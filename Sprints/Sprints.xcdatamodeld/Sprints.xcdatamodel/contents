@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedSprintTimer" representedClassName="SavedSprintTimer" syncable="YES" codeGenerationType="class">
+        <attribute name="setHour" attributeType="String"/>
+        <attribute name="setMinute" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedSprintTimer" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>

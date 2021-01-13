@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */; };
+		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
+		09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */; };
+		09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */; };
 		09ECD1CE259974B7006D301A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECD1CD259974B7006D301A /* AppDelegate.swift */; };
 		09ECD1D0259974B7006D301A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECD1CF259974B7006D301A /* SceneDelegate.swift */; };
 		09ECD1D2259974B7006D301A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECD1D1259974B7006D301A /* ViewController.swift */; };
@@ -19,8 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
+		09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunViewController.swift; sourceTree = "<group>"; };
+		09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		09ECD1CA259974B7006D301A /* Sprints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09ECD1CD259974B7006D301A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09ECD1CF259974B7006D301A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D1AC0825AD09DF00F9E053 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0915628225AD34B9002A42A9 /* sprintlaunch.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		09ECD1C1259974B7006D301A = {
 			isa = PBXGroup;
 			children = (
@@ -67,15 +83,19 @@
 		09ECD1CC259974B7006D301A /* Sprints */ = {
 			isa = PBXGroup;
 			children = (
-				09ECD1CD259974B7006D301A /* AppDelegate.swift */,
-				09ECD1CF259974B7006D301A /* SceneDelegate.swift */,
-				09ECD1D1259974B7006D301A /* ViewController.swift */,
-				09ECD1D3259974B7006D301A /* Main.storyboard */,
-				09ECD1D6259974BA006D301A /* Assets.xcassets */,
-				09ECD1D8259974BA006D301A /* LaunchScreen.storyboard */,
 				09ECD1DB259974BA006D301A /* Info.plist */,
+				09ECD1CD259974B7006D301A /* AppDelegate.swift */,
+				09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */,
+				09ECD1CF259974B7006D301A /* SceneDelegate.swift */,
 				09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */,
 				09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */,
+				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
+				09ECD1D1259974B7006D301A /* ViewController.swift */,
+				09ECD1D6259974BA006D301A /* Assets.xcassets */,
+				09ECD1D8259974BA006D301A /* LaunchScreen.storyboard */,
+				09ECD1D3259974B7006D301A /* Main.storyboard */,
+				09D1AC0825AD09DF00F9E053 /* Resources */,
+				0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */,
 			);
 			path = Sprints;
 			sourceTree = "<group>";
@@ -157,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
+				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
 			);
@@ -212,9 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ECD1D2259974B7006D301A /* ViewController.swift in Sources */,
+				09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */,
 				09ECD1CE259974B7006D301A /* AppDelegate.swift in Sources */,
 				09ECD1D0259974B7006D301A /* SceneDelegate.swift in Sources */,
 				09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */,
+				0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */,
+				09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */,
 				09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nadia-Siddiqah.Sprints";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -393,7 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nadia-Siddiqah.Sprints";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
