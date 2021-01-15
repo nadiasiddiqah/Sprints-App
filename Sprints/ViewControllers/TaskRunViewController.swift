@@ -23,11 +23,6 @@ class TaskRunViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
 }
 
 extension TaskRunViewController: UITableViewDataSource {
