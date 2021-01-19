@@ -2,7 +2,6 @@ PODS:
   - DateTimePicker (2.3.1)
   - DropDown (2.3.13)
   - Gifu (3.3)
-  - IQDropDownTextField (2.0.1)
   - TimePicker (0.0.5)
   - TinyConstraints (4.0.1)
 
@@ -10,7 +9,6 @@ DEPENDENCIES:
   - DateTimePicker
   - DropDown
   - Gifu (~> 3.3.0)
-  - IQDropDownTextField
   - TimePicker
   - TinyConstraints (~> 4.0.1)
 
@@ -19,7 +17,6 @@ SPEC REPOS:
     - DateTimePicker
     - DropDown
     - Gifu
-    - IQDropDownTextField
     - TimePicker
     - TinyConstraints
 
@@ -27,10 +24,9 @@ SPEC CHECKSUMS:
   DateTimePicker: 678d94f4ed27643db6be3381fff6296953dda0c1
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Gifu: 97c2a3c3865fbc834ab13f797e2e8e7729a1853c
-  IQDropDownTextField: 1afad4825d80089a1b0907e8a8d73a49248a2508
   TimePicker: aecaba534b52aa87d8ec6c62816bf2e6e56167fa
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: f67a7df7f4d52d098be9c2a43ffb7d14ee85843b
+PODFILE CHECKSUM: 958a883511dcf4db00699e09fb736dcfa1b36bef
 
 COCOAPODS: 1.10.0

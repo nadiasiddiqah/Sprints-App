@@ -232,10 +232,10 @@
                                 <color key="trackTintColor" systemColor="separatorColor"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-yF-BA0">
-                                <rect key="frame" x="15" y="366" width="384" height="393"/>
+                                <rect key="frame" x="20" y="365" width="374" height="393"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="351" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crq-yl-GxC" customClass="SelfSizedTableView" customModule="Sprints" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="0.0" width="374" height="351"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="351"/>
                                         <color key="backgroundColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -250,7 +250,7 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-KP-sq2">
-                                        <rect key="frame" x="117" y="359" width="150" height="34"/>
+                                        <rect key="frame" x="112" y="359" width="150" height="34"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="5ue-Yx-Iv4"/>
@@ -277,13 +277,12 @@
                             <constraint firstItem="X69-ou-aMS" firstAttribute="top" secondItem="DW1-Y0-k5c" secondAttribute="top" id="4xa-mI-RD5"/>
                             <constraint firstItem="ykh-0k-sj5" firstAttribute="top" secondItem="4ti-nj-DZP" secondAttribute="bottom" constant="32" id="Ee4-0T-mYP"/>
                             <constraint firstItem="X69-ou-aMS" firstAttribute="top" secondItem="ykh-0k-sj5" secondAttribute="bottom" constant="19" id="GL5-qr-Q7F"/>
+                            <constraint firstItem="fdP-1t-xWY" firstAttribute="trailing" secondItem="sq7-yF-BA0" secondAttribute="trailing" constant="20" id="Gqp-fB-84S"/>
                             <constraint firstItem="4ti-nj-DZP" firstAttribute="leading" secondItem="fdP-1t-xWY" secondAttribute="leading" constant="15" id="Nhn-U1-pEl"/>
                             <constraint firstItem="DW1-Y0-k5c" firstAttribute="leading" secondItem="ykh-0k-sj5" secondAttribute="trailing" constant="-151" id="QSY-xO-cAx"/>
-                            <constraint firstItem="sq7-yF-BA0" firstAttribute="top" secondItem="DW1-Y0-k5c" secondAttribute="bottom" constant="41" id="T7m-Z0-YGP"/>
-                            <constraint firstItem="fdP-1t-xWY" firstAttribute="bottom" secondItem="sq7-yF-BA0" secondAttribute="bottom" constant="49" id="Uz9-1i-lEI"/>
-                            <constraint firstItem="sq7-yF-BA0" firstAttribute="leading" secondItem="fdP-1t-xWY" secondAttribute="leading" constant="15" id="Z5D-cG-Kx0"/>
+                            <constraint firstItem="sq7-yF-BA0" firstAttribute="leading" secondItem="fdP-1t-xWY" secondAttribute="leading" constant="20" id="UqU-TZ-cQn"/>
+                            <constraint firstItem="sq7-yF-BA0" firstAttribute="top" secondItem="DW1-Y0-k5c" secondAttribute="bottom" constant="40" id="YCv-P0-s9r"/>
                             <constraint firstItem="fdP-1t-xWY" firstAttribute="trailing" secondItem="DW1-Y0-k5c" secondAttribute="trailing" constant="120" id="e1p-AC-WIv"/>
-                            <constraint firstItem="fdP-1t-xWY" firstAttribute="trailing" secondItem="sq7-yF-BA0" secondAttribute="trailing" constant="15" id="epe-a1-qWN"/>
                             <constraint firstItem="fdP-1t-xWY" firstAttribute="trailing" secondItem="4ti-nj-DZP" secondAttribute="trailing" constant="15" id="lwT-er-dJs"/>
                             <constraint firstItem="X69-ou-aMS" firstAttribute="leading" secondItem="fdP-1t-xWY" secondAttribute="leading" constant="120" id="puk-WT-uZ5"/>
                             <constraint firstItem="ykh-0k-sj5" firstAttribute="leading" secondItem="X69-ou-aMS" secondAttribute="trailing" constant="-145" id="rsZ-ux-4cr"/>
