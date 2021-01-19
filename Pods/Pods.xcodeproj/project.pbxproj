@@ -1,0 +1,1673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00619A58DE13185C8E4D550E59DB050E /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B4274315A473E0C8973B17E1BE325 /* TimePicker.swift */; };
+		0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0896EF141D64AC7BE3CEADB9CC477C /* FrameStore.swift */; };
+		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0063A755106C4C41AB01773CA8BE11A /* TinyConstraints.swift */; };
+		2662C8BCDDB84DF9A0ADE19A21000C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		2A90AB363B0F8A82DD9D4FC2F650578A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */; };
+		2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED892EDC3ECA9A3FC5A67A18F60DE7 /* UIImage.swift */; };
+		361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518909BB8C1F924BAFA5D94B1482295 /* DropDownCell.swift */; };
+		3C254704F2D4352A6026F0B36642C79E /* TimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6CB4C25FCFF28289F20BA210692BC /* TimePicker-dummy.m */; };
+		412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF8C24D976C78170EE4963214A054D /* Array.swift */; };
+		44D1C7B0CFD66548E85A749451B57ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A75A037DBB18316D21FFD08DDAB7559C /* Gifu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BBAB6E268B960BAE89F9F54A629CC /* DPDUIView+Extension.swift */; };
+		4D91A24F741D55D9990BFA93F5701A15 /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2F565F022EC5770910C87EEA0B61B /* UIGestureRecognizer.swift */; };
+		4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59715AF95F3798EF00E0784A16B15000 /* UIImageView.swift */; };
+		579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E37E10D34A844135F2671BB58C91C9 /* Animator.swift */; };
+		5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D5E6A06F157E366DF81D6EAB587E6 /* DPDConstants.swift */; };
+		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138822DD84AE08022D5FE69DA263A71 /* TinyConstraints-dummy.m */; };
+		6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E6EE070CB3BF2EA64AF2DE262C9893 /* DropDown+Appearance.swift */; };
+		69DB319F78528E5848263501EF9D947D /* DateTimePicker+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B991CF6C9EDE7B66FF10C9538F92C /* DateTimePicker+UITableView.swift */; };
+		6ECF594A87B2DEC35A225A3C969D6CC5 /* IQDropDownTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCBC103D360F72E2B428CBAE075AD60 /* IQDropDownTextField-dummy.m */; };
+		79DD7AB16901A4CE16A083E3BD5C5A83 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEB0F19A13774EA5680D19BEDE3DF4 /* IQDropDownTextField.m */; };
+		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0CE1658DCB4AC3A8DA81FF6C40BFCBE /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD6005DA1A49FFECA43DF9FC894E /* TinyConstraints+superview.swift */; };
+		83E6156FF22C02341056DA17176A623F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DED04075DD6D839DEEFE20E1E1D81 /* DropDown.swift */; };
+		8B65DFF4E8422E129096EE5777231E28 /* TimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1FAA95D283C52A586BAD792827C5B3 /* TimePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B939DDE35D4DBCF9C03CC3DFDE2B9E /* CGSize.swift */; };
+		9511B04D9F8FC808A79F75555D9C0C57 /* NSLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D6EE10AFD8F99B379A58C6191C160 /* NSLayoutConstraints.swift */; };
+		9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9CBB7DEC21A5E7E4B1BB345D0B1373E /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F66024BCF19EF9305BC1B82F458A413E /* DropDown-dummy.m */; };
+		96F8AB8B53B249C661F4BC634D4EC392 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558FD6622F184873A22CA87FBCD68B2 /* DateCollectionViewCell.swift */; };
+		9B142A1B489CFEE122796886B2AFB9E9 /* StepCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97171F0E59A9C5D7B98B071BE48ED22 /* StepCollectionViewFlowLayout.swift */; };
+		9D4F8836CEEC0301ADFD12E623F5F4CF /* Pods-Sprints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F03163883272D820A7FEA2E96F8CD7C /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D860C108F924B267F64716BB5E792787 /* TimeInterval.swift */; };
+		9F940FB6E2B35B04810CA60593353F68 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230DB7CDF0D18D2367A67CB5819FB671 /* DateTimePicker.swift */; };
+		A09C6F8458CE2EF255D89235825F441D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		A26AC0442A3F92D7F0FE2FF409072846 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */; };
+		A3B4EBFFA53719C4EE534FBC89633A24 /* FullDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F2C30A89E45453B06348DB0D3AA04 /* FullDateCollectionViewCell.swift */; };
+		A479E0839287C86EB34549B8B6EA8946 /* TimePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507B4CA45D310211B139E65BAA3499C /* TimePickerConfig.swift */; };
+		A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32A66B8E3EFA8762C4DA8632DC9AE0 /* GIFImageView.swift */; };
+		ABBAF2224F657907AC107044CBDEA486 /* DateTimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D486F5CF4F9BBBC2125DE5AE05F855 /* DateTimePicker-dummy.m */; };
+		AE883588B21FB69D94C56F185CBE58D6 /* TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4B2D9E7873E56265E1D3904BEB645 /* TimeFormat.swift */; };
+		AE905458421E3B3E18A733318743DCF0 /* IQDropDownTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C12102D29D210430B78AB60052D8AA /* IQDropDownTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 882217B03DBFB5EE5B802323CBAFFA76 /* Gifu-dummy.m */; };
+		B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C4C804C9487796AA456028570C823 /* AnimatedFrame.swift */; };
+		B4C5E814EBFDAB3119846F01CD075E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		B8A78601EEB86322D91B7BE5B1B0FAC5 /* DateTimePicker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701F444D07D345D7A440FC5C097B84A0 /* DateTimePicker+CollectionView.swift */; };
+		BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C35548B4CB2C040A3057AADDECEEC /* DPDKeyboardListener.swift */; };
+		C49F07559C06C6B9C96B3887EDA8D4B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */; };
+		C99487C04757ECF4F73FA1D4519CFD6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463227065A1E0C0E47E0A9B82C2E7B9 /* Constraints.swift */; };
+		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F39BA6DEA6EC9C24E9B87F888FF8FE5 /* TinyEdgeInsets.swift */; };
+		CE466A37BA6596CC1A10A136B4CFAC24 /* TimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EABF3730353660041A361FADF58B25E /* TimePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82428DEAA55D816EFFEBDC470FE24B6 /* Abstraction.swift */; };
+		D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A1B27549E5006D9DA5565C975D55B /* ImageSourceHelpers.swift */; };
+		DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AAFD82D7BB31F61296FA984BA275 /* GIFAnimatable.swift */; };
+		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCABE84BB83F2C36AFD7A4A5EA20CE /* Stack.swift */; };
+		E5E0FCAE1A15F06DC0ED6BD05A0C6B66 /* DateTimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D8D8B00D8F668CDC99840B79CABB7A /* DateTimePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E746373D728BEEDB30F726B275F6E6F2 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD787098A8EB560243F6BDBD89B44B /* TimeCalculator.swift */; };
+		E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5086A9F9CA5735374B903AE1CAC39AD7 /* Gifu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAAE3CFD5FD7C605478DE7EE72FCBA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FD62740269946978020E5F640BF19D /* Constrainable.swift */; };
+		EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43668888F22A054E329903D2023BE09 /* DropDownCell.xib */; };
+		F1173245B11C2BDD4349156F0472CE74 /* Pods-Sprints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */; };
+		FAF970173E70F0D837D3EF79C08D44CC /* IQDropDownTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B653599A0E7BB5CD4AA6330A358EB0 /* IQDropDownTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0240955A468ED4B0A9B22770A6AC79A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 830B5AB9E16163B4A1BA339D625FE46C;
+			remoteInfo = Gifu;
+		};
+		0C70AE35202488117C4031C993524268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
+			remoteInfo = TinyConstraints;
+		};
+		4D29ECAE50F3C59FB74BB018E89D20E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1367300EE05CBC62C2314CF94203D9;
+			remoteInfo = TimePicker;
+		};
+		6F5D8D84DC533232A08C21CD79CCD2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31E89965CFA54DE4BCC99C05112D7483;
+			remoteInfo = DateTimePicker;
+		};
+		8084FC5E922C33E67FCA30C0EE0060EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD391C9941B66C78392286FFFCFD700F;
+			remoteInfo = IQDropDownTextField;
+		};
+		CFF0BCDC96F15311FD5CB66A0183860E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04D899B40D70611EEBA0FE90D8889B06 /* Pods-Sprints-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sprints-acknowledgements.markdown"; sourceTree = "<group>"; };
+		06D094336B4D27FB4DC9A76DD191872B /* TimePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TimePicker-Info.plist"; sourceTree = "<group>"; };
+		0CD46A75212ACC18D992437B8CE0E69B /* IQDropDownTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQDropDownTextField.debug.xcconfig; sourceTree = "<group>"; };
+		0F39BA6DEA6EC9C24E9B87F888FF8FE5 /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		172D688C9AAD6534DC646CB0C17B0349 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		176DED04075DD6D839DEEFE20E1E1D81 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		17A0C3714DA0A2D6A5CED3ECBA8C303A /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
+		1B1C4C804C9487796AA456028570C823 /* AnimatedFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFrame.swift; path = Sources/Gifu/Classes/AnimatedFrame.swift; sourceTree = "<group>"; };
+		1EABF3730353660041A361FADF58B25E /* TimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimePicker-umbrella.h"; sourceTree = "<group>"; };
+		205B991CF6C9EDE7B66FF10C9538F92C /* DateTimePicker+UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateTimePicker+UITableView.swift"; path = "Source/DateTimePicker+UITableView.swift"; sourceTree = "<group>"; };
+		20AB0AF86FF6FB019D83280610E6F9D0 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		230DB7CDF0D18D2367A67CB5819FB671 /* DateTimePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimePicker.swift; path = Source/DateTimePicker.swift; sourceTree = "<group>"; };
+		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2518909BB8C1F924BAFA5D94B1482295 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		268C538BDDCA2ABA3146F0600D9509D7 /* Pods-Sprints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-Info.plist"; sourceTree = "<group>"; };
+		2CDCADC53DB6058F035551CE2E483AC1 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		2D8B5AAE928E82626E564DB330C78AD6 /* Gifu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gifu.modulemap; sourceTree = "<group>"; };
+		2EDCABE84BB83F2C36AFD7A4A5EA20CE /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		36D6CB4C25FCFF28289F20BA210692BC /* TimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TimePicker-dummy.m"; sourceTree = "<group>"; };
+		3E32A66B8E3EFA8762C4DA8632DC9AE0 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = Sources/Gifu/Classes/GIFImageView.swift; sourceTree = "<group>"; };
+		3ECEB0F19A13774EA5680D19BEDE3DF4 /* IQDropDownTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQDropDownTextField.m; path = IQDropDownTextField/IQDropDownTextField.m; sourceTree = "<group>"; };
+		3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.release.xcconfig"; sourceTree = "<group>"; };
+		3F1FAA95D283C52A586BAD792827C5B3 /* TimePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TimePicker.h; path = TimePicker/TimePicker.h; sourceTree = "<group>"; };
+		40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4138822DD84AE08022D5FE69DA263A71 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		44E6EE070CB3BF2EA64AF2DE262C9893 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		4507B4CA45D310211B139E65BAA3499C /* TimePickerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePickerConfig.swift; path = TimePicker/Classes/TimePickerConfig.swift; sourceTree = "<group>"; };
+		49B653599A0E7BB5CD4AA6330A358EB0 /* IQDropDownTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQDropDownTextField.h; path = IQDropDownTextField/IQDropDownTextField.h; sourceTree = "<group>"; };
+		49F2C9A2327C67D0CED0828837B58D2B /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
+		4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sprints-dummy.m"; sourceTree = "<group>"; };
+		502F2C30A89E45453B06348DB0D3AA04 /* FullDateCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullDateCollectionViewCell.swift; path = Source/FullDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		5086A9F9CA5735374B903AE1CAC39AD7 /* Gifu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gifu.h; path = Sources/Gifu.h; sourceTree = "<group>"; };
+		51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.debug.xcconfig"; sourceTree = "<group>"; };
+		52E37E10D34A844135F2671BB58C91C9 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Gifu/Classes/Animator.swift; sourceTree = "<group>"; };
+		546735229EBD02C3F2ABA9B4ED19EFF6 /* Gifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.debug.xcconfig; sourceTree = "<group>"; };
+		553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		55E4B2D9E7873E56265E1D3904BEB645 /* TimeFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeFormat.swift; path = TimePicker/Classes/Utils/TimeFormat.swift; sourceTree = "<group>"; };
+		576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59715AF95F3798EF00E0784A16B15000 /* UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/Gifu/Extensions/UIImageView.swift; sourceTree = "<group>"; };
+		59BB90BD57DE948F3309C995DDD8B3C5 /* Gifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.release.xcconfig; sourceTree = "<group>"; };
+		5C4EE4FBCEE2F1C5A3D1814EECAE8F73 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
+		67EF8C24D976C78170EE4963214A054D /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Gifu/Extensions/Array.swift; sourceTree = "<group>"; };
+		68D486F5CF4F9BBBC2125DE5AE05F855 /* DateTimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateTimePicker-dummy.m"; sourceTree = "<group>"; };
+		69F474101C1A900FD999B8327FAFBECF /* TimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimePicker.release.xcconfig; sourceTree = "<group>"; };
+		6C608C1A919E9BCE4C0E9278F025C2A6 /* IQDropDownTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQDropDownTextField-prefix.pch"; sourceTree = "<group>"; };
+		6FCBC103D360F72E2B428CBAE075AD60 /* IQDropDownTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQDropDownTextField-dummy.m"; sourceTree = "<group>"; };
+		701F444D07D345D7A440FC5C097B84A0 /* DateTimePicker+CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateTimePicker+CollectionView.swift"; path = "Source/DateTimePicker+CollectionView.swift"; sourceTree = "<group>"; };
+		717CF63303955FFF52126F3A3CC759CC /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		76C12102D29D210430B78AB60052D8AA /* IQDropDownTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQDropDownTextField-umbrella.h"; sourceTree = "<group>"; };
+		7CD04A742DE0CCDCCDF19A80476D30E6 /* IQDropDownTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQDropDownTextField.release.xcconfig; sourceTree = "<group>"; };
+		7E9D28A647D617EB853B191460C1272E /* TimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimePicker-prefix.pch"; sourceTree = "<group>"; };
+		81796C3A09221F4F0171C6165F545ED1 /* IQDropDownTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQDropDownTextField-Info.plist"; sourceTree = "<group>"; };
+		82D8D8B00D8F668CDC99840B79CABB7A /* DateTimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTimePicker-umbrella.h"; sourceTree = "<group>"; };
+		83ED892EDC3ECA9A3FC5A67A18F60DE7 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Gifu/Extensions/UIImage.swift; sourceTree = "<group>"; };
+		86D872FDFE07E0818F95236FB2989E35 /* TimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TimePicker.modulemap; sourceTree = "<group>"; };
+		870DCAE476AEDF69BCE21E10B9558103 /* Pods-Sprints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sprints.modulemap"; sourceTree = "<group>"; };
+		882217B03DBFB5EE5B802323CBAFFA76 /* Gifu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gifu-dummy.m"; sourceTree = "<group>"; };
+		8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		903C35548B4CB2C040A3057AADDECEEC /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		96932FA5378CD902F2912A19AA999B61 /* DateTimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DateTimePicker.modulemap; sourceTree = "<group>"; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0CE1658DCB4AC3A8DA81FF6C40BFCBE /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		A19D6EE10AFD8F99B379A58C6191C160 /* NSLayoutConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraints.swift; path = TimePicker/Classes/Extensions/NSLayoutConstraints.swift; sourceTree = "<group>"; };
+		A2B2F565F022EC5770910C87EEA0B61B /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizer.swift; path = TimePicker/Classes/Extensions/UIGestureRecognizer.swift; sourceTree = "<group>"; };
+		A75A037DBB18316D21FFD08DDAB7559C /* Gifu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-umbrella.h"; sourceTree = "<group>"; };
+		A9B939DDE35D4DBCF9C03CC3DFDE2B9E /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Gifu/Extensions/CGSize.swift; sourceTree = "<group>"; };
+		AB4BBAB6E268B960BAE89F9F54A629CC /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		AF1F722B3BC3BA76D531B51D9502B726 /* DateTimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTimePicker-prefix.pch"; sourceTree = "<group>"; };
+		B0063A755106C4C41AB01773CA8BE11A /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		B102EFC7B521C79D3823BE36B6F94944 /* DateTimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTimePicker.debug.xcconfig; sourceTree = "<group>"; };
+		B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B463227065A1E0C0E47E0A9B82C2E7B9 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		B4DD787098A8EB560243F6BDBD89B44B /* TimeCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeCalculator.swift; path = TimePicker/Classes/Utils/TimeCalculator.swift; sourceTree = "<group>"; };
+		B59B4274315A473E0C8973B17E1BE325 /* TimePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePicker.swift; path = TimePicker/Classes/TimePicker.swift; sourceTree = "<group>"; };
+		B82428DEAA55D816EFFEBDC470FE24B6 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		B91A1B27549E5006D9DA5565C975D55B /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSourceHelpers.swift; path = Sources/Gifu/Helpers/ImageSourceHelpers.swift; sourceTree = "<group>"; };
+		B9A1739E571F18800B2EF8E16123C4FA /* IQDropDownTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQDropDownTextField.modulemap; sourceTree = "<group>"; };
+		B9CBB7DEC21A5E7E4B1BB345D0B1373E /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		BDE0C092019340CAEBF4CE823969C815 /* IQDropDownTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQDropDownTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0896EF141D64AC7BE3CEADB9CC477C /* FrameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameStore.swift; path = Sources/Gifu/Classes/FrameStore.swift; sourceTree = "<group>"; };
+		C4E6C917F9741D2AB70BDAB688CCF7E4 /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
+		C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sprints-umbrella.h"; sourceTree = "<group>"; };
+		D025AAFD82D7BB31F61296FA984BA275 /* GIFAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatable.swift; path = Sources/Gifu/Classes/GIFAnimatable.swift; sourceTree = "<group>"; };
+		D139BD6005DA1A49FFECA43DF9FC894E /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		D2391BD40A236894F16FADCE59053BE3 /* Pods-Sprints-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-acknowledgements.plist"; sourceTree = "<group>"; };
+		D43668888F22A054E329903D2023BE09 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		D83D5E6A06F157E366DF81D6EAB587E6 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		D860C108F924B267F64716BB5E792787 /* TimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeInterval.swift; path = TimePicker/Classes/Extensions/TimeInterval.swift; sourceTree = "<group>"; };
+		D8FD62740269946978020E5F640BF19D /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		DABDEEB4D41CB05A265CF859C7430F8F /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		DBB5E111782AE3588AA6F9EBE7774C01 /* DateTimePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DateTimePicker-Info.plist"; sourceTree = "<group>"; };
+		DC8C2F0D042C1657893B9D69DDBD7E0C /* TimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimePicker.debug.xcconfig; sourceTree = "<group>"; };
+		DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7A17C74BC55C507DC6E8C590082E0B /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
+		F558FD6622F184873A22CA87FBCD68B2 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = Source/DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		F66024BCF19EF9305BC1B82F458A413E /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		F7400871807129A4900C9CFECEC30235 /* Gifu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Gifu-Info.plist"; sourceTree = "<group>"; };
+		F7F410CBB227714AF87E0CC14EB4C2E0 /* Pods-Sprints-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sprints-frameworks.sh"; sourceTree = "<group>"; };
+		F97171F0E59A9C5D7B98B071BE48ED22 /* StepCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepCollectionViewFlowLayout.swift; path = Source/StepCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		FCA3FA851C8DF99129625596B49D56BF /* Gifu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-prefix.pch"; sourceTree = "<group>"; };
+		FE8F2EC07D22C34D9A9FEDF815AC9791 /* DateTimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTimePicker.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BFE408A8A51D8000552165FB2C8B1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E6156FF22C02341056DA17176A623F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14DBC1A8EC4AD5505D62F587C3AD5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44D1C7B0CFD66548E85A749451B57ED2 /* Foundation.framework in Frameworks */,
+				2A90AB363B0F8A82DD9D4FC2F650578A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36535A7B888AFE58F76BDA6B07CEB9C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAE3CFD5FD7C605478DE7EE72FCBA2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9727840973A9C2692E58F7089A7C243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99487C04757ECF4F73FA1D4519CFD6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D67FA5C7D83687C867E0A5B3F0B5086 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09C6F8458CE2EF255D89235825F441D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC41DEC17E920EB1D20A8049971F4BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C5E814EBFDAB3119846F01CD075E5F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCDE0892524163E9FA50E837CFE24E10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A26AC0442A3F92D7F0FE2FF409072846 /* CoreGraphics.framework in Frameworks */,
+				2662C8BCDDB84DF9A0ADE19A21000C35 /* Foundation.framework in Frameworks */,
+				C49F07559C06C6B9C96B3887EDA8D4B3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20D8528256A7AF28D53631225E57465A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04DC3E9F75F0A3813A0948E2AB25821A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9A1739E571F18800B2EF8E16123C4FA /* IQDropDownTextField.modulemap */,
+				6FCBC103D360F72E2B428CBAE075AD60 /* IQDropDownTextField-dummy.m */,
+				81796C3A09221F4F0171C6165F545ED1 /* IQDropDownTextField-Info.plist */,
+				6C608C1A919E9BCE4C0E9278F025C2A6 /* IQDropDownTextField-prefix.pch */,
+				76C12102D29D210430B78AB60052D8AA /* IQDropDownTextField-umbrella.h */,
+				0CD46A75212ACC18D992437B8CE0E69B /* IQDropDownTextField.debug.xcconfig */,
+				7CD04A742DE0CCDCCDF19A80476D30E6 /* IQDropDownTextField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IQDropDownTextField";
+			sourceTree = "<group>";
+		};
+		0A0A61221BADA02A9E5FF5B128C4B92A /* Pods-Sprints */ = {
+			isa = PBXGroup;
+			children = (
+				870DCAE476AEDF69BCE21E10B9558103 /* Pods-Sprints.modulemap */,
+				04D899B40D70611EEBA0FE90D8889B06 /* Pods-Sprints-acknowledgements.markdown */,
+				D2391BD40A236894F16FADCE59053BE3 /* Pods-Sprints-acknowledgements.plist */,
+				4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */,
+				F7F410CBB227714AF87E0CC14EB4C2E0 /* Pods-Sprints-frameworks.sh */,
+				268C538BDDCA2ABA3146F0600D9509D7 /* Pods-Sprints-Info.plist */,
+				C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */,
+				51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */,
+				3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */,
+			);
+			name = "Pods-Sprints";
+			path = "Target Support Files/Pods-Sprints";
+			sourceTree = "<group>";
+		};
+		16E85AFB095352093C7F1D7BA3EEBA91 /* Gifu */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C4C804C9487796AA456028570C823 /* AnimatedFrame.swift */,
+				52E37E10D34A844135F2671BB58C91C9 /* Animator.swift */,
+				67EF8C24D976C78170EE4963214A054D /* Array.swift */,
+				A9B939DDE35D4DBCF9C03CC3DFDE2B9E /* CGSize.swift */,
+				BF0896EF141D64AC7BE3CEADB9CC477C /* FrameStore.swift */,
+				D025AAFD82D7BB31F61296FA984BA275 /* GIFAnimatable.swift */,
+				3E32A66B8E3EFA8762C4DA8632DC9AE0 /* GIFImageView.swift */,
+				5086A9F9CA5735374B903AE1CAC39AD7 /* Gifu.h */,
+				B91A1B27549E5006D9DA5565C975D55B /* ImageSourceHelpers.swift */,
+				83ED892EDC3ECA9A3FC5A67A18F60DE7 /* UIImage.swift */,
+				59715AF95F3798EF00E0784A16B15000 /* UIImageView.swift */,
+				A1427807F4D22FFAA4179544E71111DE /* Support Files */,
+			);
+			path = Gifu;
+			sourceTree = "<group>";
+		};
+		20D8528256A7AF28D53631225E57465A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */,
+				8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */,
+				DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		31ABA123066100072970331AC3FB5628 /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				B82428DEAA55D816EFFEBDC470FE24B6 /* Abstraction.swift */,
+				D8FD62740269946978020E5F640BF19D /* Constrainable.swift */,
+				B463227065A1E0C0E47E0A9B82C2E7B9 /* Constraints.swift */,
+				2EDCABE84BB83F2C36AFD7A4A5EA20CE /* Stack.swift */,
+				B0063A755106C4C41AB01773CA8BE11A /* TinyConstraints.swift */,
+				D139BD6005DA1A49FFECA43DF9FC894E /* TinyConstraints+superview.swift */,
+				0F39BA6DEA6EC9C24E9B87F888FF8FE5 /* TinyEdgeInsets.swift */,
+				3F0C955D93F4138428C420745FF7E466 /* Support Files */,
+			);
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
+		3F0C955D93F4138428C420745FF7E466 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CDCADC53DB6058F035551CE2E483AC1 /* TinyConstraints.modulemap */,
+				4138822DD84AE08022D5FE69DA263A71 /* TinyConstraints-dummy.m */,
+				17A0C3714DA0A2D6A5CED3ECBA8C303A /* TinyConstraints-Info.plist */,
+				20AB0AF86FF6FB019D83280610E6F9D0 /* TinyConstraints-prefix.pch */,
+				A0CE1658DCB4AC3A8DA81FF6C40BFCBE /* TinyConstraints-umbrella.h */,
+				DABDEEB4D41CB05A265CF859C7430F8F /* TinyConstraints.debug.xcconfig */,
+				5C4EE4FBCEE2F1C5A3D1814EECAE8F73 /* TinyConstraints.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TinyConstraints";
+			sourceTree = "<group>";
+		};
+		49CB697016963454C9784A9EC1B92A34 /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A19D6EE10AFD8F99B379A58C6191C160 /* NSLayoutConstraints.swift */,
+				B4DD787098A8EB560243F6BDBD89B44B /* TimeCalculator.swift */,
+				55E4B2D9E7873E56265E1D3904BEB645 /* TimeFormat.swift */,
+				D860C108F924B267F64716BB5E792787 /* TimeInterval.swift */,
+				3F1FAA95D283C52A586BAD792827C5B3 /* TimePicker.h */,
+				B59B4274315A473E0C8973B17E1BE325 /* TimePicker.swift */,
+				4507B4CA45D310211B139E65BAA3499C /* TimePickerConfig.swift */,
+				A2B2F565F022EC5770910C87EEA0B61B /* UIGestureRecognizer.swift */,
+				66AB86E5F851EB2914388624974DEC04 /* Support Files */,
+			);
+			path = TimePicker;
+			sourceTree = "<group>";
+		};
+		4C75F2DF334AEB4F26CC2950EC560B64 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				D83D5E6A06F157E366DF81D6EAB587E6 /* DPDConstants.swift */,
+				903C35548B4CB2C040A3057AADDECEEC /* DPDKeyboardListener.swift */,
+				AB4BBAB6E268B960BAE89F9F54A629CC /* DPDUIView+Extension.swift */,
+				176DED04075DD6D839DEEFE20E1E1D81 /* DropDown.swift */,
+				44E6EE070CB3BF2EA64AF2DE262C9893 /* DropDown+Appearance.swift */,
+				2518909BB8C1F924BAFA5D94B1482295 /* DropDownCell.swift */,
+				EB462B1EB938D782D565C9C8D4E1A05C /* Resources */,
+				AFEA1C793CF04A03F90FCBB83B09D67D /* Support Files */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		4E6A59830EEA267E4372C5AC1B3B7585 /* DateTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F558FD6622F184873A22CA87FBCD68B2 /* DateCollectionViewCell.swift */,
+				230DB7CDF0D18D2367A67CB5819FB671 /* DateTimePicker.swift */,
+				701F444D07D345D7A440FC5C097B84A0 /* DateTimePicker+CollectionView.swift */,
+				205B991CF6C9EDE7B66FF10C9538F92C /* DateTimePicker+UITableView.swift */,
+				502F2C30A89E45453B06348DB0D3AA04 /* FullDateCollectionViewCell.swift */,
+				F97171F0E59A9C5D7B98B071BE48ED22 /* StepCollectionViewFlowLayout.swift */,
+				C55EA40DC4B490B8C670325BA3DD6907 /* Support Files */,
+			);
+			path = DateTimePicker;
+			sourceTree = "<group>";
+		};
+		6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A0A61221BADA02A9E5FF5B128C4B92A /* Pods-Sprints */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		66AB86E5F851EB2914388624974DEC04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				86D872FDFE07E0818F95236FB2989E35 /* TimePicker.modulemap */,
+				36D6CB4C25FCFF28289F20BA210692BC /* TimePicker-dummy.m */,
+				06D094336B4D27FB4DC9A76DD191872B /* TimePicker-Info.plist */,
+				7E9D28A647D617EB853B191460C1272E /* TimePicker-prefix.pch */,
+				1EABF3730353660041A361FADF58B25E /* TimePicker-umbrella.h */,
+				DC8C2F0D042C1657893B9D69DDBD7E0C /* TimePicker.debug.xcconfig */,
+				69F474101C1A900FD999B8327FAFBECF /* TimePicker.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TimePicker";
+			sourceTree = "<group>";
+		};
+		A1427807F4D22FFAA4179544E71111DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D8B5AAE928E82626E564DB330C78AD6 /* Gifu.modulemap */,
+				882217B03DBFB5EE5B802323CBAFFA76 /* Gifu-dummy.m */,
+				F7400871807129A4900C9CFECEC30235 /* Gifu-Info.plist */,
+				FCA3FA851C8DF99129625596B49D56BF /* Gifu-prefix.pch */,
+				A75A037DBB18316D21FFD08DDAB7559C /* Gifu-umbrella.h */,
+				546735229EBD02C3F2ABA9B4ED19EFF6 /* Gifu.debug.xcconfig */,
+				59BB90BD57DE948F3309C995DDD8B3C5 /* Gifu.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Gifu";
+			sourceTree = "<group>";
+		};
+		AFEA1C793CF04A03F90FCBB83B09D67D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				172D688C9AAD6534DC646CB0C17B0349 /* DropDown.modulemap */,
+				F66024BCF19EF9305BC1B82F458A413E /* DropDown-dummy.m */,
+				49F2C9A2327C67D0CED0828837B58D2B /* DropDown-Info.plist */,
+				717CF63303955FFF52126F3A3CC759CC /* DropDown-prefix.pch */,
+				B9CBB7DEC21A5E7E4B1BB345D0B1373E /* DropDown-umbrella.h */,
+				C4E6C917F9741D2AB70BDAB688CCF7E4 /* DropDown.debug.xcconfig */,
+				EB7A17C74BC55C507DC6E8C590082E0B /* DropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		C55EA40DC4B490B8C670325BA3DD6907 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96932FA5378CD902F2912A19AA999B61 /* DateTimePicker.modulemap */,
+				68D486F5CF4F9BBBC2125DE5AE05F855 /* DateTimePicker-dummy.m */,
+				DBB5E111782AE3588AA6F9EBE7774C01 /* DateTimePicker-Info.plist */,
+				AF1F722B3BC3BA76D531B51D9502B726 /* DateTimePicker-prefix.pch */,
+				82D8D8B00D8F668CDC99840B79CABB7A /* DateTimePicker-umbrella.h */,
+				B102EFC7B521C79D3823BE36B6F94944 /* DateTimePicker.debug.xcconfig */,
+				FE8F2EC07D22C34D9A9FEDF815AC9791 /* DateTimePicker.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DateTimePicker";
+			sourceTree = "<group>";
+		};
+		CCC3E802490A9FF43410F6679A035417 /* IQDropDownTextField */ = {
+			isa = PBXGroup;
+			children = (
+				49B653599A0E7BB5CD4AA6330A358EB0 /* IQDropDownTextField.h */,
+				3ECEB0F19A13774EA5680D19BEDE3DF4 /* IQDropDownTextField.m */,
+				04DC3E9F75F0A3813A0948E2AB25821A /* Support Files */,
+			);
+			path = IQDropDownTextField;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				D7583CFB42808B7B1D5EEA6800EDA27C /* Pods */,
+				E7A04A107FF96BD4F6387C9AC4C6A48D /* Products */,
+				6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D7583CFB42808B7B1D5EEA6800EDA27C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E6A59830EEA267E4372C5AC1B3B7585 /* DateTimePicker */,
+				4C75F2DF334AEB4F26CC2950EC560B64 /* DropDown */,
+				16E85AFB095352093C7F1D7BA3EEBA91 /* Gifu */,
+				CCC3E802490A9FF43410F6679A035417 /* IQDropDownTextField */,
+				49CB697016963454C9784A9EC1B92A34 /* TimePicker */,
+				31ABA123066100072970331AC3FB5628 /* TinyConstraints */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7A04A107FF96BD4F6387C9AC4C6A48D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */,
+				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
+				40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */,
+				BDE0C092019340CAEBF4CE823969C815 /* IQDropDownTextField.framework */,
+				576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */,
+				E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */,
+				248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB462B1EB938D782D565C9C8D4E1A05C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D43668888F22A054E329903D2023BE09 /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BA99DBE2EED61D6C9C8030ACB434B1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE905458421E3B3E18A733318743DCF0 /* IQDropDownTextField-umbrella.h in Headers */,
+				FAF970173E70F0D837D3EF79C08D44CC /* IQDropDownTextField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B3F4421F9302AF84E3C38480D3D51A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4F8836CEEC0301ADFD12E623F5F4CF /* Pods-Sprints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C82A261E114E04E54D5D64380D759BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */,
+				E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72D0F8BBE17567EE727378BB74DD8C80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE466A37BA6596CC1A10A136B4CFAC24 /* TimePicker-umbrella.h in Headers */,
+				8B65DFF4E8422E129096EE5777231E28 /* TimePicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4CE379A678224BC76F31E2F6738C11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0FCAE1A15F06DC0ED6BD05A0C6B66 /* DateTimePicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98FE3D0A640F390EA7AEA8E88F47DEDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF840770D4D967E6F9B4F1E5F24EAC7 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */;
+			buildPhases = (
+				57B3F4421F9302AF84E3C38480D3D51A /* Headers */,
+				B389960A7703FF15F12A94912C66237C /* Sources */,
+				18BFE408A8A51D8000552165FB2C8B1F /* Frameworks */,
+				F059840FCFEC0F2A0E4DF532A7BB589A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				355249D68606BF4C49C0C94175FB2769 /* PBXTargetDependency */,
+				C45C658AFF233C1AD454BC289770536B /* PBXTargetDependency */,
+				E5A1AF6473AF0516E30E9870957DC610 /* PBXTargetDependency */,
+				BC8C94D1743CE89B76A6EE7A4F604508 /* PBXTargetDependency */,
+				E90D8BBC35219D42FBECA80050E47529 /* PBXTargetDependency */,
+				5B8E8F1E130A66C7BA29CE4912258A72 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sprints";
+			productName = "Pods-Sprints";
+			productReference = 576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C7926DA2E4E8F6C84C9F21EA38B67B /* Build configuration list for PBXNativeTarget "DateTimePicker" */;
+			buildPhases = (
+				8C4CE379A678224BC76F31E2F6738C11 /* Headers */,
+				DFD5662DAEF6A75395A36DEEEC0E78B0 /* Sources */,
+				2E14DBC1A8EC4AD5505D62F587C3AD5F /* Frameworks */,
+				25FA478858624FE946B3866ED3A7A5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DateTimePicker;
+			productName = DateTimePicker;
+			productReference = B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED162CA822CAFF9F3B82904FBA2988C /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildPhases = (
+				98FE3D0A640F390EA7AEA8E88F47DEDA /* Headers */,
+				B22F16F1C73358E59AE260C86E3D1F1D /* Sources */,
+				36535A7B888AFE58F76BDA6B07CEB9C6 /* Frameworks */,
+				7465A1319E37DADA12A8BAEB409143AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyConstraints;
+			productName = TinyConstraints;
+			productReference = 248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		830B5AB9E16163B4A1BA339D625FE46C /* Gifu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BF61807C7C6D0918F26F2E99C6D024 /* Build configuration list for PBXNativeTarget "Gifu" */;
+			buildPhases = (
+				6C82A261E114E04E54D5D64380D759BE /* Headers */,
+				08A0F7D54E6E96D496EF1270392D981E /* Sources */,
+				9D67FA5C7D83687C867E0A5B3F0B5086 /* Frameworks */,
+				1637D52521EF70529E9091617E2F70CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gifu;
+			productName = Gifu;
+			productReference = 40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF76798308B8D51A33B669B9D1BFF1E /* Build configuration list for PBXNativeTarget "TimePicker" */;
+			buildPhases = (
+				72D0F8BBE17567EE727378BB74DD8C80 /* Headers */,
+				1308521A02F0BB816F12CB8DF041571E /* Sources */,
+				CC41DEC17E920EB1D20A8049971F4BA7 /* Frameworks */,
+				28B1887FD87C8076ABFF725BC5C4AD85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimePicker;
+			productName = TimePicker;
+			productReference = E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD391C9941B66C78392286FFFCFD700F /* IQDropDownTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59CC51D6699B4A2F97DAD5D7E17C475D /* Build configuration list for PBXNativeTarget "IQDropDownTextField" */;
+			buildPhases = (
+				4BA99DBE2EED61D6C9C8030ACB434B1C /* Headers */,
+				4C6F45211E3F1D18A8D3B09278EFF543 /* Sources */,
+				CCDE0892524163E9FA50E837CFE24E10 /* Frameworks */,
+				CDEC79C7F358C0A50B7C8CE164430CF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IQDropDownTextField;
+			productName = IQDropDownTextField;
+			productReference = BDE0C092019340CAEBF4CE823969C815 /* IQDropDownTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */,
+				FAFA782452D3B598A37FB459CD314120 /* Sources */,
+				9727840973A9C2692E58F7089A7C243E /* Frameworks */,
+				D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1230;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E7A04A107FF96BD4F6387C9AC4C6A48D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */,
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
+				830B5AB9E16163B4A1BA339D625FE46C /* Gifu */,
+				CD391C9941B66C78392286FFFCFD700F /* IQDropDownTextField */,
+				0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */,
+				BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */,
+				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1637D52521EF70529E9091617E2F70CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25FA478858624FE946B3866ED3A7A5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B1887FD87C8076ABFF725BC5C4AD85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7465A1319E37DADA12A8BAEB409143AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDEC79C7F358C0A50B7C8CE164430CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F059840FCFEC0F2A0E4DF532A7BB589A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08A0F7D54E6E96D496EF1270392D981E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */,
+				579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */,
+				412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */,
+				93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */,
+				0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */,
+				DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */,
+				A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */,
+				B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */,
+				D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */,
+				2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */,
+				4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1308521A02F0BB816F12CB8DF041571E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9511B04D9F8FC808A79F75555D9C0C57 /* NSLayoutConstraints.swift in Sources */,
+				E746373D728BEEDB30F726B275F6E6F2 /* TimeCalculator.swift in Sources */,
+				AE883588B21FB69D94C56F185CBE58D6 /* TimeFormat.swift in Sources */,
+				9F03163883272D820A7FEA2E96F8CD7C /* TimeInterval.swift in Sources */,
+				3C254704F2D4352A6026F0B36642C79E /* TimePicker-dummy.m in Sources */,
+				00619A58DE13185C8E4D550E59DB050E /* TimePicker.swift in Sources */,
+				A479E0839287C86EB34549B8B6EA8946 /* TimePickerConfig.swift in Sources */,
+				4D91A24F741D55D9990BFA93F5701A15 /* UIGestureRecognizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6F45211E3F1D18A8D3B09278EFF543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ECF594A87B2DEC35A225A3C969D6CC5 /* IQDropDownTextField-dummy.m in Sources */,
+				79DD7AB16901A4CE16A083E3BD5C5A83 /* IQDropDownTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22F16F1C73358E59AE260C86E3D1F1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */,
+				EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */,
+				CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */,
+				DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */,
+				80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */,
+				602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */,
+				0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */,
+				CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B389960A7703FF15F12A94912C66237C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1173245B11C2BDD4349156F0472CE74 /* Pods-Sprints-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD5662DAEF6A75395A36DEEEC0E78B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F8AB8B53B249C661F4BC634D4EC392 /* DateCollectionViewCell.swift in Sources */,
+				B8A78601EEB86322D91B7BE5B1B0FAC5 /* DateTimePicker+CollectionView.swift in Sources */,
+				69DB319F78528E5848263501EF9D947D /* DateTimePicker+UITableView.swift in Sources */,
+				ABBAF2224F657907AC107044CBDEA486 /* DateTimePicker-dummy.m in Sources */,
+				9F940FB6E2B35B04810CA60593353F68 /* DateTimePicker.swift in Sources */,
+				A3B4EBFFA53719C4EE534FBC89633A24 /* FullDateCollectionViewCell.swift in Sources */,
+				9B142A1B489CFEE122796886B2AFB9E9 /* StepCollectionViewFlowLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFA782452D3B598A37FB459CD314120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */,
+				BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */,
+				4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */,
+				6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */,
+				95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */,
+				842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */,
+				361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		355249D68606BF4C49C0C94175FB2769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DateTimePicker;
+			target = 31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */;
+			targetProxy = 6F5D8D84DC533232A08C21CD79CCD2AF /* PBXContainerItemProxy */;
+		};
+		5B8E8F1E130A66C7BA29CE4912258A72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyConstraints;
+			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
+			targetProxy = 0C70AE35202488117C4031C993524268 /* PBXContainerItemProxy */;
+		};
+		BC8C94D1743CE89B76A6EE7A4F604508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IQDropDownTextField;
+			target = CD391C9941B66C78392286FFFCFD700F /* IQDropDownTextField */;
+			targetProxy = 8084FC5E922C33E67FCA30C0EE0060EC /* PBXContainerItemProxy */;
+		};
+		C45C658AFF233C1AD454BC289770536B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = CFF0BCDC96F15311FD5CB66A0183860E /* PBXContainerItemProxy */;
+		};
+		E5A1AF6473AF0516E30E9870957DC610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gifu;
+			target = 830B5AB9E16163B4A1BA339D625FE46C /* Gifu */;
+			targetProxy = 0240955A468ED4B0A9B22770A6AC79A9 /* PBXContainerItemProxy */;
+		};
+		E90D8BBC35219D42FBECA80050E47529 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TimePicker;
+			target = BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */;
+			targetProxy = 4D29ECAE50F3C59FB74BB018E89D20E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FC1F0034542601DF1F5A76D5F10376C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABDEEB4D41CB05A265CF859C7430F8F /* TinyConstraints.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		29DF9A66DC7F566FCD4F4BBFC452D432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F474101C1A900FD999B8327FAFBECF /* TimePicker.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TimePicker/TimePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimePicker/TimePicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TimePicker/TimePicker.modulemap";
+				PRODUCT_MODULE_NAME = TimePicker;
+				PRODUCT_NAME = TimePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3B7165CE72FA0260993EC86E2AC48993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4EE4FBCEE2F1C5A3D1814EECAE8F73 /* TinyConstraints.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A17D27FFBCE427192C281661D3F5767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E6C917F9741D2AB70BDAB688CCF7E4 /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6133B189B40542305DBA62DD57C0A8DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD46A75212ACC18D992437B8CE0E69B /* IQDropDownTextField.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IQDropDownTextField/IQDropDownTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField.modulemap";
+				PRODUCT_MODULE_NAME = IQDropDownTextField;
+				PRODUCT_NAME = IQDropDownTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		855BA280B827E6D9A30B7999504CFC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8F2EC07D22C34D9A9FEDF815AC9791 /* DateTimePicker.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DateTimePicker/DateTimePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateTimePicker/DateTimePicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DateTimePicker/DateTimePicker.modulemap";
+				PRODUCT_MODULE_NAME = DateTimePicker;
+				PRODUCT_NAME = DateTimePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B28DAA7DDFFF9A20AD710664AC96ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7A17C74BC55C507DC6E8C590082E0B /* DropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C21E10536E660DBDC36E5EFF798B2C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B102EFC7B521C79D3823BE36B6F94944 /* DateTimePicker.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DateTimePicker/DateTimePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateTimePicker/DateTimePicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DateTimePicker/DateTimePicker.modulemap";
+				PRODUCT_MODULE_NAME = DateTimePicker;
+				PRODUCT_NAME = DateTimePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D18549E11A3EA0069E1BE5EB332C1A2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC8C2F0D042C1657893B9D69DDBD7E0C /* TimePicker.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TimePicker/TimePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimePicker/TimePicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TimePicker/TimePicker.modulemap";
+				PRODUCT_MODULE_NAME = TimePicker;
+				PRODUCT_NAME = TimePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4BD84D160BB5631FCF0514CB0327B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D57D8E2C9CA4D77D99674150CBB4AC43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD04A742DE0CCDCCDF19A80476D30E6 /* IQDropDownTextField.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IQDropDownTextField/IQDropDownTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField.modulemap";
+				PRODUCT_MODULE_NAME = IQDropDownTextField;
+				PRODUCT_NAME = IQDropDownTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DDA145A73C39DFCFE4523C0ADC738938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59BB90BD57DE948F3309C995DDD8B3C5 /* Gifu.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gifu/Gifu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Gifu/Gifu.modulemap";
+				PRODUCT_MODULE_NAME = Gifu;
+				PRODUCT_NAME = Gifu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E880EECC3218C35D488DFB71C9A9562B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546735229EBD02C3F2ABA9B4ED19EFF6 /* Gifu.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gifu/Gifu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Gifu/Gifu.modulemap";
+				PRODUCT_MODULE_NAME = Gifu;
+				PRODUCT_NAME = Gifu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EBD2DF02B5D312CA249A870A4757FBC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04BF61807C7C6D0918F26F2E99C6D024 /* Build configuration list for PBXNativeTarget "Gifu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E880EECC3218C35D488DFB71C9A9562B /* Debug */,
+				DDA145A73C39DFCFE4523C0ADC738938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C7926DA2E4E8F6C84C9F21EA38B67B /* Build configuration list for PBXNativeTarget "DateTimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21E10536E660DBDC36E5EFF798B2C53 /* Debug */,
+				855BA280B827E6D9A30B7999504CFC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF840770D4D967E6F9B4F1E5F24EAC7 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD2DF02B5D312CA249A870A4757FBC1 /* Debug */,
+				D4BD84D160BB5631FCF0514CB0327B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59CC51D6699B4A2F97DAD5D7E17C475D /* Build configuration list for PBXNativeTarget "IQDropDownTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6133B189B40542305DBA62DD57C0A8DE /* Debug */,
+				D57D8E2C9CA4D77D99674150CBB4AC43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BF76798308B8D51A33B669B9D1BFF1E /* Build configuration list for PBXNativeTarget "TimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18549E11A3EA0069E1BE5EB332C1A2F /* Debug */,
+				29DF9A66DC7F566FCD4F4BBFC452D432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED162CA822CAFF9F3B82904FBA2988C /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC1F0034542601DF1F5A76D5F10376C /* Debug */,
+				3B7165CE72FA0260993EC86E2AC48993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A17D27FFBCE427192C281661D3F5767 /* Debug */,
+				8B28DAA7DDFFF9A20AD710664AC96ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

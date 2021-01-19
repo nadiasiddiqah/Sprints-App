@@ -64,7 +64,7 @@ class SprintTimeViewController: UIViewController {
         
     }
     
-    // Runs before view appears
+    // Runs before view appeas
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)

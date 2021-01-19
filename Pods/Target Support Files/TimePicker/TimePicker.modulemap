@@ -1,0 +1,6 @@
+framework module TimePicker {
+  umbrella header "TimePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
