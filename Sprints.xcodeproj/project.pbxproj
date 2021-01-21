@@ -12,9 +12,10 @@
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
 		092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */; };
 		092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */; };
-		0935FFFC25B66ACD0071DF03 /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0935FFFA25B66ACD0071DF03 /* TaskListCell.swift */; };
-		0935FFFD25B66ACD0071DF03 /* TaskListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935FFFB25B66ACD0071DF03 /* TaskListCell.xib */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
+		09BBE53925B8F946007CC2F5 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53725B8F946007CC2F5 /* TaskCell.swift */; };
+		09BBE53A25B8F946007CC2F5 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09BBE53825B8F946007CC2F5 /* TaskCell.xib */; };
+		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
 		09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */; };
@@ -34,9 +35,10 @@
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		0935FFFA25B66ACD0071DF03 /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
-		0935FFFB25B66ACD0071DF03 /* TaskListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListCell.xib; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		09BBE53725B8F946007CC2F5 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		09BBE53825B8F946007CC2F5 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
 		09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */,
 				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
 				0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */,
+				09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,8 +139,8 @@
 				09D1AC0825AD09DF00F9E053 /* Resources */,
 				0903724625AFAB1E00A0AAD6 /* ViewControllers */,
 				094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */,
-				0935FFFA25B66ACD0071DF03 /* TaskListCell.swift */,
-				0935FFFB25B66ACD0071DF03 /* TaskListCell.xib */,
+				09BBE53725B8F946007CC2F5 /* TaskCell.swift */,
+				09BBE53825B8F946007CC2F5 /* TaskCell.xib */,
 			);
 			path = Sprints;
 			sourceTree = "<group>";
@@ -222,7 +225,7 @@
 				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
-				0935FFFD25B66ACD0071DF03 /* TaskListCell.xib in Resources */,
+				09BBE53A25B8F946007CC2F5 /* TaskCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +283,15 @@
 				0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */,
 				09ECD1CE259974B7006D301A /* AppDelegate.swift in Sources */,
 				09ECD1D0259974B7006D301A /* SceneDelegate.swift in Sources */,
+				09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */,
 				09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */,
 				0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */,
 				092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */,
+				09BBE53925B8F946007CC2F5 /* TaskCell.swift in Sources */,
 				092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */,
 				094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */,
 				09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */,
 				09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */,
-				0935FFFC25B66ACD0071DF03 /* TaskListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

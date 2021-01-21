@@ -32,8 +32,6 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var sprintButton: UIButton!
-   
-//    @IBOutlet weak var timeField: IQDropDownTextField!
     
     // MARK: - Instance Variables
     var context: NSManagedObjectContext!
@@ -49,11 +47,8 @@ class TaskListViewController: UIViewController {
         super.viewDidLoad()
         
         // Register TaskListCell.xib file
-        let taskCellNib = UINib(nibName: "TaskListCell", bundle: nil)
+        let taskCellNib = UINib(nibName: "TaskCell", bundle: nil)
         taskList.register(taskCellNib, forCellReuseIdentifier: "taskCell")
-        
-//        timeField.isOptionalDropDown = false
-//        timeField.itemList = ["0:15", "0:30", "0:45", "1:00", "1:30", "2:00", "2:30", "3:00"]
         
         // Define max height for table view
         taskList.maxHeight = 351
@@ -68,6 +63,7 @@ class TaskListViewController: UIViewController {
     
     }
     
+    
     // MARK: - Action Methods
     
     // Adds new cell in Table View
@@ -75,17 +71,15 @@ class TaskListViewController: UIViewController {
         taskCount += 1
         taskList.reloadData()
         taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
-//        // Adds TaskData item at the beginning of array
-//        taskData = [TaskData(name: "Task #1", time: ["0", "1", "2"])] + taskData
-//
-//        taskList.beginUpdates()
-//        // Adds first row
-//        taskList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-//        taskList.endUpdates()
     }
     
     // Saves data to Core Data
     @IBAction func pressedSprint(_ sender: Any) {
+    }
+    
+    // MARK: - Methods
+    @objc func pressedTimeButton(_ sender: UIButton) {
+        print("Button tapped")
     }
     
 }
@@ -101,17 +95,40 @@ extension TaskListViewController: UITableViewDataSource {
     // Return the cell to the insert in table view
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell
         
-        if let c = tableView.dequeueReusableCell(withIdentifier: "taskCell") {
-            cell = c
-        } else {
-            let c = UITableViewCell(style: .default, reuseIdentifier: "taskCell")
-            cell = c
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskListCell
+        
+//        tableView.beginUpdates()
+        cell.timeButton.tag = indexPath.row
+        cell.timeButton.addTarget(self, action: #selector(pressedTimeButton(_:)), for: .touchUpInside)
+//        tableView.endUpdates()
+        
+        return cell
+        
+//        var cell: TaskListCell! = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskListCell
+//        if cell == nil {
+//            let taskCellNib = UINib(nibName: "TaskListCell", bundle: nil)
+//            tableView.register(taskCellNib, forCellReuseIdentifier: "taskCell")
+//            cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskListCell
+//        }
+        
+        // Configure cell
+//        var cell: TaskListCell!
+//
+//        // If there is an existing cell, it returns reusable table view cell
+//        if let c = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskListCell {
+//            cell = c
+//        // If there is no cell, it initializes new reusable table view cell
+//        } else {
+//            let c = TaskListCell(style: .default, reuseIdentifier: "taskCell")
+//            cell = c
+//        }
+//
+//        cell.timeButton.tag = indexPath.row
+//        cell.timeButton.addTarget(self, action: #selector(pressedTimeButton(_:)), for: .touchUpInside)
+        
         
         //cell.textLabel?.text = "New cell \(indexPath.row+1)"
-        return cell
         
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
 //
@@ -125,11 +142,19 @@ extension TaskListViewController: UITableViewDataSource {
 //        return cell
     }
     
+//    func tableView(_ tableView: UITableView,
+//                   didSelectRowAt indexPath: IndexPath) {
+//
+//        if let cell = tableView.cellForRow(at: indexPath) as? TaskListCell {
+//            cell.timeButton.tag = indexPath.row
+//            cell.timeButton.addTarget(self, action: #selector(pressedTimeButton(_:)), for: .touchUpInside)
+//        }
+//    }
     
 }
 
 extension TaskListViewController: UITableViewDelegate {
-    
 }
+
 
 
