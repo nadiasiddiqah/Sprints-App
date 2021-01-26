@@ -12,7 +12,7 @@ import CoreData
 // MARK: - TimerData Class
 
 // Custom class type to set hour/min options in UIPickerView
-class TimerData {
+public class TimerData {
     var hour: String
     var minute: [String]
     
