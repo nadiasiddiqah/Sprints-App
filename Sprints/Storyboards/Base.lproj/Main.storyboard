@@ -32,7 +32,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyN-4o-E1T"/>
                                     <segue destination="14o-Td-6ft" kind="show" id="u5g-sm-9hb"/>
                                 </connections>
                             </button>
@@ -54,6 +53,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sWg-Yh-7C4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-3A-HZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="14o-Td-6ft" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FhX-7X-i6y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NxI-Bo-5Mv">
@@ -64,7 +64,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fip-Gk-wbf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-3A-HZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="70"/>
         </scene>
@@ -163,17 +162,92 @@
         <!--Select Time View Controller-->
         <scene sceneID="UAr-qi-5ir">
             <objects>
-                <viewController id="8Lv-4k-Yq5" customClass="SelectTimeViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="8Lv-4k-Yq5" customClass="SelectTimeViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKP-ni-B2d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fv7-6A-OQq">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8Q-UU-gsw">
+                                        <rect key="frame" x="88.5" y="41" width="63" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="G8M-W7-LEN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="pN4-Th-PxG">
+                                        <rect key="frame" x="3" y="106" width="234" height="31"/>
+                                        <connections>
+                                            <action selector="adjustTimeSlider:" destination="8Lv-4k-Yq5" eventType="valueChanged" id="z04-6v-Ekd"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEb-rz-a1t">
+                                        <rect key="frame" x="60" y="164" width="120" height="35"/>
+                                        <color key="backgroundColor" red="0.28018331530000001" green="0.26929908990000001" blue="0.70195978879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="T1V-p4-Cw5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Save Time">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="DPZ-zR-kdI" kind="unwind" unwindAction="unwindFromSelectTime:" id="rtD-uu-1Dk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="eEb-rz-a1t" firstAttribute="leading" secondItem="Fv7-6A-OQq" secondAttribute="leading" constant="60" id="696-TI-m1Q"/>
+                                    <constraint firstAttribute="height" constant="240" id="A2Z-Fp-Zlh"/>
+                                    <constraint firstItem="pN4-Th-PxG" firstAttribute="top" secondItem="v8Q-UU-gsw" secondAttribute="bottom" constant="29" id="HDZ-RW-PWe"/>
+                                    <constraint firstAttribute="width" constant="240" id="Jtl-LD-Ewf"/>
+                                    <constraint firstItem="pN4-Th-PxG" firstAttribute="leading" secondItem="Fv7-6A-OQq" secondAttribute="leading" constant="5" id="MeJ-FV-NWz"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v8Q-UU-gsw" secondAttribute="trailing" constant="20" symbolic="YES" id="NAa-0X-yYu"/>
+                                    <constraint firstAttribute="trailing" secondItem="pN4-Th-PxG" secondAttribute="trailing" constant="5" id="Nnv-RN-Ixv"/>
+                                    <constraint firstItem="v8Q-UU-gsw" firstAttribute="top" secondItem="Fv7-6A-OQq" secondAttribute="top" constant="41" id="UH3-M9-V9U"/>
+                                    <constraint firstItem="v8Q-UU-gsw" firstAttribute="leading" secondItem="Fv7-6A-OQq" secondAttribute="leading" constant="88.5" id="Vvy-MF-In7"/>
+                                    <constraint firstAttribute="bottom" secondItem="eEb-rz-a1t" secondAttribute="bottom" constant="41" id="e4r-ny-TLR"/>
+                                    <constraint firstItem="eEb-rz-a1t" firstAttribute="top" secondItem="pN4-Th-PxG" secondAttribute="bottom" constant="28" id="wvk-4H-ZLx"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eEb-rz-a1t" secondAttribute="trailing" constant="20" symbolic="YES" id="xpJ-3l-cMd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ayx-SX-RKI"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="0.80359053938356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fv7-6A-OQq" firstAttribute="centerX" secondItem="ayx-SX-RKI" secondAttribute="centerX" id="Oau-ZH-CJV"/>
+                            <constraint firstItem="Fv7-6A-OQq" firstAttribute="centerY" secondItem="ayx-SX-RKI" secondAttribute="centerY" id="u1E-Qt-T9b"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="reL-fY-FkF"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="saveTimeButton" destination="eEb-rz-a1t" id="UGa-xQ-nbe"/>
+                        <outlet property="setTimeLabel" destination="v8Q-UU-gsw" id="pbR-qF-OIi"/>
+                        <outlet property="setTimeSlider" destination="pN4-Th-PxG" id="XQo-7m-H3B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rID-GS-deo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DPZ-zR-kdI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="87" y="834"/>
+            <point key="canvasLocation" x="838" y="796"/>
         </scene>
         <!--Task List View Controller-->
         <scene sceneID="dEc-T8-gHU">
@@ -253,6 +327,56 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="351"/>
                                         <color key="backgroundColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="Qbn-yl-Gzr" userLabel="Task Cell" customClass="TaskCell" customModule="Sprints" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbn-yl-Gzr" id="Rrx-xy-4Z4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-g4-vxp">
+                                                            <rect key="frame" x="14" y="5" width="345" height="34"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-Vu-wC9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="hJy-Re-Um0"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-0E-1dq">
+                                                                    <rect key="frame" x="295" y="0.0" width="50" height="34"/>
+                                                                    <color key="backgroundColor" red="0.34721022839999999" green="0.33570402859999998" blue="0.85815113779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hOB-VU-XMb"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                    <state key="normal" title="Set Time">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <segue destination="8Lv-4k-Yq5" kind="presentation" identifier="selectTime" modalPresentationStyle="overCurrentContext" id="yAa-dO-d5Y"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="nameField" destination="Dao-Vu-wC9" id="LHD-Er-BNc"/>
+                                                    <outlet property="timeButton" destination="9Tm-0E-1dq" id="y5T-ju-NOr"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -556,9 +680,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
