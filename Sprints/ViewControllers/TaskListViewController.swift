@@ -33,15 +33,13 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var sprintButton: UIButton!
     
-    
-    
     // MARK: - Instance Variables
     var context: NSManagedObjectContext!
     var savedTotalTime: [String] = []
     
     var taskData = [TaskData]()
     var savedTaskName = [String]()
-    var savedTaskTime = [String]()
+    var savedTaskTime: [String] = []
     var selectedTaskTime = ""
     
     var taskCount: Int = 1
@@ -65,34 +63,20 @@ class TaskListViewController: UIViewController {
         timeLeftLabel.text = totalTimeLabel.text
         
         // Update button title
-
     }
     
     // MARK: - Navigation
     
-    // Unwind segue to update selectedTaskTime
-    @IBAction func selectTimeDidSaveTime(_ segue: UIStoryboardSegue) {
-        let controller = segue.source as! SelectTimeViewController
-        selectedTaskTime = controller.selectedTaskTime
+    // Unwind from SelectTimeVC
+    @IBAction func unwindFromSelectTime(_ sender: UIStoryboardSegue) {
+        if sender.source is SelectTimeViewController {
+            if let controller = sender.source as? SelectTimeViewController {
+                savedTaskTime.append(controller.selectedTaskTime)
+            }
+            taskList.reloadData()
+        }
     }
-    
-//    // Segue runs when timeButton is pressed
-//    @IBAction func saveRowIndexPath(_ sender: UIButton) {
-//        let buttonPosition = sender.convert(sender.bounds.origin, to: taskList)
-//        if let indexPath = taskList.indexPathForRow(at: buttonPosition) {
-//            selectedRowIndex = indexPath
-//        }
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "setTime" {
-//            let controller = segue.destination as! SelectTimeViewController
-//            controller.selectedRowIndex = selectedRowIndex
-//        }
-//    }
-    
-    
-    
+
     // MARK: - Action Methods
     
     // Adds new cell in Table View
@@ -122,14 +106,13 @@ extension TaskListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
         
-        
         // Configure timeButton in cell
         cell.timeButton.tag = indexPath.row
         
-        if selectedTaskTime != "" {
-            cell.timeButton.setTitle(savedTaskTime[indexPath.row], for: .normal)
+        if savedTaskTime.isEmpty {
+            cell.timeButton.setTitle("Set time", for: .normal)
         } else {
-            print(selectedTaskTime)
+            cell.timeButton.setTitle(savedTaskTime[indexPath.row], for: .normal)
         }
         
 //        // Configure nameField in cell
@@ -144,11 +127,11 @@ extension TaskListViewController: UITableViewDataSource {
 extension TaskListViewController: UITableViewDelegate {
     
     // De-selects a row after its selected
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+//    func tableView(_ tableView: UITableView,
+//                   didSelectRowAt indexPath: IndexPath) {
+//
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
 }
 
 extension TaskListViewController: UITextFieldDelegate {

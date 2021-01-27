@@ -14,12 +14,13 @@ class SelectTimeViewController: UIViewController {
     
     var hour: String = "0"
     var min: String = "00"
-    var selectedTaskTime = ""
+    var selectedTaskTime: String!
 //    var selectedRowIndex: IndexPath = []
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
     @IBOutlet weak var setTimeSlider: UISlider!
+    @IBOutlet weak var saveTimeButton: UIButton!
     
     // MARK: - Action Methods
     
@@ -27,23 +28,44 @@ class SelectTimeViewController: UIViewController {
     @IBAction func adjustTimeSlider(_ sender: UISlider) {
         timeFloat = sender.value
         updateTimeLabel()
+        enableSaveTimeButton()
+    }
+    
+    func enableSaveTimeButton() {
+        if (hour, min) == ("0", "00") {
+            // Animate disabling save button
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
+                self.saveTimeButton.alpha = 0.6
+            } completion: { _ in
+                self.saveTimeButton.isEnabled = false
+            }
+        } else {
+            // Animate enabling save button
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
+                self.saveTimeButton.alpha = 1
+            } completion: { _ in
+                self.saveTimeButton.isEnabled = true
+            }
+        }
     }
     
     // Save set time + returns to TaskList screen
-    @IBAction func saveTimeButton(_ sender: UIButton) {
-        if (hour, min) != ("0", "00") {
-            selectedTaskTime = "\(hour + ":" + min)"
-        } else {
-            let alert = UIAlertController(title: "Error", message: "Please enter valid time", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
-        }
-    }
+//    @IBAction func saveTimeButton(_ sender: UIButton) {
+//        if (hour, min) != ("0", "00") {
+//            selectedTaskTime = "\(hour + ":" + min)"
+//            performSegue(withIdentifier: "unwindToTaskList", sender: self)
+//        } else {
+//            let alert = UIAlertController(title: "Error", message: "Please enter valid time", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alert.addAction(action)
+//            present(alert, animated: true, completion: nil)
+//        }
+//    }
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        enableSaveTimeButton()
         
         // Initialize setTimeLabel
         updateTimeLabel()
@@ -90,14 +112,22 @@ class SelectTimeViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // Segue runs when unwind segue is triggered
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "setTime" {
-            let controller = segue.destination as! TaskListViewController
-            controller.selectedTaskTime = selectedTaskTime
-            //controller.taskList.reloadRows(at: [selectedRowIndex], with: .automatic)
+        if let time = setTimeLabel.text {
+            selectedTaskTime = time
         }
     }
+
+    
+////  Segue runs when unwind segue is triggered
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        selectedTaskTime = "\(hour + ":" + min)"
+////        if segue.identifier == "savedTime" {
+////            let controller = segue.destination as! TaskListViewController
+////            controller.selectedTaskTime = selectedTaskTime
+////            //controller.taskList.reloadRows(at: [selectedRowIndex], with: .automatic)
+////        }
+//    }
 
 
 }

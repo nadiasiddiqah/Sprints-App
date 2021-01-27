@@ -53,6 +53,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sWg-Yh-7C4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-3A-HZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="14o-Td-6ft" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FhX-7X-i6y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NxI-Bo-5Mv">
@@ -63,7 +64,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fip-Gk-wbf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-3A-HZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="70"/>
         </scene>
@@ -202,8 +202,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="saveTimeButton:" destination="8Lv-4k-Yq5" eventType="touchUpInside" id="HVM-Hs-LE3"/>
-                                            <segue destination="DPZ-zR-kdI" kind="unwind" unwindAction="selectTimeDidSaveTime:" id="WoX-0l-fdS"/>
+                                            <segue destination="DPZ-zR-kdI" kind="unwind" unwindAction="unwindFromSelectTime:" id="rtD-uu-1Dk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -240,6 +239,7 @@
                     <navigationItem key="navigationItem" id="reL-fY-FkF"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="saveTimeButton" destination="eEb-rz-a1t" id="UGa-xQ-nbe"/>
                         <outlet property="setTimeLabel" destination="v8Q-UU-gsw" id="pbR-qF-OIi"/>
                         <outlet property="setTimeSlider" destination="pN4-Th-PxG" id="XQo-7m-H3B"/>
                     </connections>
