@@ -14,13 +14,29 @@ class SelectTimeViewController: UIViewController {
     
     var hour: String = "0"
     var min: String = "00"
-    var selectedTaskTime: String!
-//    var selectedRowIndex: IndexPath = []
+    var selectedTaskTime: String = ""
+    var selectedRowIndex: Int = 0
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
     @IBOutlet weak var setTimeSlider: UISlider!
     @IBOutlet weak var saveTimeButton: UIButton!
+    
+    // MARK: - View Controller Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        enableSaveTimeButton()
+        
+        // Initialize setTimeLabel
+        updateTimeLabel()
+        
+        // Initialize setTimeSlider
+        setTimeSlider.value = timeFloat
+        
+        // Observes value changes in setTimeSlider
+        setTimeSlider.addTarget(self, action: #selector(adjustTimeSlider(_:)), for: .valueChanged)
+
+    }
     
     // MARK: - Action Methods
     
@@ -62,22 +78,6 @@ class SelectTimeViewController: UIViewController {
 //        }
 //    }
     
-    // MARK: - View Controller Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        enableSaveTimeButton()
-        
-        // Initialize setTimeLabel
-        updateTimeLabel()
-        
-        // Initialize setTimeSlider
-        setTimeSlider.value = timeFloat
-        
-        // Observes value changes in setTimeSlider
-        setTimeSlider.addTarget(self, action: #selector(adjustTimeSlider(_:)), for: .valueChanged)
-
-    }
-    
     // MARK: - Methods
     
     // Update Time Label with Slider Value
@@ -112,6 +112,7 @@ class SelectTimeViewController: UIViewController {
     
     // MARK: - Navigation
     
+    // Segue to TaskListVC (runs when unwind segue is triggered)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let time = setTimeLabel.text {
             selectedTaskTime = time
@@ -119,7 +120,7 @@ class SelectTimeViewController: UIViewController {
     }
 
     
-////  Segue runs when unwind segue is triggered
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        selectedTaskTime = "\(hour + ":" + min)"
 ////        if segue.identifier == "savedTime" {

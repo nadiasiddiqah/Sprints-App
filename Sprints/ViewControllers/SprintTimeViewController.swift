@@ -141,8 +141,6 @@ class SprintTimeViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 // MARK: - UIPickerViewDataSource protocol

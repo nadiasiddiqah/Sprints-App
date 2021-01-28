@@ -38,14 +38,14 @@ class TaskListViewController: UIViewController {
     var savedTotalTime: [String] = []
     
     var taskData = [TaskData]()
-    var savedTaskName = [String]()
-    var savedTaskTime: [String] = []
-    var selectedTaskTime = ""
     
     var taskCount: Int = 1
     
-//    var selectedRowIndex: IndexPath = []
+    var savedTaskName = [String]()
     
+    var savedTaskTime: String = ""
+    var savedRowIndex: Int = 0
+    var taskTime = [Int:String]()
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -53,6 +53,7 @@ class TaskListViewController: UIViewController {
         
         // Define max height for table view
         taskList.maxHeight = 351
+        taskTime[0] = "Set time"
         
         // Connect table view's dataSource and delegate to current view controller
         taskList.delegate = self
@@ -67,21 +68,55 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // Unwind from SelectTimeVC
-    @IBAction func unwindFromSelectTime(_ sender: UIStoryboardSegue) {
-        if sender.source is SelectTimeViewController {
-            if let controller = sender.source as? SelectTimeViewController {
-                savedTaskTime.append(controller.selectedTaskTime)
-            }
+    // Segue to SelectTimeVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSelectTime" {
+            let controller = segue.destination as! SelectTimeViewController
+            controller.selectedRowIndex = taskCount-1
             taskList.reloadData()
         }
     }
-
+    
+    // Unwind from SelectTimeVC
+    @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
+        let controller = segue.source as! SelectTimeViewController
+        savedTaskTime = controller.selectedTaskTime
+        savedRowIndex = controller.selectedRowIndex
+        taskTime[savedRowIndex] = savedTaskTime
+        
+        taskList.reloadRows(at: [IndexPath(row: savedRowIndex, section: 0)], with: .automatic)
+    }
+    
+//    // Segue to SelectTimeVC
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "segueToSelectTime" {
+//            let controller = segue.destination as! SelectTimeViewController
+//            if let rowIndex = taskList.indexPathForSelectedRow?.row {
+//                print(rowIndex)
+//                controller.selectedRowIndex = rowIndex
+//                savedRowIndex = rowIndex
+//            }
+//            taskList.reloadData()
+//        }
+//    }
+    
+//    // Unwind from SelectTimeVC
+//    @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
+//        let controller = segue.source as! SelectTimeViewController
+//        savedTaskTime = controller.selectedTaskTime
+//        savedRowIndex = controller.selectedRowIndex
+//        taskTime[savedRowIndex] = savedTaskTime
+//
+//        taskList.reloadRows(at: [IndexPath(row: savedRowIndex, section: 0)], with: .automatic)
+//    }
+    
     // MARK: - Action Methods
     
     // Adds new cell in Table View
     @IBAction func pressedAddTask(_ sender: UIButton) {
         taskCount += 1
+        savedRowIndex += 1
+        taskTime[taskCount-1] = "Set time"
         taskList.reloadData()
         taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
     }
@@ -104,16 +139,34 @@ extension TaskListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
+        var cell: TaskCell
+        
+        if let c = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskCell {
+            cell = c
+        } else {
+            let c = TaskCell(style: .default, reuseIdentifier: "taskCell")
+            cell = c
+        }
+        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
         
         // Configure timeButton in cell
-        cell.timeButton.tag = indexPath.row
+        cell.nameField.text = "New cell \(indexPath.row)"
         
-        if savedTaskTime.isEmpty {
-            cell.timeButton.setTitle("Set time", for: .normal)
-        } else {
-            cell.timeButton.setTitle(savedTaskTime[indexPath.row], for: .normal)
-        }
+        
+        cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
+        
+//        if taskTime[indexPath.row] == "Set time" {
+//            cell.timeButton.setTitle("Set time", for: .normal)
+//        } else if taskTime[indexPath.row] != "Set time" {
+//            cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
+//        }
+        
+//        if savedTaskTime.isEmpty {
+//            cell.timeButton.setTitle("Set time", for: .normal)
+//        } else {
+//            cell.timeButton.setTitle(savedTaskTime[indexPath.row], for: .normal)
+//        }
         
 //        // Configure nameField in cell
 //        cell.nameField.tag = indexPath.row
@@ -127,11 +180,11 @@ extension TaskListViewController: UITableViewDataSource {
 extension TaskListViewController: UITableViewDelegate {
     
     // De-selects a row after its selected
-//    func tableView(_ tableView: UITableView,
-//                   didSelectRowAt indexPath: IndexPath) {
-//
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension TaskListViewController: UITextFieldDelegate {
