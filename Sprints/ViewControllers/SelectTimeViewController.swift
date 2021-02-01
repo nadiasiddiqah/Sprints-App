@@ -14,8 +14,7 @@ class SelectTimeViewController: UIViewController {
     
     var hour: String = "0"
     var min: String = "00"
-    var selectedTaskTime: String = ""
-    var selectedRowIndex: Int = 0
+    var selectedTaskTime = String()
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
@@ -35,7 +34,6 @@ class SelectTimeViewController: UIViewController {
         
         // Observes value changes in setTimeSlider
         setTimeSlider.addTarget(self, action: #selector(adjustTimeSlider(_:)), for: .valueChanged)
-
     }
     
     // MARK: - Action Methods
@@ -65,19 +63,6 @@ class SelectTimeViewController: UIViewController {
         }
     }
     
-    // Save set time + returns to TaskList screen
-//    @IBAction func saveTimeButton(_ sender: UIButton) {
-//        if (hour, min) != ("0", "00") {
-//            selectedTaskTime = "\(hour + ":" + min)"
-//            performSegue(withIdentifier: "unwindToTaskList", sender: self)
-//        } else {
-//            let alert = UIAlertController(title: "Error", message: "Please enter valid time", preferredStyle: .alert)
-//            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//            alert.addAction(action)
-//            present(alert, animated: true, completion: nil)
-//        }
-//    }
-    
     // MARK: - Methods
     
     // Update Time Label with Slider Value
@@ -85,8 +70,6 @@ class SelectTimeViewController: UIViewController {
         
         // Convert time from Float to Int
         let timeInt = Int(timeFloat)
-        
-        // Initialize setTimeLabel
         let timeSet = "\(hour + ":" + min)"
 
         // Set hour value
@@ -94,7 +77,6 @@ class SelectTimeViewController: UIViewController {
         
         // Check min conditions + set min value
         let minCheck = timeInt % 60
-        
         switch minCheck {
         case 0:
             min = "00"
@@ -109,7 +91,6 @@ class SelectTimeViewController: UIViewController {
     }
     
 
-    
     // MARK: - Navigation
     
     // Segue to TaskListVC (runs when unwind segue is triggered)
@@ -118,17 +99,5 @@ class SelectTimeViewController: UIViewController {
             selectedTaskTime = time
         }
     }
-
-    
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        selectedTaskTime = "\(hour + ":" + min)"
-////        if segue.identifier == "savedTime" {
-////            let controller = segue.destination as! TaskListViewController
-////            controller.selectedTaskTime = selectedTaskTime
-////            //controller.taskList.reloadRows(at: [selectedRowIndex], with: .automatic)
-////        }
-//    }
-
 
 }

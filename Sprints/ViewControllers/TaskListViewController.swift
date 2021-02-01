@@ -40,11 +40,9 @@ class TaskListViewController: UIViewController {
     var taskData = [TaskData]()
     
     var taskCount: Int = 1
+    var rowIndex = Int()
     
-    var savedTaskName = [String]()
-    
-    var savedTaskTime: String = ""
-    var savedRowIndex: Int = 0
+    var taskName = [Int:String]()
     var taskTime = [Int:String]()
     
     // MARK: - View Controller Methods
@@ -62,60 +60,23 @@ class TaskListViewController: UIViewController {
         // Update time labels on screen
         totalTimeLabel.text = "\(savedTotalTime[0] + ":" + savedTotalTime[1])"
         timeLeftLabel.text = totalTimeLabel.text
-        
-        // Update button title
     }
     
     // MARK: - Navigation
     
-    // Segue to SelectTimeVC
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToSelectTime" {
-            let controller = segue.destination as! SelectTimeViewController
-            controller.selectedRowIndex = taskCount-1
-            taskList.reloadData()
-        }
-    }
-    
     // Unwind from SelectTimeVC
     @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! SelectTimeViewController
-        savedTaskTime = controller.selectedTaskTime
-        savedRowIndex = controller.selectedRowIndex
-        taskTime[savedRowIndex] = savedTaskTime
+        taskTime[rowIndex] = controller.selectedTaskTime
         
-        taskList.reloadRows(at: [IndexPath(row: savedRowIndex, section: 0)], with: .automatic)
+        taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
     }
-    
-//    // Segue to SelectTimeVC
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "segueToSelectTime" {
-//            let controller = segue.destination as! SelectTimeViewController
-//            if let rowIndex = taskList.indexPathForSelectedRow?.row {
-//                print(rowIndex)
-//                controller.selectedRowIndex = rowIndex
-//                savedRowIndex = rowIndex
-//            }
-//            taskList.reloadData()
-//        }
-//    }
-    
-//    // Unwind from SelectTimeVC
-//    @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
-//        let controller = segue.source as! SelectTimeViewController
-//        savedTaskTime = controller.selectedTaskTime
-//        savedRowIndex = controller.selectedRowIndex
-//        taskTime[savedRowIndex] = savedTaskTime
-//
-//        taskList.reloadRows(at: [IndexPath(row: savedRowIndex, section: 0)], with: .automatic)
-//    }
     
     // MARK: - Action Methods
     
     // Adds new cell in Table View
     @IBAction func pressedAddTask(_ sender: UIButton) {
         taskCount += 1
-        savedRowIndex += 1
         taskTime[taskCount-1] = "Set time"
         taskList.reloadData()
         taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
@@ -139,41 +100,37 @@ extension TaskListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
         
-        if let c = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskCell {
-            cell = c
-        } else {
-            let c = TaskCell(style: .default, reuseIdentifier: "taskCell")
-            cell = c
-        }
+        cell.delegate = self
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
+        // Configure nameField in taskCell
+        cell.nameField.text = taskName[indexPath.row]
+        cell.nameField.clearButtonMode = .always
         
-        // Configure timeButton in cell
-        cell.nameField.text = "New cell \(indexPath.row)"
-        
-        
+        // Configure timeButton in taskCell
         cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
         
-//        if taskTime[indexPath.row] == "Set time" {
-//            cell.timeButton.setTitle("Set time", for: .normal)
-//        } else if taskTime[indexPath.row] != "Set time" {
-//            cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
-//        }
-        
-//        if savedTaskTime.isEmpty {
-//            cell.timeButton.setTitle("Set time", for: .normal)
-//        } else {
-//            cell.timeButton.setTitle(savedTaskTime[indexPath.row], for: .normal)
-//        }
-        
-//        // Configure nameField in cell
-//        cell.nameField.tag = indexPath.row
-//        cell.nameField.delegate = self
+        if cell.timeButton.currentTitle != "Set time" {
+            cell.timeButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+        } else {
+            cell.timeButton.setTitle("Set time", for: .normal)
+            cell.timeButton.backgroundColor = UIColor.systemIndigo
+        }
         
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView,
+//                   commit editingStyle: UITableViewCell.EditingStyle,
+//                   forRowAt indexPath: IndexPath) {
+//        taskName[indexPath.row] = nil
+//        taskTime[indexPath.row] = nil
+//
+//        taskCount -= 1
+//        taskList.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .automatic)
+//        taskList.reloadData()
+//    }
     
 }
 
@@ -187,20 +144,29 @@ extension TaskListViewController: UITableViewDelegate {
     }
 }
 
-extension TaskListViewController: UITextFieldDelegate {
+extension TaskListViewController: TaskCellDelegate {
+    func nameFieldDidEndEditing(onCell cell: TaskCell) {
+        if let indexPath = taskList.indexPath(for: cell) {
+            rowIndex = indexPath.row
+            print("Task edited on row \(indexPath.row)")
+        }
+        taskName[rowIndex] = cell.nameField.text
+        print(taskName)
+        cell.nameField.resignFirstResponder()
+    }
     
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        if let savedText = textField.text {
-//            savedTaskName.append(savedText)
-//        } else {
-//            savedTaskName.append("")
-//        }
-//    }
-    
-    // Resigns text field in focus + dismisses upon pressing return
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool {
+        cell.nameField.resignFirstResponder()
         return true
     }
+    
+    func pressedTimeButton(onCell cell: TaskCell) {
+        if let indexPath = taskList.indexPath(for: cell) {
+            rowIndex = indexPath.row
+            print("Button tapped on row \(indexPath.row)")
+            print(taskTime)
+        }
+    }
+
 }
 

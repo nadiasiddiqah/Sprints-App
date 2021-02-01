@@ -7,37 +7,55 @@
 
 import UIKit
 
-class TaskCell: UITableViewCell {
+protocol TaskCellDelegate: class {
+    func pressedTimeButton(onCell cell: TaskCell)
+    func nameFieldDidEndEditing(onCell cell: TaskCell)
+    func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool
+}
 
+class TaskCell: UITableViewCell, UITextFieldDelegate {
+
+    // MARK: - Instance Variables
+    weak var delegate: TaskCellDelegate?
+    
     // MARK: - Outlet Variables
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var timeButton: UIButton!
     
-//    var indexPath: IndexPath?
-    
-    // MARK: - Helper Methods
-    
-    
-    
-//    @objc func showSelectTime(_ sender: UIButton) {
-//        performSegue(withIdentifier: "selectTime", sender: nil)
-//    }
-    
-    
     // MARK: - Table View Cell Methods
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        delegate = nil
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        nameField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-//        if timeButton.isSelected {
-//            timeButton.addTarget(self, action: #selector(showSelectTime(_:)), for: .touchUpInside)
-//        }
-
         // Configure the view for the selected state
     }
+    
+    // MARK: - TaskCellDelegate Methods
+    @IBAction func tapTimeButton(_ sender: UIButton) {
+        delegate?.pressedTimeButton(onCell: self)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.nameFieldDidEndEditing(onCell: self)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.nameFieldShouldReturn(onCell: self)
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // MARK: - Helper Methods
+    
 
 }
+
+

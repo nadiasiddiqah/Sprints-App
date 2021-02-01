@@ -268,7 +268,7 @@
                                 <color key="progressTintColor" systemColor="systemGreenColor"/>
                                 <color key="trackTintColor" systemColor="separatorColor"/>
                             </progressView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-Y0-k5c">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-Y0-k5c" userLabel="Time Left Stack">
                                 <rect key="frame" x="214" y="295" width="80" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptY-bG-fXM">
@@ -294,7 +294,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X69-ou-aMS">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X69-ou-aMS" userLabel="Total Time Stack">
                                 <rect key="frame" x="120" y="295" width="80" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Rp-CTs">
@@ -320,7 +320,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-yF-BA0">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-yF-BA0" userLabel="Task List Stack">
                                 <rect key="frame" x="20" y="365" width="374" height="393"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="351" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crq-yl-GxC" customClass="SelfSizedTableView" customModule="Sprints" customModuleProvider="target">
@@ -363,6 +363,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
+                                                                        <action selector="tapTimeButton:" destination="Qbn-yl-Gzr" eventType="touchUpInside" id="3Oa-S2-sWZ"/>
                                                                         <segue destination="8Lv-4k-Yq5" kind="presentation" identifier="segueToSelectTime" modalPresentationStyle="overCurrentContext" id="T1O-Et-07o"/>
                                                                     </connections>
                                                                 </button>
@@ -373,14 +374,12 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Ws6-g4-vxp" secondAttribute="bottom" constant="5" id="0iN-rI-SE4"/>
                                                         <constraint firstItem="Ws6-g4-vxp" firstAttribute="centerX" secondItem="Rrx-xy-4Z4" secondAttribute="centerX" id="2oT-5z-pYA"/>
+                                                        <constraint firstItem="Ws6-g4-vxp" firstAttribute="top" secondItem="Rrx-xy-4Z4" secondAttribute="top" constant="5" id="CIT-Jr-kbz"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="Ws6-g4-vxp" secondAttribute="bottom" constant="5" id="PLe-xl-d3K"/>
-                                                    <constraint firstItem="Ws6-g4-vxp" firstAttribute="top" secondItem="Qbn-yl-Gzr" secondAttribute="top" constant="5" id="Yg0-uh-CkO"/>
-                                                </constraints>
                                                 <connections>
                                                     <outlet property="nameField" destination="Dao-Vu-wC9" id="LHD-Er-BNc"/>
                                                     <outlet property="timeButton" destination="9Tm-0E-1dq" id="y5T-ju-NOr"/>
