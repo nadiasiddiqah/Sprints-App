@@ -11,10 +11,10 @@ class SelectTimeViewController: UIViewController {
     
     // MARK: - Instance Variables
     var timeFloat: Float = 0
+    var timeStep: Float = 15
     
-    var hour: String = "0"
-    var min: String = "00"
     var selectedTaskTime = String()
+    var selectedTaskTimeInt = Int()
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
@@ -40,13 +40,14 @@ class SelectTimeViewController: UIViewController {
     
     // Updates UISlider and setTimeLabel value
     @IBAction func adjustTimeSlider(_ sender: UISlider) {
-        timeFloat = sender.value
+        timeFloat = round(sender.value / timeStep) * timeStep
+        sender.value = timeFloat
         updateTimeLabel()
         enableSaveTimeButton()
     }
     
     func enableSaveTimeButton() {
-        if (hour, min) == ("0", "00") {
+        if selectedTaskTimeInt == 0 {
             // Animate disabling save button
             UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
                 self.saveTimeButton.alpha = 0.6
@@ -70,24 +71,15 @@ class SelectTimeViewController: UIViewController {
         
         // Convert time from Float to Int
         let timeInt = Int(timeFloat)
-        let timeSet = "\(hour + ":" + min)"
 
-        // Set hour value
-        hour = "\(timeInt / 60)"
+        // Set hour/min value
+        let hour = timeInt / 60
+        let min = timeInt % 60
         
-        // Check min conditions + set min value
-        let minCheck = timeInt % 60
-        switch minCheck {
-        case 0:
-            min = "00"
-        case 1...9:
-            min = "0" + "\(minCheck)"
-        default:
-            min = "\(minCheck)"
-        }
+        selectedTaskTimeInt = hour + min
         
         // Update setTimeLabel
-        setTimeLabel.text = timeSet
+        setTimeLabel.text = String(format: "%01d:%02d", hour, min)
     }
     
 

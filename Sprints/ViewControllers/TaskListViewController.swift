@@ -34,8 +34,8 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var sprintButton: UIButton!
     
     // MARK: - Instance Variables
-    var context: NSManagedObjectContext!
-    var savedTotalTime: [String] = []
+//    var context: NSManagedObjectContext!
+    var savedTotalTime: Int!
     
     var taskData = [TaskData]()
     
@@ -60,7 +60,10 @@ class TaskListViewController: UIViewController {
         taskList.dataSource = self
         
         // Update time labels on screen
-        totalTimeLabel.text = "\(savedTotalTime[0] + ":" + savedTotalTime[1])"
+        let hour = savedTotalTime / 60 / 60
+        let min = (savedTotalTime - (hour * 60 * 60)) / 60
+        
+        totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
         timeLeftLabel.text = totalTimeLabel.text
         
         // Hide keyboard on drag and tap
