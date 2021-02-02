@@ -7,96 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00619A58DE13185C8E4D550E59DB050E /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FD63588CD4E5B218A243A8ED5B4C8 /* TimePicker.swift */; };
-		0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD20C723B08D4B48D2D34ABE1C09C7 /* FrameStore.swift */; };
-		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952CB613D0C2D754795C4488658E240 /* TinyConstraints.swift */; };
-		1005847C7B86A71FEEDA1B6B38DC0152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		2A90AB363B0F8A82DD9D4FC2F650578A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DE63953A5DC3F1365B7F19CA5459C /* UIImage.swift */; };
-		361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B282D6168CA365013FDF9EE6D25A7A /* DropDownCell.swift */; };
-		3C254704F2D4352A6026F0B36642C79E /* TimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CAE5D34FAE7D62758B7570346560FF /* TimePicker-dummy.m */; };
-		412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FC20F27470B61E5F971E2FF7D7C4C /* Array.swift */; };
-		44D1C7B0CFD66548E85A749451B57ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5252077C0A8EBFE822DEB5B16294F9 /* Gifu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25081B5A1DFC69D8DE5A402D278AC8 /* DPDUIView+Extension.swift */; };
-		4D91A24F741D55D9990BFA93F5701A15 /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE598043B6DEA2A24609DB1F45E33A4 /* UIGestureRecognizer.swift */; };
-		4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CDD24F492FE27067AF57EBCDA36E2 /* UIImageView.swift */; };
-		579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9CC612E00AB7F4C0AAC13CE8CC6BE3 /* Animator.swift */; };
-		5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF95B1D91546DA9EC7968817A32D516 /* DPDConstants.swift */; };
-		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44363E65C90CFBDFF3EF75D7BF27B95F /* TinyConstraints-dummy.m */; };
-		6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47DDFB639078C5AF427498CD43C9F0 /* DropDown+Appearance.swift */; };
-		62D5F8D44D21ED5C00AE62C29BC496BD /* Pods-Sprints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69DB319F78528E5848263501EF9D947D /* DateTimePicker+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50534440A8210AC7AA47024982E09F09 /* DateTimePicker+UITableView.swift */; };
-		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3100C8B6B332734702676788CB169372 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF3B29992210EC79B3402C761ED406 /* TinyConstraints+superview.swift */; };
-		842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AA617DB25B7893458A678B16E0830 /* DropDown.swift */; };
-		8B65DFF4E8422E129096EE5777231E28 /* TimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F44E30EC6A305757D2915E9B0D0D0D /* TimePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C846640A9B407E58FDCE483AF5068E /* CGSize.swift */; };
-		9511B04D9F8FC808A79F75555D9C0C57 /* NSLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CE5A9EE47DB75AEFA25522DCDCC1B /* NSLayoutConstraints.swift */; };
-		9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 366BC7182831C78955B7FD48C12182B2 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E86DA6122F08FCD02FC9E9EE2907CA2 /* DropDown-dummy.m */; };
-		96F8AB8B53B249C661F4BC634D4EC392 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E3032D0BCB11B1F58FC700331963D /* DateCollectionViewCell.swift */; };
-		9B142A1B489CFEE122796886B2AFB9E9 /* StepCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531FD092345DEAC8888D7645F16058F /* StepCollectionViewFlowLayout.swift */; };
-		9F03163883272D820A7FEA2E96F8CD7C /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDBB6097A7E4B1FE7605EFD0F9E10 /* TimeInterval.swift */; };
-		9F940FB6E2B35B04810CA60593353F68 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB25AF234B680232E9EE4650169B9D /* DateTimePicker.swift */; };
-		A09C6F8458CE2EF255D89235825F441D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		A3B4EBFFA53719C4EE534FBC89633A24 /* FullDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F505A6FEDCFCBA72E8695D2B35489 /* FullDateCollectionViewCell.swift */; };
-		A422B19CB5FCA9DBBFE056E5F1551386 /* Pods-Sprints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */; };
-		A479E0839287C86EB34549B8B6EA8946 /* TimePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE8844D0771D9FAB54D8C3AB13B97C /* TimePickerConfig.swift */; };
-		A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF2C5E363FF821EE56300F933B83C8 /* GIFImageView.swift */; };
-		ABBAF2224F657907AC107044CBDEA486 /* DateTimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE745DE805255C34B6DBBE3968D8E96 /* DateTimePicker-dummy.m */; };
-		AE883588B21FB69D94C56F185CBE58D6 /* TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EA6655904E9897B875C669BF83EF17 /* TimeFormat.swift */; };
-		B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B315468CB4E021A527F47437B3363DDD /* Gifu-dummy.m */; };
-		B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121422BB1A55C13BA2FBCF3F02F06094 /* AnimatedFrame.swift */; };
-		B4C5E814EBFDAB3119846F01CD075E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		B8A78601EEB86322D91B7BE5B1B0FAC5 /* DateTimePicker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF394742232EE25609310BE8DFC79553 /* DateTimePicker+CollectionView.swift */; };
-		BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05356DC812FB06E8D86846770B47E9DE /* DPDKeyboardListener.swift */; };
-		C99487C04757ECF4F73FA1D4519CFD6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A355C52CCE2414CDBB08FF72371A89 /* Constraints.swift */; };
-		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE444B0443978E0A8DD48A5C8AD71627 /* TinyEdgeInsets.swift */; };
-		CE466A37BA6596CC1A10A136B4CFAC24 /* TimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C47A164976929728565F02AB20CB4D37 /* TimePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078C225AEDF3CD5C6FF5697411E53954 /* Abstraction.swift */; };
-		D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E20218709A3A81B306B69D80394A9 /* ImageSourceHelpers.swift */; };
-		DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE262C6F3C842257162D7DA0A7B24C9 /* GIFAnimatable.swift */; };
-		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD486E8135DDBC822373BE4AE176075 /* Stack.swift */; };
-		E5E0FCAE1A15F06DC0ED6BD05A0C6B66 /* DateTimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E0C3D35BB3BD38B9BF7D4B7F13F2EE /* DateTimePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E746373D728BEEDB30F726B275F6E6F2 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CB82D5734C9E35966404187231405 /* TimeCalculator.swift */; };
-		E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E686D449A4D3E0D30E23609EFB3CA05 /* Gifu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAAE3CFD5FD7C605478DE7EE72FCBA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4E36A6CDD2E3FC98A36931409020F /* Constrainable.swift */; };
-		EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59975ACB00B2053D5BBDA38C6AC4375 /* DropDownCell.xib */; };
+		0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */; };
+		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */; };
+		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */; };
+		2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
+		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */; };
+		2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */; };
+		33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
+		38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
+		3E8CFAC1BB3448456D1F880575CC06D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */; };
+		412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */; };
+		45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */; };
+		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */; };
+		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */; };
+		4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */; };
+		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */; };
+		579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */; };
+		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */; };
+		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */; };
+		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */; };
+		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */; };
+		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */; };
+		93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */; };
+		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */; };
+		9D2C13F5BA2EC1496BA0BA2FC19E46E8 /* Pods-Sprints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */; };
+		A09C6F8458CE2EF255D89235825F441D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */; };
+		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */; };
+		B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */; };
+		B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */; };
+		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */; };
+		BD8522C7CB1081A939637489C945BDF1 /* Pods-Sprints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */; };
+		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */; };
+		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */; };
+		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */; };
+		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */; };
+		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */; };
+		D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */; };
+		DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */; };
+		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */; };
+		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1841788A6E68B66A507DA68ED603259 /* Stack.swift */; };
+		E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAAE3CFD5FD7C605478DE7EE72FCBA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */; };
+		EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F13210394FE26CE49A07DBB3DF75726 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD1367300EE05CBC62C2314CF94203D9;
-			remoteInfo = TimePicker;
-		};
-		8CD3C928E7069F2B05B01B4951B77BC9 /* PBXContainerItemProxy */ = {
+		C0E47CD71D9E048130F915255602496B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 830B5AB9E16163B4A1BA339D625FE46C;
 			remoteInfo = Gifu;
 		};
-		979AA9C0305D57AD2AB00E3819611912 /* PBXContainerItemProxy */ = {
+		CC3C4C3969F0C013AF96099D8D948146 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
-			remoteInfo = DropDown;
+			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
+			remoteInfo = IQKeyboardManagerSwift;
 		};
-		D54E3B9AAE63D60833540BA84493D30A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31E89965CFA54DE4BCC99C05112D7483;
-			remoteInfo = DateTimePicker;
-		};
-		E7AD81B1217A156B820B739B7C376D75 /* PBXContainerItemProxy */ = {
+		DA04A58C153059B1F92A6B5D826C8F49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -106,107 +83,98 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01D059F4F24311CE3934D8F037A164BE /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
-		04B31DCBD23393526856ED4259CD1D7A /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
+		0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
+		01CB0FA2FC075D81796D27E912CD613E /* Gifu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Gifu-Info.plist"; sourceTree = "<group>"; };
+		02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.release.xcconfig; sourceTree = "<group>"; };
+		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		04D899B40D70611EEBA0FE90D8889B06 /* Pods-Sprints-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sprints-acknowledgements.markdown"; sourceTree = "<group>"; };
-		05356DC812FB06E8D86846770B47E9DE /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		05A355C52CCE2414CDBB08FF72371A89 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
-		05EA6655904E9897B875C669BF83EF17 /* TimeFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeFormat.swift; path = TimePicker/Classes/Utils/TimeFormat.swift; sourceTree = "<group>"; };
-		078C225AEDF3CD5C6FF5697411E53954 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
-		0B871AFF1730650E4DB0FB5B1CCE7DA4 /* TimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TimePicker.modulemap; sourceTree = "<group>"; };
-		0F25081B5A1DFC69D8DE5A402D278AC8 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
-		121422BB1A55C13BA2FBCF3F02F06094 /* AnimatedFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFrame.swift; path = Sources/Gifu/Classes/AnimatedFrame.swift; sourceTree = "<group>"; };
-		1E86DA6122F08FCD02FC9E9EE2907CA2 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		0F97D9ECEA9925BBC93C8B50C029FE6E /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
+		13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Gifu/Extensions/Array.swift; sourceTree = "<group>"; };
+		23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
 		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		268C538BDDCA2ABA3146F0600D9509D7 /* Pods-Sprints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-Info.plist"; sourceTree = "<group>"; };
-		28F4E36A6CDD2E3FC98A36931409020F /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
-		2BD486E8135DDBC822373BE4AE176075 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
-		3077C599308BA95220F43FEEBFE80099 /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
-		30E0C3D35BB3BD38B9BF7D4B7F13F2EE /* DateTimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTimePicker-umbrella.h"; sourceTree = "<group>"; };
-		3100C8B6B332734702676788CB169372 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
-		31B282D6168CA365013FDF9EE6D25A7A /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
-		34D159A6ABBFFDF4C756F2DCDF5E4DA4 /* DateTimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTimePicker.release.xcconfig; sourceTree = "<group>"; };
-		366BC7182831C78955B7FD48C12182B2 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
-		3E3AA617DB25B7893458A678B16E0830 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		27360F201CD203FEEC3844492F120CA4 /* Gifu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gifu.modulemap; sourceTree = "<group>"; };
+		27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		2B618F0782A34D9A7733EFAF1FB69401 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
+		2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gifu-dummy.m"; sourceTree = "<group>"; };
+		369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
+		3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
+		3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Gifu/Classes/Animator.swift; sourceTree = "<group>"; };
 		3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.release.xcconfig"; sourceTree = "<group>"; };
 		40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44363E65C90CFBDFF3EF75D7BF27B95F /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
-		454A3883948BA2823F52814AE1AAE430 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
-		4BCB783D3F1D2AEE6B32AB1F6BD58809 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
+		4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
 		4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sprints-dummy.m"; sourceTree = "<group>"; };
-		4E924728E105D3772950A0C6A0C08C7B /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
-		4FF48E604AC07FA887541D349A331B15 /* TimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimePicker-prefix.pch"; sourceTree = "<group>"; };
-		50534440A8210AC7AA47024982E09F09 /* DateTimePicker+UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateTimePicker+UITableView.swift"; path = "Source/DateTimePicker+UITableView.swift"; sourceTree = "<group>"; };
 		51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.debug.xcconfig"; sourceTree = "<group>"; };
-		53F1883FD4EA211E618FC3088A77F32D /* Gifu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gifu.modulemap; sourceTree = "<group>"; };
+		55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
 		576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F4FD63588CD4E5B218A243A8ED5B4C8 /* TimePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePicker.swift; path = TimePicker/Classes/TimePicker.swift; sourceTree = "<group>"; };
-		5FAF3B29992210EC79B3402C761ED406 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
-		69CFEAFC42FDD6F8792F5083B39140ED /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		69E42A6EB75BD7C37110618ACE33F66B /* TimePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TimePicker-Info.plist"; sourceTree = "<group>"; };
-		69FEA9A1D83298C527D99872DCE90644 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
-		6E686D449A4D3E0D30E23609EFB3CA05 /* Gifu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gifu.h; path = Sources/Gifu.h; sourceTree = "<group>"; };
-		736CE5A9EE47DB75AEFA25522DCDCC1B /* NSLayoutConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraints.swift; path = TimePicker/Classes/Extensions/NSLayoutConstraints.swift; sourceTree = "<group>"; };
-		762FE1D8779CFFC1BF89CB8273B52389 /* DateTimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTimePicker.debug.xcconfig; sourceTree = "<group>"; };
-		76C846640A9B407E58FDCE483AF5068E /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Gifu/Extensions/CGSize.swift; sourceTree = "<group>"; };
-		775F505A6FEDCFCBA72E8695D2B35489 /* FullDateCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullDateCollectionViewCell.swift; path = Source/FullDateCollectionViewCell.swift; sourceTree = "<group>"; };
-		7B14970D0E0D8CD40F8106F03B93BC1E /* DateTimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTimePicker-prefix.pch"; sourceTree = "<group>"; };
-		7E7CB82D5734C9E35966404187231405 /* TimeCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeCalculator.swift; path = TimePicker/Classes/Utils/TimeCalculator.swift; sourceTree = "<group>"; };
-		80CAE5D34FAE7D62758B7570346560FF /* TimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TimePicker-dummy.m"; sourceTree = "<group>"; };
-		83DD05CA9EBA8068147E8893CF8DB010 /* Gifu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-prefix.pch"; sourceTree = "<group>"; };
+		5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Gifu/Extensions/UIImage.swift; sourceTree = "<group>"; };
+		6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gifu.h; path = Sources/Gifu.h; sourceTree = "<group>"; };
+		6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		6E25619743EDD901547C5EBA0DDCE09B /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameStore.swift; path = Sources/Gifu/Classes/FrameStore.swift; sourceTree = "<group>"; };
+		79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E5CED8881BACC6BAA0CDB9897A6D04B /* Gifu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-prefix.pch"; sourceTree = "<group>"; };
+		7FB22243B7A8A7EDCADB6AC0474115C7 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		870DCAE476AEDF69BCE21E10B9558103 /* Pods-Sprints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sprints.modulemap"; sourceTree = "<group>"; };
-		8C3E88DF16E7D323F9D93C0D822F1E7B /* Gifu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Gifu-Info.plist"; sourceTree = "<group>"; };
-		8CDB07EA84FA5C3674EE6B8FEADBFF39 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
-		8D5DE63953A5DC3F1365B7F19CA5459C /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Gifu/Extensions/UIImage.swift; sourceTree = "<group>"; };
-		8FE745DE805255C34B6DBBE3968D8E96 /* DateTimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateTimePicker-dummy.m"; sourceTree = "<group>"; };
-		905E3032D0BCB11B1F58FC700331963D /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = Source/DateCollectionViewCell.swift; sourceTree = "<group>"; };
-		9531FD092345DEAC8888D7645F16058F /* StepCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepCollectionViewFlowLayout.swift; path = Source/StepCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.debug.xcconfig; sourceTree = "<group>"; };
+		9612CB862CB2D4DDE05A06B458E140A9 /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EA02E2ED47EE045C9E9480729D0E2B6 /* Gifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.release.xcconfig; sourceTree = "<group>"; };
-		9F47DDFB639078C5AF427498CD43C9F0 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		A69BC8C386021EAFCA17566505A114DD /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
-		AA9CC612E00AB7F4C0AAC13CE8CC6BE3 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Gifu/Classes/Animator.swift; sourceTree = "<group>"; };
-		AC15E4B15F811BD72613026FB1950894 /* Gifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.debug.xcconfig; sourceTree = "<group>"; };
-		AE7FC20F27470B61E5F971E2FF7D7C4C /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Gifu/Extensions/Array.swift; sourceTree = "<group>"; };
-		AF394742232EE25609310BE8DFC79553 /* DateTimePicker+CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateTimePicker+CollectionView.swift"; path = "Source/DateTimePicker+CollectionView.swift"; sourceTree = "<group>"; };
-		B0F44E30EC6A305757D2915E9B0D0D0D /* TimePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TimePicker.h; path = TimePicker/TimePicker.h; sourceTree = "<group>"; };
-		B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B315468CB4E021A527F47437B3363DDD /* Gifu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gifu-dummy.m"; sourceTree = "<group>"; };
-		B5AE8844D0771D9FAB54D8C3AB13B97C /* TimePickerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePickerConfig.swift; path = TimePicker/Classes/TimePickerConfig.swift; sourceTree = "<group>"; };
-		B952CB613D0C2D754795C4488658E240 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
-		BBE598043B6DEA2A24609DB1F45E33A4 /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizer.swift; path = TimePicker/Classes/Extensions/UIGestureRecognizer.swift; sourceTree = "<group>"; };
-		BDA38860A2B42E9F1698303F9F3AADE7 /* DateTimePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DateTimePicker-Info.plist"; sourceTree = "<group>"; };
-		BE444B0443978E0A8DD48A5C8AD71627 /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
-		BFE262C6F3C842257162D7DA0A7B24C9 /* GIFAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatable.swift; path = Sources/Gifu/Classes/GIFAnimatable.swift; sourceTree = "<group>"; };
-		C3DB25AF234B680232E9EE4650169B9D /* DateTimePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimePicker.swift; path = Source/DateTimePicker.swift; sourceTree = "<group>"; };
-		C45B614222AC6BF53140068F3E742AAB /* TimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimePicker.release.xcconfig; sourceTree = "<group>"; };
-		C47A164976929728565F02AB20CB4D37 /* TimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimePicker-umbrella.h"; sourceTree = "<group>"; };
+		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = Sources/Gifu/Classes/GIFImageView.swift; sourceTree = "<group>"; };
+		A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.release.xcconfig; sourceTree = "<group>"; };
+		A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
+		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
+		B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatable.swift; path = Sources/Gifu/Classes/GIFAnimatable.swift; sourceTree = "<group>"; };
+		B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSourceHelpers.swift; path = Sources/Gifu/Helpers/ImageSourceHelpers.swift; sourceTree = "<group>"; };
+		C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
 		C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sprints-umbrella.h"; sourceTree = "<group>"; };
-		CAF95B1D91546DA9EC7968817A32D516 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-umbrella.h"; sourceTree = "<group>"; };
+		CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
 		D2391BD40A236894F16FADCE59053BE3 /* Pods-Sprints-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-acknowledgements.plist"; sourceTree = "<group>"; };
-		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		DB5252077C0A8EBFE822DEB5B16294F9 /* Gifu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-umbrella.h"; sourceTree = "<group>"; };
-		DC6E20218709A3A81B306B69D80394A9 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSourceHelpers.swift; path = Sources/Gifu/Helpers/ImageSourceHelpers.swift; sourceTree = "<group>"; };
-		E1AF2C5E363FF821EE56300F933B83C8 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = Sources/Gifu/Classes/GIFImageView.swift; sourceTree = "<group>"; };
-		E2DD20C723B08D4B48D2D34ABE1C09C7 /* FrameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameStore.swift; path = Sources/Gifu/Classes/FrameStore.swift; sourceTree = "<group>"; };
-		E8957202995DEE942625989C71CE2A6B /* TimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimePicker.debug.xcconfig; sourceTree = "<group>"; };
-		E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F23CDD24F492FE27067AF57EBCDA36E2 /* UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/Gifu/Extensions/UIImageView.swift; sourceTree = "<group>"; };
-		F59975ACB00B2053D5BBDA38C6AC4375 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Gifu/Extensions/CGSize.swift; sourceTree = "<group>"; };
+		D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/Gifu/Extensions/UIImageView.swift; sourceTree = "<group>"; };
+		EB77680ECA209CE65FEE6B8A67E4350C /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
+		F1841788A6E68B66A507DA68ED603259 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFrame.swift; path = Sources/Gifu/Classes/AnimatedFrame.swift; sourceTree = "<group>"; };
 		F7F410CBB227714AF87E0CC14EB4C2E0 /* Pods-Sprints-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sprints-frameworks.sh"; sourceTree = "<group>"; };
-		F8D474D40D04F63541909835D8A2C128 /* DateTimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DateTimePicker.modulemap; sourceTree = "<group>"; };
-		F9FFDBB6097A7E4B1FE7605EFD0F9E10 /* TimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeInterval.swift; path = TimePicker/Classes/Extensions/TimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E14DBC1A8EC4AD5505D62F587C3AD5F /* Frameworks */ = {
+		2A5E78E2934E919E5D9ACD3C0B89AF99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D1C7B0CFD66548E85A749451B57ED2 /* Foundation.framework in Frameworks */,
-				2A90AB363B0F8A82DD9D4FC2F650578A /* UIKit.framework in Frameworks */,
+				3E8CFAC1BB3448456D1F880575CC06D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C2292E431F316076553538B7FBB63C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */,
+				EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */,
+				2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */,
+				38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,22 +186,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76990F637A5B8122CE9341A12910DFD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1005847C7B86A71FEEDA1B6B38DC0152 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9727840973A9C2692E58F7089A7C243E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C99487C04757ECF4F73FA1D4519CFD6D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9D67FA5C7D83687C867E0A5B3F0B5086 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,30 +194,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC41DEC17E920EB1D20A8049971F4BA7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B4C5E814EBFDAB3119846F01CD075E5F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0987CC997928B23DEFCCDD7C9C8C4530 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */,
-				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
-				40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */,
-				576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */,
-				E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */,
-				248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0A0A61221BADA02A9E5FF5B128C4B92A /* Pods-Sprints */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,85 +214,59 @@
 			path = "Target Support Files/Pods-Sprints";
 			sourceTree = "<group>";
 		};
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		1BE63D9000C08946455184ABD51F5241 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+				386296E6DB0EB9234C5712B6454E9145 /* Gifu */,
+				F905C2358530BEB9B81D1DCA863B0E69 /* IQKeyboardManagerSwift */,
+				403CCB5D92AE6872A09C1E614129389E /* TinyConstraints */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		293A45A67E9A7C013D0FCCD10F46F1FD /* Support Files */ = {
+		221A3850195B62BEEE34E1919DC3E54F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69FEA9A1D83298C527D99872DCE90644 /* DropDown.modulemap */,
-				1E86DA6122F08FCD02FC9E9EE2907CA2 /* DropDown-dummy.m */,
-				4E924728E105D3772950A0C6A0C08C7B /* DropDown-Info.plist */,
-				8CDB07EA84FA5C3674EE6B8FEADBFF39 /* DropDown-prefix.pch */,
-				366BC7182831C78955B7FD48C12182B2 /* DropDown-umbrella.h */,
-				04B31DCBD23393526856ED4259CD1D7A /* DropDown.debug.xcconfig */,
-				A69BC8C386021EAFCA17566505A114DD /* DropDown.release.xcconfig */,
+				40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */,
+				248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		29E5C383D4E0F40955A604FDBB2E4DA6 /* TinyConstraints */ = {
+		386296E6DB0EB9234C5712B6454E9145 /* Gifu */ = {
 			isa = PBXGroup;
 			children = (
-				078C225AEDF3CD5C6FF5697411E53954 /* Abstraction.swift */,
-				28F4E36A6CDD2E3FC98A36931409020F /* Constrainable.swift */,
-				05A355C52CCE2414CDBB08FF72371A89 /* Constraints.swift */,
-				2BD486E8135DDBC822373BE4AE176075 /* Stack.swift */,
-				B952CB613D0C2D754795C4488658E240 /* TinyConstraints.swift */,
-				5FAF3B29992210EC79B3402C761ED406 /* TinyConstraints+superview.swift */,
-				BE444B0443978E0A8DD48A5C8AD71627 /* TinyEdgeInsets.swift */,
-				DC5D89A33A072A4EE0736E8BF754D5A7 /* Support Files */,
-			);
-			path = TinyConstraints;
-			sourceTree = "<group>";
-		};
-		2D2B38681E21C26C7B675EF7E264E7E9 /* DropDown */ = {
-			isa = PBXGroup;
-			children = (
-				CAF95B1D91546DA9EC7968817A32D516 /* DPDConstants.swift */,
-				05356DC812FB06E8D86846770B47E9DE /* DPDKeyboardListener.swift */,
-				0F25081B5A1DFC69D8DE5A402D278AC8 /* DPDUIView+Extension.swift */,
-				3E3AA617DB25B7893458A678B16E0830 /* DropDown.swift */,
-				9F47DDFB639078C5AF427498CD43C9F0 /* DropDown+Appearance.swift */,
-				31B282D6168CA365013FDF9EE6D25A7A /* DropDownCell.swift */,
-				B226B5023A0A456261816BEE94769D18 /* Resources */,
-				293A45A67E9A7C013D0FCCD10F46F1FD /* Support Files */,
-			);
-			path = DropDown;
-			sourceTree = "<group>";
-		};
-		3FA410EC77C55CCEC38AB1F624BB6D6C /* Gifu */ = {
-			isa = PBXGroup;
-			children = (
-				121422BB1A55C13BA2FBCF3F02F06094 /* AnimatedFrame.swift */,
-				AA9CC612E00AB7F4C0AAC13CE8CC6BE3 /* Animator.swift */,
-				AE7FC20F27470B61E5F971E2FF7D7C4C /* Array.swift */,
-				76C846640A9B407E58FDCE483AF5068E /* CGSize.swift */,
-				E2DD20C723B08D4B48D2D34ABE1C09C7 /* FrameStore.swift */,
-				BFE262C6F3C842257162D7DA0A7B24C9 /* GIFAnimatable.swift */,
-				E1AF2C5E363FF821EE56300F933B83C8 /* GIFImageView.swift */,
-				6E686D449A4D3E0D30E23609EFB3CA05 /* Gifu.h */,
-				DC6E20218709A3A81B306B69D80394A9 /* ImageSourceHelpers.swift */,
-				8D5DE63953A5DC3F1365B7F19CA5459C /* UIImage.swift */,
-				F23CDD24F492FE27067AF57EBCDA36E2 /* UIImageView.swift */,
-				780E1FCDF8909BA88452CCD8509A0FA3 /* Support Files */,
+				F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */,
+				3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */,
+				1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */,
+				D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */,
+				7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */,
+				B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */,
+				A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */,
+				6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */,
+				B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */,
+				5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */,
+				EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */,
+				7F93784E264A536DD2BBBFC151A4EC7A /* Support Files */,
 			);
 			path = Gifu;
 			sourceTree = "<group>";
 		};
-		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+		403CCB5D92AE6872A09C1E614129389E /* TinyConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
-				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+				6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */,
+				C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */,
+				2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */,
+				F1841788A6E68B66A507DA68ED603259 /* Stack.swift */,
+				23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */,
+				56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */,
+				49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */,
+				C2FBDEBAAA33609DA28AE83423EE4D8C /* Support Files */,
 			);
-			name = iOS;
+			path = TinyConstraints;
 			sourceTree = "<group>";
 		};
 		6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */ = {
@@ -372,169 +277,114 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		780E1FCDF8909BA88452CCD8509A0FA3 /* Support Files */ = {
+		7F93784E264A536DD2BBBFC151A4EC7A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				53F1883FD4EA211E618FC3088A77F32D /* Gifu.modulemap */,
-				B315468CB4E021A527F47437B3363DDD /* Gifu-dummy.m */,
-				8C3E88DF16E7D323F9D93C0D822F1E7B /* Gifu-Info.plist */,
-				83DD05CA9EBA8068147E8893CF8DB010 /* Gifu-prefix.pch */,
-				DB5252077C0A8EBFE822DEB5B16294F9 /* Gifu-umbrella.h */,
-				AC15E4B15F811BD72613026FB1950894 /* Gifu.debug.xcconfig */,
-				9EA02E2ED47EE045C9E9480729D0E2B6 /* Gifu.release.xcconfig */,
+				27360F201CD203FEEC3844492F120CA4 /* Gifu.modulemap */,
+				2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */,
+				01CB0FA2FC075D81796D27E912CD613E /* Gifu-Info.plist */,
+				7E5CED8881BACC6BAA0CDB9897A6D04B /* Gifu-prefix.pch */,
+				CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */,
+				886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */,
+				02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Gifu";
 			sourceTree = "<group>";
 		};
-		8D88092D05E653978FBB3F1B0E29C325 /* Pods */ = {
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				977858B0AD3ECE57B9CAFC9EC6C61195 /* DateTimePicker */,
-				2D2B38681E21C26C7B675EF7E264E7E9 /* DropDown */,
-				3FA410EC77C55CCEC38AB1F624BB6D6C /* Gifu */,
-				A222A1A2EC8C92B7475ADF1575C7C5C2 /* TimePicker */,
-				29E5C383D4E0F40955A604FDBB2E4DA6 /* TinyConstraints */,
+				F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		977858B0AD3ECE57B9CAFC9EC6C61195 /* DateTimePicker */ = {
+		BEC8E79E0F5E1B440A3E11B82F6EE976 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				905E3032D0BCB11B1F58FC700331963D /* DateCollectionViewCell.swift */,
-				C3DB25AF234B680232E9EE4650169B9D /* DateTimePicker.swift */,
-				AF394742232EE25609310BE8DFC79553 /* DateTimePicker+CollectionView.swift */,
-				50534440A8210AC7AA47024982E09F09 /* DateTimePicker+UITableView.swift */,
-				775F505A6FEDCFCBA72E8695D2B35489 /* FullDateCollectionViewCell.swift */,
-				9531FD092345DEAC8888D7645F16058F /* StepCollectionViewFlowLayout.swift */,
-				AC6CA540E7ED2A3DF20CE4789DFD543D /* Support Files */,
-			);
-			path = DateTimePicker;
-			sourceTree = "<group>";
-		};
-		A222A1A2EC8C92B7475ADF1575C7C5C2 /* TimePicker */ = {
-			isa = PBXGroup;
-			children = (
-				736CE5A9EE47DB75AEFA25522DCDCC1B /* NSLayoutConstraints.swift */,
-				7E7CB82D5734C9E35966404187231405 /* TimeCalculator.swift */,
-				05EA6655904E9897B875C669BF83EF17 /* TimeFormat.swift */,
-				F9FFDBB6097A7E4B1FE7605EFD0F9E10 /* TimeInterval.swift */,
-				B0F44E30EC6A305757D2915E9B0D0D0D /* TimePicker.h */,
-				5F4FD63588CD4E5B218A243A8ED5B4C8 /* TimePicker.swift */,
-				B5AE8844D0771D9FAB54D8C3AB13B97C /* TimePickerConfig.swift */,
-				BBE598043B6DEA2A24609DB1F45E33A4 /* UIGestureRecognizer.swift */,
-				BF77D923BA0BD6ED9633E64C6DDAC722 /* Support Files */,
-			);
-			path = TimePicker;
-			sourceTree = "<group>";
-		};
-		AC6CA540E7ED2A3DF20CE4789DFD543D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8D474D40D04F63541909835D8A2C128 /* DateTimePicker.modulemap */,
-				8FE745DE805255C34B6DBBE3968D8E96 /* DateTimePicker-dummy.m */,
-				BDA38860A2B42E9F1698303F9F3AADE7 /* DateTimePicker-Info.plist */,
-				7B14970D0E0D8CD40F8106F03B93BC1E /* DateTimePicker-prefix.pch */,
-				30E0C3D35BB3BD38B9BF7D4B7F13F2EE /* DateTimePicker-umbrella.h */,
-				762FE1D8779CFFC1BF89CB8273B52389 /* DateTimePicker.debug.xcconfig */,
-				34D159A6ABBFFDF4C756F2DCDF5E4DA4 /* DateTimePicker.release.xcconfig */,
+				0F97D9ECEA9925BBC93C8B50C029FE6E /* IQKeyboardManagerSwift.modulemap */,
+				369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */,
+				EB77680ECA209CE65FEE6B8A67E4350C /* IQKeyboardManagerSwift-Info.plist */,
+				2B618F0782A34D9A7733EFAF1FB69401 /* IQKeyboardManagerSwift-prefix.pch */,
+				3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */,
+				4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */,
+				A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/DateTimePicker";
+			path = "../Target Support Files/IQKeyboardManagerSwift";
 			sourceTree = "<group>";
 		};
-		B226B5023A0A456261816BEE94769D18 /* Resources */ = {
+		C2FBDEBAAA33609DA28AE83423EE4D8C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F59975ACB00B2053D5BBDA38C6AC4375 /* DropDownCell.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		BF77D923BA0BD6ED9633E64C6DDAC722 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B871AFF1730650E4DB0FB5B1CCE7DA4 /* TimePicker.modulemap */,
-				80CAE5D34FAE7D62758B7570346560FF /* TimePicker-dummy.m */,
-				69E42A6EB75BD7C37110618ACE33F66B /* TimePicker-Info.plist */,
-				4FF48E604AC07FA887541D349A331B15 /* TimePicker-prefix.pch */,
-				C47A164976929728565F02AB20CB4D37 /* TimePicker-umbrella.h */,
-				E8957202995DEE942625989C71CE2A6B /* TimePicker.debug.xcconfig */,
-				C45B614222AC6BF53140068F3E742AAB /* TimePicker.release.xcconfig */,
+				7FB22243B7A8A7EDCADB6AC0474115C7 /* TinyConstraints.modulemap */,
+				6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */,
+				9612CB862CB2D4DDE05A06B458E140A9 /* TinyConstraints-Info.plist */,
+				6E25619743EDD901547C5EBA0DDCE09B /* TinyConstraints-prefix.pch */,
+				833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */,
+				13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */,
+				0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TimePicker";
+			path = "../Target Support Files/TinyConstraints";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				8D88092D05E653978FBB3F1B0E29C325 /* Pods */,
-				0987CC997928B23DEFCCDD7C9C8C4530 /* Products */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				1BE63D9000C08946455184ABD51F5241 /* Pods */,
+				221A3850195B62BEEE34E1919DC3E54F /* Products */,
 				6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DC5D89A33A072A4EE0736E8BF754D5A7 /* Support Files */ = {
+		F905C2358530BEB9B81D1DCA863B0E69 /* IQKeyboardManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				454A3883948BA2823F52814AE1AAE430 /* TinyConstraints.modulemap */,
-				44363E65C90CFBDFF3EF75D7BF27B95F /* TinyConstraints-dummy.m */,
-				3077C599308BA95220F43FEEBFE80099 /* TinyConstraints-Info.plist */,
-				69CFEAFC42FDD6F8792F5083B39140ED /* TinyConstraints-prefix.pch */,
-				3100C8B6B332734702676788CB169372 /* TinyConstraints-umbrella.h */,
-				4BCB783D3F1D2AEE6B32AB1F6BD58809 /* TinyConstraints.debug.xcconfig */,
-				01D059F4F24311CE3934D8F037A164BE /* TinyConstraints.release.xcconfig */,
+				27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */,
+				B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */,
+				A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */,
+				87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */,
+				1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */,
+				284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */,
+				D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */,
+				D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */,
+				4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */,
+				4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */,
+				55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */,
+				D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */,
+				48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */,
+				6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */,
+				085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */,
+				CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */,
+				BEC8E79E0F5E1B440A3E11B82F6EE976 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TinyConstraints";
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */,
+				79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */,
+				A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */,
+				04D60AC13D33197690A05C641925DDDA /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38FA4886F2F77F39B267A7BEB5375308 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				62D5F8D44D21ED5C00AE62C29BC496BD /* Pods-Sprints-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6C82A261E114E04E54D5D64380D759BE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */,
 				E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		72D0F8BBE17567EE727378BB74DD8C80 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE466A37BA6596CC1A10A136B4CFAC24 /* TimePicker-umbrella.h in Headers */,
-				8B65DFF4E8422E129096EE5777231E28 /* TimePicker.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C4CE379A678224BC76F31E2F6738C11 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5E0FCAE1A15F06DC0ED6BD05A0C6B66 /* DateTimePicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,48 +396,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9AC88E3AD70332C5D71128804857B23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD8522C7CB1081A939637489C945BDF1 /* Pods-Sprints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4A6429FF0F9608A16E4D96813E85F23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15874515CB78BE4F1B411C4B0CE34627 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */;
+			buildConfigurationList = 21AC70D1C705FE5E35B68F71D01648CD /* Build configuration list for PBXNativeTarget "Pods-Sprints" */;
 			buildPhases = (
-				38FA4886F2F77F39B267A7BEB5375308 /* Headers */,
-				97AF7E94858A043598E2ED566D985D15 /* Sources */,
-				76990F637A5B8122CE9341A12910DFD5 /* Frameworks */,
-				D8FCCB5654D297F97D8CBAEF2A8AD6BF /* Resources */,
+				B9AC88E3AD70332C5D71128804857B23 /* Headers */,
+				632553BAD0778491805B27D90E5B9DDD /* Sources */,
+				2A5E78E2934E919E5D9ACD3C0B89AF99 /* Frameworks */,
+				319974C6C40F178A24975802BDC82F15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F0EE75B5A27677EEDADCCE39A0293A79 /* PBXTargetDependency */,
-				F58BF3340954F69555347F56F726CF1C /* PBXTargetDependency */,
-				38AED5B9FBCE6748003D9B48F915F78A /* PBXTargetDependency */,
-				01CCCE3E3ADD94D15307430950EE984D /* PBXTargetDependency */,
-				0B36E122688E88E2EEB3EE99AF00DD89 /* PBXTargetDependency */,
+				9E6857C73109CA1EF6DB200324E0E9B9 /* PBXTargetDependency */,
+				F45C8123690258777FF62530BA19B9F0 /* PBXTargetDependency */,
+				604D24A52917D9E5B48FBBC4ACA4F41E /* PBXTargetDependency */,
 			);
 			name = "Pods-Sprints";
 			productName = "Pods-Sprints";
 			productReference = 576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 34C7926DA2E4E8F6C84C9F21EA38B67B /* Build configuration list for PBXNativeTarget "DateTimePicker" */;
-			buildPhases = (
-				8C4CE379A678224BC76F31E2F6738C11 /* Headers */,
-				DFD5662DAEF6A75395A36DEEEC0E78B0 /* Sources */,
-				2E14DBC1A8EC4AD5505D62F587C3AD5F /* Frameworks */,
-				25FA478858624FE946B3866ED3A7A5AB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DateTimePicker;
-			productName = DateTimePicker;
-			productReference = B26CB6AD16677CB8E5B8A5059EA05677 /* DateTimePicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
@@ -626,40 +472,22 @@
 			productReference = 40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */ = {
+		B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BF76798308B8D51A33B669B9D1BFF1E /* Build configuration list for PBXNativeTarget "TimePicker" */;
+			buildConfigurationList = A7155AE59A19533F60ECE3B4045B01F0 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */;
 			buildPhases = (
-				72D0F8BBE17567EE727378BB74DD8C80 /* Headers */,
-				1308521A02F0BB816F12CB8DF041571E /* Sources */,
-				CC41DEC17E920EB1D20A8049971F4BA7 /* Frameworks */,
-				28B1887FD87C8076ABFF725BC5C4AD85 /* Resources */,
+				F4A6429FF0F9608A16E4D96813E85F23 /* Headers */,
+				6C02E9CBF87ED8A1C6D8ED4C951F75A4 /* Sources */,
+				2C2292E431F316076553538B7FBB63C3 /* Frameworks */,
+				FAA5DA81F8292820D65F403E941074FC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TimePicker;
-			productName = TimePicker;
-			productReference = E9F5FB5F40360B56CA9524E4EAA437B5 /* TimePicker.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */;
-			buildPhases = (
-				2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */,
-				FAFA782452D3B598A37FB459CD314120 /* Sources */,
-				9727840973A9C2692E58F7089A7C243E /* Frameworks */,
-				D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DropDown;
-			productName = DropDown;
-			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
+			name = IQKeyboardManagerSwift;
+			productName = IQKeyboardManagerSwift;
+			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -669,7 +497,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -680,15 +508,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0987CC997928B23DEFCCDD7C9C8C4530 /* Products */;
+			productRefGroup = 221A3850195B62BEEE34E1919DC3E54F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */,
-				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				830B5AB9E16163B4A1BA339D625FE46C /* Gifu */,
+				B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */,
 				0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */,
-				BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */,
 				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
 			);
 		};
@@ -702,14 +528,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25FA478858624FE946B3866ED3A7A5AB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28B1887FD87C8076ABFF725BC5C4AD85 /* Resources */ = {
+		319974C6C40F178A24975802BDC82F15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -723,15 +542,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D8FCCB5654D297F97D8CBAEF2A8AD6BF /* Resources */ = {
+		FAA5DA81F8292820D65F403E941074FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -759,26 +570,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1308521A02F0BB816F12CB8DF041571E /* Sources */ = {
+		632553BAD0778491805B27D90E5B9DDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9511B04D9F8FC808A79F75555D9C0C57 /* NSLayoutConstraints.swift in Sources */,
-				E746373D728BEEDB30F726B275F6E6F2 /* TimeCalculator.swift in Sources */,
-				AE883588B21FB69D94C56F185CBE58D6 /* TimeFormat.swift in Sources */,
-				9F03163883272D820A7FEA2E96F8CD7C /* TimeInterval.swift in Sources */,
-				3C254704F2D4352A6026F0B36642C79E /* TimePicker-dummy.m in Sources */,
-				00619A58DE13185C8E4D550E59DB050E /* TimePicker.swift in Sources */,
-				A479E0839287C86EB34549B8B6EA8946 /* TimePickerConfig.swift in Sources */,
-				4D91A24F741D55D9990BFA93F5701A15 /* UIGestureRecognizer.swift in Sources */,
+				9D2C13F5BA2EC1496BA0BA2FC19E46E8 /* Pods-Sprints-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97AF7E94858A043598E2ED566D985D15 /* Sources */ = {
+		6C02E9CBF87ED8A1C6D8ED4C951F75A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A422B19CB5FCA9DBBFE056E5F1551386 /* Pods-Sprints-dummy.m in Sources */,
+				DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */,
+				4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */,
+				3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */,
+				C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */,
+				102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */,
+				4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */,
+				5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */,
+				7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */,
+				C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */,
+				980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */,
+				C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */,
+				4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */,
+				8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */,
+				AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,73 +617,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD5662DAEF6A75395A36DEEEC0E78B0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96F8AB8B53B249C661F4BC634D4EC392 /* DateCollectionViewCell.swift in Sources */,
-				B8A78601EEB86322D91B7BE5B1B0FAC5 /* DateTimePicker+CollectionView.swift in Sources */,
-				69DB319F78528E5848263501EF9D947D /* DateTimePicker+UITableView.swift in Sources */,
-				ABBAF2224F657907AC107044CBDEA486 /* DateTimePicker-dummy.m in Sources */,
-				9F940FB6E2B35B04810CA60593353F68 /* DateTimePicker.swift in Sources */,
-				A3B4EBFFA53719C4EE534FBC89633A24 /* FullDateCollectionViewCell.swift in Sources */,
-				9B142A1B489CFEE122796886B2AFB9E9 /* StepCollectionViewFlowLayout.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAFA782452D3B598A37FB459CD314120 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */,
-				BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */,
-				4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */,
-				6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */,
-				95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */,
-				842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */,
-				361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01CCCE3E3ADD94D15307430950EE984D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TimePicker;
-			target = BD1367300EE05CBC62C2314CF94203D9 /* TimePicker */;
-			targetProxy = 1F13210394FE26CE49A07DBB3DF75726 /* PBXContainerItemProxy */;
-		};
-		0B36E122688E88E2EEB3EE99AF00DD89 /* PBXTargetDependency */ = {
+		604D24A52917D9E5B48FBBC4ACA4F41E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TinyConstraints;
 			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
-			targetProxy = E7AD81B1217A156B820B739B7C376D75 /* PBXContainerItemProxy */;
+			targetProxy = DA04A58C153059B1F92A6B5D826C8F49 /* PBXContainerItemProxy */;
 		};
-		38AED5B9FBCE6748003D9B48F915F78A /* PBXTargetDependency */ = {
+		9E6857C73109CA1EF6DB200324E0E9B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Gifu;
 			target = 830B5AB9E16163B4A1BA339D625FE46C /* Gifu */;
-			targetProxy = 8CD3C928E7069F2B05B01B4951B77BC9 /* PBXContainerItemProxy */;
+			targetProxy = C0E47CD71D9E048130F915255602496B /* PBXContainerItemProxy */;
 		};
-		F0EE75B5A27677EEDADCCE39A0293A79 /* PBXTargetDependency */ = {
+		F45C8123690258777FF62530BA19B9F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DateTimePicker;
-			target = 31E89965CFA54DE4BCC99C05112D7483 /* DateTimePicker */;
-			targetProxy = D54E3B9AAE63D60833540BA84493D30A /* PBXContainerItemProxy */;
-		};
-		F58BF3340954F69555347F56F726CF1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DropDown;
-			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
-			targetProxy = 979AA9C0305D57AD2AB00E3819611912 /* PBXContainerItemProxy */;
+			name = IQKeyboardManagerSwift;
+			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
+			targetProxy = CC3C4C3969F0C013AF96099D8D948146 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0FC1F0034542601DF1F5A76D5F10376C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BCB783D3F1D2AEE6B32AB1F6BD58809 /* TinyConstraints.debug.xcconfig */;
+			baseConfigurationReference = 13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -887,49 +667,14 @@
 				PRODUCT_NAME = TinyConstraints;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		29DF9A66DC7F566FCD4F4BBFC452D432 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45B614222AC6BF53140068F3E742AAB /* TimePicker.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TimePicker/TimePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TimePicker/TimePicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TimePicker/TimePicker.modulemap";
-				PRODUCT_MODULE_NAME = TimePicker;
-				PRODUCT_NAME = TimePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -999,7 +744,7 @@
 		};
 		3B7165CE72FA0260993EC86E2AC48993 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01D059F4F24311CE3934D8F037A164BE /* TinyConstraints.release.xcconfig */;
+			baseConfigurationReference = 0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1023,18 +768,54 @@
 				PRODUCT_NAME = TinyConstraints;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		3E98632363DB75BA70A73E25C5C9383A /* Debug */ = {
+		3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */;
+			baseConfigurationReference = 4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap";
+				PRODUCT_MODULE_NAME = IQKeyboardManagerSwift;
+				PRODUCT_NAME = IQKeyboardManagerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C09037AB465B44D43DE51E0A393D4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1063,45 +844,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		4A17D27FFBCE427192C281661D3F5767 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04B31DCBD23393526856ED4259CD1D7A /* DropDown.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+			name = Release;
 		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1165,9 +914,9 @@
 			};
 			name = Release;
 		};
-		7E832473514C109355B3191BF026D75E /* Release */ = {
+		7D849F3B5448415F99C651DAE1DA4B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */;
+			baseConfigurationReference = 51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1196,145 +945,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		855BA280B827E6D9A30B7999504CFC69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34D159A6ABBFFDF4C756F2DCDF5E4DA4 /* DateTimePicker.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DateTimePicker/DateTimePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateTimePicker/DateTimePicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DateTimePicker/DateTimePicker.modulemap";
-				PRODUCT_MODULE_NAME = DateTimePicker;
-				PRODUCT_NAME = DateTimePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8B28DAA7DDFFF9A20AD710664AC96ADD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69BC8C386021EAFCA17566505A114DD /* DropDown.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C21E10536E660DBDC36E5EFF798B2C53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 762FE1D8779CFFC1BF89CB8273B52389 /* DateTimePicker.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DateTimePicker/DateTimePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateTimePicker/DateTimePicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DateTimePicker/DateTimePicker.modulemap";
-				PRODUCT_MODULE_NAME = DateTimePicker;
-				PRODUCT_NAME = DateTimePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D18549E11A3EA0069E1BE5EB332C1A2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8957202995DEE942625989C71CE2A6B /* TimePicker.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TimePicker/TimePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TimePicker/TimePicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TimePicker/TimePicker.modulemap";
-				PRODUCT_MODULE_NAME = TimePicker;
-				PRODUCT_NAME = TimePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1342,7 +954,7 @@
 		};
 		DDA145A73C39DFCFE4523C0ADC738938 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EA02E2ED47EE045C9E9480729D0E2B6 /* Gifu.release.xcconfig */;
+			baseConfigurationReference = 02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1366,9 +978,10 @@
 				PRODUCT_NAME = Gifu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1377,7 +990,7 @@
 		};
 		E880EECC3218C35D488DFB71C9A9562B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC15E4B15F811BD72613026FB1950894 /* Gifu.debug.xcconfig */;
+			baseConfigurationReference = 886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1401,13 +1014,50 @@
 				PRODUCT_NAME = Gifu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		ECD830E9FF60065425D88BB789C29686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap";
+				PRODUCT_MODULE_NAME = IQKeyboardManagerSwift;
+				PRODUCT_NAME = IQKeyboardManagerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1421,20 +1071,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15874515CB78BE4F1B411C4B0CE34627 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */ = {
+		21AC70D1C705FE5E35B68F71D01648CD /* Build configuration list for PBXNativeTarget "Pods-Sprints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E98632363DB75BA70A73E25C5C9383A /* Debug */,
-				7E832473514C109355B3191BF026D75E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		34C7926DA2E4E8F6C84C9F21EA38B67B /* Build configuration list for PBXNativeTarget "DateTimePicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C21E10536E660DBDC36E5EFF798B2C53 /* Debug */,
-				855BA280B827E6D9A30B7999504CFC69 /* Release */,
+				7D849F3B5448415F99C651DAE1DA4B81 /* Debug */,
+				3C09037AB465B44D43DE51E0A393D4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1448,11 +1089,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BF76798308B8D51A33B669B9D1BFF1E /* Build configuration list for PBXNativeTarget "TimePicker" */ = {
+		A7155AE59A19533F60ECE3B4045B01F0 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D18549E11A3EA0069E1BE5EB332C1A2F /* Debug */,
-				29DF9A66DC7F566FCD4F4BBFC452D432 /* Release */,
+				3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */,
+				ECD830E9FF60065425D88BB789C29686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1462,15 +1103,6 @@
 			buildConfigurations = (
 				0FC1F0034542601DF1F5A76D5F10376C /* Debug */,
 				3B7165CE72FA0260993EC86E2AC48993 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A17D27FFBCE427192C281661D3F5767 /* Debug */,
-				8B28DAA7DDFFF9A20AD710664AC96ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

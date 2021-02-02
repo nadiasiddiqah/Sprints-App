@@ -9,6 +9,7 @@ import UIKit
 
 protocol TaskCellDelegate: class {
     func pressedTimeButton(onCell cell: TaskCell)
+    func nameFieldDidStartEditing(onCell cell: TaskCell)
     func nameFieldDidEndEditing(onCell cell: TaskCell)
     func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool
 }
@@ -31,6 +32,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         nameField.delegate = self
+        nameField.autocorrectionType = .no
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,6 +43,10 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
     // MARK: - TaskCellDelegate Methods
     @IBAction func tapTimeButton(_ sender: UIButton) {
         delegate?.pressedTimeButton(onCell: self)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.nameFieldDidStartEditing(onCell: self)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

@@ -323,10 +323,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-yF-BA0" userLabel="Task List Stack">
                                 <rect key="frame" x="20" y="365" width="374" height="393"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="351" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crq-yl-GxC" customClass="SelfSizedTableView" customModule="Sprints" customModuleProvider="target">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="351" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crq-yl-GxC" customClass="SelfSizedTableView" customModule="Sprints" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="351"/>
                                         <color key="backgroundColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.4781147838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="qQ6-AP-W9I"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="plK-5i-x6B"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="Qbn-yl-Gzr" userLabel="Task Cell" customClass="TaskCell" customModule="Sprints" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="44"/>
@@ -340,6 +342,7 @@
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-Vu-wC9">
                                                                     <rect key="frame" x="0.0" y="0.0" width="285" height="34"/>
+                                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="hJy-Re-Um0"/>
                                                                     </constraints>

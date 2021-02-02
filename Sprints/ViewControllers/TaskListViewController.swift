@@ -51,6 +51,8 @@ class TaskListViewController: UIViewController {
         
         // Define max height for table view
         taskList.maxHeight = 351
+        
+        // Set initial taskTime vlaue
         taskTime[0] = "Set time"
         
         // Connect table view's dataSource and delegate to current view controller
@@ -60,6 +62,10 @@ class TaskListViewController: UIViewController {
         // Update time labels on screen
         totalTimeLabel.text = "\(savedTotalTime[0] + ":" + savedTotalTime[1])"
         timeLeftLabel.text = totalTimeLabel.text
+        
+        // Hide keyboard on drag and tap
+        taskList.keyboardDismissMode = .onDrag
+        setUpGestureRecognizer()
     }
     
     // MARK: - Navigation
@@ -70,6 +76,16 @@ class TaskListViewController: UIViewController {
         taskTime[rowIndex] = controller.selectedTaskTime
         
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
+    }
+    
+    // MARK: - Helper Methods
+    func setUpGestureRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: - Action Methods
@@ -145,6 +161,10 @@ extension TaskListViewController: UITableViewDelegate {
 }
 
 extension TaskListViewController: TaskCellDelegate {
+    func nameFieldDidStartEditing(onCell cell: TaskCell) {
+        cell.nameField.becomeFirstResponder()
+    }
+    
     func nameFieldDidEndEditing(onCell cell: TaskCell) {
         if let indexPath = taskList.indexPath(for: cell) {
             rowIndex = indexPath.row
