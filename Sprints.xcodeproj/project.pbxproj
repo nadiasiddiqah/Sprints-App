@@ -73,8 +73,8 @@
 				09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */,
 				09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */,
 				09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */,
-				09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */,
 				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
+				09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */,
 				0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */,
 			);
 			path = ViewControllers;

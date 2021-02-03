@@ -45,6 +45,15 @@ class TaskListViewController: UIViewController {
     var taskName = [Int:String]()
     var taskTime = [Int:String]()
     
+    var switchToSprintButton: Bool = false
+    
+//    var hourInSec = Int()
+//    var minInSec = Int()
+    
+//    var hoursInSec = [Int]()
+//    var minsInSec = [Int]()
+//    var currentTotalTime = Int()
+    
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +73,7 @@ class TaskListViewController: UIViewController {
         let min = (savedTotalTime - (hour * 60 * 60)) / 60
         
         totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
-        timeLeftLabel.text = totalTimeLabel.text
+        timeLeftLabel.text = "0:00"
         
         // Hide keyboard on drag and tap
         taskList.keyboardDismissMode = .onDrag
@@ -77,8 +86,10 @@ class TaskListViewController: UIViewController {
     @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! SelectTimeViewController
         taskTime[rowIndex] = controller.selectedTaskTime
-        
+//        updateTimeLabels()
+        timeLeftIsZero()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
+        taskList.reloadData()
     }
     
     // MARK: - Helper Methods
@@ -91,19 +102,75 @@ class TaskListViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func timeLeftIsZero() {
+        if timeLeftLabel.text == "0:00" {
+            switchToSprintButton = true
+            addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
+        }
+    }
+    
+//    func updateTimeLabels() {
+//        // Find total time left
+//        let recentTimeValue = taskTime[rowIndex]
+//
+//        let components = recentTimeValue?.split { $0 == ":" }.map({ (x) -> Int in
+//            return Int(String(x))!
+//        })
+//
+//        if let components = components {
+//            hourInSec = components[0] * 60 * 60
+//            minInSec = components[1] * 60
+//        }
+//
+//        let hour = (savedTotalTime - hourInSec - minInSec) / 60 / 60
+//        let min = ((savedTotalTime - hourInSec - minInSec) - (hour * 60 * 60)) / 60
+        
+//        let timeValues = Array(taskTime.values)
+//        let filterTimeValues = timeValues.filter { $0 != "Set time" }
+//
+//        for time in filterTimeValues {
+//            let components = time.split { $0 == ":" }.map { (x) -> Int in
+//                return Int(String(x))!
+//            }
+//
+//            hoursInSec.append(components[0] * 60 * 60)
+//            minsInSec.append(components[1] * 60)
+//
+//            currentTotalTime = hoursInSec.reduce(0, +) + minsInSec.reduce(0, +)
+//        }
+//
+//        let hour = (savedTotalTime - currentTotalTime) / 60 / 60
+//        let min = ((savedTotalTime - currentTotalTime) - (hour * 60 * 60)) / 60
+//        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+//    }
+    
     // MARK: - Action Methods
     
     // Adds new cell in Table View
     @IBAction func pressedAddTask(_ sender: UIButton) {
-        taskCount += 1
-        taskTime[taskCount-1] = "Set time"
-        taskList.reloadData()
-        taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
+        if switchToSprintButton == false {
+            taskCount += 1
+            taskTime[taskCount-1] = "Set time"
+            taskList.reloadData()
+            taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
+        } else if switchToSprintButton == true {
+//            performSegue(withIdentifier: "goToRunTask", sender: switchToSprintButton == true)
+            let controller = TaskRunViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     // Saves data to Core Data
-    @IBAction func pressedSprint(_ sender: Any) {
-    }
+//    @IBAction func pressedSprint(_ sender: UIButton) {
+//        if timeLeftLabel.text == "0:00" {
+//            addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
+//            // Create delay here
+//            performSegue(withIdentifier: "toRunTask", sender: nil)
+//        } else {
+//            pressedAddTask(sender)
+//        }
+//    }
+    
     
 }
 

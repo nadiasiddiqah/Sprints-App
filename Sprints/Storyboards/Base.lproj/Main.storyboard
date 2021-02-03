@@ -396,11 +396,11 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-KP-sq2">
-                                        <rect key="frame" x="112" y="359" width="150" height="34"/>
+                                        <rect key="frame" x="97" y="359" width="180" height="34"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="5ue-Yx-Iv4"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="oDv-wr-Ke5"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="oDv-wr-Ke5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="➕ Add Task"/>
@@ -448,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41V-qE-pJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="69.642857142857139"/>
+            <point key="canvasLocation" x="838" y="70"/>
         </scene>
         <!--Task Run View Controller-->
         <scene sceneID="HmH-Md-XEf">
@@ -516,10 +516,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="5FW-TZ-ryn" id="Mqg-Ea-Cxa"/>
-                                    <outlet property="delegate" destination="5FW-TZ-ryn" id="2eB-QH-P29"/>
-                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qp-q4-zwP">
                                 <rect key="frame" x="111" y="178" width="192" height="64"/>
@@ -610,8 +606,9 @@
                             <constraint firstItem="I9n-1E-S9f" firstAttribute="leading" secondItem="Gdl-mo-IzR" secondAttribute="trailing" constant="32" id="ze8-h4-GF6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Fs3-Pc-1NJ"/>
                     <connections>
-                        <outlet property="taskRunList" destination="pIM-PC-OFT" id="GJg-42-pf8"/>
+                        <outlet property="taskRunList" destination="pIM-PC-OFT" id="4we-yv-fbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jI-P2-Dqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
