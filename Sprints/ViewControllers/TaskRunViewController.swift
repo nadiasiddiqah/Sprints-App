@@ -14,6 +14,8 @@ class TaskRunViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskRunList.delegate = self
+        taskRunList.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,24 +25,24 @@ class TaskRunViewController: UIViewController {
     
 }
 
-//extension TaskRunViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView,
-//                   numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func tableView(_ tableView: UITableView,
-//                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "taskRunCell",
-//                                                 for: indexPath)
-//
-//        return cell
-//    }
-//
-//
-//}
-//
-//extension TaskRunViewController: UITableViewDelegate {
-//
-//}
+extension TaskRunViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskRunCell",
+                                                 for: indexPath)
+
+        return cell
+    }
+
+
+}
+
+extension TaskRunViewController: UITableViewDelegate {
+
+}

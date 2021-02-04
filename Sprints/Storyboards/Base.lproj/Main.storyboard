@@ -453,7 +453,7 @@
         <!--Task Run View Controller-->
         <scene sceneID="HmH-Md-XEf">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="LR7-eS-b3X" customClass="TaskRunViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="taskRunScreen" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="LR7-eS-b3X" customClass="TaskRunViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ax-L0-nmq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,6 +516,10 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LR7-eS-b3X" id="eNF-lT-JDx"/>
+                                    <outlet property="delegate" destination="LR7-eS-b3X" id="M0V-4v-3Mg"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qp-q4-zwP">
                                 <rect key="frame" x="111" y="178" width="192" height="64"/>
@@ -608,7 +612,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fs3-Pc-1NJ"/>
                     <connections>
-                        <outlet property="taskRunList" destination="pIM-PC-OFT" id="4we-yv-fbv"/>
+                        <outlet property="taskRunList" destination="pIM-PC-OFT" id="i3h-1R-nbF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jI-P2-Dqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

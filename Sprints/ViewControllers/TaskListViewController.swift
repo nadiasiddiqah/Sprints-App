@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 import CoreData
 
-
-
 // MARK: - TimerData Class
 
 // Custom class type to set task name/time in UITableView
@@ -47,12 +45,8 @@ class TaskListViewController: UIViewController {
     
     var switchToSprintButton: Bool = false
     
-//    var hourInSec = Int()
-//    var minInSec = Int()
-    
-//    var hoursInSec = [Int]()
-//    var minsInSec = [Int]()
-//    var currentTotalTime = Int()
+    var currentTimeLeftInt = Int()
+    var recentTaskTimeInt = Int()
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -73,7 +67,7 @@ class TaskListViewController: UIViewController {
         let min = (savedTotalTime - (hour * 60 * 60)) / 60
         
         totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
-        timeLeftLabel.text = "0:00"
+        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
         
         // Hide keyboard on drag and tap
         taskList.keyboardDismissMode = .onDrag
@@ -86,90 +80,87 @@ class TaskListViewController: UIViewController {
     @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! SelectTimeViewController
         taskTime[rowIndex] = controller.selectedTaskTime
-//        updateTimeLabels()
+        updateTimeLeft()
         timeLeftIsZero()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
-        taskList.reloadData()
+        print(taskTime)
     }
     
     // MARK: - Helper Methods
+    
+    // Set up tap gesture recongizer on screen
     func setUpGestureRecognizer() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    // Hides keyboard when screen is tapped
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
     
+    // Checks if timeLeft is 0:00
     func timeLeftIsZero() {
-        if timeLeftLabel.text == "0:00" {
+        if timeLeftLabel.text == "0:00" || currentTimeLeftInt <= 900 {
             switchToSprintButton = true
             addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
+            addTaskButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+        }
+    }
+
+    func updateTimeLeft() {
+        // Recent task time saved for a task
+        let recentTaskTime = taskTime[rowIndex]
+        
+        // Check that recentTaskTime is not a String + currentTimeLeftInt is greater than 15min
+        if recentTaskTime != "Set time" {
+            // Convert recentTaskTime (Str) into Int
+            let recentTimeComponents = recentTaskTime?.split { $0 == ":" }.map({ (x) -> Int in
+                Int(String(x))!
+            })
+
+            if let components = recentTimeComponents {
+               recentTaskTimeInt = (components[0] * 60 * 60) + (components[1] * 60)
+            }
+            
+            // Convert currentTimeLeft into Int
+            let currentTimeLeft = timeLeftLabel.text
+            
+            let currentTimeLeftComponents = currentTimeLeft?.split { $0 == ":" }.map({ (x) -> Int in
+                Int(String(x))!
+            })
+            
+            if let components = currentTimeLeftComponents {
+                currentTimeLeftInt = (components[0] * 60 * 60) + (components[1] * 60)
+            }
+            
+            // Calculate timeLeft
+            let hour = (currentTimeLeftInt - recentTaskTimeInt) / 60 / 60
+            let min = ((currentTimeLeftInt - recentTaskTimeInt) - (hour * 60 * 60)) / 60
+            
+            // Update timeLeftLabel
+            timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+        } else {
+            timeLeftIsZero()
         }
     }
     
-//    func updateTimeLabels() {
-//        // Find total time left
-//        let recentTimeValue = taskTime[rowIndex]
-//
-//        let components = recentTimeValue?.split { $0 == ":" }.map({ (x) -> Int in
-//            return Int(String(x))!
-//        })
-//
-//        if let components = components {
-//            hourInSec = components[0] * 60 * 60
-//            minInSec = components[1] * 60
-//        }
-//
-//        let hour = (savedTotalTime - hourInSec - minInSec) / 60 / 60
-//        let min = ((savedTotalTime - hourInSec - minInSec) - (hour * 60 * 60)) / 60
-        
-//        let timeValues = Array(taskTime.values)
-//        let filterTimeValues = timeValues.filter { $0 != "Set time" }
-//
-//        for time in filterTimeValues {
-//            let components = time.split { $0 == ":" }.map { (x) -> Int in
-//                return Int(String(x))!
-//            }
-//
-//            hoursInSec.append(components[0] * 60 * 60)
-//            minsInSec.append(components[1] * 60)
-//
-//            currentTotalTime = hoursInSec.reduce(0, +) + minsInSec.reduce(0, +)
-//        }
-//
-//        let hour = (savedTotalTime - currentTotalTime) / 60 / 60
-//        let min = ((savedTotalTime - currentTotalTime) - (hour * 60 * 60)) / 60
-//        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
-//    }
-    
     // MARK: - Action Methods
     
-    // Adds new cell in Table View
     @IBAction func pressedAddTask(_ sender: UIButton) {
+        // Adds new cell in Table View
         if switchToSprintButton == false {
             taskCount += 1
             taskTime[taskCount-1] = "Set time"
             taskList.reloadData()
             taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
-        } else if switchToSprintButton == true {
-//            performSegue(withIdentifier: "goToRunTask", sender: switchToSprintButton == true)
-            let controller = TaskRunViewController()
-            navigationController?.pushViewController(controller, animated: true)
+        } else if switchToSprintButton {
+        // Switch to Sprint Button to segue to TaskRun screen
+            if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
+                navigationController?.pushViewController(controller, animated: true)
+            }
         }
     }
-    
-    // Saves data to Core Data
-//    @IBAction func pressedSprint(_ sender: UIButton) {
-//        if timeLeftLabel.text == "0:00" {
-//            addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
-//            // Create delay here
-//            performSegue(withIdentifier: "toRunTask", sender: nil)
-//        } else {
-//            pressedAddTask(sender)
-//        }
-//    }
     
     
 }
@@ -195,6 +186,7 @@ extension TaskListViewController: UITableViewDataSource {
         cell.nameField.clearButtonMode = .always
         
         // Configure timeButton in taskCell
+        
         cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
         
         if cell.timeButton.currentTitle != "Set time" {
@@ -254,7 +246,6 @@ extension TaskListViewController: TaskCellDelegate {
         if let indexPath = taskList.indexPath(for: cell) {
             rowIndex = indexPath.row
             print("Button tapped on row \(indexPath.row)")
-            print(taskTime)
         }
     }
 
