@@ -47,6 +47,7 @@ class TaskListViewController: UIViewController {
     
     var currentTimeLeftInt = Int()
     var recentTaskTimeInt = Int()
+    var clickedTaskTime = String()
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -57,6 +58,7 @@ class TaskListViewController: UIViewController {
         
         // Set initial taskTime vlaue
         taskTime[0] = "Set time"
+        currentTimeLeftInt = savedTotalTime
         
         // Connect table view's dataSource and delegate to current view controller
         taskList.delegate = self
@@ -76,12 +78,30 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Navigation
     
+    // Segue to SelectTimeVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSelectTime" {
+            let controller = segue.destination as! SelectTimeViewController
+            controller.currentTimeLeftInt = currentTimeLeftInt
+            if switchToSprintButton {
+                controller.switchToSprintButton = switchToSprintButton
+                if let task = taskTime[rowIndex] {
+                    clickedTaskTime = task
+                }
+                let components = clickedTaskTime.split(separator: ":").map { (x) -> Int in
+                    return Int(String(x))!
+                }
+                controller.clickedTaskTimeInt = (components[0]*60*60) + (components[1]*60)
+            }
+//            controller.recentTaskTimeInt = recentTaskTimeInt
+        }
+    }
+    
     // Unwind from SelectTimeVC
     @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! SelectTimeViewController
         taskTime[rowIndex] = controller.selectedTaskTime
-        updateTimeLeft()
-        timeLeftIsZero()
+        checkTimeLeft()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
         print(taskTime)
     }
@@ -100,19 +120,9 @@ class TaskListViewController: UIViewController {
     }
     
     // Checks if timeLeft is 0:00
-    func timeLeftIsZero() {
-        if timeLeftLabel.text == "0:00" || currentTimeLeftInt <= 900 {
-            switchToSprintButton = true
-            addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
-            addTaskButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
-        }
-    }
-
-    func updateTimeLeft() {
-        // Recent task time saved for a task
+    func checkTimeLeft() {
         let recentTaskTime = taskTime[rowIndex]
         
-        // Check that recentTaskTime is not a String + currentTimeLeftInt is greater than 15min
         if recentTaskTime != "Set time" {
             // Convert recentTaskTime (Str) into Int
             let recentTimeComponents = recentTaskTime?.split { $0 == ":" }.map({ (x) -> Int in
@@ -122,28 +132,63 @@ class TaskListViewController: UIViewController {
             if let components = recentTimeComponents {
                recentTaskTimeInt = (components[0] * 60 * 60) + (components[1] * 60)
             }
-            
-            // Convert currentTimeLeft into Int
-            let currentTimeLeft = timeLeftLabel.text
-            
-            let currentTimeLeftComponents = currentTimeLeft?.split { $0 == ":" }.map({ (x) -> Int in
-                Int(String(x))!
-            })
-            
-            if let components = currentTimeLeftComponents {
-                currentTimeLeftInt = (components[0] * 60 * 60) + (components[1] * 60)
-            }
-            
-            // Calculate timeLeft
-            let hour = (currentTimeLeftInt - recentTaskTimeInt) / 60 / 60
-            let min = ((currentTimeLeftInt - recentTaskTimeInt) - (hour * 60 * 60)) / 60
-            
-            // Update timeLeftLabel
-            timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
-        } else {
-            timeLeftIsZero()
         }
+        
+        if currentTimeLeftInt == 0 {
+            updateTimeLeft()
+            showSprintButton()
+        } else if currentTimeLeftInt <= 900 {
+            updateTimeLeft()
+            showSprintButton()
+        } else if recentTaskTimeInt < currentTimeLeftInt {
+            updateTimeLeft()
+        } else if recentTaskTimeInt == currentTimeLeftInt {
+            updateTimeLeft()
+            showSprintButton()
+        } else {
+            updateTimeLeft()
+        }
+       
     }
+    
+    func showSprintButton() {
+        switchToSprintButton = true
+        addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
+        addTaskButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+    }
+
+    func updateTimeLeft() {
+
+        // Filter out "Set time" from taskTime
+        var filterTaskTime = taskTime
+        
+        for pair in filterTaskTime {
+            if pair.value == "Set time" {
+                filterTaskTime.removeValue(forKey: pair.key)
+            }
+        }
+        
+        // Convert taskTime [Int:String] -> taskTimeInt [Int: Int]
+        let taskTimeInt = filterTaskTime.mapValues { (value) -> Int in
+            let components = value.split(separator: ":").map { (x) -> Int in
+                return Int(String(x))!
+            }
+            let valueInSec = (components[0]*60*60) + (components[1]*60)
+            return valueInSec
+        }
+        
+        // Add together taskTimeInt
+        let addedTaskTime = taskTimeInt.values.reduce(0, +)
+        
+        // Calculate timeLeft
+        currentTimeLeftInt = savedTotalTime - addedTaskTime
+        let hour = currentTimeLeftInt/60/60
+        let min = (currentTimeLeftInt - (hour*60*60)) / 60
+        
+        // Update timeLeftLabel
+        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+    }
+
     
     // MARK: - Action Methods
     
