@@ -10,10 +10,15 @@ import UIKit
 
 class TaskRunViewController: UIViewController {
     
-    @IBOutlet weak var taskRunList: UITableView!
+    // MARK: - Outlets
+    @IBOutlet weak var taskRunList: SelfSizedTableView!
+    @IBOutlet weak var timerLabel: UILabel!
     
+    // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Connect table view's dataSource and delegate to current view controller
         taskRunList.delegate = self
         taskRunList.dataSource = self
     }
@@ -25,6 +30,8 @@ class TaskRunViewController: UIViewController {
     
 }
 
+
+// MARK: - UITableViewDataSource Extension
 extension TaskRunViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -43,6 +50,8 @@ extension TaskRunViewController: UITableViewDataSource {
 
 }
 
+
+// MARK: - UITableViewDelegate Extension
 extension TaskRunViewController: UITableViewDelegate {
 
 }

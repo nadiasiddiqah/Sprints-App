@@ -29,7 +29,6 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var addTaskButton: UIButton!
-    @IBOutlet weak var sprintButton: UIButton!
     
     // MARK: - Instance Variables
 //    var context: NSManagedObjectContext!
@@ -210,6 +209,8 @@ class TaskListViewController: UIViewController {
     
 }
 
+
+// MARK: - UITableViewDataSource Extension
 extension TaskListViewController: UITableViewDataSource {
     
     // Return the number of rows in table view
@@ -257,6 +258,8 @@ extension TaskListViewController: UITableViewDataSource {
     
 }
 
+
+// MARK: - UITableViewDelegate Extension
 extension TaskListViewController: UITableViewDelegate {
     
     // De-selects a row after its selected
@@ -267,6 +270,8 @@ extension TaskListViewController: UITableViewDelegate {
     }
 }
 
+
+// MARK: TaskCellDelegate Extension
 extension TaskListViewController: TaskCellDelegate {
     func nameFieldDidStartEditing(onCell cell: TaskCell) {
         cell.nameField.becomeFirstResponder()

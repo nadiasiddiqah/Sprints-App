@@ -20,7 +20,6 @@ class SelectTimeViewController: UIViewController {
     // Passed from TaskListVC
     var currentTimeLeftInt = Int()
     var clickedTaskTimeInt = Int()
-//    var recentTaskTimeInt = Int()
     var switchToSprintButton = Bool()
     
     // MARK: - Outlet Variables

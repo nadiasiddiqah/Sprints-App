@@ -14,6 +14,7 @@
 		092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */; };
 		092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
+		0991334E25CDEAB2000E233B /* TaskRunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991334D25CDEAB2000E233B /* TaskRunCell.swift */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
@@ -36,6 +37,7 @@
 		092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		0991334D25CDEAB2000E233B /* TaskRunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunCell.swift; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				0903724625AFAB1E00A0AAD6 /* ViewControllers */,
 				094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */,
 				0906C3DA25BF80A300B5C415 /* TaskCell.swift */,
+				0991334D25CDEAB2000E233B /* TaskRunCell.swift */,
 			);
 			path = Sprints;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */,
 				0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */,
 				092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */,
+				0991334E25CDEAB2000E233B /* TaskRunCell.swift in Sources */,
 				092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */,
 				094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */,
 				09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */,
