@@ -1,18 +1,16 @@
 //
-//  TaskRunCell.swift
+//  NextTaskCell.swift
 //  Sprints
 //
-//  Created by Nadia Siddiqah on 2/5/21.
+//  Created by Nadia Siddiqah on 2/6/21.
 //
 
 import UIKit
 
-class TaskRunCell: UITableViewCell {
-
-    @IBOutlet weak var taskName: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var checkmark: UIImageView!
-    @IBOutlet weak var nextTaskButton: UIButton!
+class NextTaskCell: UITableViewCell {
+    
+    @IBOutlet weak var nextTaskName: UILabel!
+    @IBOutlet weak var nextTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -76,6 +76,8 @@ class SprintTimeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+    // MARK: - Navigation
+    
     // Runs before segue to next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTaskList" {
@@ -95,6 +97,12 @@ class SprintTimeViewController: UIViewController {
     // MARK: - Methods
     
     // Save timer set by user data in Core Data
+    func saveTotalTime() {
+        // Create SavedTotalTime object
+        
+    }
+    
+    
 //    func saveTimerSet() {
 //        // Create SprintTimer object (using timer set by user data)
 //        let finalTimerSet = SprintTimer(context: self.context)

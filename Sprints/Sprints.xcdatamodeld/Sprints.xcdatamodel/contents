@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="SprintTimer" representedClassName="SprintTimer" syncable="YES">
-        <attribute name="hour" attributeType="String"/>
-        <attribute name="min" attributeType="String"/>
-        <attribute name="sec" attributeType="String"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedTotalTime" representedClassName="SavedTotalTime" syncable="YES" codeGenerationType="class">
+        <attribute name="totalTimeInSec" attributeType="Integer 16" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="SprintTimer" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="SavedTotalTime" positionX="-45" positionY="0" width="128" height="58"/>
     </elements>
 </model>

@@ -14,10 +14,118 @@
             filePath = "Sprints/ViewControllers/TaskListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "nameFieldDidEndEditing(onCell:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77D06C62-00E4-4924-9109-687C713B0A62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sprints/ViewControllers/TaskRunViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "TaskRunViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - f24e882cc945bbb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.savedTotalTime.getter : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - 73599c2b3a56784"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.savedTotalTime.setter : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - 3963beb624cb5f21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.savedTotalTime.modify : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - 9033bb81d0024a5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.savedTotalTime.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - a8111902b1da2c20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Sprints.TaskRunViewController"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "77D06C62-00E4-4924-9109-687C713B0A62 - 487f6ba7267bd3ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskRunViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Sprints.TaskRunViewController&gt;"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskRunViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

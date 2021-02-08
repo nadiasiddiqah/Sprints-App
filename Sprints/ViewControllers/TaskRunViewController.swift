@@ -11,8 +11,19 @@ import UIKit
 class TaskRunViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var taskRunList: SelfSizedTableView!
+    @IBOutlet weak var taskRunList: UITableView!
+    @IBOutlet weak var nextTaskList: UITableView!
     @IBOutlet weak var timerLabel: UILabel!
+    
+    // MARK: - Instance Variables
+    
+    var savedTotalTime = Int()
+    
+    var taskCount = Int()
+    var rowIndex = Int()
+    
+    var taskName = [Int:String]()
+    var taskTime = [Int: String]()
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -21,6 +32,10 @@ class TaskRunViewController: UIViewController {
         // Connect table view's dataSource and delegate to current view controller
         taskRunList.delegate = self
         taskRunList.dataSource = self
+        nextTaskList.delegate = self
+        nextTaskList.dataSource = self
+        
+        print(savedTotalTime)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,13 +55,15 @@ extension TaskRunViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskRunCell",
-                                                 for: indexPath)
-
-        return cell
+        
+        if tableView == taskRunList {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "taskRunCell") as! TaskRunCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "nextTaskCell") as! NextTaskCell
+            return cell
+        }
     }
-
 
 }
 

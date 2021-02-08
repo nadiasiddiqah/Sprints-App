@@ -11,8 +11,6 @@
 		0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906C3DA25BF80A300B5C415 /* TaskCell.swift */; };
 		0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */; };
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
-		092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */; };
-		092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
 		0991334E25CDEAB2000E233B /* TaskRunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991334D25CDEAB2000E233B /* TaskRunCell.swift */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
@@ -26,6 +24,7 @@
 		09ECD1D5259974B7006D301A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09ECD1D3259974B7006D301A /* Main.storyboard */; };
 		09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09ECD1D6259974BA006D301A /* Assets.xcassets */; };
 		09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09ECD1D8259974BA006D301A /* LaunchScreen.storyboard */; };
+		09F1332E25CF3D930077CC6C /* NextTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F1332D25CF3D930077CC6C /* NextTaskCell.swift */; };
 		C49B2326B992CF1DE3132C5A /* Pods_Sprints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A7940E19E6CA255888C5EA /* Pods_Sprints.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +33,6 @@
 		0906C3DA25BF80A300B5C415 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sprints.xcdatamodel; sourceTree = "<group>"; };
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
-		092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SprintTimer+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		0991334D25CDEAB2000E233B /* TaskRunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunCell.swift; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +48,7 @@
 		09ECD1D6259974BA006D301A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09ECD1D9259974BA006D301A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09ECD1DB259974BA006D301A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F1332D25CF3D930077CC6C /* NextTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTaskCell.swift; sourceTree = "<group>"; };
 		30A7940E19E6CA255888C5EA /* Pods_Sprints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDDEB22300C24494CE304BA /* Pods-Sprints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprints.release.xcconfig"; path = "Target Support Files/Pods-Sprints/Pods-Sprints.release.xcconfig"; sourceTree = "<group>"; };
 		E1C8D720C906D69968AAA04C /* Pods-Sprints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprints.debug.xcconfig"; path = "Target Support Files/Pods-Sprints/Pods-Sprints.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,8 +73,8 @@
 				09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */,
 				09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */,
 				09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */,
-				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
 				09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */,
+				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
 				0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */,
 			);
 			path = ViewControllers;
@@ -85,8 +83,6 @@
 		0903724725AFAB5500A0AAD6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				092D73C025B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift */,
-				092D73C125B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift */,
 				0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */,
 			);
 			path = Model;
@@ -141,6 +137,7 @@
 				094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */,
 				0906C3DA25BF80A300B5C415 /* TaskCell.swift */,
 				0991334D25CDEAB2000E233B /* TaskRunCell.swift */,
+				09F1332D25CF3D930077CC6C /* NextTaskCell.swift */,
 			);
 			path = Sprints;
 			sourceTree = "<group>";
@@ -286,12 +283,11 @@
 				09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */,
 				0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */,
 				0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */,
-				092D73C225B0E00F008F76C9 /* SprintTimer+CoreDataClass.swift in Sources */,
 				0991334E25CDEAB2000E233B /* TaskRunCell.swift in Sources */,
-				092D73C325B0E00F008F76C9 /* SprintTimer+CoreDataProperties.swift in Sources */,
 				094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */,
 				09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */,
 				09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */,
+				09F1332E25CF3D930077CC6C /* NextTaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

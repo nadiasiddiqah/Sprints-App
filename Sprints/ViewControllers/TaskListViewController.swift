@@ -77,12 +77,13 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // Segue to SelectTimeVC
+    // Segue to SelectTimeVC or TaskRunVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToSelectTime" {
             let controller = segue.destination as! SelectTimeViewController
-            controller.currentTimeLeftInt = currentTimeLeftInt
+            
             if switchToSprintButton {
+                // If time left == "0:00", subtract last set time
                 controller.switchToSprintButton = switchToSprintButton
                 if let task = taskTime[rowIndex] {
                     clickedTaskTime = task
@@ -91,8 +92,13 @@ class TaskListViewController: UIViewController {
                     return Int(String(x))!
                 }
                 controller.clickedTaskTimeInt = (components[0]*60*60) + (components[1]*60)
+            } else {
+                // If time left != "0:00"
+                controller.currentTimeLeftInt = currentTimeLeftInt
             }
-//            controller.recentTaskTimeInt = recentTaskTimeInt
+            
+        } else if let controller = segue.destination as? TaskRunViewController {
+            controller.savedTotalTime = 100
         }
     }
     
@@ -192,14 +198,14 @@ class TaskListViewController: UIViewController {
     // MARK: - Action Methods
     
     @IBAction func pressedAddTask(_ sender: UIButton) {
-        // Adds new cell in Table View
         if switchToSprintButton == false {
+            // Adds new cell in Table View
             taskCount += 1
             taskTime[taskCount-1] = "Set time"
             taskList.reloadData()
             taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
         } else if switchToSprintButton {
-        // Switch to Sprint Button to segue to TaskRun screen
+            // Switch to Sprint Button to segue to TaskRun screen
             if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
                 navigationController?.pushViewController(controller, animated: true)
             }
