@@ -31,16 +31,14 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var addTaskButton: UIButton!
     
     // MARK: - Instance Variables
-//    var context: NSManagedObjectContext!
-    var savedTotalTime: Int!
     
-    var taskData = [TaskData]()
+    // Reference to Managed Object Context (via the Persistent Container in AppDelegate)
+//    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
+//    var taskData = [TaskData]()
     
     var taskCount: Int = 1
     var rowIndex = Int()
-    
-    var taskName = [Int:String]()
-    var taskTime = [Int:String]()
     
     var switchToSprintButton: Bool = false
     
@@ -55,25 +53,50 @@ class TaskListViewController: UIViewController {
         // Define max height for table view
         taskList.maxHeight = 351
         
-        // Set initial taskTime vlaue
+        // Set initial taskTime value
         taskTime[0] = "Set time"
-        currentTimeLeftInt = savedTotalTime
+        currentTimeLeftInt = pickedTime
         
         // Connect table view's dataSource and delegate to current view controller
         taskList.delegate = self
         taskList.dataSource = self
         
         // Update time labels on screen
-        let hour = savedTotalTime / 60 / 60
-        let min = (savedTotalTime - (hour * 60 * 60)) / 60
-        
-        totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
-        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
-        
+        let time = showTimeLabel(time: pickedTime)
+        totalTimeLabel.text = time
+        timeLeftLabel.text = time
+
         // Hide keyboard on drag and tap
         taskList.keyboardDismissMode = .onDrag
         setUpGestureRecognizer()
+        
+//        fetchTotalTime()
     }
+    
+//    func fetchTotalTime() {
+//        do {
+//            totalTime = try context.fetch(TotalTime.fetchRequest())
+//
+//            let hour = Int(totalTime) / 60 / 60
+//            let min = (totalTime - (hour * 60 * 60)) / 60
+//
+//            totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
+//            timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+//        } catch {
+//            // Show error alert to user
+//            let alert = UIAlertController(title: "Fatal Error", message: "Unable to save timer set", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "Force Quit", style: .destructive, handler: nil)
+//            alert.addAction(action)
+//            present(alert, animated: true) {
+//                DispatchQueue.main.async {
+//                    fatalError()
+//                }
+//            }
+//            // DEBUG if error in saving pickedTime
+//            print(error.localizedDescription)
+//        }
+//    }
+    
     
     // MARK: - Navigation
     
@@ -97,8 +120,8 @@ class TaskListViewController: UIViewController {
                 controller.currentTimeLeftInt = currentTimeLeftInt
             }
             
-        } else if let controller = segue.destination as? TaskRunViewController {
-            controller.savedTotalTime = 100
+        } else if segue.destination == TaskRunViewController() {
+            print("this before the segue: \(pickedTime)")
         }
     }
     
@@ -186,12 +209,10 @@ class TaskListViewController: UIViewController {
         let addedTaskTime = taskTimeInt.values.reduce(0, +)
         
         // Calculate timeLeft
-        currentTimeLeftInt = savedTotalTime - addedTaskTime
-        let hour = currentTimeLeftInt/60/60
-        let min = (currentTimeLeftInt - (hour*60*60)) / 60
+        currentTimeLeftInt = pickedTime - addedTaskTime
         
         // Update timeLeftLabel
-        timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+        timeLeftLabel.text = showTimeLabel(time: currentTimeLeftInt)
     }
 
     

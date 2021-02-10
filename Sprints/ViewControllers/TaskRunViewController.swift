@@ -16,9 +16,6 @@ class TaskRunViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     // MARK: - Instance Variables
-    
-    var savedTotalTime = Int()
-    
     var taskCount = Int()
     var rowIndex = Int()
     
@@ -28,14 +25,15 @@ class TaskRunViewController: UIViewController {
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Connect table view's dataSource and delegate to current view controller
         taskRunList.delegate = self
         taskRunList.dataSource = self
         nextTaskList.delegate = self
         nextTaskList.dataSource = self
         
-        print(savedTotalTime)
+        // Update timerLabel
+        timerLabel.text = showTimeLabel(time: pickedTime)
     }
     
     override func viewWillAppear(_ animated: Bool) {
