@@ -8,9 +8,13 @@
 import Foundation
 
 // Global variables
+var taskCount: Int = 1
 var pickedTime = Int()
 var taskName = [Int:String]()
 var taskTime = [Int:String]()
+
+var completedTaskName = [Int:String]()
+var completedTaskTime = [Int:String]()
 
 // Global helper methods
 func showTimeLabel(time: Int) -> String {

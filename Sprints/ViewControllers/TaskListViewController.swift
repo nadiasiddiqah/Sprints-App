@@ -37,7 +37,6 @@ class TaskListViewController: UIViewController {
     
 //    var taskData = [TaskData]()
     
-    var taskCount: Int = 1
     var rowIndex = Int()
     
     var switchToSprintButton: Bool = false
@@ -259,7 +258,6 @@ extension TaskListViewController: UITableViewDataSource {
         cell.nameField.clearButtonMode = .always
         
         // Configure timeButton in taskCell
-        
         cell.timeButton.setTitle(taskTime[indexPath.row], for: .normal)
         
         if cell.timeButton.currentTitle != "Set time" {

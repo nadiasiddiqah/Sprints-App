@@ -58,9 +58,6 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    // MARK: - Helper Methods
-    
 
 }
 
