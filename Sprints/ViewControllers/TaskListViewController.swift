@@ -120,7 +120,7 @@ class TaskListViewController: UIViewController {
             }
             
         } else if segue.destination == TaskRunViewController() {
-            print("this before the segue: \(pickedTime)")
+    
         }
     }
     
