@@ -118,7 +118,6 @@ class TaskListViewController: UIViewController {
                 // If time left != "0:00"
                 controller.currentTimeLeftInt = currentTimeLeftInt
             }
-            
         } else if segue.destination == TaskRunViewController() {
     
         }

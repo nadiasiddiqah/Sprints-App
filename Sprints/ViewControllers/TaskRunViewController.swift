@@ -56,11 +56,25 @@ class TaskRunViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        print("taskCount is:" + "\(taskCount)")
     }
     
     // MARK: - Action methods
     @IBAction func pressedNextTask(_ sender: UIButton) {
-//        completedTaskInfo[taskName.values.first!] = taskTime.values.first!
+        
+//        taskStatus.image = UIImage.init(named: "checkmark")
+        
+        let completedTaskName = sortedNameValues.remove(at: 0)
+        let completedTaskTime = sortedTimeValues.remove(at: 0)
+        
+        if taskTimeInt == 0 || currentTaskTime.text == "No time left" {
+            // If current task time runs out
+            completedTaskInfo.append([completedTaskName, "0:00", completedTaskTime])
+        } else {
+            // If current task is finished earlier
+            completedTaskInfo.append([completedTaskTime, showTimeLabel(time: taskTimeInt), completedTaskTime])
+        }
+        reloadTaskViews()
     }
     
     
@@ -76,6 +90,13 @@ class TaskRunViewController: UIViewController {
 //            }
 //        })
 //    }
+    
+    func reloadTaskViews() {
+        currentTaskName.text = sortedNameValues.first
+        currentTaskTime.text = "\(sortedTimeValues.first! + " left")"
+        taskCount -= 1
+        nextTaskList.reloadData()
+    }
     
     
     func startSprintTimer() {
@@ -141,7 +162,7 @@ extension TaskRunViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         if taskCount >= 2 {
-            return 3
+            return taskCount-1
         } else {
             tableView.isHidden = true
             return 0

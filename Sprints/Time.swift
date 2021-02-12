@@ -18,6 +18,8 @@ var taskTime = [Int:String]()
 var sortedNameValues = [String]()
 var sortedTimeValues = [String]()
 
+var completedTaskInfo = [[String]]()
+
 
 // MARK: - Global helper methods
 
