@@ -217,17 +217,20 @@ class TaskListViewController: UIViewController {
     // MARK: - Action Methods
     
     @IBAction func pressedAddTask(_ sender: UIButton) {
-        if switchToSprintButton == false {
+        if switchToSprintButton {
+            // Switch to Sprint Button to segue to TaskRun screen
+            if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
+                view.endEditing(true)
+                navigationController?.pushViewController(controller, animated: true)
+                print(taskName)
+                print(taskTime)
+            }
+        } else {
             // Adds new cell in Table View
             taskCount += 1
             taskTime[taskCount-1] = "Set time"
             taskList.reloadData()
             taskList.scrollToRow(at: IndexPath(row: taskCount-1, section: 0), at: .bottom, animated: true)
-        } else if switchToSprintButton {
-            // Switch to Sprint Button to segue to TaskRun screen
-            if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
-                navigationController?.pushViewController(controller, animated: true)
-            }
         }
     }
     
@@ -297,17 +300,16 @@ extension TaskListViewController: UITableViewDelegate {
 
 // MARK: TaskCellDelegate Extension
 extension TaskListViewController: TaskCellDelegate {
-    func nameFieldDidStartEditing(onCell cell: TaskCell) {
+    func nameFieldDidBeginEditing(onCell cell: TaskCell) {
         cell.nameField.becomeFirstResponder()
     }
     
     func nameFieldDidEndEditing(onCell cell: TaskCell) {
         if let indexPath = taskList.indexPath(for: cell) {
             rowIndex = indexPath.row
+            taskName[rowIndex] = cell.nameField.text
             print("Task edited on row \(indexPath.row)")
         }
-        taskName[rowIndex] = cell.nameField.text
-        print(taskName)
         cell.nameField.resignFirstResponder()
     }
     

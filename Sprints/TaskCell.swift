@@ -9,7 +9,7 @@ import UIKit
 
 protocol TaskCellDelegate: class {
     func pressedTimeButton(onCell cell: TaskCell)
-    func nameFieldDidStartEditing(onCell cell: TaskCell)
+    func nameFieldDidBeginEditing(onCell cell: TaskCell)
     func nameFieldDidEndEditing(onCell cell: TaskCell)
     func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool
 }
@@ -46,7 +46,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        delegate?.nameFieldDidStartEditing(onCell: self)
+        delegate?.nameFieldDidBeginEditing(onCell: self)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -58,7 +58,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
+    
 }
 
 

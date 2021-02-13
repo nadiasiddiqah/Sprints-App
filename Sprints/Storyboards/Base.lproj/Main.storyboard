@@ -753,7 +753,7 @@
         <!--Completed View Controller-->
         <scene sceneID="B3r-Jk-gCJ">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="tsw-Cv-J4h" customClass="CompletedViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="completedScreen" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="tsw-Cv-J4h" customClass="CompletedViewController" customModule="Sprints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UxD-HW-8AP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

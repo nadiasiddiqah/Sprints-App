@@ -10,12 +10,14 @@ import UIKit
 
 class TaskRunViewController: UIViewController {
     
+    // MARK: - Instance Variables
     var sprintTimer: Timer?
     var taskTimer: Timer?
-    var totalTime = Int()
-    var rowIndex = Int()
     
+    var totalTime = Int()
     var taskTimeInt = Int()
+    
+    var completedAllTasks = false
 
     // MARK: - Outlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -27,15 +29,24 @@ class TaskRunViewController: UIViewController {
     @IBOutlet weak var currentTaskTime: UILabel!
     @IBOutlet weak var nextTaskButton: UIButton!
     
-    // MARK: - Instance Variables
-    
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if taskCount > 1 {
+            taskCount -= 1
+            
+            // Connect table view's dataSource and delegate to current view controller
+            nextTaskList.delegate = self
+            nextTaskList.dataSource = self
+        } else {
+            nextTaskButton.setTitle("Completed", for: .normal)
+            nextTaskButton.backgroundColor = UIColor.systemIndigo
+            completedAllTasks = true
+            nextTaskList.isHidden = true
+        }
     
-        // Connect table view's dataSource and delegate to current view controller
-        nextTaskList.delegate = self
-        nextTaskList.dataSource = self
+        print("initial taskCount:" + "\(taskCount)")
         
         // Update timerLabel
         totalTime = pickedTime
@@ -44,61 +55,56 @@ class TaskRunViewController: UIViewController {
         // Sort name and time values
         sortedNameValues = sortTaskInfo(dict: taskName)
         sortedTimeValues = sortTaskInfo(dict: taskTime)
+        print(sortedNameValues)
+        print(sortedTimeValues)
         
         // Add round borders to views
         roundedBorder(object: [currentTaskView, nextTaskList, timerLabel])
         
+        // Start timers
         startSprintTimer()
         startTaskTimer()
+        
+        // Update current task view
         updateCurrentTaskView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        print("taskCount is:" + "\(taskCount)")
     }
     
     // MARK: - Action methods
+    
+    //
     @IBAction func pressedNextTask(_ sender: UIButton) {
         
 //        taskStatus.image = UIImage.init(named: "checkmark")
-        
         let completedTaskName = sortedNameValues.remove(at: 0)
         let completedTaskTime = sortedTimeValues.remove(at: 0)
         
         if taskTimeInt == 0 || currentTaskTime.text == "No time left" {
             // If current task time runs out
-            completedTaskInfo.append([completedTaskName, "0:00", completedTaskTime])
+            completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: 0)])
         } else {
             // If current task is finished earlier
-            completedTaskInfo.append([completedTaskTime, showTimeLabel(time: taskTimeInt), completedTaskTime])
+            completedTaskInfo.append([completedTaskTime, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: taskTimeInt)])
         }
-        reloadTaskViews()
+        
+        if completedAllTasks {
+            if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
+                sprintTimer?.invalidate()
+                taskTimer?.invalidate()
+                navigationController?.pushViewController(controller, animated: true)
+            }
+        } else {
+            reloadTaskViews()
+        }
+        print(completedTaskInfo)
     }
     
     
     // MARK: - Helper methods
-//    func startSprintTimer() {
-//       Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] (sprintTimer) in
-//            timerLabel.text = showTimeLabel(time: pickedTime)
-//            if pickedTime > 0 {
-//                print("\(pickedTime) left")
-//                pickedTime -= 1
-//            } else {
-//                sprintTimer.invalidate()
-//            }
-//        })
-//    }
-    
-    func reloadTaskViews() {
-        currentTaskName.text = sortedNameValues.first
-        currentTaskTime.text = "\(sortedTimeValues.first! + " left")"
-        taskCount -= 1
-        nextTaskList.reloadData()
-    }
-    
-    
     func startSprintTimer() {
         sprintTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
                                            selector: #selector(updateSprintTimer),
@@ -108,12 +114,12 @@ class TaskRunViewController: UIViewController {
     @objc func updateSprintTimer() {
         timerLabel.text = showTimeLabel(time: pickedTime)
         if pickedTime > 0 {
-            print("\(pickedTime) left")
+//            print("\(pickedTime) left")
             pickedTime -= 1
         } else {
             if let sprintTimer = sprintTimer {
                 sprintTimer.invalidate()
-                timerLabel.text = "Completed"
+                timerLabel.text = "Time's Up"
             }
         }
     }
@@ -128,7 +134,7 @@ class TaskRunViewController: UIViewController {
     @objc func updateTaskTimer() {
         currentTaskTime.text = "\(showTimeLabel(time: taskTimeInt) + " left")"
         if taskTimeInt > 0 {
-            print("\(taskTimeInt) left")
+//            print("\(taskTimeInt) left")
             taskTimeInt -= 1
         } else {
             if let taskTimer = taskTimer {
@@ -138,11 +144,33 @@ class TaskRunViewController: UIViewController {
         }
     }
     
+    func actualTimeSpent(timeSet: String, timeLeft: Int) -> String {
+        let timeSetInSec = showTimeInSec(time: timeSet)
+        let timeSpent = timeSetInSec - timeLeft
+        return showTimeLabel(time: timeSpent)
+    }
+    
     func updateCurrentTaskView() {
         currentTaskName.text = sortedNameValues.first
         currentTaskTime.text = "\(sortedTimeValues.first! + " left")"
     }
-
+    
+    func reloadTaskViews() {
+        taskCount -= 1
+        print("reloadedView taskCount:" + "\(taskCount)")
+        currentTaskName.text = sortedNameValues.first
+        currentTaskTime.text = "\(sortedTimeValues.first! + " left")"
+        taskTimeInt = showTimeInSec(time: sortedTimeValues.first!)
+        updateTaskTimer()
+        
+        if taskCount > 0 {
+            nextTaskList.reloadData()
+        } else {
+            completedAllTasks = true
+            nextTaskButton.setTitle("Complete", for: .normal)
+            nextTaskList.isHidden = true
+        }
+    }
 }
 
 
@@ -151,7 +179,7 @@ extension TaskRunViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    titleForHeaderInSection section: Int) -> String? {
-        if taskCount >= 2 {
+        if taskCount > 0 {
             return "Up Next:"
         } else {
             tableView.isHidden = true
@@ -161,8 +189,9 @@ extension TaskRunViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if taskCount >= 2 {
-            return taskCount-1
+        print("tableViewRows taskCount:" + "\(taskCount)")
+        if taskCount > 0 {
+            return taskCount
         } else {
             tableView.isHidden = true
             return 0
