@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class TaskRunViewController: UIViewController {
     
@@ -24,7 +25,12 @@ class TaskRunViewController: UIViewController {
     @IBOutlet weak var nextTaskList: UITableView!
     
     @IBOutlet weak var currentTaskView: UIView!
-    @IBOutlet weak var taskStatus: UIImageView!
+    @IBOutlet weak var taskStatus: UIImageView! {
+        didSet {
+            taskStatus.isUserInteractionEnabled = true
+            taskStatus.image = UIImage(systemName: "square")
+        }
+    }
     @IBOutlet weak var currentTaskName: UILabel!
     @IBOutlet weak var currentTaskTime: UILabel!
     @IBOutlet weak var nextTaskButton: UIButton!
@@ -67,7 +73,9 @@ class TaskRunViewController: UIViewController {
         
         // Update current task view
         updateCurrentTaskView()
+        tapToShowCheckmark()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -76,38 +84,57 @@ class TaskRunViewController: UIViewController {
     
     // MARK: - Action methods
     
-    //
     @IBAction func pressedNextTask(_ sender: UIButton) {
         
-//        taskStatus.image = UIImage.init(named: "checkmark")
-        let completedTaskName = sortedNameValues.remove(at: 0)
-        let completedTaskTime = sortedTimeValues.remove(at: 0)
-        
-        print(completedTaskName)
-        print(completedTaskTime)
-        
-        if taskTimeInt == 0 || currentTaskTime.text == "No time left" {
-            // If current task time runs out
-            completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: 0)])
-        } else {
-            // If current task is finished earlier
-            completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: taskTimeInt)])
-        }
-        
-        if completedAllTasks {
-            if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
-                sprintTimer?.invalidate()
-                taskTimer?.invalidate()
-                navigationController?.pushViewController(controller, animated: true)
+        UIView.animate(withDuration: 1, delay: 0, options: .curveLinear) { [self] in
+            taskStatus.image = UIImage(systemName: "checkmark.square.fill")
+            taskStatus.tintColor = UIColor.systemGreen
+        } completion: { [self] _ in
+            let completedTaskName = sortedNameValues.remove(at: 0)
+            let completedTaskTime = sortedTimeValues.remove(at: 0)
+            
+            // Check taskTimeInt (of current task) to update completedTaskInfo
+            if taskTimeInt == 0 || currentTaskTime.text == "No time left" {
+                // If current task time runs out
+                completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: 0)])
+            } else {
+                // If current task is finished earlier
+                completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: taskTimeInt)])
             }
-        } else {
-            reloadTaskViews()
+            
+            // Check if all tasks are completed to update screen
+            if completedAllTasks {
+                // If all tasks completed, segue to completed screen
+                if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
+                    sprintTimer?.invalidate()
+                    taskTimer?.invalidate()
+                    navigationController?.pushViewController(controller, animated: true)
+                }
+            } else {
+                // If more tasks left, update task view info
+                reloadTaskViews()
+            }
+            print(completedTaskInfo)
         }
-        print(completedTaskInfo)
     }
     
     
     // MARK: - Helper methods
+    func tapToShowCheckmark() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showCheckmark(_:)))
+        taskStatus.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func showCheckmark(_ sender: UITapGestureRecognizer) {
+        taskStatus.image = UIImage(systemName: "checkmark.square.fill")
+        taskStatus.tintColor = UIColor.systemGreen
+    }
+    
+    func showSquare() {
+        taskStatus.image = UIImage(systemName: "square")
+        taskStatus.tintColor = nil
+    }
+    
     func startSprintTimer() {
         sprintTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
                                            selector: #selector(updateSprintTimer),
@@ -161,8 +188,11 @@ class TaskRunViewController: UIViewController {
     func reloadTaskViews() {
         taskCount -= 1
         print("reloadedView taskCount:" + "\(taskCount)")
+        
+        showSquare()
         currentTaskName.text = sortedNameValues.first
         currentTaskTime.text = "\(sortedTimeValues.first! + " left")"
+        
         taskTimeInt = showTimeInSec(time: sortedTimeValues.first!)
         updateTaskTimer()
         

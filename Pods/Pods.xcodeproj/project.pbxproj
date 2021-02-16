@@ -7,166 +7,439 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */; };
-		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */; };
-		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */; };
+		009CB881035B85E694EDE43F7F32AB6B /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7FFBA6BE964C103825E47B9914750 /* FillNode.swift */; };
+		0133233B8FA3F7CD520BF2320BBB48D1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7A5F1F0C9021D160C853072F0DF66 /* FrameStore.swift */; };
+		02216B580F40908071EC21B96D67E9D9 /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB74826B6C863963FEA5F3A1705AE0 /* GradientStrokeNode.swift */; };
+		02295D78802AA44A08CC4D151AB3754F /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB21C7F5823C560C2BB83FBC8F3664 /* PolygonNode.swift */; };
+		02625B5BFE249E69FB44FDC74093E4DB /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBA8D3FB45F16F39A86BF392EFC6AA /* AnimationTime.swift */; };
+		04691E6969AC548F927B70E462F08B00 /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7418E66767393DA69248399F0D29AB /* ShapeNode.swift */; };
+		0653A2C5607C749695E268E4E6C2F021 /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C3C2F6D4DEEB4A59940BAB3023F87 /* AnimationKeypathExtension.swift */; };
+		079D7B6FAA7B0E0E2B0491A31E13A781 /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB07CE406EC19052B91E7D1C945BCCC /* AnimationViewInitializers.swift */; };
+		07D5D290AFC1C0625577879F23E1CA98 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9219DAAC6DD4419E7ECCA065AFA80CC /* Keyframe.swift */; };
+		0ABF0E24D4C5C2211CC8734E9F045546 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C179641694926441020857A8F351E3 /* TextCompositionLayer.swift */; };
+		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF906C11F051420CAF50A4FC3B368A /* TinyConstraints.swift */; };
+		0E4F718620888EE78E494057B9D3DEBC /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D4490038D7F626CF3576DDDF1A2DA /* PathElement.swift */; };
+		0F5226419BBB085467BA8C5F52CC94B6 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05BD52A1DC57F6DF33CEFDB16490AA4 /* Glyph.swift */; };
+		0FA94B0CBA835214F8CFFDC2D1419BAF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F27E4A2D78234714DF33DB11244F52 /* UIColorExtension.swift */; };
+		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AE545EB76EC1F6CB23DDDAD388BC /* IQKeyboardManagerConstantsInternal.swift */; };
+		1054137AE9E91B0E0D9B63092CE376B5 /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F8934EFCDA35F78F29CDA88669E67 /* ShapeContainerLayer.swift */; };
+		112C74EFE714BCE32F08F8D6D546794A /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022EEDAFBE898082C40A24BBD0370C4 /* StarNode.swift */; };
+		1218933A8027C276466182664799D7DF /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E134BCD26690E502F883E0CCEE019B3 /* PreCompLayerModel.swift */; };
+		187AA66ABF3683980ECF622D6DBD1AD3 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C2E86B5254ED47339B8C545F0769C /* TextAnimatorNode.swift */; };
+		18F0E77D3312E80E7EA2E809FBB10439 /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84308917A074E0D877CC22255164D875 /* TextLayer.swift */; };
+		1EBDC31834A8904BE9C2E6C416DB7483 /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC93A8C423368D9A3F8162491B835E /* LRUAnimationCache.swift */; };
+		234268BD38A122DE31CF0280378B778C /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B207C795836A9753994B945BF0A122B /* GradientFill.swift */; };
 		2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
-		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */; };
-		2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */; };
+		2468319AB27EE70D9BB5D28AD1B1A408 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE92E484DA60C3829C17C68A1B680FAF /* CGFloatExtensions.swift */; };
+		248067FE931D5EB2D20417570F07BD35 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC4E359B18C8C4D243329CDBB7C22 /* KeyedDecodingContainerExtensions.swift */; };
+		24AC03A69DCEEDC21E29F9E63F95D808 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B877F0121D6ACC6090D6FAF6C9B379 /* Font.swift */; };
+		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C4C713BBAB25F218B06E2643877BA /* IQNSArray+Sort.swift */; };
+		269E0D3C45823193E8FF7F4057195B59 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481216CCACE2979492CC08F8A0359CD /* Stroke.swift */; };
+		2758F281AF0C7D8F312A3B0661F3509E /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBFB2E0944BD48910176CC6337E1D3 /* Star.swift */; };
+		2922B51988C082497CF379C93B976717 /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52E4A106A9030DAC51B0D53F1FC3E4 /* Repeater.swift */; };
+		29AC5563A65E92E1D5A39C76A94558FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
+		2C94A3135168EFCB30223DAC7080F1A8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0051EC012B403CC8686398CD394CCE /* UIImage.swift */; };
+		2E754D63217B7BC94CECA7FE23D96905 /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7FB7A9D070B3076D7D971FB932BA6 /* AnimatedControl.swift */; };
+		2F0715E5BCE33639A0FCA1F626B9BFA7 /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDAF6311D8ED9260C13EF71EC9AAE6 /* SolidCompositionLayer.swift */; };
+		2FE08E71527A2450E881B39F8B9EC98C /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B49715F03BF8C1DEFE653EA0A7BF29 /* GradientFillRenderer.swift */; };
 		33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
+		338366E6762002CDF447808FD6E7AB86 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072D707D68645FC0A82574FB58DD419 /* InterpolatableExtensions.swift */; };
+		33C7935FAFF578A13D784DA2A3528E82 /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20924A6C0DD47EDC224103DE968208C1 /* GradientFillNode.swift */; };
+		3803EDA965588719CA8C54F9B13E997F /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B2D257C898DBFB1AF490167CA5C81D /* GroupNode.swift */; };
 		38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
-		3E8CFAC1BB3448456D1F880575CC06D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */; };
-		412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */; };
-		45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */; };
-		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */; };
-		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */; };
-		4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */; };
-		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */; };
-		579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */; };
-		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */; };
-		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */; };
-		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */; };
-		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */; };
-		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */; };
-		93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */; };
-		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */; };
-		9D2C13F5BA2EC1496BA0BA2FC19E46E8 /* Pods-Sprints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */; };
+		3AB381D0AE115FF6FD925F521872976E /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD65EA3FF1C854F737C512DAC70BDF /* ImageCompositionLayer.swift */; };
+		3EB03A262C7F5F9B14DFC52CC9C8B6F6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF30D5BF3EFB44CEA8A499A44607C39 /* ColorExtension.swift */; };
+		3EC7B1E8A42E64BC81E289A460EB6A07 /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F40725FE58107F7926E8935B6049B4 /* FillI.swift */; };
+		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2321D1FB2DDE95170C06C76B81AD0 /* IQKeyboardManager.swift */; };
+		3F84D4C0A3E8A01D6FC705973B6CD4E3 /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE26B07E33B58B42DBCEACD5B5BAD9 /* PointValueProvider.swift */; };
+		412892682BE8AA0CE911F1C04590BEF5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB40D47F1664853FA1B76ECC1E77E6E /* Array.swift */; };
+		4222ADA2E456904DAA7C5E6C135457F4 /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7056820F61C87CB82B984D63B45325 /* ColorValueProvider.swift */; };
+		45984E7480A4DB592B40F0DA0DAE7514 /* Gifu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D617C75191F98584C97DB4345B386809 /* Gifu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F890259FFB3B187065F0AD8BDE25B3 /* IQKeyboardReturnKeyHandler.swift */; };
+		47F63B725F7D79C6B35AE458421320EC /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05018B12C24279C79F1C71AADEFF5F5F /* FillRenderer.swift */; };
+		49229652E662E1F06AD60AB7E04816D1 /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DA09F059B21B8927A04C4AE3BD293 /* GradientStrokeRenderer.swift */; };
+		4B6F77ADDBD9A476A94F29AA8311B595 /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3913BB4ACCDB18E039D8CA36ADE0F2DF /* PrecompAsset.swift */; };
+		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795208BCA1E3F5519AEEAD45008EA250 /* IQUITextFieldView+Additions.swift */; };
+		4C159BD8975D5734D8F9D71E51DD30CF /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829CA29286B569CB3433462CADF3BCC7 /* CompositionLayer.swift */; };
+		4DDFDBCB37FA90B0BBF12A0A2EE8736E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2A99A246D2599C887C5D1F4F42633 /* StringExtensions.swift */; };
+		4E0588332E5C8BE6B875B5A440192EFC /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3777917E6F813B7A747650DB41933 /* SingleValueProvider.swift */; };
+		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891391A1AA37E55ED5EA0628799ADDDC /* IQInvocation.swift */; };
+		4F8F54512992CAE265C593B52F34532D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F635EA2621C203C7C929DCB4D4D076C /* UIImageView.swift */; };
+		502B36A7D6E865B6C980705FF1938DF8 /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191740854D4604D2AAFC5817DF11CA16 /* PreCompositionLayer.swift */; };
+		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2CC753065575E38F17B0042375701 /* IQPreviousNextView.swift */; };
+		530DCDE9EF6CADD6AEAAAD2978C6C6BF /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F93784E8285C92D0600A058DA795E8 /* AnyValueProvider.swift */; };
+		5323BB7033DDFBB8DF91A570B47E37F4 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639CA53111E266F42C535255DDC85742 /* Mask.swift */; };
+		5429E317969AAD6CFD490D60443CB9B3 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C2DD63C29C07CA4A3E74D008229E5 /* BundleImageProvider.swift */; };
+		54A9E4C7BF9137C82BAEF05720F50B0A /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CE95D484523E24E7CA762F7FBC59E1 /* ShapeLayerModel.swift */; };
+		559E05F30E4EAE32BA48379660AE44B4 /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70207CFD09A093EA313DED9A8D6207DA /* KeyframeInterpolator.swift */; };
+		579C1FBFB7E8AB0557C8FD0D89A9AD05 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAA7C3ED06904C78BA6685F53C58102 /* Animator.swift */; };
+		585B65BDCE13078CE78CDAEE29A74BF0 /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC754ED1CB10F8D998BD62BCE6AECA /* EllipseNode.swift */; };
+		58DC484F75A76F06C4C7DB078BE54709 /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA9EE8154324C3E435383543F5E40F /* InvertedMatteLayer.swift */; };
+		59895C7550FB1575D9236CF7B9E977DC /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78597B812C32434C1606FA3D998809D /* Rectangle.swift */; };
+		5AE4D0932F1517F975525A5505421240 /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072471F07A87F7FC31A132D0CAFE6B66 /* CompoundBezierPath.swift */; };
+		5BF1B44B30938D3B6D132CE5C5BA4319 /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB8F6AB971610514AB80EB18390FF4 /* LayerModel.swift */; };
+		5EE3A72B1EAE8196BC068E5BB8DF6EE7 /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB74567045D194D0C2098FAEFD99963 /* TextDocument.swift */; };
+		5F7AA8300D54023C648A5E6DE7892435 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8B39F71A54AB55BC1544BAB47EC4E /* Transform.swift */; };
+		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB66D48E900BF5A373D655C5EC2ED83A /* TinyConstraints-dummy.m */; };
+		60449BD9530C4D527F6D9865AD7AC7F0 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557B52D913B995526FE68FA9361ADFE /* LayerTransformNode.swift */; };
+		6079862E4DC9B5AC605B8E9807582EAC /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667256671EFDA5BD914F8CC8BA735A5 /* ValueContainer.swift */; };
+		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F703118C37AB3FCA70ED4934B5456A /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63AA1E813E021D69590BDFFB0484CB92 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00504E7A872F7176F791B7D09379A97 /* Marker.swift */; };
+		645DC6A0FDFA7FDC3DF1D2AA265C1A8F /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69103C501CC8599FB063BDF43096BB /* AnimatedSwitch.swift */; };
+		6477C63835313EB2B9CBBDB4E7C6344F /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BEFBB311A8630737831EA6E76630E6 /* MathKit.swift */; };
+		64B353CDD897B011A947ED5649FE5B91 /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F45F3A26233ED9D3F3334A16482080 /* AnimationTextProvider.swift */; };
+		67FA0E52AF43BC37707EE3691A6C6E87 /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CC0724762DFFB6C515636CA56579A /* MaskContainerLayer.swift */; };
+		6CBB1D9311405F2C563D4BABCD04703E /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71685058D2F7600A751BE77FDCDA552 /* GroupOutputNode.swift */; };
+		6E271B5076A2153A2539F24479B7F0D2 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0DEA06E95F834A0B512BBCF8D0274 /* RenderNode.swift */; };
+		728CCE03BA79F5E0F2F4A838BE5847A7 /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701871B86B34311CF1012EEEC593F76 /* VectorsExtensions.swift */; };
+		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8B95A1FEB97B25A5D458D285F87F2 /* IQUIViewController+Additions.swift */; };
+		780A85B3BEA67F48B2342B14BE44D348 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720A5744E129891B2715060121C7822 /* AnimationImageProvider.swift */; };
+		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E388EB7B9AAE6B5CF8C088D2693C8F81 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE513BB77836E45ED85E526C326A3FAE /* IQTextView.swift */; };
+		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627382158169E459856443DF2CD64BF /* TinyConstraints+superview.swift */; };
+		85BA0432AF587B1C0DD30FD6EF4526D4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76580DBB1A3B8D654CCBEA6654DC4740 /* LottieView.swift */; };
+		8701E0B84141B2D9D0D4D9AFF362F0B6 /* AnimationFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF578999F9324B4D37ADD044561D19A /* AnimationFontProvider.swift */; };
+		8AB6C217119A35985E0A3E2857ABB418 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1228FADD8B2594F3133A3F2B61DF44C4 /* Ellipse.swift */; };
+		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A81E12727788854473832D73A300D /* IQUIView+Hierarchy.swift */; };
+		8BD831DC877702B1577F759D984511E9 /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633BF1232DEF34F4C44D318A6BE88BD7 /* ShapeCompositionLayer.swift */; };
+		8D945C57214018450702FEE8734883B2 /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107692F1A40B2CED1D176399CA8DC51 /* AnimationKeypath.swift */; };
+		8EC7DED1459CE95E2FFFC45D429C71BB /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D26B2D68245D2EAD6BD5360CD7879A /* AnimatorNodeDebugging.swift */; };
+		934466F4C4B07C006BC4EEE5B17E926C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
+		93547DAC83B7FCC4FB7DA7851E8A8EAB /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DBD7A18E4D38759CAA15F87C30C75 /* CGSize.swift */; };
+		9456B9ABD3F9E2767FCD2E6CB8862836 /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DA512CB6FAD1DCF8DA2BCCDDF21B4 /* KeyframeExtensions.swift */; };
+		95F9BAAFE3FC6BF6ABF607A836B08113 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4036C9535B1958AC673A0CCD8219E806 /* NodeProperty.swift */; };
+		97431400B8DFFE173E415A8B9C4F1C5E /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AA634A9C347C035B63DDDB327F14221 /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9758CD5895E13491B0F5D17625B7F4CF /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD3DBBEE67592F289F1C1D52C7B6D5 /* Interpolatable.swift */; };
+		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCEFF18661C56626570D0884E632397 /* IQToolbar.swift */; };
+		993748F61F35290FFAD7CDE35F889F7A /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F24C24AED8A89663458AE0C7EA1A0 /* GradientStroke.swift */; };
+		99A40A5D7DE69F7B97ABA8CCCAE9955C /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A356E09D8D847EEB69652C9E34C8E3D4 /* GradientValueProvider.swift */; };
+		9CFBA1B6279BCAC332CDA1A9BAC869D3 /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ADAB5EDA743CFC9FE0F9C8B7BB8970 /* TextLayerModel.swift */; };
+		9EB11A84EF4C5B21533707563E2D169A /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45336E2315266E6A0ABA9338BC66E514 /* KeypathSearchable.swift */; };
+		9EDBA961B404B9A2CBE8EFF51BD5DFB8 /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF22E9C8EEE118E40AE6C706ADA81E0 /* StrokeRenderer.swift */; };
+		A090A400F77C7D72305DE29D29AC564C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
 		A09C6F8458CE2EF255D89235825F441D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */; };
-		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */; };
-		B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */; };
-		B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */; };
-		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */; };
-		BD8522C7CB1081A939637489C945BDF1 /* Pods-Sprints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */; };
-		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */; };
-		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */; };
-		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */; };
-		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */; };
-		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */; };
-		D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */; };
-		DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */; };
-		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */; };
-		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1841788A6E68B66A507DA68ED603259 /* Stack.swift */; };
-		E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1E5120CA044B874E2B88C3EF6D338C1 /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CC964CD69EB45C323130222CECF6 /* FloatValueProvider.swift */; };
+		A2A239A2B89A243A2892D5256B5E6548 /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094928DA3FFAA66EACA6C09BAE15BCF /* DashPattern.swift */; };
+		A6A76623CE01F0CBAB470BDA582AEDB3 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3654485C3E8A1891A98AA4858B263B /* GIFImageView.swift */; };
+		A6EC5575FC578319B77F311CE92C38F7 /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F330ABD2CACD1FBA2FB5B2A11B5F13 /* KeyframeGroup.swift */; };
+		AB2E29798AD033CAE8727EFD2A5F4D59 /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40ECDF5DFA162015EA4A2708E9EAA30 /* ShapeItem.swift */; };
+		AC0AB63D4857B7BE72409748962ED419 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D1C9994CB3CF08C4BA49FF4F3FA2EE /* Merge.swift */; };
+		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5156025442D47EFEE726082345042DD4 /* IQUIView+IQKeyboardToolbar.swift */; };
+		B12033FCEF029B8D2F8BFC8AC5F9F336 /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA11C42C118BA7ACC30DF150F4D2D5 /* CompositionLayersInitializer.swift */; };
+		B18ED58C8DF81C079B5015D356A49817 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48D052943B16413CEEF308570C8ECE /* SolidLayerModel.swift */; };
+		B1D7B4A10BD29854A979065125CD2BB7 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2078B6B119C6802CED50C46E85D871 /* Trim.swift */; };
+		B1EEB201E44E9E562D052F9181538E23 /* Gifu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEB0AA50AE919CECE9D8DE2EA29A85 /* Gifu-dummy.m */; };
+		B31B0CB4874A037F044750EE515D8B1C /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0EDF183E453EF13494BB491B5F2CC /* ShapeTransform.swift */; };
+		B36CF03A512E05741F8B8F58834B08BB /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63B4C7765685124BE4933D362AAB02B /* AnimatedFrame.swift */; };
+		B40D66F27F5DACF47D68374C3291DB1F /* Pods-Sprints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */; };
+		B5E7A50CACD20C0F5DBAB6DBBDAFEF81 /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DAAF82110BCB05547EC5193C32DBAB /* AnyNodeProperty.swift */; };
+		B8EA9274ACDDE99F957E4D61CE880F64 /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CF6F917249395D7B4BFE5891E2FEFB /* ImageLayerModel.swift */; };
+		B93F14D14B9CD6B1B5A51DAC0EFA3ADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A511B76C1C0B2CD4915A79F18E58DBC7 /* IQKeyboardManagerSwift-dummy.m */; };
+		BCFA5D17A7DA6457F1DAABB6577898A4 /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52894C45A779F48C1D8EC2B0CAC4CE22 /* BezierPath.swift */; };
+		BE559AD46D01CC77943B2B0273612D8A /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46128DBE54C42D6CCAABD9CE8FE684E5 /* Asset.swift */; };
+		BEBA1B8C12D7F63B669832C898B0ECB4 /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7059CB0850BD9BD09C806ACB0CBB41 /* AssetLibrary.swift */; };
+		BFA126908186F19EE41BE5868FC1C210 /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18567305C06D6D033308E5A61E6DC18 /* CurveVertex.swift */; };
+		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556E6495907B35D57568088A2CE7A0A /* IQKeyboardManagerConstants.swift */; };
+		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A4D55AB7F16B1EA99CF62B1817A12 /* IQUIScrollView+Additions.swift */; };
+		C17B4450D1626364B2DCAA7A42C5EE97 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EA1CE0AF94417387BA1885270C823 /* AnimationView.swift */; };
+		C2F4BF932391B859E01C4A8A161A6E0D /* LayerFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2118BCA7301A920F591D0A64573B679 /* LayerFontProvider.swift */; };
+		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82F6D5CF8E761F421BE5F9BEBAFEE20 /* IQTitleBarButtonItem.swift */; };
+		C5D7664DEA52A2080B49D6B2622C39DE /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F4F96B1F4AAE7DCF1A353FEB81101 /* CompatibleAnimationView.swift */; };
+		C960309E8DBD13A20BC26B2842463D62 /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA9869F9BC71B72F9F30E7F6937EFB /* StrokeNode.swift */; };
+		C9E9AB1A4B11F4EFF49986DD6BA05AC1 /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F55D7A89241AA4CFAF2F07F5B3829A /* Vectors.swift */; };
+		CB8A7BE8F63886EE30FBCAF2F3968764 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FC2D40D30C0BE4732C998EF3217BD /* LayerTextProvider.swift */; };
+		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C732D99789216FF8022597ACFE4BE /* Constraints.swift */; };
+		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572C44B2E65E958C272DA06617F3948 /* TinyEdgeInsets.swift */; };
+		CF779993E4FEEE72B1B59F71160BF7BA /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB84250926B1B007D26750486F0A8A /* AnimatorNode.swift */; };
+		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104814808CD88AF77A063F8AC6F421EA /* Abstraction.swift */; };
+		D3BB7C10CF7FB03081B7ACF2B95313D4 /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77379CF0A14054E1CEBB39C550BDCE /* FilepathImageProvider.swift */; };
+		D482B07B389D6BED35B449680862FD5F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2F6482452B5E4ABAA356681951A43 /* Animation.swift */; };
+		D4FE036734A6D5B9548B6E8144804700 /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C820562E91153F4AEC4A836BCEA74 /* AnimationContext.swift */; };
+		D6D1B805F4ED0B8805CEB5DCE192FEA9 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654889DAB702237E0DE60E582A8B7273 /* ImageSourceHelpers.swift */; };
+		D79692BB25F9CFC26CEEA50ABB81CE95 /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CD438145A13FBEC89025578B38DC83 /* NullCompositionLayer.swift */; };
+		D7ED15B5BB3879C74834D127D315168B /* Pods-Sprints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB64698482B57470F644E7A916619EE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		DB8CB26680625363B4223412D88C3041 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E1FEF7B424233C5115CEC839F7EF3 /* AnimationSubview.swift */; };
+		DBC9BB953E1263398D517CF24DA43FA0 /* GIFAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACEBC2E794C5B51B7626042941DC82 /* GIFAnimatable.swift */; };
+		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123217003CF5E470E9480A3F4820F913 /* IQBarButtonItem.swift */; };
+		DE66E6F35287CBE5875652B44E5DB76E /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D79AECB341A6563FF66D51CE3666E /* AnyValueContainer.swift */; };
+		DF75937FFEF23A62DBDE3B7632BCD1C4 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA5FC80C9AAB13CEF147B7D087FDE8 /* lottie-ios-dummy.m */; };
+		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D80765F9F3CCE485188D323AB4950B /* Stack.swift */; };
+		E0D17096D3801D5683ADD4D823A12D3E /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CADBAC8FDB45BA5EE43CD8171C35E76 /* AnimationCacheProvider.swift */; };
+		E191971060C289CB32E2A243ED1A9D79 /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B382EC12BBE605A307C12D5C195BA6 /* PassThroughOutputNode.swift */; };
+		E4D454584D3C6A2B296DAC18F15A5C2E /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18EF14E778CBB3A25BD254F2570206 /* RectNode.swift */; };
+		E52835E3A69E0F0D060140EFFCAE45B3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5AA9DB84FF2F86386F0D4F9622D52 /* Color.swift */; };
+		E663A44D97FFE0F736EA3B73E47A0690 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E35469768D001814B90C5023C20302 /* CompatibleAnimationKeypath.swift */; };
+		E6A69EB7C716F3284634E00892C40806 /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2CFDA93CF34ADD0850C0AD8F98705 /* GroupInterpolator.swift */; };
+		E718AB84042ECA239584381DB5970552 /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BCE847A85199CF121031CF4C5C775 /* ShapeRenderLayer.swift */; };
+		E8583EF4F023B694EA051DD60BF2BAFA /* Gifu.h in Headers */ = {isa = PBXBuildFile; fileRef = E262425A295FE524454EE3B9E066DF6D /* Gifu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89DDD10D39B7447CEE9B8CE5255FCED /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC3DA220E9705CBFEBE2AB1E7A9A69 /* PathOutputNode.swift */; };
 		EAAE3CFD5FD7C605478DE7EE72FCBA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */; };
+		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9F6CC3DBA7F983D49ABFA93C306C7 /* Constrainable.swift */; };
+		EBF2506DBF64C42BB02F207763BFC350 /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EB31AC1B6EB6DB8134247E55B4974 /* ItemsExtension.swift */; };
+		EC018DD5D1BE025DDF186DBA64B9420A /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF390F465D534604F5BCEFE1A3D9A94 /* LayerImageProvider.swift */; };
+		ED357987764A814A01E4E438045C4247 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324093128EDA350EA8925412AC656524 /* ImageAsset.swift */; };
+		ED5B12BA89B00CA016A5CCB6AEAC6478 /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8253E8C76BB5EC8D96BB9F619CA1513 /* SizeValueProvider.swift */; };
 		EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		EEF7528D1A1DC76EADC7CB145295235C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560C921D9715E2D88A2505AAD604D9BA /* Group.swift */; };
+		F2FFF322C9048FC0B23B9C49A6E62F35 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653E31535504A1B6CD9757196D21D3C /* AnimatedButton.swift */; };
+		F3D7ACEB8411814DF1DB0B4AAE90A2FC /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03E50E8E8EE239C7F9FDD5663B56C1 /* TextAnimator.swift */; };
+		F734F4F307A445DC8CDD50ED2FBDD8CC /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB04A1F44FF3007B7B3C5B1A96225A5 /* AnimationPublic.swift */; };
+		F79C6CF75F09D963BC5B8C2C9680D862 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD99EF924D6C4EADA289DBB6896C2E5 /* NodePropertyMap.swift */; };
+		FA6BCAE8F1D4B6B2376C0FC7E40D57F5 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D831F9840CB153BD046CC7DAC4C6973 /* TrimPathNode.swift */; };
+		FEC9061C02A16F7449132B5407416BDA /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB0E7381305708D0D240A49160247C /* AnimationContainer.swift */; };
+		FEFFEFAF099B5368569FA4AFBB05CDBD /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A67C9BEB87246324A512622C1AD6D9 /* PathNode.swift */; };
+		FF2B32B1BAC49FDA4438824049CC4347 /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79BFEC47DAC0927CA5BB4E764C1DEB5 /* LayerDebugging.swift */; };
+		FF86C8EB28B703745F812175ACFD803C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D00D91C2F72809E300EDAA96016FA /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C0E47CD71D9E048130F915255602496B /* PBXContainerItemProxy */ = {
+		2A8AF09D43FC4AE5462916136FC0173D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 830B5AB9E16163B4A1BA339D625FE46C;
-			remoteInfo = Gifu;
+			remoteGlobalIDString = 0B967D7F8561D42493EE289EC8D450D1;
+			remoteInfo = "lottie-ios";
 		};
-		CC3C4C3969F0C013AF96099D8D948146 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
-			remoteInfo = IQKeyboardManagerSwift;
-		};
-		DA04A58C153059B1F92A6B5D826C8F49 /* PBXContainerItemProxy */ = {
+		54D65250B2FCF4980020502A816B43B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
 			remoteInfo = TinyConstraints;
 		};
+		A8CA560BC6F0FDFA1A9C881A5B97A7C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 830B5AB9E16163B4A1BA339D625FE46C;
+			remoteInfo = Gifu;
+		};
+		F85F3DFE444EA8029D71E858FDD098C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
+			remoteInfo = IQKeyboardManagerSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
-		01CB0FA2FC075D81796D27E912CD613E /* Gifu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Gifu-Info.plist"; sourceTree = "<group>"; };
-		02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.release.xcconfig; sourceTree = "<group>"; };
+		00F55D7A89241AA4CFAF2F07F5B3829A /* Vectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vectors.swift; path = "lottie-swift/src/Public/Primitives/Vectors.swift"; sourceTree = "<group>"; };
+		015DA512CB6FAD1DCF8DA2BCCDDF21B4 /* KeyframeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/KeyframeExtensions.swift"; sourceTree = "<group>"; };
 		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		04D899B40D70611EEBA0FE90D8889B06 /* Pods-Sprints-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sprints-acknowledgements.markdown"; sourceTree = "<group>"; };
-		085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		0F97D9ECEA9925BBC93C8B50C029FE6E /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
-		13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
-		1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Gifu/Extensions/Array.swift; sourceTree = "<group>"; };
-		23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
-		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05018B12C24279C79F1C71AADEFF5F5F /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/FillRenderer.swift"; sourceTree = "<group>"; };
+		054A81E12727788854473832D73A300D /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		06C838445FC68262F7442CDBAB753FBD /* Gifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.release.xcconfig; sourceTree = "<group>"; };
+		0701871B86B34311CF1012EEEC593F76 /* VectorsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorsExtensions.swift; path = "lottie-swift/src/Private/Utility/Primitives/VectorsExtensions.swift"; sourceTree = "<group>"; };
+		072471F07A87F7FC31A132D0CAFE6B66 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
+		07E35469768D001814B90C5023C20302 /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
+		0A69103C501CC8599FB063BDF43096BB /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
+		0B2078B6B119C6802CED50C46E85D871 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
+		0B7AC4E359B18C8C4D243329CDBB7C22 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = "lottie-swift/src/Private/Model/Extensions/KeyedDecodingContainerExtensions.swift"; sourceTree = "<group>"; };
+		0CAA7C3ED06904C78BA6685F53C58102 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Gifu/Classes/Animator.swift; sourceTree = "<group>"; };
+		0CB3777917E6F813B7A747650DB41933 /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
+		0D831F9840CB153BD046CC7DAC4C6973 /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
+		0EB9F6CC3DBA7F983D49ABFA93C306C7 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		104814808CD88AF77A063F8AC6F421EA /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		1228FADD8B2594F3133A3F2B61DF44C4 /* Ellipse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Ellipse.swift"; sourceTree = "<group>"; };
+		123217003CF5E470E9480A3F4820F913 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		127FC2D40D30C0BE4732C998EF3217BD /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
+		12F93784E8285C92D0600A058DA795E8 /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/AnyValueProvider.swift"; sourceTree = "<group>"; };
+		15BF906C11F051420CAF50A4FC3B368A /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		175C4C713BBAB25F218B06E2643877BA /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		191740854D4604D2AAFC5817DF11CA16 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/PreCompositionLayer.swift"; sourceTree = "<group>"; };
+		1968CC964CD69EB45C323130222CECF6 /* FloatValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/FloatValueProvider.swift"; sourceTree = "<group>"; };
+		1A8D79AECB341A6563FF66D51CE3666E /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
+		1BF22E9C8EEE118E40AE6C706ADA81E0 /* StrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/StrokeRenderer.swift"; sourceTree = "<group>"; };
+		1CE2A99A246D2599C887C5D1F4F42633 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
+		1CFB21C7F5823C560C2BB83FBC8F3664 /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift"; sourceTree = "<group>"; };
+		20924A6C0DD47EDC224103DE968208C1 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift"; sourceTree = "<group>"; };
+		23DAAF82110BCB05547EC5193C32DBAB /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
+		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2557B52D913B995526FE68FA9361ADFE /* LayerTransformNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTransformNode.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTransformNode.swift"; sourceTree = "<group>"; };
 		268C538BDDCA2ABA3146F0600D9509D7 /* Pods-Sprints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-Info.plist"; sourceTree = "<group>"; };
-		27360F201CD203FEEC3844492F120CA4 /* Gifu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gifu.modulemap; sourceTree = "<group>"; };
-		27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
-		284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		2B618F0782A34D9A7733EFAF1FB69401 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
-		2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
-		2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gifu-dummy.m"; sourceTree = "<group>"; };
-		369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
-		3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
-		3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Gifu/Classes/Animator.swift; sourceTree = "<group>"; };
+		279BCE847A85199CF121031CF4C5C775 /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
+		27CD438145A13FBEC89025578B38DC83 /* NullCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/NullCompositionLayer.swift"; sourceTree = "<group>"; };
+		2A9C820562E91153F4AEC4A836BCEA74 /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
+		2CE2321D1FB2DDE95170C06C76B81AD0 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
+		2EF30D5BF3EFB44CEA8A499A44607C39 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = "lottie-swift/src/Private/Utility/Primitives/ColorExtension.swift"; sourceTree = "<group>"; };
+		324093128EDA350EA8925412AC656524 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
+		34FB0E7381305708D0D240A49160247C /* AnimationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContainer.swift; path = "lottie-swift/src/Private/LayerContainers/AnimationContainer.swift"; sourceTree = "<group>"; };
+		35F45F3A26233ED9D3F3334A16482080 /* AnimationTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTextProvider.swift; path = "lottie-swift/src/Public/TextProvider/AnimationTextProvider.swift"; sourceTree = "<group>"; };
+		368C3C2F6D4DEEB4A59940BAB3023F87 /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
+		38CF6F917249395D7B4BFE5891E2FEFB /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ImageLayerModel.swift"; sourceTree = "<group>"; };
+		3913BB4ACCDB18E039D8CA36ADE0F2DF /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecompAsset.swift; path = "lottie-swift/src/Private/Model/Assets/PrecompAsset.swift"; sourceTree = "<group>"; };
+		39B2D257C898DBFB1AF490167CA5C81D /* GroupNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderContainers/GroupNode.swift"; sourceTree = "<group>"; };
+		3AB40D47F1664853FA1B76ECC1E77E6E /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Gifu/Extensions/Array.swift; sourceTree = "<group>"; };
+		3AF578999F9324B4D37ADD044561D19A /* AnimationFontProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationFontProvider.swift; path = "lottie-swift/src/Public/FontProvider/AnimationFontProvider.swift"; sourceTree = "<group>"; };
+		3CCEFF18661C56626570D0884E632397 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.release.xcconfig"; sourceTree = "<group>"; };
-		40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
-		49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
-		4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
-		4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
+		3FAD3DBBEE67592F289F1C1D52C7B6D5 /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/Interpolatable.swift"; sourceTree = "<group>"; };
+		4036C9535B1958AC673A0CCD8219E806 /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
+		40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Gifu.framework; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F27E4A2D78234714DF33DB11244F52 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "lottie-swift/src/Public/iOS/UIColorExtension.swift"; sourceTree = "<group>"; };
+		45336E2315266E6A0ABA9338BC66E514 /* KeypathSearchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeypathSearchable.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/KeypathSearchable.swift"; sourceTree = "<group>"; };
+		46128DBE54C42D6CCAABD9CE8FE684E5 /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = "lottie-swift/src/Private/Model/Assets/Asset.swift"; sourceTree = "<group>"; };
+		46D26B2D68245D2EAD6BD5360CD7879A /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
+		46D5AA9DB84FF2F86386F0D4F9622D52 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = "lottie-swift/src/Public/Primitives/Color.swift"; sourceTree = "<group>"; };
+		47C179641694926441020857A8F351E3 /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/TextCompositionLayer.swift"; sourceTree = "<group>"; };
 		4CDE21DA9D11F2C5DAD13CE019016D16 /* Pods-Sprints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sprints-dummy.m"; sourceTree = "<group>"; };
+		4E48D052943B16413CEEF308570C8ECE /* SolidLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/SolidLayerModel.swift"; sourceTree = "<group>"; };
+		5022EEDAFBE898082C40A24BBD0370C4 /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
+		5122835E87D987C8D2800F28CE952C24 /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
+		5156025442D47EFEE726082345042DD4 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sprints.debug.xcconfig"; sourceTree = "<group>"; };
-		55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
-		56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
-		576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Gifu/Extensions/UIImage.swift; sourceTree = "<group>"; };
-		6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
-		6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
-		6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gifu.h; path = Sources/Gifu.h; sourceTree = "<group>"; };
-		6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		6E25619743EDD901547C5EBA0DDCE09B /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameStore.swift; path = Sources/Gifu/Classes/FrameStore.swift; sourceTree = "<group>"; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lottie.framework; path = "lottie-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52894C45A779F48C1D8EC2B0CAC4CE22 /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/BezierPath.swift"; sourceTree = "<group>"; };
+		55E7A5F1F0C9021D160C853072F0DF66 /* FrameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameStore.swift; path = Sources/Gifu/Classes/FrameStore.swift; sourceTree = "<group>"; };
+		560C921D9715E2D88A2505AAD604D9BA /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
+		5653E31535504A1B6CD9757196D21D3C /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = "lottie-swift/src/Public/iOS/AnimatedButton.swift"; sourceTree = "<group>"; };
+		576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sprints.framework; path = "Pods-Sprints.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CE95D484523E24E7CA762F7FBC59E1 /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ShapeLayerModel.swift"; sourceTree = "<group>"; };
+		59B49715F03BF8C1DEFE653EA0A7BF29 /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
+		5B3DA09F059B21B8927A04C4AE3BD293 /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift"; sourceTree = "<group>"; };
+		5CBEB0AA50AE919CECE9D8DE2EA29A85 /* Gifu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gifu-dummy.m"; sourceTree = "<group>"; };
+		5DAA9EE8154324C3E435383543F5E40F /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvertedMatteLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/InvertedMatteLayer.swift"; sourceTree = "<group>"; };
+		5E6D4490038D7F626CF3576DDDF1A2DA /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = "lottie-swift/src/Private/Utility/Primitives/PathElement.swift"; sourceTree = "<group>"; };
+		61EB8F6AB971610514AB80EB18390FF4 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
+		633BF1232DEF34F4C44D318A6BE88BD7 /* ShapeCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ShapeCompositionLayer.swift"; sourceTree = "<group>"; };
+		639CA53111E266F42C535255DDC85742 /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = "lottie-swift/src/Private/Model/Objects/Mask.swift"; sourceTree = "<group>"; };
+		654889DAB702237E0DE60E582A8B7273 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSourceHelpers.swift; path = Sources/Gifu/Helpers/ImageSourceHelpers.swift; sourceTree = "<group>"; };
+		65CB84250926B1B007D26750486F0A8A /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/AnimatorNode.swift"; sourceTree = "<group>"; };
+		6627382158169E459856443DF2CD64BF /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		6667256671EFDA5BD914F8CC8BA735A5 /* ValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueContainer.swift"; sourceTree = "<group>"; };
+		66EA9869F9BC71B72F9F30E7F6937EFB /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift"; sourceTree = "<group>"; };
+		67CE26B07E33B58B42DBCEACD5B5BAD9 /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
+		69F8B39F71A54AB55BC1544BAB47EC4E /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
+		6D52E4A106A9030DAC51B0D53F1FC3E4 /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Repeater.swift"; sourceTree = "<group>"; };
+		6DBA5FC80C9AAB13CEF147B7D087FDE8 /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
+		70207CFD09A093EA313DED9A8D6207DA /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/KeyframeInterpolator.swift"; sourceTree = "<group>"; };
+		7094928DA3FFAA66EACA6C09BAE15BCF /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = "lottie-swift/src/Private/Model/Objects/DashPattern.swift"; sourceTree = "<group>"; };
+		71B2F6482452B5E4ABAA356681951A43 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = "lottie-swift/src/Private/Model/Animation.swift"; sourceTree = "<group>"; };
+		71F703118C37AB3FCA70ED4934B5456A /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
+		7481216CCACE2979492CC08F8A0359CD /* Stroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Stroke.swift"; sourceTree = "<group>"; };
+		7556E6495907B35D57568088A2CE7A0A /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		76580DBB1A3B8D654CCBEA6654DC4740 /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
+		795208BCA1E3F5519AEEAD45008EA250 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7E5CED8881BACC6BAA0CDB9897A6D04B /* Gifu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-prefix.pch"; sourceTree = "<group>"; };
-		7FB22243B7A8A7EDCADB6AC0474115C7 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
-		833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		79F890259FFB3B187065F0AD8BDE25B3 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		7A5C2E86B5254ED47339B8C545F0769C /* TextAnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/Text/TextAnimatorNode.swift"; sourceTree = "<group>"; };
+		7A6CC0724762DFFB6C515636CA56579A /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/MaskContainerLayer.swift"; sourceTree = "<group>"; };
+		7B92AE545EB76EC1F6CB23DDDAD388BC /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		7E7418E66767393DA69248399F0D29AB /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
+		7F6BDC6F983186561B4015AC72C94BC7 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		8080111E85A36521716275B710CCFCAE /* Gifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.debug.xcconfig; sourceTree = "<group>"; };
+		829CA29286B569CB3433462CADF3BCC7 /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/CompositionLayer.swift"; sourceTree = "<group>"; };
 		840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		84308917A074E0D877CC22255164D875 /* TextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/TextLayer.swift"; sourceTree = "<group>"; };
 		870DCAE476AEDF69BCE21E10B9558103 /* Pods-Sprints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sprints.modulemap"; sourceTree = "<group>"; };
-		87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gifu.debug.xcconfig; sourceTree = "<group>"; };
-		9612CB862CB2D4DDE05A06B458E140A9 /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		891391A1AA37E55ED5EA0628799ADDDC /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
+		8A17288081B84F664267D539DCE006F9 /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
+		8A7056820F61C87CB82B984D63B45325 /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
+		8AA634A9C347C035B63DDDB327F14221 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
+		8BB74567045D194D0C2098FAEFD99963 /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
+		8BD0EDF183E453EF13494BB491B5F2CC /* ShapeTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeTransform.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeTransform.swift"; sourceTree = "<group>"; };
+		8BFEAB3479AD01873BD44D8CECEFAE11 /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
+		8CADBAC8FDB45BA5EE43CD8171C35E76 /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = "lottie-swift/src/Public/AnimationCache/AnimationCacheProvider.swift"; sourceTree = "<group>"; };
+		8DDC3DA220E9705CBFEBE2AB1E7A9A69 /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
+		8E9DB771536C36EE80D89C6C931A1662 /* Gifu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gifu.modulemap; sourceTree = "<group>"; };
+		8F4C2DD63C29C07CA4A3E74D008229E5 /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = "lottie-swift/src/Public/iOS/BundleImageProvider.swift"; sourceTree = "<group>"; };
+		8F635EA2621C203C7C929DCB4D4D076C /* UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/Gifu/Extensions/UIImageView.swift; sourceTree = "<group>"; };
+		8F7059CB0850BD9BD09C806ACB0CBB41 /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = "lottie-swift/src/Private/Model/Assets/AssetLibrary.swift"; sourceTree = "<group>"; };
+		90222138088B43637EAEFC3C746D1F83 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
+		91DC754ED1CB10F8D998BD62BCE6AECA /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift"; sourceTree = "<group>"; };
+		93B382EC12BBE605A307C12D5C195BA6 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
+		952E6383131CA13FE361E929F6AD4870 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		98DDAF6311D8ED9260C13EF71EC9AAE6 /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
+		9A3EB31AC1B6EB6DB8134247E55B4974 /* ItemsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemsExtension.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Extensions/ItemsExtension.swift"; sourceTree = "<group>"; };
+		9AD99EF924D6C4EADA289DBB6896C2E5 /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift"; sourceTree = "<group>"; };
+		9B207C795836A9753994B945BF0A122B /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientFill.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E134BCD26690E502F883E0CCEE019B3 /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/PreCompLayerModel.swift"; sourceTree = "<group>"; };
+		9E3654485C3E8A1891A98AA4858B263B /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = Sources/Gifu/Classes/GIFImageView.swift; sourceTree = "<group>"; };
+		A2A88431437B30FDBE216925BF0CE85C /* IQKeyboardManagerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.release.xcconfig; sourceTree = "<group>"; };
+		A2ADAB5EDA743CFC9FE0F9C8B7BB8970 /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/TextLayerModel.swift"; sourceTree = "<group>"; };
+		A356E09D8D847EEB69652C9E34C8E3D4 /* GradientValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/GradientValueProvider.swift"; sourceTree = "<group>"; };
 		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = Sources/Gifu/Classes/GIFImageView.swift; sourceTree = "<group>"; };
-		A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.release.xcconfig; sourceTree = "<group>"; };
-		A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
-		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
-		B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatable.swift; path = Sources/Gifu/Classes/GIFAnimatable.swift; sourceTree = "<group>"; };
-		B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSourceHelpers.swift; path = Sources/Gifu/Helpers/ImageSourceHelpers.swift; sourceTree = "<group>"; };
-		C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		A48EA1CE0AF94417387BA1885270C823 /* AnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = "lottie-swift/src/Public/Animation/AnimationView.swift"; sourceTree = "<group>"; };
+		A511B76C1C0B2CD4915A79F18E58DBC7 /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
+		A5C0DEA06E95F834A0B512BBCF8D0274 /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/RenderNode.swift"; sourceTree = "<group>"; };
+		A63B4C7765685124BE4933D362AAB02B /* AnimatedFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFrame.swift; path = Sources/Gifu/Classes/AnimatedFrame.swift; sourceTree = "<group>"; };
+		A8B877F0121D6ACC6090D6FAF6C9B379 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = "lottie-swift/src/Private/Model/Text/Font.swift"; sourceTree = "<group>"; };
+		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F40725FE58107F7926E8935B6049B4 /* FillI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillI.swift; path = "lottie-swift/src/Private/Model/ShapeItems/FillI.swift"; sourceTree = "<group>"; };
+		AADE56625BFCF8A962709620C2BBE9CE /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
+		AB66D48E900BF5A373D655C5EC2ED83A /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		AD0051EC012B403CC8686398CD394CCE /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Gifu/Extensions/UIImage.swift; sourceTree = "<group>"; };
+		ADB04A1F44FF3007B7B3C5B1A96225A5 /* AnimationPublic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPublic.swift; path = "lottie-swift/src/Public/Animation/AnimationPublic.swift"; sourceTree = "<group>"; };
+		AE03E50E8E8EE239C7F9FDD5663B56C1 /* TextAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimator.swift; path = "lottie-swift/src/Private/Model/Text/TextAnimator.swift"; sourceTree = "<group>"; };
+		AF18EF14E778CBB3A25BD254F2570206 /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
+		B14A4D55AB7F16B1EA99CF62B1817A12 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		B1A67C9BEB87246324A512622C1AD6D9 /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/PathNode.swift"; sourceTree = "<group>"; };
+		B1E08E5178DE3A490A5C8ADE48FB9682 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
+		B3616760BC2CB43F5DFC3C5525A6CB07 /* lottie-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B70C5E20269484D8226024ED45CFB383 /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		B78597B812C32434C1606FA3D998809D /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
+		B79BFEC47DAC0927CA5BB4E764C1DEB5 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"; sourceTree = "<group>"; };
+		B7C4F801C0B2FFA4E9190619A5C7D786 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		B9D1C9994CB3CF08C4BA49FF4F3FA2EE /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Merge.swift"; sourceTree = "<group>"; };
+		BAB07CE406EC19052B91E7D1C945BCCC /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = "lottie-swift/src/Public/Animation/AnimationViewInitializers.swift"; sourceTree = "<group>"; };
+		BF9C732D99789216FF8022597ACFE4BE /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		BFCBFB2E0944BD48910176CC6337E1D3 /* Star.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Star.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Star.swift"; sourceTree = "<group>"; };
+		C23F8934EFCDA35F78F29CDA88669E67 /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift"; sourceTree = "<group>"; };
+		C2FB74826B6C863963FEA5F3A1705AE0 /* GradientStrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientStrokeNode.swift"; sourceTree = "<group>"; };
 		C67ADDCFA86848B836C258E4519DE6F7 /* Pods-Sprints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sprints-umbrella.h"; sourceTree = "<group>"; };
-		CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-umbrella.h"; sourceTree = "<group>"; };
-		CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
-		D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
+		C82F6D5CF8E761F421BE5F9BEBAFEE20 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		C8BEFBB311A8630737831EA6E76630E6 /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
+		CF77379CF0A14054E1CEBB39C550BDCE /* FilepathImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilepathImageProvider.swift; path = "lottie-swift/src/Public/iOS/FilepathImageProvider.swift"; sourceTree = "<group>"; };
+		CFDA11C42C118BA7ACC30DF150F4D2D5 /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
+		D00504E7A872F7176F791B7D09379A97 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = "lottie-swift/src/Private/Model/Objects/Marker.swift"; sourceTree = "<group>"; };
+		D0F330ABD2CACD1FBA2FB5B2A11B5F13 /* KeyframeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeGroup.swift; path = "lottie-swift/src/Private/Model/Keyframes/KeyframeGroup.swift"; sourceTree = "<group>"; };
+		D2118BCA7301A920F591D0A64573B679 /* LayerFontProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerFontProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerFontProvider.swift"; sourceTree = "<group>"; };
 		D2391BD40A236894F16FADCE59053BE3 /* Pods-Sprints-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sprints-acknowledgements.plist"; sourceTree = "<group>"; };
-		D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
-		D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Gifu/Extensions/CGSize.swift; sourceTree = "<group>"; };
-		D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Sources/Gifu/Extensions/UIImageView.swift; sourceTree = "<group>"; };
-		EB77680ECA209CE65FEE6B8A67E4350C /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
-		F1841788A6E68B66A507DA68ED603259 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
-		F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedFrame.swift; path = Sources/Gifu/Classes/AnimatedFrame.swift; sourceTree = "<group>"; };
+		D2EBA8D3FB45F16F39A86BF392EFC6AA /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = "lottie-swift/src/Public/Primitives/AnimationTime.swift"; sourceTree = "<group>"; };
+		D3E1E9653664ED1F2AF9C943CF8BA606 /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
+		D617C75191F98584C97DB4345B386809 /* Gifu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-umbrella.h"; sourceTree = "<group>"; };
+		D6BD65EA3FF1C854F737C512DAC70BDF /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
+		D720A5744E129891B2715060121C7822 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
+		D8253E8C76BB5EC8D96BB9F619CA1513 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift"; sourceTree = "<group>"; };
+		D98DF631651F8B141E7919685D23A31D /* lottie-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "lottie-ios-Info.plist"; sourceTree = "<group>"; };
+		DAACEBC2E794C5B51B7626042941DC82 /* GIFAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatable.swift; path = Sources/Gifu/Classes/GIFAnimatable.swift; sourceTree = "<group>"; };
+		DCBCFB3C2EB96003171638FEA456061D /* Gifu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Gifu-Info.plist"; sourceTree = "<group>"; };
+		DE92E484DA60C3829C17C68A1B680FAF /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
+		DF2F4F96B1F4AAE7DCF1A353FEB81101 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
+		DF45962CEE558928A9CE81B1A62B07BB /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
+		E072D707D68645FC0A82574FB58DD419 /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/InterpolatableExtensions.swift"; sourceTree = "<group>"; };
+		E0B2CFDA93CF34ADD0850C0AD8F98705 /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift"; sourceTree = "<group>"; };
+		E262425A295FE524454EE3B9E066DF6D /* Gifu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Gifu.h; path = Sources/Gifu.h; sourceTree = "<group>"; };
+		E388EB7B9AAE6B5CF8C088D2693C8F81 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		E40ECDF5DFA162015EA4A2708E9EAA30 /* ShapeItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItem.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeItem.swift"; sourceTree = "<group>"; };
+		E4AC93A8C423368D9A3F8162491B835E /* LRUAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUAnimationCache.swift; path = "lottie-swift/src/Public/AnimationCache/LRUAnimationCache.swift"; sourceTree = "<group>"; };
+		E572C44B2E65E958C272DA06617F3948 /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		E6D80765F9F3CCE485188D323AB4950B /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		E6F7FB7A9D070B3076D7D971FB932BA6 /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = "lottie-swift/src/Public/iOS/AnimatedControl.swift"; sourceTree = "<group>"; };
+		E70E1FEF7B424233C5115CEC839F7EF3 /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
+		E71685058D2F7600A751BE77FDCDA552 /* GroupOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/GroupOutputNode.swift"; sourceTree = "<group>"; };
+		E81F24C24AED8A89663458AE0C7EA1A0 /* GradientStroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientStroke.swift"; sourceTree = "<group>"; };
+		E9219DAAC6DD4419E7ECCA065AFA80CC /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = "lottie-swift/src/Private/Model/Keyframes/Keyframe.swift"; sourceTree = "<group>"; };
+		ED8D1D8A8F66EB114A3D9669FB68121E /* Gifu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gifu-prefix.pch"; sourceTree = "<group>"; };
+		EE513BB77836E45ED85E526C326A3FAE /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
+		EFE8B95A1FEB97B25A5D458D285F87F2 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		F05BD52A1DC57F6DF33CEFDB16490AA4 /* Glyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = "lottie-swift/src/Private/Model/Text/Glyph.swift"; sourceTree = "<group>"; };
+		F107692F1A40B2CED1D176399CA8DC51 /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = "lottie-swift/src/Public/DynamicProperties/AnimationKeypath.swift"; sourceTree = "<group>"; };
+		F18567305C06D6D033308E5A61E6DC18 /* CurveVertex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveVertex.swift; path = "lottie-swift/src/Private/Utility/Primitives/CurveVertex.swift"; sourceTree = "<group>"; };
+		F6F7FFBA6BE964C103825E47B9914750 /* FillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/FillNode.swift"; sourceTree = "<group>"; };
 		F7F410CBB227714AF87E0CC14EB4C2E0 /* Pods-Sprints-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sprints-frameworks.sh"; sourceTree = "<group>"; };
+		F96D00D91C2F72809E300EDAA96016FA /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
+		FC4DBD7A18E4D38759CAA15F87C30C75 /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Gifu/Extensions/CGSize.swift; sourceTree = "<group>"; };
+		FCB2CC753065575E38F17B0042375701 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
+		FEF390F465D534604F5BCEFE1A3D9A94 /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2A5E78E2934E919E5D9ACD3C0B89AF99 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E8CFAC1BB3448456D1F880575CC06D4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C2292E431F316076553538B7FBB63C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +448,17 @@
 				EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */,
 				2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */,
 				38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F60C6764CA449F03DDE3C9035E18C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A090A400F77C7D72305DE29D29AC564C /* CoreGraphics.framework in Frameworks */,
+				DB64698482B57470F644E7A916619EE5 /* Foundation.framework in Frameworks */,
+				934466F4C4B07C006BC4EEE5B17E926C /* QuartzCore.framework in Frameworks */,
+				29AC5563A65E92E1D5A39C76A94558FE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +478,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D551445A429583477A19BC912BE9E026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93F14D14B9CD6B1B5A51DAC0EFA3ADE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0185C5F33156B08A1C039A0DD4910639 /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				104814808CD88AF77A063F8AC6F421EA /* Abstraction.swift */,
+				0EB9F6CC3DBA7F983D49ABFA93C306C7 /* Constrainable.swift */,
+				BF9C732D99789216FF8022597ACFE4BE /* Constraints.swift */,
+				E6D80765F9F3CCE485188D323AB4950B /* Stack.swift */,
+				15BF906C11F051420CAF50A4FC3B368A /* TinyConstraints.swift */,
+				6627382158169E459856443DF2CD64BF /* TinyConstraints+superview.swift */,
+				E572C44B2E65E958C272DA06617F3948 /* TinyEdgeInsets.swift */,
+				CAAA7090078DD56EE6584E67EF18AF40 /* Support Files */,
+			);
+			name = TinyConstraints;
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
 		0A0A61221BADA02A9E5FF5B128C4B92A /* Pods-Sprints */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,59 +522,47 @@
 			path = "Target Support Files/Pods-Sprints";
 			sourceTree = "<group>";
 		};
-		1BE63D9000C08946455184ABD51F5241 /* Pods */ = {
+		22F08FB0E7DF9FFA86EB322DADCBF6EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				386296E6DB0EB9234C5712B6454E9145 /* Gifu */,
-				F905C2358530BEB9B81D1DCA863B0E69 /* IQKeyboardManagerSwift */,
-				403CCB5D92AE6872A09C1E614129389E /* TinyConstraints */,
+				37C3BF65A2F0260D30AC3CD10918BEBE /* Gifu */,
+				D6A69C7EB3010863C164EAC82569AE71 /* IQKeyboardManagerSwift */,
+				AE6C5C0F51A2AFFB349C6EF387854F1B /* lottie-ios */,
+				0185C5F33156B08A1C039A0DD4910639 /* TinyConstraints */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		221A3850195B62BEEE34E1919DC3E54F /* Products */ = {
+		2D9A22EFB1A7E5C175E19761653B33C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				40E5F8D9277E714962AFA02550F15F8A /* Gifu.framework */,
 				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
 				576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */,
 				248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		386296E6DB0EB9234C5712B6454E9145 /* Gifu */ = {
+		37C3BF65A2F0260D30AC3CD10918BEBE /* Gifu */ = {
 			isa = PBXGroup;
 			children = (
-				F3E1F6C8C23778BBB32E06EB035843CB /* AnimatedFrame.swift */,
-				3E22326471DB4D6B2802D66DEF71C156 /* Animator.swift */,
-				1F83C5C0D0FCCC7FAFC9CA5C7812CFAD /* Array.swift */,
-				D5607C1F43BBEE0B5EE2D8C1BA5D3892 /* CGSize.swift */,
-				7172EA238BD288B563D902EE416A41CF /* FrameStore.swift */,
-				B3E01865241E4FFF61F0D284F61203EF /* GIFAnimatable.swift */,
-				A490D69F3ECA441C3DAA973AB867E459 /* GIFImageView.swift */,
-				6BD4EFA11118ED4CF67AAB8A2D036C57 /* Gifu.h */,
-				B7B42E8D220FED792803657797E8EC72 /* ImageSourceHelpers.swift */,
-				5D62F5B93E7F60613A18913FF724EAA9 /* UIImage.swift */,
-				EAE1244BB8AAC8F1CE0FA3335F047711 /* UIImageView.swift */,
-				7F93784E264A536DD2BBBFC151A4EC7A /* Support Files */,
+				A63B4C7765685124BE4933D362AAB02B /* AnimatedFrame.swift */,
+				0CAA7C3ED06904C78BA6685F53C58102 /* Animator.swift */,
+				3AB40D47F1664853FA1B76ECC1E77E6E /* Array.swift */,
+				FC4DBD7A18E4D38759CAA15F87C30C75 /* CGSize.swift */,
+				55E7A5F1F0C9021D160C853072F0DF66 /* FrameStore.swift */,
+				DAACEBC2E794C5B51B7626042941DC82 /* GIFAnimatable.swift */,
+				9E3654485C3E8A1891A98AA4858B263B /* GIFImageView.swift */,
+				E262425A295FE524454EE3B9E066DF6D /* Gifu.h */,
+				654889DAB702237E0DE60E582A8B7273 /* ImageSourceHelpers.swift */,
+				AD0051EC012B403CC8686398CD394CCE /* UIImage.swift */,
+				8F635EA2621C203C7C929DCB4D4D076C /* UIImageView.swift */,
+				F3D53F4778DD7B10C14EFB6575B3AD3D /* Support Files */,
 			);
+			name = Gifu;
 			path = Gifu;
-			sourceTree = "<group>";
-		};
-		403CCB5D92AE6872A09C1E614129389E /* TinyConstraints */ = {
-			isa = PBXGroup;
-			children = (
-				6A5C28B9553DB034EBE9B37159F32543 /* Abstraction.swift */,
-				C247E36DAF8E53BC86018DD02B591C98 /* Constrainable.swift */,
-				2E875FFA6D28775A1DC65B012C61F14D /* Constraints.swift */,
-				F1841788A6E68B66A507DA68ED603259 /* Stack.swift */,
-				23357D82E10B3F328FE94C19035A9998 /* TinyConstraints.swift */,
-				56CAE1D7341D708F6EC879E9CD823245 /* TinyConstraints+superview.swift */,
-				49ED546E541830D24C753FD49C755C2C /* TinyEdgeInsets.swift */,
-				C2FBDEBAAA33609DA28AE83423EE4D8C /* Support Files */,
-			);
-			path = TinyConstraints;
 			sourceTree = "<group>";
 		};
 		6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */ = {
@@ -277,19 +573,143 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7F93784E264A536DD2BBBFC151A4EC7A /* Support Files */ = {
+		AE6C5C0F51A2AFFB349C6EF387854F1B /* lottie-ios */ = {
 			isa = PBXGroup;
 			children = (
-				27360F201CD203FEEC3844492F120CA4 /* Gifu.modulemap */,
-				2F0A2076DFB1CCA3B75FEC871CCB57FE /* Gifu-dummy.m */,
-				01CB0FA2FC075D81796D27E912CD613E /* Gifu-Info.plist */,
-				7E5CED8881BACC6BAA0CDB9897A6D04B /* Gifu-prefix.pch */,
-				CB52CC2EEBF405033B1C7106BA69D8CB /* Gifu-umbrella.h */,
-				886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */,
-				02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */,
+				5653E31535504A1B6CD9757196D21D3C /* AnimatedButton.swift */,
+				E6F7FB7A9D070B3076D7D971FB932BA6 /* AnimatedControl.swift */,
+				0A69103C501CC8599FB063BDF43096BB /* AnimatedSwitch.swift */,
+				71B2F6482452B5E4ABAA356681951A43 /* Animation.swift */,
+				8CADBAC8FDB45BA5EE43CD8171C35E76 /* AnimationCacheProvider.swift */,
+				34FB0E7381305708D0D240A49160247C /* AnimationContainer.swift */,
+				2A9C820562E91153F4AEC4A836BCEA74 /* AnimationContext.swift */,
+				3AF578999F9324B4D37ADD044561D19A /* AnimationFontProvider.swift */,
+				D720A5744E129891B2715060121C7822 /* AnimationImageProvider.swift */,
+				F107692F1A40B2CED1D176399CA8DC51 /* AnimationKeypath.swift */,
+				368C3C2F6D4DEEB4A59940BAB3023F87 /* AnimationKeypathExtension.swift */,
+				ADB04A1F44FF3007B7B3C5B1A96225A5 /* AnimationPublic.swift */,
+				E70E1FEF7B424233C5115CEC839F7EF3 /* AnimationSubview.swift */,
+				35F45F3A26233ED9D3F3334A16482080 /* AnimationTextProvider.swift */,
+				D2EBA8D3FB45F16F39A86BF392EFC6AA /* AnimationTime.swift */,
+				A48EA1CE0AF94417387BA1885270C823 /* AnimationView.swift */,
+				BAB07CE406EC19052B91E7D1C945BCCC /* AnimationViewInitializers.swift */,
+				65CB84250926B1B007D26750486F0A8A /* AnimatorNode.swift */,
+				46D26B2D68245D2EAD6BD5360CD7879A /* AnimatorNodeDebugging.swift */,
+				23DAAF82110BCB05547EC5193C32DBAB /* AnyNodeProperty.swift */,
+				1A8D79AECB341A6563FF66D51CE3666E /* AnyValueContainer.swift */,
+				12F93784E8285C92D0600A058DA795E8 /* AnyValueProvider.swift */,
+				46128DBE54C42D6CCAABD9CE8FE684E5 /* Asset.swift */,
+				8F7059CB0850BD9BD09C806ACB0CBB41 /* AssetLibrary.swift */,
+				52894C45A779F48C1D8EC2B0CAC4CE22 /* BezierPath.swift */,
+				8F4C2DD63C29C07CA4A3E74D008229E5 /* BundleImageProvider.swift */,
+				DE92E484DA60C3829C17C68A1B680FAF /* CGFloatExtensions.swift */,
+				46D5AA9DB84FF2F86386F0D4F9622D52 /* Color.swift */,
+				2EF30D5BF3EFB44CEA8A499A44607C39 /* ColorExtension.swift */,
+				8A7056820F61C87CB82B984D63B45325 /* ColorValueProvider.swift */,
+				07E35469768D001814B90C5023C20302 /* CompatibleAnimationKeypath.swift */,
+				DF2F4F96B1F4AAE7DCF1A353FEB81101 /* CompatibleAnimationView.swift */,
+				829CA29286B569CB3433462CADF3BCC7 /* CompositionLayer.swift */,
+				CFDA11C42C118BA7ACC30DF150F4D2D5 /* CompositionLayersInitializer.swift */,
+				072471F07A87F7FC31A132D0CAFE6B66 /* CompoundBezierPath.swift */,
+				F18567305C06D6D033308E5A61E6DC18 /* CurveVertex.swift */,
+				7094928DA3FFAA66EACA6C09BAE15BCF /* DashPattern.swift */,
+				1228FADD8B2594F3133A3F2B61DF44C4 /* Ellipse.swift */,
+				91DC754ED1CB10F8D998BD62BCE6AECA /* EllipseNode.swift */,
+				CF77379CF0A14054E1CEBB39C550BDCE /* FilepathImageProvider.swift */,
+				A8F40725FE58107F7926E8935B6049B4 /* FillI.swift */,
+				F6F7FFBA6BE964C103825E47B9914750 /* FillNode.swift */,
+				05018B12C24279C79F1C71AADEFF5F5F /* FillRenderer.swift */,
+				1968CC964CD69EB45C323130222CECF6 /* FloatValueProvider.swift */,
+				A8B877F0121D6ACC6090D6FAF6C9B379 /* Font.swift */,
+				F05BD52A1DC57F6DF33CEFDB16490AA4 /* Glyph.swift */,
+				9B207C795836A9753994B945BF0A122B /* GradientFill.swift */,
+				20924A6C0DD47EDC224103DE968208C1 /* GradientFillNode.swift */,
+				59B49715F03BF8C1DEFE653EA0A7BF29 /* GradientFillRenderer.swift */,
+				E81F24C24AED8A89663458AE0C7EA1A0 /* GradientStroke.swift */,
+				C2FB74826B6C863963FEA5F3A1705AE0 /* GradientStrokeNode.swift */,
+				5B3DA09F059B21B8927A04C4AE3BD293 /* GradientStrokeRenderer.swift */,
+				A356E09D8D847EEB69652C9E34C8E3D4 /* GradientValueProvider.swift */,
+				560C921D9715E2D88A2505AAD604D9BA /* Group.swift */,
+				E0B2CFDA93CF34ADD0850C0AD8F98705 /* GroupInterpolator.swift */,
+				39B2D257C898DBFB1AF490167CA5C81D /* GroupNode.swift */,
+				E71685058D2F7600A751BE77FDCDA552 /* GroupOutputNode.swift */,
+				324093128EDA350EA8925412AC656524 /* ImageAsset.swift */,
+				D6BD65EA3FF1C854F737C512DAC70BDF /* ImageCompositionLayer.swift */,
+				38CF6F917249395D7B4BFE5891E2FEFB /* ImageLayerModel.swift */,
+				3FAD3DBBEE67592F289F1C1D52C7B6D5 /* Interpolatable.swift */,
+				E072D707D68645FC0A82574FB58DD419 /* InterpolatableExtensions.swift */,
+				5DAA9EE8154324C3E435383543F5E40F /* InvertedMatteLayer.swift */,
+				9A3EB31AC1B6EB6DB8134247E55B4974 /* ItemsExtension.swift */,
+				0B7AC4E359B18C8C4D243329CDBB7C22 /* KeyedDecodingContainerExtensions.swift */,
+				E9219DAAC6DD4419E7ECCA065AFA80CC /* Keyframe.swift */,
+				015DA512CB6FAD1DCF8DA2BCCDDF21B4 /* KeyframeExtensions.swift */,
+				D0F330ABD2CACD1FBA2FB5B2A11B5F13 /* KeyframeGroup.swift */,
+				70207CFD09A093EA313DED9A8D6207DA /* KeyframeInterpolator.swift */,
+				45336E2315266E6A0ABA9338BC66E514 /* KeypathSearchable.swift */,
+				B79BFEC47DAC0927CA5BB4E764C1DEB5 /* LayerDebugging.swift */,
+				D2118BCA7301A920F591D0A64573B679 /* LayerFontProvider.swift */,
+				FEF390F465D534604F5BCEFE1A3D9A94 /* LayerImageProvider.swift */,
+				61EB8F6AB971610514AB80EB18390FF4 /* LayerModel.swift */,
+				127FC2D40D30C0BE4732C998EF3217BD /* LayerTextProvider.swift */,
+				2557B52D913B995526FE68FA9361ADFE /* LayerTransformNode.swift */,
+				76580DBB1A3B8D654CCBEA6654DC4740 /* LottieView.swift */,
+				E4AC93A8C423368D9A3F8162491B835E /* LRUAnimationCache.swift */,
+				D00504E7A872F7176F791B7D09379A97 /* Marker.swift */,
+				639CA53111E266F42C535255DDC85742 /* Mask.swift */,
+				7A6CC0724762DFFB6C515636CA56579A /* MaskContainerLayer.swift */,
+				C8BEFBB311A8630737831EA6E76630E6 /* MathKit.swift */,
+				B9D1C9994CB3CF08C4BA49FF4F3FA2EE /* Merge.swift */,
+				4036C9535B1958AC673A0CCD8219E806 /* NodeProperty.swift */,
+				9AD99EF924D6C4EADA289DBB6896C2E5 /* NodePropertyMap.swift */,
+				27CD438145A13FBEC89025578B38DC83 /* NullCompositionLayer.swift */,
+				93B382EC12BBE605A307C12D5C195BA6 /* PassThroughOutputNode.swift */,
+				5E6D4490038D7F626CF3576DDDF1A2DA /* PathElement.swift */,
+				B1A67C9BEB87246324A512622C1AD6D9 /* PathNode.swift */,
+				8DDC3DA220E9705CBFEBE2AB1E7A9A69 /* PathOutputNode.swift */,
+				67CE26B07E33B58B42DBCEACD5B5BAD9 /* PointValueProvider.swift */,
+				1CFB21C7F5823C560C2BB83FBC8F3664 /* PolygonNode.swift */,
+				3913BB4ACCDB18E039D8CA36ADE0F2DF /* PrecompAsset.swift */,
+				9E134BCD26690E502F883E0CCEE019B3 /* PreCompLayerModel.swift */,
+				191740854D4604D2AAFC5817DF11CA16 /* PreCompositionLayer.swift */,
+				B78597B812C32434C1606FA3D998809D /* Rectangle.swift */,
+				AF18EF14E778CBB3A25BD254F2570206 /* RectNode.swift */,
+				A5C0DEA06E95F834A0B512BBCF8D0274 /* RenderNode.swift */,
+				6D52E4A106A9030DAC51B0D53F1FC3E4 /* Repeater.swift */,
+				F96D00D91C2F72809E300EDAA96016FA /* Shape.swift */,
+				633BF1232DEF34F4C44D318A6BE88BD7 /* ShapeCompositionLayer.swift */,
+				C23F8934EFCDA35F78F29CDA88669E67 /* ShapeContainerLayer.swift */,
+				E40ECDF5DFA162015EA4A2708E9EAA30 /* ShapeItem.swift */,
+				58CE95D484523E24E7CA762F7FBC59E1 /* ShapeLayerModel.swift */,
+				7E7418E66767393DA69248399F0D29AB /* ShapeNode.swift */,
+				279BCE847A85199CF121031CF4C5C775 /* ShapeRenderLayer.swift */,
+				8BD0EDF183E453EF13494BB491B5F2CC /* ShapeTransform.swift */,
+				0CB3777917E6F813B7A747650DB41933 /* SingleValueProvider.swift */,
+				D8253E8C76BB5EC8D96BB9F619CA1513 /* SizeValueProvider.swift */,
+				98DDAF6311D8ED9260C13EF71EC9AAE6 /* SolidCompositionLayer.swift */,
+				4E48D052943B16413CEEF308570C8ECE /* SolidLayerModel.swift */,
+				BFCBFB2E0944BD48910176CC6337E1D3 /* Star.swift */,
+				5022EEDAFBE898082C40A24BBD0370C4 /* StarNode.swift */,
+				1CE2A99A246D2599C887C5D1F4F42633 /* StringExtensions.swift */,
+				7481216CCACE2979492CC08F8A0359CD /* Stroke.swift */,
+				66EA9869F9BC71B72F9F30E7F6937EFB /* StrokeNode.swift */,
+				1BF22E9C8EEE118E40AE6C706ADA81E0 /* StrokeRenderer.swift */,
+				AE03E50E8E8EE239C7F9FDD5663B56C1 /* TextAnimator.swift */,
+				7A5C2E86B5254ED47339B8C545F0769C /* TextAnimatorNode.swift */,
+				47C179641694926441020857A8F351E3 /* TextCompositionLayer.swift */,
+				8BB74567045D194D0C2098FAEFD99963 /* TextDocument.swift */,
+				84308917A074E0D877CC22255164D875 /* TextLayer.swift */,
+				A2ADAB5EDA743CFC9FE0F9C8B7BB8970 /* TextLayerModel.swift */,
+				69F8B39F71A54AB55BC1544BAB47EC4E /* Transform.swift */,
+				0B2078B6B119C6802CED50C46E85D871 /* Trim.swift */,
+				0D831F9840CB153BD046CC7DAC4C6973 /* TrimPathNode.swift */,
+				43F27E4A2D78234714DF33DB11244F52 /* UIColorExtension.swift */,
+				6667256671EFDA5BD914F8CC8BA735A5 /* ValueContainer.swift */,
+				00F55D7A89241AA4CFAF2F07F5B3829A /* Vectors.swift */,
+				0701871B86B34311CF1012EEEC593F76 /* VectorsExtensions.swift */,
+				F28C5588C5DA4E3A8C5D6F4FF8D192F4 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Gifu";
+			name = "lottie-ios";
+			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -300,31 +720,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEC8E79E0F5E1B440A3E11B82F6EE976 /* Support Files */ = {
+		CAAA7090078DD56EE6584E67EF18AF40 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F97D9ECEA9925BBC93C8B50C029FE6E /* IQKeyboardManagerSwift.modulemap */,
-				369899A87D8F2FC46D54E2589BAF3A9A /* IQKeyboardManagerSwift-dummy.m */,
-				EB77680ECA209CE65FEE6B8A67E4350C /* IQKeyboardManagerSwift-Info.plist */,
-				2B618F0782A34D9A7733EFAF1FB69401 /* IQKeyboardManagerSwift-prefix.pch */,
-				3CADE907641D1F9FA5F8459F5416A404 /* IQKeyboardManagerSwift-umbrella.h */,
-				4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */,
-				A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/IQKeyboardManagerSwift";
-			sourceTree = "<group>";
-		};
-		C2FBDEBAAA33609DA28AE83423EE4D8C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7FB22243B7A8A7EDCADB6AC0474115C7 /* TinyConstraints.modulemap */,
-				6A581E870CDC130BF63036D814555A83 /* TinyConstraints-dummy.m */,
-				9612CB862CB2D4DDE05A06B458E140A9 /* TinyConstraints-Info.plist */,
-				6E25619743EDD901547C5EBA0DDCE09B /* TinyConstraints-prefix.pch */,
-				833BC6D44BF0EA33D6FCA5BBDD802778 /* TinyConstraints-umbrella.h */,
-				13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */,
-				0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */,
+				B7C4F801C0B2FFA4E9190619A5C7D786 /* TinyConstraints.modulemap */,
+				AB66D48E900BF5A373D655C5EC2ED83A /* TinyConstraints-dummy.m */,
+				5122835E87D987C8D2800F28CE952C24 /* TinyConstraints-Info.plist */,
+				952E6383131CA13FE361E929F6AD4870 /* TinyConstraints-prefix.pch */,
+				E388EB7B9AAE6B5CF8C088D2693C8F81 /* TinyConstraints-umbrella.h */,
+				7F6BDC6F983186561B4015AC72C94BC7 /* TinyConstraints.debug.xcconfig */,
+				DF45962CEE558928A9CE81B1A62B07BB /* TinyConstraints.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/TinyConstraints";
@@ -335,34 +740,80 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				1BE63D9000C08946455184ABD51F5241 /* Pods */,
-				221A3850195B62BEEE34E1919DC3E54F /* Products */,
+				22F08FB0E7DF9FFA86EB322DADCBF6EF /* Pods */,
+				2D9A22EFB1A7E5C175E19761653B33C4 /* Products */,
 				6467CED9DB4892586B32EEDE95EE7776 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F905C2358530BEB9B81D1DCA863B0E69 /* IQKeyboardManagerSwift */ = {
+		D6A69C7EB3010863C164EAC82569AE71 /* IQKeyboardManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				27D062B8F60557C9C647CD71F35EA932 /* IQBarButtonItem.swift */,
-				B1D9FE20AA1A634F063A1AF1C124AF01 /* IQInvocation.swift */,
-				A79C74DC92FF1CC1DE50151AA0711DF6 /* IQKeyboardManager.swift */,
-				87CA4FA075D1C1444C5342F0187B224A /* IQKeyboardManagerConstants.swift */,
-				1EB6DCFDDC1143A38E7D349F745741E5 /* IQKeyboardManagerConstantsInternal.swift */,
-				284BCF4D59CFECDD31DECDC0A24D2CF3 /* IQKeyboardReturnKeyHandler.swift */,
-				D88742D0D1B409E6385C9D23C1C4B67D /* IQNSArray+Sort.swift */,
-				D0CC311CF7984C3DCF1D223B4AD522CC /* IQPreviousNextView.swift */,
-				4BBD2D2F1D4214584FB714215817B0ED /* IQTextView.swift */,
-				4AAB569F5876CB6A0E4C6AAC8BD1C6CA /* IQTitleBarButtonItem.swift */,
-				55740CC615E764AA13968428EFAA80FA /* IQToolbar.swift */,
-				D5011F050065524F82DD18D99601C740 /* IQUIScrollView+Additions.swift */,
-				48D6949796BF9FF91517A580AC479A78 /* IQUITextFieldView+Additions.swift */,
-				6D2AE1DA8E4F3CEADD9BAE019A60733A /* IQUIView+Hierarchy.swift */,
-				085AB2B1B50443995E2DBD533E2B31EE /* IQUIView+IQKeyboardToolbar.swift */,
-				CB97F7E7A9427E9E167FE354AD541894 /* IQUIViewController+Additions.swift */,
-				BEC8E79E0F5E1B440A3E11B82F6EE976 /* Support Files */,
+				123217003CF5E470E9480A3F4820F913 /* IQBarButtonItem.swift */,
+				891391A1AA37E55ED5EA0628799ADDDC /* IQInvocation.swift */,
+				2CE2321D1FB2DDE95170C06C76B81AD0 /* IQKeyboardManager.swift */,
+				7556E6495907B35D57568088A2CE7A0A /* IQKeyboardManagerConstants.swift */,
+				7B92AE545EB76EC1F6CB23DDDAD388BC /* IQKeyboardManagerConstantsInternal.swift */,
+				79F890259FFB3B187065F0AD8BDE25B3 /* IQKeyboardReturnKeyHandler.swift */,
+				175C4C713BBAB25F218B06E2643877BA /* IQNSArray+Sort.swift */,
+				FCB2CC753065575E38F17B0042375701 /* IQPreviousNextView.swift */,
+				EE513BB77836E45ED85E526C326A3FAE /* IQTextView.swift */,
+				C82F6D5CF8E761F421BE5F9BEBAFEE20 /* IQTitleBarButtonItem.swift */,
+				3CCEFF18661C56626570D0884E632397 /* IQToolbar.swift */,
+				B14A4D55AB7F16B1EA99CF62B1817A12 /* IQUIScrollView+Additions.swift */,
+				795208BCA1E3F5519AEEAD45008EA250 /* IQUITextFieldView+Additions.swift */,
+				054A81E12727788854473832D73A300D /* IQUIView+Hierarchy.swift */,
+				5156025442D47EFEE726082345042DD4 /* IQUIView+IQKeyboardToolbar.swift */,
+				EFE8B95A1FEB97B25A5D458D285F87F2 /* IQUIViewController+Additions.swift */,
+				F60E6323E34C9C86B7FEC9E99654B2E2 /* Support Files */,
 			);
+			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		F28C5588C5DA4E3A8C5D6F4FF8D192F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1E9653664ED1F2AF9C943CF8BA606 /* lottie-ios.modulemap */,
+				6DBA5FC80C9AAB13CEF147B7D087FDE8 /* lottie-ios-dummy.m */,
+				D98DF631651F8B141E7919685D23A31D /* lottie-ios-Info.plist */,
+				90222138088B43637EAEFC3C746D1F83 /* lottie-ios-prefix.pch */,
+				8AA634A9C347C035B63DDDB327F14221 /* lottie-ios-umbrella.h */,
+				B70C5E20269484D8226024ED45CFB383 /* lottie-ios.debug.xcconfig */,
+				B3616760BC2CB43F5DFC3C5525A6CB07 /* lottie-ios.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/lottie-ios";
+			sourceTree = "<group>";
+		};
+		F3D53F4778DD7B10C14EFB6575B3AD3D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E9DB771536C36EE80D89C6C931A1662 /* Gifu.modulemap */,
+				5CBEB0AA50AE919CECE9D8DE2EA29A85 /* Gifu-dummy.m */,
+				DCBCFB3C2EB96003171638FEA456061D /* Gifu-Info.plist */,
+				ED8D1D8A8F66EB114A3D9669FB68121E /* Gifu-prefix.pch */,
+				D617C75191F98584C97DB4345B386809 /* Gifu-umbrella.h */,
+				8080111E85A36521716275B710CCFCAE /* Gifu.debug.xcconfig */,
+				06C838445FC68262F7442CDBAB753FBD /* Gifu.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Gifu";
+			sourceTree = "<group>";
+		};
+		F60E6323E34C9C86B7FEC9E99654B2E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1E08E5178DE3A490A5C8ADE48FB9682 /* IQKeyboardManagerSwift.modulemap */,
+				A511B76C1C0B2CD4915A79F18E58DBC7 /* IQKeyboardManagerSwift-dummy.m */,
+				8BFEAB3479AD01873BD44D8CECEFAE11 /* IQKeyboardManagerSwift-Info.plist */,
+				AADE56625BFCF8A962709620C2BBE9CE /* IQKeyboardManagerSwift-prefix.pch */,
+				71F703118C37AB3FCA70ED4934B5456A /* IQKeyboardManagerSwift-umbrella.h */,
+				8A17288081B84F664267D539DCE006F9 /* IQKeyboardManagerSwift.debug.xcconfig */,
+				A2A88431437B30FDBE216925BF0CE85C /* IQKeyboardManagerSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IQKeyboardManagerSwift";
 			sourceTree = "<group>";
 		};
 		F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */ = {
@@ -388,6 +839,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91965945166C29D12ECA31470B0BE720 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ED15B5BB3879C74834D127D315168B /* Pods-Sprints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98FE3D0A640F390EA7AEA8E88F47DEDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,11 +855,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9AC88E3AD70332C5D71128804857B23 /* Headers */ = {
+		D29FF6455545C2F4D0145EDD2FED44B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD8522C7CB1081A939637489C945BDF1 /* Pods-Sprints-umbrella.h in Headers */,
+				97431400B8DFFE173E415A8B9C4F1C5E /* lottie-ios-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,23 +876,42 @@
 /* Begin PBXNativeTarget section */
 		0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21AC70D1C705FE5E35B68F71D01648CD /* Build configuration list for PBXNativeTarget "Pods-Sprints" */;
+			buildConfigurationList = 021D2F2AF8E43D2B64043BA828904847 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */;
 			buildPhases = (
-				B9AC88E3AD70332C5D71128804857B23 /* Headers */,
-				632553BAD0778491805B27D90E5B9DDD /* Sources */,
-				2A5E78E2934E919E5D9ACD3C0B89AF99 /* Frameworks */,
-				319974C6C40F178A24975802BDC82F15 /* Resources */,
+				91965945166C29D12ECA31470B0BE720 /* Headers */,
+				B809D3BC85C420283E04FF85BC1839CE /* Sources */,
+				D551445A429583477A19BC912BE9E026 /* Frameworks */,
+				982CB6738D979983F9A644155D582779 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9E6857C73109CA1EF6DB200324E0E9B9 /* PBXTargetDependency */,
-				F45C8123690258777FF62530BA19B9F0 /* PBXTargetDependency */,
-				604D24A52917D9E5B48FBBC4ACA4F41E /* PBXTargetDependency */,
+				78E4F17CBC5E8E297E4FA1DF20F79C55 /* PBXTargetDependency */,
+				BEE44084FFC776DD5B2E69216B29A70F /* PBXTargetDependency */,
+				04B992554D0836ED15E2FE7655A6CC21 /* PBXTargetDependency */,
+				F42D665DB18A6E027D7924D517341914 /* PBXTargetDependency */,
 			);
 			name = "Pods-Sprints";
 			productName = "Pods-Sprints";
 			productReference = 576C592221A170152CEA39FDCE0A973D /* Pods_Sprints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D475FFA1A89F8A9E6ECCE9674D42D468 /* Build configuration list for PBXNativeTarget "lottie-ios" */;
+			buildPhases = (
+				D29FF6455545C2F4D0145EDD2FED44B6 /* Headers */,
+				46010A4D1B5A84E2437F6D486879CA48 /* Sources */,
+				2F60C6764CA449F03DDE3C9035E18C62 /* Frameworks */,
+				7141B8BFD91321B48D2EC833C693184F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lottie-ios";
+			productName = "lottie-ios";
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
@@ -497,7 +975,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -508,12 +986,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 221A3850195B62BEEE34E1919DC3E54F /* Products */;
+			productRefGroup = 2D9A22EFB1A7E5C175E19761653B33C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				830B5AB9E16163B4A1BA339D625FE46C /* Gifu */,
 				B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */,
+				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
 				0260C5B3E48FFB122A2F7300B3636534 /* Pods-Sprints */,
 				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
 			);
@@ -528,7 +1007,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		319974C6C40F178A24975802BDC82F15 /* Resources */ = {
+		7141B8BFD91321B48D2EC833C693184F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -536,6 +1015,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7465A1319E37DADA12A8BAEB409143AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982CB6738D979983F9A644155D582779 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,11 +1056,141 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		632553BAD0778491805B27D90E5B9DDD /* Sources */ = {
+		46010A4D1B5A84E2437F6D486879CA48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2C13F5BA2EC1496BA0BA2FC19E46E8 /* Pods-Sprints-dummy.m in Sources */,
+				F2FFF322C9048FC0B23B9C49A6E62F35 /* AnimatedButton.swift in Sources */,
+				2E754D63217B7BC94CECA7FE23D96905 /* AnimatedControl.swift in Sources */,
+				645DC6A0FDFA7FDC3DF1D2AA265C1A8F /* AnimatedSwitch.swift in Sources */,
+				D482B07B389D6BED35B449680862FD5F /* Animation.swift in Sources */,
+				E0D17096D3801D5683ADD4D823A12D3E /* AnimationCacheProvider.swift in Sources */,
+				FEC9061C02A16F7449132B5407416BDA /* AnimationContainer.swift in Sources */,
+				D4FE036734A6D5B9548B6E8144804700 /* AnimationContext.swift in Sources */,
+				8701E0B84141B2D9D0D4D9AFF362F0B6 /* AnimationFontProvider.swift in Sources */,
+				780A85B3BEA67F48B2342B14BE44D348 /* AnimationImageProvider.swift in Sources */,
+				8D945C57214018450702FEE8734883B2 /* AnimationKeypath.swift in Sources */,
+				0653A2C5607C749695E268E4E6C2F021 /* AnimationKeypathExtension.swift in Sources */,
+				F734F4F307A445DC8CDD50ED2FBDD8CC /* AnimationPublic.swift in Sources */,
+				DB8CB26680625363B4223412D88C3041 /* AnimationSubview.swift in Sources */,
+				64B353CDD897B011A947ED5649FE5B91 /* AnimationTextProvider.swift in Sources */,
+				02625B5BFE249E69FB44FDC74093E4DB /* AnimationTime.swift in Sources */,
+				C17B4450D1626364B2DCAA7A42C5EE97 /* AnimationView.swift in Sources */,
+				079D7B6FAA7B0E0E2B0491A31E13A781 /* AnimationViewInitializers.swift in Sources */,
+				CF779993E4FEEE72B1B59F71160BF7BA /* AnimatorNode.swift in Sources */,
+				8EC7DED1459CE95E2FFFC45D429C71BB /* AnimatorNodeDebugging.swift in Sources */,
+				B5E7A50CACD20C0F5DBAB6DBBDAFEF81 /* AnyNodeProperty.swift in Sources */,
+				DE66E6F35287CBE5875652B44E5DB76E /* AnyValueContainer.swift in Sources */,
+				530DCDE9EF6CADD6AEAAAD2978C6C6BF /* AnyValueProvider.swift in Sources */,
+				BE559AD46D01CC77943B2B0273612D8A /* Asset.swift in Sources */,
+				BEBA1B8C12D7F63B669832C898B0ECB4 /* AssetLibrary.swift in Sources */,
+				BCFA5D17A7DA6457F1DAABB6577898A4 /* BezierPath.swift in Sources */,
+				5429E317969AAD6CFD490D60443CB9B3 /* BundleImageProvider.swift in Sources */,
+				2468319AB27EE70D9BB5D28AD1B1A408 /* CGFloatExtensions.swift in Sources */,
+				E52835E3A69E0F0D060140EFFCAE45B3 /* Color.swift in Sources */,
+				3EB03A262C7F5F9B14DFC52CC9C8B6F6 /* ColorExtension.swift in Sources */,
+				4222ADA2E456904DAA7C5E6C135457F4 /* ColorValueProvider.swift in Sources */,
+				E663A44D97FFE0F736EA3B73E47A0690 /* CompatibleAnimationKeypath.swift in Sources */,
+				C5D7664DEA52A2080B49D6B2622C39DE /* CompatibleAnimationView.swift in Sources */,
+				4C159BD8975D5734D8F9D71E51DD30CF /* CompositionLayer.swift in Sources */,
+				B12033FCEF029B8D2F8BFC8AC5F9F336 /* CompositionLayersInitializer.swift in Sources */,
+				5AE4D0932F1517F975525A5505421240 /* CompoundBezierPath.swift in Sources */,
+				BFA126908186F19EE41BE5868FC1C210 /* CurveVertex.swift in Sources */,
+				A2A239A2B89A243A2892D5256B5E6548 /* DashPattern.swift in Sources */,
+				8AB6C217119A35985E0A3E2857ABB418 /* Ellipse.swift in Sources */,
+				585B65BDCE13078CE78CDAEE29A74BF0 /* EllipseNode.swift in Sources */,
+				D3BB7C10CF7FB03081B7ACF2B95313D4 /* FilepathImageProvider.swift in Sources */,
+				3EC7B1E8A42E64BC81E289A460EB6A07 /* FillI.swift in Sources */,
+				009CB881035B85E694EDE43F7F32AB6B /* FillNode.swift in Sources */,
+				47F63B725F7D79C6B35AE458421320EC /* FillRenderer.swift in Sources */,
+				A1E5120CA044B874E2B88C3EF6D338C1 /* FloatValueProvider.swift in Sources */,
+				24AC03A69DCEEDC21E29F9E63F95D808 /* Font.swift in Sources */,
+				0F5226419BBB085467BA8C5F52CC94B6 /* Glyph.swift in Sources */,
+				234268BD38A122DE31CF0280378B778C /* GradientFill.swift in Sources */,
+				33C7935FAFF578A13D784DA2A3528E82 /* GradientFillNode.swift in Sources */,
+				2FE08E71527A2450E881B39F8B9EC98C /* GradientFillRenderer.swift in Sources */,
+				993748F61F35290FFAD7CDE35F889F7A /* GradientStroke.swift in Sources */,
+				02216B580F40908071EC21B96D67E9D9 /* GradientStrokeNode.swift in Sources */,
+				49229652E662E1F06AD60AB7E04816D1 /* GradientStrokeRenderer.swift in Sources */,
+				99A40A5D7DE69F7B97ABA8CCCAE9955C /* GradientValueProvider.swift in Sources */,
+				EEF7528D1A1DC76EADC7CB145295235C /* Group.swift in Sources */,
+				E6A69EB7C716F3284634E00892C40806 /* GroupInterpolator.swift in Sources */,
+				3803EDA965588719CA8C54F9B13E997F /* GroupNode.swift in Sources */,
+				6CBB1D9311405F2C563D4BABCD04703E /* GroupOutputNode.swift in Sources */,
+				ED357987764A814A01E4E438045C4247 /* ImageAsset.swift in Sources */,
+				3AB381D0AE115FF6FD925F521872976E /* ImageCompositionLayer.swift in Sources */,
+				B8EA9274ACDDE99F957E4D61CE880F64 /* ImageLayerModel.swift in Sources */,
+				9758CD5895E13491B0F5D17625B7F4CF /* Interpolatable.swift in Sources */,
+				338366E6762002CDF447808FD6E7AB86 /* InterpolatableExtensions.swift in Sources */,
+				58DC484F75A76F06C4C7DB078BE54709 /* InvertedMatteLayer.swift in Sources */,
+				EBF2506DBF64C42BB02F207763BFC350 /* ItemsExtension.swift in Sources */,
+				248067FE931D5EB2D20417570F07BD35 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				07D5D290AFC1C0625577879F23E1CA98 /* Keyframe.swift in Sources */,
+				9456B9ABD3F9E2767FCD2E6CB8862836 /* KeyframeExtensions.swift in Sources */,
+				A6EC5575FC578319B77F311CE92C38F7 /* KeyframeGroup.swift in Sources */,
+				559E05F30E4EAE32BA48379660AE44B4 /* KeyframeInterpolator.swift in Sources */,
+				9EB11A84EF4C5B21533707563E2D169A /* KeypathSearchable.swift in Sources */,
+				FF2B32B1BAC49FDA4438824049CC4347 /* LayerDebugging.swift in Sources */,
+				C2F4BF932391B859E01C4A8A161A6E0D /* LayerFontProvider.swift in Sources */,
+				EC018DD5D1BE025DDF186DBA64B9420A /* LayerImageProvider.swift in Sources */,
+				5BF1B44B30938D3B6D132CE5C5BA4319 /* LayerModel.swift in Sources */,
+				CB8A7BE8F63886EE30FBCAF2F3968764 /* LayerTextProvider.swift in Sources */,
+				60449BD9530C4D527F6D9865AD7AC7F0 /* LayerTransformNode.swift in Sources */,
+				DF75937FFEF23A62DBDE3B7632BCD1C4 /* lottie-ios-dummy.m in Sources */,
+				85BA0432AF587B1C0DD30FD6EF4526D4 /* LottieView.swift in Sources */,
+				1EBDC31834A8904BE9C2E6C416DB7483 /* LRUAnimationCache.swift in Sources */,
+				63AA1E813E021D69590BDFFB0484CB92 /* Marker.swift in Sources */,
+				5323BB7033DDFBB8DF91A570B47E37F4 /* Mask.swift in Sources */,
+				67FA0E52AF43BC37707EE3691A6C6E87 /* MaskContainerLayer.swift in Sources */,
+				6477C63835313EB2B9CBBDB4E7C6344F /* MathKit.swift in Sources */,
+				AC0AB63D4857B7BE72409748962ED419 /* Merge.swift in Sources */,
+				95F9BAAFE3FC6BF6ABF607A836B08113 /* NodeProperty.swift in Sources */,
+				F79C6CF75F09D963BC5B8C2C9680D862 /* NodePropertyMap.swift in Sources */,
+				D79692BB25F9CFC26CEEA50ABB81CE95 /* NullCompositionLayer.swift in Sources */,
+				E191971060C289CB32E2A243ED1A9D79 /* PassThroughOutputNode.swift in Sources */,
+				0E4F718620888EE78E494057B9D3DEBC /* PathElement.swift in Sources */,
+				FEFFEFAF099B5368569FA4AFBB05CDBD /* PathNode.swift in Sources */,
+				E89DDD10D39B7447CEE9B8CE5255FCED /* PathOutputNode.swift in Sources */,
+				3F84D4C0A3E8A01D6FC705973B6CD4E3 /* PointValueProvider.swift in Sources */,
+				02295D78802AA44A08CC4D151AB3754F /* PolygonNode.swift in Sources */,
+				4B6F77ADDBD9A476A94F29AA8311B595 /* PrecompAsset.swift in Sources */,
+				1218933A8027C276466182664799D7DF /* PreCompLayerModel.swift in Sources */,
+				502B36A7D6E865B6C980705FF1938DF8 /* PreCompositionLayer.swift in Sources */,
+				59895C7550FB1575D9236CF7B9E977DC /* Rectangle.swift in Sources */,
+				E4D454584D3C6A2B296DAC18F15A5C2E /* RectNode.swift in Sources */,
+				6E271B5076A2153A2539F24479B7F0D2 /* RenderNode.swift in Sources */,
+				2922B51988C082497CF379C93B976717 /* Repeater.swift in Sources */,
+				FF86C8EB28B703745F812175ACFD803C /* Shape.swift in Sources */,
+				8BD831DC877702B1577F759D984511E9 /* ShapeCompositionLayer.swift in Sources */,
+				1054137AE9E91B0E0D9B63092CE376B5 /* ShapeContainerLayer.swift in Sources */,
+				AB2E29798AD033CAE8727EFD2A5F4D59 /* ShapeItem.swift in Sources */,
+				54A9E4C7BF9137C82BAEF05720F50B0A /* ShapeLayerModel.swift in Sources */,
+				04691E6969AC548F927B70E462F08B00 /* ShapeNode.swift in Sources */,
+				E718AB84042ECA239584381DB5970552 /* ShapeRenderLayer.swift in Sources */,
+				B31B0CB4874A037F044750EE515D8B1C /* ShapeTransform.swift in Sources */,
+				4E0588332E5C8BE6B875B5A440192EFC /* SingleValueProvider.swift in Sources */,
+				ED5B12BA89B00CA016A5CCB6AEAC6478 /* SizeValueProvider.swift in Sources */,
+				2F0715E5BCE33639A0FCA1F626B9BFA7 /* SolidCompositionLayer.swift in Sources */,
+				B18ED58C8DF81C079B5015D356A49817 /* SolidLayerModel.swift in Sources */,
+				2758F281AF0C7D8F312A3B0661F3509E /* Star.swift in Sources */,
+				112C74EFE714BCE32F08F8D6D546794A /* StarNode.swift in Sources */,
+				4DDFDBCB37FA90B0BBF12A0A2EE8736E /* StringExtensions.swift in Sources */,
+				269E0D3C45823193E8FF7F4057195B59 /* Stroke.swift in Sources */,
+				C960309E8DBD13A20BC26B2842463D62 /* StrokeNode.swift in Sources */,
+				9EDBA961B404B9A2CBE8EFF51BD5DFB8 /* StrokeRenderer.swift in Sources */,
+				F3D7ACEB8411814DF1DB0B4AAE90A2FC /* TextAnimator.swift in Sources */,
+				187AA66ABF3683980ECF622D6DBD1AD3 /* TextAnimatorNode.swift in Sources */,
+				0ABF0E24D4C5C2211CC8734E9F045546 /* TextCompositionLayer.swift in Sources */,
+				5EE3A72B1EAE8196BC068E5BB8DF6EE7 /* TextDocument.swift in Sources */,
+				18F0E77D3312E80E7EA2E809FBB10439 /* TextLayer.swift in Sources */,
+				9CFBA1B6279BCAC332CDA1A9BAC869D3 /* TextLayerModel.swift in Sources */,
+				5F7AA8300D54023C648A5E6DE7892435 /* Transform.swift in Sources */,
+				B1D7B4A10BD29854A979065125CD2BB7 /* Trim.swift in Sources */,
+				FA6BCAE8F1D4B6B2376C0FC7E40D57F5 /* TrimPathNode.swift in Sources */,
+				0FA94B0CBA835214F8CFFDC2D1419BAF /* UIColorExtension.swift in Sources */,
+				6079862E4DC9B5AC605B8E9807582EAC /* ValueContainer.swift in Sources */,
+				C9E9AB1A4B11F4EFF49986DD6BA05AC1 /* Vectors.swift in Sources */,
+				728CCE03BA79F5E0F2F4A838BE5847A7 /* VectorsExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,33 +1233,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B809D3BC85C420283E04FF85BC1839CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40D66F27F5DACF47D68374C3291DB1F /* Pods-Sprints-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		604D24A52917D9E5B48FBBC4ACA4F41E /* PBXTargetDependency */ = {
+		04B992554D0836ED15E2FE7655A6CC21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TinyConstraints;
 			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
-			targetProxy = DA04A58C153059B1F92A6B5D826C8F49 /* PBXContainerItemProxy */;
+			targetProxy = 54D65250B2FCF4980020502A816B43B3 /* PBXContainerItemProxy */;
 		};
-		9E6857C73109CA1EF6DB200324E0E9B9 /* PBXTargetDependency */ = {
+		78E4F17CBC5E8E297E4FA1DF20F79C55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Gifu;
 			target = 830B5AB9E16163B4A1BA339D625FE46C /* Gifu */;
-			targetProxy = C0E47CD71D9E048130F915255602496B /* PBXContainerItemProxy */;
+			targetProxy = A8CA560BC6F0FDFA1A9C881A5B97A7C3 /* PBXContainerItemProxy */;
 		};
-		F45C8123690258777FF62530BA19B9F0 /* PBXTargetDependency */ = {
+		BEE44084FFC776DD5B2E69216B29A70F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = CC3C4C3969F0C013AF96099D8D948146 /* PBXContainerItemProxy */;
+			targetProxy = F85F3DFE444EA8029D71E858FDD098C2 /* PBXContainerItemProxy */;
+		};
+		F42D665DB18A6E027D7924D517341914 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lottie-ios";
+			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
+			targetProxy = 2A8AF09D43FC4AE5462916136FC0173D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0FC1F0034542601DF1F5A76D5F10376C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13F5FDEAB688A82116802519FAB2468D /* TinyConstraints.debug.xcconfig */;
+			baseConfigurationReference = 7F6BDC6F983186561B4015AC72C94BC7 /* TinyConstraints.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -656,7 +1286,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,7 +1373,7 @@
 		};
 		3B7165CE72FA0260993EC86E2AC48993 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0111DABC24AA566D3804442D2C1F05D8 /* TinyConstraints.release.xcconfig */;
+			baseConfigurationReference = DF45962CEE558928A9CE81B1A62B07BB /* TinyConstraints.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -756,7 +1386,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,7 +1408,7 @@
 		};
 		3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B3B3D15A91E7D5ED0FDE0A34EFD912E /* IQKeyboardManagerSwift.debug.xcconfig */;
+			baseConfigurationReference = 8A17288081B84F664267D539DCE006F9 /* IQKeyboardManagerSwift.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -791,7 +1421,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,12 +1440,10 @@
 			};
 			name = Debug;
 		};
-		3C09037AB465B44D43DE51E0A393D4B0 /* Release */ = {
+		4C977A0DF0369D6FA852FB68BD28B039 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */;
+			baseConfigurationReference = B70C5E20269484D8226024ED45CFB383 /* lottie-ios.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -824,29 +1452,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				PRODUCT_MODULE_NAME = Lottie;
+				PRODUCT_NAME = Lottie;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -910,7 +1536,80 @@
 			};
 			name = Release;
 		};
-		7D849F3B5448415F99C651DAE1DA4B81 /* Debug */ = {
+		832F2AD39F38E6C44693ED9B2CDCCAB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0324B2AA4155FA7729D7F9AE59DEA7 /* Pods-Sprints.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sprints/Pods-Sprints.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6C25141F9755327A5CE5AE5C1FBD1BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3616760BC2CB43F5DFC3C5525A6CB07 /* lottie-ios.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				PRODUCT_MODULE_NAME = Lottie;
+				PRODUCT_NAME = Lottie;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C771305909FDE3231F3EDB19F0C63841 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51A4D2D9519F4A62B877150B57A36CCB /* Pods-Sprints.debug.xcconfig */;
 			buildSettings = {
@@ -949,7 +1648,7 @@
 		};
 		DDA145A73C39DFCFE4523C0ADC738938 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02EEA73ECC23C3F9B1C53DB0C34BFE02 /* Gifu.release.xcconfig */;
+			baseConfigurationReference = 06C838445FC68262F7442CDBAB753FBD /* Gifu.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -962,7 +1661,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Gifu/Gifu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -984,7 +1683,7 @@
 		};
 		E880EECC3218C35D488DFB71C9A9562B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 886FDBF7667DD251B0FB906A4FB70295 /* Gifu.debug.xcconfig */;
+			baseConfigurationReference = 8080111E85A36521716275B710CCFCAE /* Gifu.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -997,7 +1696,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Gifu/Gifu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1018,7 +1717,7 @@
 		};
 		ECD830E9FF60065425D88BB789C29686 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A55C6B52BFC26AE9C7E40AD83CA7BFC0 /* IQKeyboardManagerSwift.release.xcconfig */;
+			baseConfigurationReference = A2A88431437B30FDBE216925BF0CE85C /* IQKeyboardManagerSwift.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1031,7 +1730,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1054,20 +1753,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		021D2F2AF8E43D2B64043BA828904847 /* Build configuration list for PBXNativeTarget "Pods-Sprints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C771305909FDE3231F3EDB19F0C63841 /* Debug */,
+				832F2AD39F38E6C44693ED9B2CDCCAB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04BF61807C7C6D0918F26F2E99C6D024 /* Build configuration list for PBXNativeTarget "Gifu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E880EECC3218C35D488DFB71C9A9562B /* Debug */,
 				DDA145A73C39DFCFE4523C0ADC738938 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21AC70D1C705FE5E35B68F71D01648CD /* Build configuration list for PBXNativeTarget "Pods-Sprints" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D849F3B5448415F99C651DAE1DA4B81 /* Debug */,
-				3C09037AB465B44D43DE51E0A393D4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1086,6 +1785,15 @@
 			buildConfigurations = (
 				3BE7200682DA3DD02079CC5BBF5E56EB /* Debug */,
 				ECD830E9FF60065425D88BB789C29686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D475FFA1A89F8A9E6ECCE9674D42D468 /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C977A0DF0369D6FA852FB68BD28B039 /* Debug */,
+				A6C25141F9755327A5CE5AE5C1FBD1BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

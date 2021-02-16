@@ -6,5 +6,6 @@ target 'Sprints' do
   pod 'Gifu', '~> 3.3.0'
   pod 'TinyConstraints', '~> 4.0.1'
   pod 'IQKeyboardManagerSwift', '~> 6.5.6'
+  pod 'lottie-ios', '~> 3.1.9'
   
 end

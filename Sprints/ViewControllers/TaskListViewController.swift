@@ -67,7 +67,7 @@ class TaskListViewController: UIViewController {
 
         // Hide keyboard on drag and tap
         taskList.keyboardDismissMode = .onDrag
-        setUpGestureRecognizer()
+        tapToHideKeyboard()
         
 //        fetchTotalTime()
     }
@@ -135,7 +135,7 @@ class TaskListViewController: UIViewController {
     // MARK: - Helper Methods
     
     // Set up tap gesture recongizer on screen
-    func setUpGestureRecognizer() {
+    func tapToHideKeyboard() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGestureRecognizer)
     }
