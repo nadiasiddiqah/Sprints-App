@@ -25,10 +25,10 @@ class TaskRunViewController: UIViewController {
     @IBOutlet weak var nextTaskList: UITableView!
     
     @IBOutlet weak var currentTaskView: UIView!
-    @IBOutlet weak var taskStatus: UIImageView! {
+    @IBOutlet weak var checkmarkBox: UIImageView! {
         didSet {
-            taskStatus.isUserInteractionEnabled = true
-            taskStatus.image = UIImage(systemName: "square")
+            checkmarkBox.isUserInteractionEnabled = true
+            checkmarkBox.image = UIImage(systemName: "square")
         }
     }
     @IBOutlet weak var currentTaskName: UILabel!
@@ -73,6 +73,8 @@ class TaskRunViewController: UIViewController {
         
         // Update current task view
         updateCurrentTaskView()
+        
+        // Tap gesture recognizer
         tapToShowCheckmark()
     }
     
@@ -87,8 +89,8 @@ class TaskRunViewController: UIViewController {
     @IBAction func pressedNextTask(_ sender: UIButton) {
         
         UIView.animate(withDuration: 1, delay: 0, options: .curveLinear) { [self] in
-            taskStatus.image = UIImage(systemName: "checkmark.square.fill")
-            taskStatus.tintColor = UIColor.systemGreen
+            checkmarkBox.image = UIImage(systemName: "checkmark.square.fill")
+            checkmarkBox.tintColor = UIColor.systemGreen
         } completion: { [self] _ in
             let completedTaskName = sortedNameValues.remove(at: 0)
             let completedTaskTime = sortedTimeValues.remove(at: 0)
@@ -122,17 +124,17 @@ class TaskRunViewController: UIViewController {
     // MARK: - Helper methods
     func tapToShowCheckmark() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showCheckmark(_:)))
-        taskStatus.addGestureRecognizer(tapGestureRecognizer)
+        checkmarkBox.addGestureRecognizer(tapGestureRecognizer)
     }
     
     @objc func showCheckmark(_ sender: UITapGestureRecognizer) {
-        taskStatus.image = UIImage(systemName: "checkmark.square.fill")
-        taskStatus.tintColor = UIColor.systemGreen
+        checkmarkBox.image = UIImage(systemName: "checkmark.square.fill")
+        checkmarkBox.tintColor = UIColor.systemGreen
     }
     
     func showSquare() {
-        taskStatus.image = UIImage(systemName: "square")
-        taskStatus.tintColor = nil
+        checkmarkBox.image = UIImage(systemName: "square")
+        checkmarkBox.tintColor = nil
     }
     
     func startSprintTimer() {
