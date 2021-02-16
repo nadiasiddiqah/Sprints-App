@@ -83,12 +83,15 @@ class TaskRunViewController: UIViewController {
         let completedTaskName = sortedNameValues.remove(at: 0)
         let completedTaskTime = sortedTimeValues.remove(at: 0)
         
+        print(completedTaskName)
+        print(completedTaskTime)
+        
         if taskTimeInt == 0 || currentTaskTime.text == "No time left" {
             // If current task time runs out
             completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: 0)])
         } else {
             // If current task is finished earlier
-            completedTaskInfo.append([completedTaskTime, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: taskTimeInt)])
+            completedTaskInfo.append([completedTaskName, completedTaskTime, actualTimeSpent(timeSet: completedTaskTime, timeLeft: taskTimeInt)])
         }
         
         if completedAllTasks {
