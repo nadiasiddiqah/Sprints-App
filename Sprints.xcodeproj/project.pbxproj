@@ -12,11 +12,14 @@
 		0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */; };
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
+		097E802A25DDCAFD00E36AB9 /* emptyCheckBox.gif in Resources */ = {isa = PBXBuildFile; fileRef = 097E802925DDCAFD00E36AB9 /* emptyCheckBox.gif */; };
+		097E802D25DDCB0500E36AB9 /* animatedCheckBox.gif in Resources */ = {isa = PBXBuildFile; fileRef = 097E802C25DDCB0500E36AB9 /* animatedCheckBox.gif */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
 		09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */; };
 		09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */; };
+		09DC102C25DDBD5800A83504 /* checkmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09DC102B25DDBD5800A83504 /* checkmark.gif */; };
 		09ECD1CE259974B7006D301A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECD1CD259974B7006D301A /* AppDelegate.swift */; };
 		09ECD1D0259974B7006D301A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECD1CF259974B7006D301A /* SceneDelegate.swift */; };
 		09ECD1D5259974B7006D301A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09ECD1D3259974B7006D301A /* Main.storyboard */; };
@@ -33,11 +36,14 @@
 		0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sprints.xcdatamodel; sourceTree = "<group>"; };
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		097E802925DDCAFD00E36AB9 /* emptyCheckBox.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = emptyCheckBox.gif; path = ../../../../Downloads/emptyCheckBox.gif; sourceTree = "<group>"; };
+		097E802C25DDCB0500E36AB9 /* animatedCheckBox.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = animatedCheckBox.gif; path = ../../../../Downloads/animatedCheckBox.gif; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
 		09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunViewController.swift; sourceTree = "<group>"; };
 		09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		09DC102B25DDBD5800A83504 /* checkmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = checkmark.gif; path = ../../../../.Trash/checkmark.gif; sourceTree = "<group>"; };
 		09ECD1CA259974B7006D301A /* Sprints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09ECD1CD259974B7006D301A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09ECD1CF259974B7006D301A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				0915628225AD34B9002A42A9 /* sprintlaunch.gif */,
+				09DC102B25DDBD5800A83504 /* checkmark.gif */,
+				097E802925DDCAFD00E36AB9 /* emptyCheckBox.gif */,
+				097E802C25DDCB0500E36AB9 /* animatedCheckBox.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,8 +226,11 @@
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
 				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
+				097E802D25DDCB0500E36AB9 /* animatedCheckBox.gif in Resources */,
+				097E802A25DDCAFD00E36AB9 /* emptyCheckBox.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
+				09DC102C25DDBD5800A83504 /* checkmark.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
