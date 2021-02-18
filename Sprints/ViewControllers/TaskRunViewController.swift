@@ -21,11 +21,11 @@ class TaskRunViewController: UIViewController {
     
     var completedAllTasks = false
     
-    lazy var animatedCheckBox: GIFImageView = {
+    lazy var animatedCheckmark: GIFImageView = {
         let view = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y, width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
         view.contentMode = .scaleAspectFit
+        view.animate(withGIFNamed: "animatedCheckmark")
         view.animationRepeatCount = 1
-        view.animate(withGIFNamed: "animatedCheckBox", loopCount: 1, preparationBlock: nil, animationBlock: nil)
         return view
     }()
 
@@ -100,7 +100,10 @@ class TaskRunViewController: UIViewController {
     // MARK: - Helper methods
     func determineNextStep() {
         // Show animated checkmark
-        checkmarkBox.addSubview(animatedCheckBox)
+        checkmarkBox.addSubview(animatedCheckmark)
+        // Disable nextTaskButton + checkmarkBox
+        nextTaskButton.isEnabled = false
+        checkmarkBox.isUserInteractionEnabled = false
         
         // Delay striking through text
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [self] in
@@ -112,6 +115,9 @@ class TaskRunViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
             saveCompletedTaskInfo()
             checkForCompletion()
+            // Reenable nextTaskButton + checkmarkBox
+            nextTaskButton.isEnabled = true
+            checkmarkBox.isUserInteractionEnabled = true
         }
     }
     
@@ -160,7 +166,7 @@ class TaskRunViewController: UIViewController {
     }
     
     func showSquare() {
-        animatedCheckBox.removeFromSuperview()
+        animatedCheckmark.removeFromSuperview()
     }
     
     func startSprintTimer() {
