@@ -55,6 +55,11 @@ func sortTaskInfo(dict: [Int:String]) -> [String] {
     return sortedValues
 }
 
+//func sortTaskDict(dict: [Int:String]) -> [Int:String] {
+//    let sortByKey = dict.keys.sorted()
+//    
+//}
+
 extension UIView {
     func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
