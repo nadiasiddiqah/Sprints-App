@@ -67,8 +67,8 @@ class TaskRunViewController: UIViewController {
         timerLabel.text = showTimeLabel(time: totalTime)
         
         // Sort name and time values
-        sortedNameValues = sortTaskInfo(dict: taskName)
-        sortedTimeValues = sortTaskInfo(dict: taskTime)
+//        sortedNameValues = sortTaskInfo(dict: taskName)
+//        sortedTimeValues = sortTaskInfo(dict: taskTime)
         
         // Add round borders to views
         roundedBorder(object: [currentTaskView, nextTaskList, timerLabel])
