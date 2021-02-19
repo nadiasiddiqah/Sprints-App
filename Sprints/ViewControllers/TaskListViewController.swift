@@ -40,6 +40,7 @@ class TaskListViewController: UIViewController {
     var rowIndex = Int()
     
     var switchToSprintButton: Bool = false
+    var reloadRows: Bool = false
     
     var currentTimeLeftInt = Int()
     var recentTaskTimeInt = Int()
@@ -69,37 +70,30 @@ class TaskListViewController: UIViewController {
         taskList.keyboardDismissMode = .onDrag
         tapToHideKeyboard()
         
+        // Add reset bar button
+        let resetButton = UIBarButtonItem(title: "Reset", style: .plain,
+                                          target: self, action: #selector(resetSprint))
+        navigationItem.leftBarButtonItem = resetButton
+        navigationItem.hidesBackButton = true
+        
+//        let resetButton = UIBarButtonItem(title: "Reset", style: .plain,
+//                                          target: self, action: #selector(resetSprint))
+//        navigationController?.navigationBar.topItem?.backBarButtonItem = resetButton
+        
 //        fetchTotalTime()
     }
     
-//    func fetchTotalTime() {
-//        do {
-//            totalTime = try context.fetch(TotalTime.fetchRequest())
-//
-//            let hour = Int(totalTime) / 60 / 60
-//            let min = (totalTime - (hour * 60 * 60)) / 60
-//
-//            totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
-//            timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
-//        } catch {
-//            // Show error alert to user
-//            let alert = UIAlertController(title: "Fatal Error", message: "Unable to save timer set", preferredStyle: .alert)
-//            let action = UIAlertAction(title: "Force Quit", style: .destructive, handler: nil)
-//            alert.addAction(action)
-//            present(alert, animated: true) {
-//                DispatchQueue.main.async {
-//                    fatalError()
-//                }
-//            }
-//            // DEBUG if error in saving pickedTime
-//            print(error.localizedDescription)
-//        }
-//    }
-    
+    // Segue to SprintTime screen
+    @objc func resetSprint() {
+        taskName.removeAll()
+        taskTime.removeAll()
+        taskCount = 1
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - Navigation
     
-    // Segue to SelectTimeVC or TaskRunVC
+    // Segue to SelectTime or TaskRun screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToSelectTime" {
             let controller = segue.destination as! SelectTimeViewController
@@ -110,12 +104,9 @@ class TaskListViewController: UIViewController {
                 if let task = taskTime[rowIndex] {
                     clickedTaskTime = task
                 }
-                let components = clickedTaskTime.split(separator: ":").map { (x) -> Int in
-                    return Int(String(x))!
-                }
-                controller.clickedTaskTimeInt = (components[0]*60*60) + (components[1]*60)
+                controller.clickedTaskTimeInt = showTimeInSec(time: clickedTaskTime)
             } else {
-                // If time left != "0:00"
+                // If there is more time left
                 controller.currentTimeLeftInt = currentTimeLeftInt
             }
         } else if segue.destination == TaskRunViewController() {
@@ -151,13 +142,7 @@ class TaskListViewController: UIViewController {
         
         if recentTaskTime != "Set time" {
             // Convert recentTaskTime (Str) into Int
-            let recentTimeComponents = recentTaskTime?.split { $0 == ":" }.map({ (x) -> Int in
-                Int(String(x))!
-            })
-
-            if let components = recentTimeComponents {
-               recentTaskTimeInt = (components[0] * 60 * 60) + (components[1] * 60)
-            }
+            recentTaskTimeInt = showTimeInSec(time: recentTaskTime!)
         }
         
         if currentTimeLeftInt == 0 {
@@ -181,10 +166,10 @@ class TaskListViewController: UIViewController {
         switchToSprintButton = true
         addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
         addTaskButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+        
     }
 
     func updateTimeLeft() {
-
         // Filter out "Set time" from taskTime
         var filterTaskTime = taskTime
         
@@ -222,8 +207,6 @@ class TaskListViewController: UIViewController {
             if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
                 view.endEditing(true)
                 navigationController?.pushViewController(controller, animated: true)
-                print(taskName)
-                print(taskTime)
             }
         } else {
             // Adds new cell in Table View
@@ -275,14 +258,39 @@ extension TaskListViewController: UITableViewDataSource {
 //    func tableView(_ tableView: UITableView,
 //                   commit editingStyle: UITableViewCell.EditingStyle,
 //                   forRowAt indexPath: IndexPath) {
-//        taskName[indexPath.row] = nil
-//        taskTime[indexPath.row] = nil
 //
+//        // Set to true
+//        reloadRows = true
+//
+//        // Update # of rows in taskList
 //        taskCount -= 1
-//        taskList.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .automatic)
+//
+//        // Row that is deleted
+//        let deleteRowIndex = indexPath.row
+//        print(deleteRowIndex)
+//
+//        // Remove taskInfo from dictionary
+//        taskName[deleteRowIndex] = nil
+//        taskTime[deleteRowIndex] = nil
+////        if let nameIndex = taskName.index(forKey: deleteRowIndex),
+////           let timeIndex = taskTime.index(forKey: deleteRowIndex) {
+////            taskName.remove(at: nameIndex)
+////            taskTime.remove(at: timeIndex)
+////        }
+//        print("after delete:" + "\(taskName)")
+//        print("after delete:" + "\(taskTime)")
+//
+//        // Delete corresponding row from table view
+//        let indexPaths = [indexPath]
+//        taskList.deleteRows(at: indexPaths, with: .automatic)
+//
+//        // Reload table view with new data
+//
 //        taskList.reloadData()
+//
+//        reloadRows = false
 //    }
-    
+//
 }
 
 
@@ -327,3 +335,28 @@ extension TaskListViewController: TaskCellDelegate {
 
 }
 
+
+
+//    func fetchTotalTime() {
+//        do {
+//            totalTime = try context.fetch(TotalTime.fetchRequest())
+//
+//            let hour = Int(totalTime) / 60 / 60
+//            let min = (totalTime - (hour * 60 * 60)) / 60
+//
+//            totalTimeLabel.text = String(format: "%01d:%02d", hour, min)
+//            timeLeftLabel.text = String(format: "%01d:%02d", hour, min)
+//        } catch {
+//            // Show error alert to user
+//            let alert = UIAlertController(title: "Fatal Error", message: "Unable to save timer set", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "Force Quit", style: .destructive, handler: nil)
+//            alert.addAction(action)
+//            present(alert, animated: true) {
+//                DispatchQueue.main.async {
+//                    fatalError()
+//                }
+//            }
+//            // DEBUG if error in saving pickedTime
+//            print(error.localizedDescription)
+//        }
+//    }
