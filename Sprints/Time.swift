@@ -12,8 +12,8 @@ import UIKit
 
 var taskCount: Int = 1
 var pickedTime = Int()
-var taskName = [Int:String]()
-var taskTime = [Int:String]()
+//var taskName = [Int:String]()
+//var taskTime = [Int:String]()
 
 var sortedNameValues = [String]()
 var sortedTimeValues = [String]()
