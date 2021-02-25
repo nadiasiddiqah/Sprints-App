@@ -9,17 +9,15 @@ import Foundation
 import UIKit
 
 // MARK: - Global variables
-
 var pickedTime = Int()
 
-var sortedNameValues = [String]()
-var sortedTimeValues = [String]()
+var tasks = [Task]()
+var taskNames = [String]()
+var taskTimes = [Int]()
 
-var completedTaskInfo = [[String]]()
-
+var completedTaskInfo = [CompletedTask]()
 
 // MARK: - Global helper methods
-
 func showTimeLabel(time: Int) -> String {
     let hour = time / 60 / 60
     let min = (time - (hour * 60 * 60)) / 60
@@ -58,12 +56,7 @@ func buttonAnimation(button: UIButton, enable: Bool) {
     }
 }
 
-func disableButton(button: UIButton) {
-    
-}
-
-
-
+// MARK: - Extensions
 extension UIView {
     func fadeTransition(_ duration: CFTimeInterval) {
         let animation = CATransition()
@@ -98,4 +91,25 @@ extension UILabel {
         self.attributedText = attributeString
     }
     
+}
+
+private var __maxLengths = [UITextField: Int]()
+extension UITextField {
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let l = __maxLengths[self] else {
+                return 150 // (global default-limit. or just, Int.max)
+            }
+            return l
+        }
+        set {
+            __maxLengths[self] = newValue
+            addTarget(self, action: #selector(fix), for: .editingChanged)
+        }
+    }
+    @objc func fix(textField: UITextField) {
+        if let t = textField.text {
+            textField.text = String(t.prefix(maxLength))
+        }
+    }
 }

@@ -20,7 +20,6 @@ class SelectTimeViewController: UIViewController {
     // Passed from TaskListVC
     var timeLeft = Int()
     var lastTimeSet = Int()
-//    var switchToSprintButton = Bool()
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
@@ -40,14 +39,6 @@ class SelectTimeViewController: UIViewController {
         
         // Customize max value for setTimeSlider
         setTimeSlider.maximumValue = Float(timeLeft/60)
-        
-//        if switchToSprintButton {
-//            setTimeSlider.maximumValue = Float((currentTimeLeftInt + clickedTaskTimeInt) / 60)
-//        } else {
-//            setTimeSlider.maximumValue = Float(currentTimeLeftInt / 60)
-//        }
-//        print(currentTimeLeftInt)
-//        print(Float(currentTimeLeftInt/60))
         
         // Observes value changes in setTimeSlider
         setTimeSlider.addTarget(self, action: #selector(adjustTimeSlider(_:)), for: .valueChanged)

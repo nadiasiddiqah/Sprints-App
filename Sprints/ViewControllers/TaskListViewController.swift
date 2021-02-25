@@ -25,9 +25,6 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Instance Variables
     
-    // Updates with task name and time
-    var tasks = [Task]()
-    
     // Updates with indexPath.row of clicked timeButton
     var rowIndex = Int()
     
@@ -85,7 +82,8 @@ class TaskListViewController: UIViewController {
                 controller.timeLeft = timeLeft
                 print("editing time in row \(rowIndex)")
             }
-//        } else if segue.destination == TaskRunViewController() {
+        } else if segue.destination == TaskRunViewController() {
+            
         }
     }
     
@@ -119,19 +117,19 @@ class TaskListViewController: UIViewController {
     }
 
     func updateTimeLeft() {
-        var taskTimes = [Int]()
+        var updatedTaskTimes = [Int]()
         
         for task in tasks {
             // Filter out "set time" from task.time
             if task.time != "Set time" {
                 // Convert task.time (Str) to Int
                 let timeInSec = showTimeInSec(time: task.time)
-                taskTimes.append(timeInSec)
+                updatedTaskTimes.append(timeInSec)
             }
         }
         
         // Update currentTimeLabel
-        timeLeft = pickedTime - taskTimes.reduce(0, +)
+        timeLeft = pickedTime - updatedTaskTimes.reduce(0, +)
         timeLeftLabel.text = showTimeLabel(time: timeLeft)
         
         // Check timeLeft and initiate appropriate action
@@ -140,8 +138,8 @@ class TaskListViewController: UIViewController {
     
     // Check timeLeft and initiate appropriate action
     func checkTaskInfo() {
-        var taskName = [String]()
-        var taskTime = [String]()
+        var checkTaskNames = [String]()
+        var checkTaskTimes = [String]()
         
         if timeLeft == 0 {
             // When timeLeft = 0, show sprint button
@@ -149,22 +147,20 @@ class TaskListViewController: UIViewController {
             
             // Compile taskName and taskTime values
             for task in tasks {
-                taskName.append(task.name)
-                taskTime.append(task.time)
+                checkTaskNames.append(task.name)
+                checkTaskTimes.append(task.time)
             }
             
             // Check if taskName or taskTime is empty, show appropriate alert + buttonAnimation
-            if taskName.contains("") || taskTime.contains("Set time") {
+            if checkTaskNames.contains("") || checkTaskTimes.contains("Set time") {
                 buttonAnimation(button: addOrSprintButton, enable: false)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [self] in
-                    let alert = UIAlertController(title: "Finish updating task name and time to start the sprint.", message: nil, preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(action)
-                    present(alert, animated: true, completion: nil)
-                }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [self] in
+//                    let alert = UIAlertController(title: "Finish updating task name and time to start the sprint.", message: nil, preferredStyle: .alert)
+//                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                    alert.addAction(action)
+//                    present(alert, animated: true, completion: nil)
+//                }
             } else {
-                print("showAlert: no timeLeft, press sprint button to start sprint")
                 buttonAnimation(button: addOrSprintButton, enable: true)
             }
         } else {
@@ -242,10 +238,6 @@ extension TaskListViewController: UITableViewDataSource {
         
         return cell
     }
-    
-//    @objc func buttonTapped(_ sender: UIButton) {
-//        performSegue(withIdentifier: "segueToSelectTime", sender: sender)
-//    }
     
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
