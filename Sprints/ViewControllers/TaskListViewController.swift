@@ -18,26 +18,23 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Outlet Variables
     @IBOutlet weak var taskList: SelfSizedTableView!
-    @IBOutlet weak var sprintTimeLabel: UILabel!
-    @IBOutlet weak var currentTimeLabel: UILabel!
-    @IBOutlet weak var addTaskButton: UIButton!
+    @IBOutlet weak var pickedTimeLabel: UILabel!
+    @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var addOrSprintButton: UIButton!
     @IBOutlet weak var taskListStack: UIStackView!
     
     // MARK: - Instance Variables
+    
+    // Updates with task name and time
     var tasks = [Task]()
     
+    // Updates with indexPath.row of clicked timeButton
     var rowIndex = Int()
     
-    var currentTime = Int()
-    
-    
-    
+    // Updates timeLeft when new time is set
+    var timeLeft = Int()
     
     var switchToSprintButton: Bool = false
-    
-    var currentTimeLeftInt = Int()
-    var recentTaskTimeInt = Int()
-    var clickedTaskTime = String()
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -48,15 +45,16 @@ class TaskListViewController: UIViewController {
         
         // Set initial taskTime value
         tasks.append(Task(name: "", time: "Set time"))
-        currentTimeLeftInt = pickedTime
+        timeLeft = pickedTime
         
         // Connect table view's dataSource+delegate to current VC
         taskList.delegate = self
         taskList.dataSource = self
         
         // Update time labels on screen
-        sprintTimeLabel.text = showTimeLabel(time: pickedTime)
-        currentTimeLabel.text = "0:00"
+        let time = showTimeLabel(time: pickedTime)
+        pickedTimeLabel.text = time
+        timeLeftLabel.text = time
 
         // Hide keyboard on drag and tap
         taskList.keyboardDismissMode = .onDrag
@@ -68,48 +66,46 @@ class TaskListViewController: UIViewController {
         navigationItem.leftBarButtonItem = resetButton
         navigationItem.hidesBackButton = true
     }
-    
-    // Segue to SprintTime screen
-    @objc func resetSprint() {
-        tasks.removeAll()
-        navigationController?.popViewController(animated: true)
-    }
-    
+
     // MARK: - Navigation
-    
+
     // Segue to SelectTime or TaskRun screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToSelectTime" {
             let controller = segue.destination as! SelectTimeViewController
-
-            if switchToSprintButton {
-//                // If time left == "0:00", subtract last set time
-//                controller.switchToSprintButton = switchToSprintButton
-//                if let task = taskTime[rowIndex] {
-//                    clickedTaskTime = task
-//                }
-//                controller.clickedTaskTimeInt = showTimeInSec(time: clickedTaskTime)
-            } else {
-//                // If there is more time left
-//                controller.currentTimeLeftInt = currentTimeLeftInt
+            
+            if tasks[rowIndex].time == "Set time" {
+                // Initially set timeButton title
+                controller.timeLeft = timeLeft
+                print("setting time in row \(rowIndex)")
+            } else if tasks[rowIndex].time != "Set time" {
+                // Edit timeButton title
+                tasks[rowIndex].time = "0:00"
+                updateTimeLeft()
+                controller.timeLeft = timeLeft
+                print("editing time in row \(rowIndex)")
             }
-        } else if segue.destination == TaskRunViewController() {
-
+//        } else if segue.destination == TaskRunViewController() {
         }
     }
     
     // Unwind from SelectTimeVC
     @IBAction func unwindFromSelectTime(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! SelectTimeViewController
-        tasks[rowIndex].time = controller.selectedTaskTime
-        updateCurrentTime()
-//        checkTimeLeft()
+        tasks[rowIndex].time = controller.selectedTaskTimeLabel
+        updateTimeLeft()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
         print("row \(rowIndex): \(tasks[rowIndex].time)")
         print(tasks)
     }
     
     // MARK: - Helper Methods
+    
+    // Segue to SprintTime screen
+    @objc func resetSprint() {
+        tasks.removeAll()
+        navigationController?.popViewController(animated: true)
+    }
     
     // Set up tap gesture recongizer on screen
     func tapToHideKeyboard() {
@@ -121,37 +117,8 @@ class TaskListViewController: UIViewController {
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
-    
-    // Check currentTime and initiate appropriate action
-    func checkCurrentTime() {
-        if currentTime == pickedTime {
-            // if tasks names != "" and task times != "Set time"
-                // show alert (sprint time is equal to current time, do you want to start sprint)
-                    // if yes
-                        showSprintButton()
-                    // If no
-                        // show disabled next button
-            // else tasks names == "" and task times == "Set time"
-                // show alert (sprint time is equal to current time, adjust number of tasks, task name, or task time to start sprint)
-                // show disabled sprint button
-        } else if currentTime > pickedTime {
-            // show alert (inform user, sprint time is not equal to current time, adjust task times or number of tasks)
-            // change currentTimeLabel to RED
-            // show disabled "add task button"
-        } else {
-            // set currentTimeLabel to INDIGO (def)
-            // show enabled "add task button"
-        }
-    }
-    
-    func showSprintButton() {
-        switchToSprintButton = true
-        addTaskButton.setTitle("Ready, Set, Sprint!", for: .normal)
-        addTaskButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
-        
-    }
 
-    func updateCurrentTime() {
+    func updateTimeLeft() {
         var taskTimes = [Int]()
         
         for task in tasks {
@@ -163,12 +130,62 @@ class TaskListViewController: UIViewController {
             }
         }
         
-        // Add up taskTimes
-        currentTime = taskTimes.reduce(0, +)
-        
         // Update currentTimeLabel
-        currentTimeLabel.text = showTimeLabel(time: currentTime)
+        timeLeft = pickedTime - taskTimes.reduce(0, +)
+        timeLeftLabel.text = showTimeLabel(time: timeLeft)
+        
+        // Check timeLeft and initiate appropriate action
+        checkTaskInfo()
     }
+    
+    // Check timeLeft and initiate appropriate action
+    func checkTaskInfo() {
+        var taskName = [String]()
+        var taskTime = [String]()
+        
+        if timeLeft == 0 {
+            // When timeLeft = 0, show sprint button
+            showSprintButton()
+            
+            // Compile taskName and taskTime values
+            for task in tasks {
+                taskName.append(task.name)
+                taskTime.append(task.time)
+            }
+            
+            // Check if taskName or taskTime is empty, show appropriate alert + buttonAnimation
+            if taskName.contains("") || taskTime.contains("Set time") {
+                buttonAnimation(button: addOrSprintButton, enable: false)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [self] in
+                    let alert = UIAlertController(title: "Finish updating task name and time to start the sprint.", message: nil, preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(action)
+                    present(alert, animated: true, completion: nil)
+                }
+            } else {
+                print("showAlert: no timeLeft, press sprint button to start sprint")
+                buttonAnimation(button: addOrSprintButton, enable: true)
+            }
+        } else {
+            // When timeLeft > 0, show add button
+            showAddButton()
+            buttonAnimation(button: addOrSprintButton, enable: true)
+        }
+    }
+    
+    func showAddButton() {
+        switchToSprintButton = false
+        addOrSprintButton.setTitle("➕ Add Task", for: .normal)
+        addOrSprintButton.backgroundColor = UIColor.systemIndigo
+    }
+    
+    func showSprintButton() {
+        switchToSprintButton = true
+        addOrSprintButton.setTitle("Ready, Set, Sprint!", for: .normal)
+        addOrSprintButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+    }
+    
 
     
     // MARK: - Action Methods
@@ -221,8 +238,14 @@ extension TaskListViewController: UITableViewDataSource {
             cell.timeButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
         }
         
+        updateTimeLeft()
+        
         return cell
     }
+    
+//    @objc func buttonTapped(_ sender: UIButton) {
+//        performSegue(withIdentifier: "segueToSelectTime", sender: sender)
+//    }
     
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -230,7 +253,7 @@ extension TaskListViewController: UITableViewDataSource {
                                         title: "Delete") { [unowned self] (action, view, completionHandler) in
             // Update tasks data + current time label
             tasks.remove(at: indexPath.row)
-            updateCurrentTime()
+            updateTimeLeft()
             
             // Update tableView
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -254,6 +277,7 @@ extension TaskListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        print("selected: \(indexPath.row)")
     }
 }
 
@@ -266,25 +290,27 @@ extension TaskListViewController: TaskCellDelegate {
     
     func nameFieldDidEndEditing(onCell cell: TaskCell) {
         if let indexPath = taskList.indexPath(for: cell) {
-            rowIndex = indexPath.row
             if let newName = cell.nameField.text {
-                tasks[rowIndex].name = newName
-                print("row \(rowIndex): \(newName)")
+                tasks[indexPath.row].name = newName
+                print("row \(indexPath.row): \(newName)")
                 print(tasks)
             }
         }
-        cell.nameField.resignFirstResponder()
+        updateTimeLeft()
+        view.endEditing(true)
     }
     
     func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool {
-        cell.nameField.resignFirstResponder()
+        view.endEditing(true)
         return true
     }
     
     func pressedTimeButton(onCell cell: TaskCell) {
+        view.endEditing(true)
         if let indexPath = taskList.indexPath(for: cell) {
             rowIndex = indexPath.row
-            print("row \(rowIndex): button tapped")
+            print("row \(indexPath.row): button tapped")
+            performSegue(withIdentifier: "segueToSelectTime", sender: nil)
         }
     }
 

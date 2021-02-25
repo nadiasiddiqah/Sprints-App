@@ -148,21 +148,14 @@ class SprintTimeViewController: UIViewController {
     // Determines if next button is enabled
     func enableNextButton() {
         if pickedTime != 0 {
-            // Animate enabling next button
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-                self.nextButton.alpha = 1
-            } completion: { _ in
-                self.nextButton.isEnabled = true
-            }
+            // Enable next button
+            buttonAnimation(button: nextButton, enable: true)
         } else if pickedTime == 0 {
-            // Animate disabling next button
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-                self.nextButton.alpha = 0.4
-            } completion: { _ in
-                self.nextButton.isEnabled = false
-            }
+            // Disable next button
+            buttonAnimation(button: nextButton, enable: false)
         }
     }
+    
 }
 
 // MARK: - UIPickerViewDataSource protocol
