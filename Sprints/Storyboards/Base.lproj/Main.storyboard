@@ -271,7 +271,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-Y0-k5c" userLabel="Time Left Stack">
                                 <rect key="frame" x="214" y="295" width="80" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptY-bG-fXM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptY-bG-fXM">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="15"/>
                                         <color key="backgroundColor" red="0.34721022839999999" green="0.33570402859999998" blue="0.85815113779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -297,7 +297,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X69-ou-aMS" userLabel="Total Time Stack">
                                 <rect key="frame" x="120" y="295" width="80" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprint Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Rp-CTs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Rp-CTs">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="15"/>
                                         <color key="backgroundColor" red="0.34721022839999999" green="0.33570402859999998" blue="0.85815113779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -367,7 +367,6 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
                                                                         <action selector="tapTimeButton:" destination="Qbn-yl-Gzr" eventType="touchUpInside" id="3Oa-S2-sWZ"/>
-                                                                        <segue destination="8Lv-4k-Yq5" kind="presentation" identifier="segueToSelectTime" modalPresentationStyle="overCurrentContext" id="T1O-Et-07o"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -439,11 +438,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ufR-sw-tDP"/>
                     <connections>
-                        <outlet property="addTaskButton" destination="jOx-KP-sq2" id="I0H-EG-Cwd"/>
-                        <outlet property="currentTimeLabel" destination="drn-bD-wCu" id="UT1-ti-NAw"/>
-                        <outlet property="sprintTimeLabel" destination="sf7-8m-D8a" id="dKj-xc-PQf"/>
+                        <outlet property="IQLayoutGuideConstraint" destination="sq7-yF-BA0" id="5Wi-Zq-APH"/>
+                        <outlet property="addOrSprintButton" destination="jOx-KP-sq2" id="I0H-EG-Cwd"/>
+                        <outlet property="pickedTimeLabel" destination="sf7-8m-D8a" id="dKj-xc-PQf"/>
                         <outlet property="taskList" destination="crq-yl-GxC" id="a8X-1h-PSq"/>
                         <outlet property="taskListStack" destination="sq7-yF-BA0" id="SV9-3s-rJs"/>
+                        <outlet property="timeLeftLabel" destination="drn-bD-wCu" id="UT1-ti-NAw"/>
+                        <segue destination="8Lv-4k-Yq5" kind="presentation" identifier="segueToSelectTime" modalPresentationStyle="overCurrentContext" id="Soy-D3-Hg3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41V-qE-pJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

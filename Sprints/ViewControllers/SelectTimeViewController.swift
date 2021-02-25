@@ -12,14 +12,14 @@ class SelectTimeViewController: UIViewController {
     // MARK: - Instance Variables
     var timeFloat: Float = 0
     var timeStep: Float = 15
+    var selectedTaskTime = Int()
     
     // Pass to TaskListVC
-    var selectedTaskTime = String()
-    var selectedTaskTimeInt = Int()
+    var selectedTaskTimeLabel = String()
     
-//    // Passed from TaskListVC
-//    var currentTimeLeftInt = Int()
-//    var clickedTaskTimeInt = Int()
+    // Passed from TaskListVC
+    var timeLeft = Int()
+    var lastTimeSet = Int()
 //    var switchToSprintButton = Bool()
     
     // MARK: - Outlet Variables
@@ -37,6 +37,9 @@ class SelectTimeViewController: UIViewController {
         
         // Initialize setTimeSlider
         setTimeSlider.value = timeFloat
+        
+        // Customize max value for setTimeSlider
+        setTimeSlider.maximumValue = Float(timeLeft/60)
         
 //        if switchToSprintButton {
 //            setTimeSlider.maximumValue = Float((currentTimeLeftInt + clickedTaskTimeInt) / 60)
@@ -61,20 +64,12 @@ class SelectTimeViewController: UIViewController {
     }
     
     func enableSaveTimeButton() {
-        if selectedTaskTimeInt == 0 {
-            // Animate disabling save button
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-                self.saveTimeButton.alpha = 0.6
-            } completion: { _ in
-                self.saveTimeButton.isEnabled = false
-            }
+        if selectedTaskTime == 0 {
+            // Disable save button
+            buttonAnimation(button: saveTimeButton, enable: false)
         } else {
-            // Animate enabling save button
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-                self.saveTimeButton.alpha = 1
-            } completion: { _ in
-                self.saveTimeButton.isEnabled = true
-            }
+            // Enable save button
+            buttonAnimation(button: saveTimeButton, enable: true)
         }
     }
     
@@ -90,7 +85,7 @@ class SelectTimeViewController: UIViewController {
         let hour = timeInt / 60
         let min = timeInt % 60
         
-        selectedTaskTimeInt = hour + min
+        selectedTaskTime = hour + min
         
         // Update setTimeLabel
         setTimeLabel.text = String(format: "%01d:%02d", hour, min)
@@ -102,7 +97,7 @@ class SelectTimeViewController: UIViewController {
     // Segue to TaskListVC (runs when unwind segue is triggered)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let time = setTimeLabel.text {
-            selectedTaskTime = time
+            selectedTaskTimeLabel = time
         }
     }
 

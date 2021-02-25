@@ -10,7 +10,10 @@ import UIKit
 
 // MARK: - Global variables
 
+var taskCount: Int = 1
 var pickedTime = Int()
+var taskName = [Int:String]()
+var taskTime = [Int:String]()
 
 var sortedNameValues = [String]()
 var sortedTimeValues = [String]()
@@ -42,30 +45,18 @@ func roundedBorder(object: [UIView]) {
     }
 }
 
-func buttonAnimation(button: UIButton, enable: Bool) {
-    if enable == true {
-        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-            button.alpha = 1
-        } completion: { _ in
-            button.isEnabled = true
-        }
-    } else {
-        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
-            button.alpha = 0.6
-        } completion: { _ in
-            button.isEnabled = false
-        }
+func sortTaskInfo(dict: [Int:String]) -> [String] {
+    let sortByKey = dict.keys.sorted()
+    var sortedValues = [String]()
+    for key in sortByKey {
+        let sortByValue = dict[key]
+        sortedValues.append(sortByValue!)
     }
+    return sortedValues
 }
-
-func disableButton(button: UIButton) {
-    
-}
-
-
 
 extension UIView {
-    func fadeTransition(_ duration: CFTimeInterval) {
+    func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name:
             CAMediaTimingFunctionName.easeInEaseOut)
