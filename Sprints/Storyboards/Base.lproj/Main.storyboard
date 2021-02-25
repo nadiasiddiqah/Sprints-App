@@ -338,24 +338,30 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-g4-vxp">
-                                                            <rect key="frame" x="14.5" y="5" width="345" height="34"/>
+                                                            <rect key="frame" x="5" y="5" width="364" height="34"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-Vu-wC9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="34"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="34"/>
                                                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="hJy-Re-Um0"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="303" id="tH1-M4-QBi"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                            <integer key="value" value="40"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </textField>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-0E-1dq">
-                                                                    <rect key="frame" x="295" y="0.0" width="50" height="34"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-0E-1dq">
+                                                                    <rect key="frame" x="313" y="0.0" width="51" height="34"/>
                                                                     <color key="backgroundColor" red="0.34721022839999999" green="0.33570402859999998" blue="0.85815113779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="kx2-fX-9IG"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="JYg-EX-mF6"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                                                     <state key="normal" title="Set Time">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
@@ -376,7 +382,9 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Ws6-g4-vxp" secondAttribute="trailing" constant="5" id="29l-li-kMd"/>
                                                         <constraint firstItem="Ws6-g4-vxp" firstAttribute="centerX" secondItem="Rrx-xy-4Z4" secondAttribute="centerX" id="2oT-5z-pYA"/>
+                                                        <constraint firstItem="Ws6-g4-vxp" firstAttribute="leading" secondItem="Rrx-xy-4Z4" secondAttribute="leading" constant="5" id="8dt-JQ-Ygz"/>
                                                         <constraint firstItem="Ws6-g4-vxp" firstAttribute="centerY" secondItem="Rrx-xy-4Z4" secondAttribute="centerY" id="BaW-d5-j2r"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -653,7 +661,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="d20-7h-4Zc">
                                                 <rect key="frame" x="40" y="0.0" width="298" height="59.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h42-vs-r2Y">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h42-vs-r2Y">
                                                         <rect key="frame" x="0.0" y="0.0" width="131.5" height="30"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                         <nil key="textColor"/>
