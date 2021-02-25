@@ -3,4 +3,114 @@
    uuid = "6875EA37-8AE0-47B5-A7DC-22788826C97F"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sprints/ViewControllers/TaskListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "TaskListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - 9dbf676e7d1bd43b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.rowIndex.getter : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - 4b9d55aa4b7ce837"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.rowIndex.setter : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - 5f8fa8c48e9ef543"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.rowIndex.modify : Swift.Int"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - fdf05a444a2dd737"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.rowIndex.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - ee933a33de514ca2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Sprints.TaskListViewController"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "784">
+               </Location>
+               <Location
+                  uuid = "9C2313E4-79AC-49AA-BF17-979B8E2DEB08 - 1f7efae50e066aa5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sprints.TaskListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Sprints.TaskListViewController&gt;"
+                  moduleName = "Sprints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nadiasiddiqah/Desktop/Sprints/Sprints/ViewControllers/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Lottie
 import Gifu
 
 class TaskRunViewController: UIViewController {
