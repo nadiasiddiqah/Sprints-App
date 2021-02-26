@@ -7,6 +7,19 @@
 
 import UIKit
 
+class CustomSlider: UISlider {
+    override func trackRect(forBounds bounds: CGRect) -> CGRect {
+        let point = CGPoint(x: bounds.minX, y: bounds.midY)
+        return CGRect(origin: point, size: CGSize(width: bounds.width, height: 15))
+    }
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        var bounds: CGRect = self.bounds
+        bounds = bounds.insetBy(dx: -10, dy: -15)
+        return bounds.contains(point)
+    }
+}
+
 class SelectTimeViewController: UIViewController {
     
     // MARK: - Instance Variables
@@ -23,7 +36,7 @@ class SelectTimeViewController: UIViewController {
     
     // MARK: - Outlet Variables
     @IBOutlet weak var setTimeLabel: UILabel!
-    @IBOutlet weak var setTimeSlider: UISlider!
+    @IBOutlet weak var setTimeSlider: CustomSlider!
     @IBOutlet weak var saveTimeButton: UIButton!
     
     // MARK: - View Controller Methods
@@ -36,9 +49,10 @@ class SelectTimeViewController: UIViewController {
         
         // Initialize setTimeSlider
         setTimeSlider.value = timeFloat
-        
-        // Customize max value for setTimeSlider
         setTimeSlider.maximumValue = Float(timeLeft/60)
+//        setTimeSlider.minimumTrackTintColor = Color("#9EBABD")
+//        setTimeSlider.maximumTrackTintColor = Color("#168D99")
+        setTimeSlider.setThumbImage(UIImage(named: "sprintsSlider"), for: .normal)
         
         // Observes value changes in setTimeSlider
         setTimeSlider.addTarget(self, action: #selector(adjustTimeSlider(_:)), for: .valueChanged)

@@ -6,13 +6,28 @@
 //
 
 import UIKit
+import Gifu
 
 class CompletedViewController: UIViewController {
+    
+    lazy var sprintGif: GIFImageView = {
+        let view = GIFImageView()
+        view.contentMode = .scaleAspectFit
+        view.animate(withGIFNamed: "sprintlaunch")
+        return view
+    }()
 
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//        view.addSubview(sprintGif)
+//        sprintGif.centerInSuperview()
+//    }
+
+    // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,14 +40,15 @@ class CompletedViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueToStart" {
+            tasks.removeAll()
+            completedTaskInfo.removeAll()
+        }
     }
-    */
 
 }

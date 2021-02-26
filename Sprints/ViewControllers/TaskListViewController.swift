@@ -66,8 +66,8 @@ class TaskListViewController: UIViewController {
 
     // MARK: - Navigation
 
-    // Segue to SelectTime or TaskRun screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Segue to SelectTime
         if segue.identifier == "segueToSelectTime" {
             let controller = segue.destination as! SelectTimeViewController
             
@@ -82,8 +82,9 @@ class TaskListViewController: UIViewController {
                 controller.timeLeft = timeLeft
                 print("editing time in row \(rowIndex)")
             }
-        } else if segue.destination == TaskRunViewController() {
-            
+        } else {
+            // Segue to TaskRun
+            performSegue(withIdentifier: "segueToTaskRun", sender: nil)
         }
     }
     
@@ -93,7 +94,6 @@ class TaskListViewController: UIViewController {
         tasks[rowIndex].time = controller.selectedTaskTimeLabel
         updateTimeLeft()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
-        print("row \(rowIndex): \(tasks[rowIndex].time)")
         print(tasks)
     }
     
@@ -269,7 +269,6 @@ extension TaskListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("selected: \(indexPath.row)")
     }
 }
 
@@ -284,8 +283,6 @@ extension TaskListViewController: TaskCellDelegate {
         if let indexPath = taskList.indexPath(for: cell) {
             if let newName = cell.nameField.text {
                 tasks[indexPath.row].name = newName
-                print("row \(indexPath.row): \(newName)")
-                print(tasks)
             }
         }
         updateTimeLeft()
@@ -301,7 +298,6 @@ extension TaskListViewController: TaskCellDelegate {
         view.endEditing(true)
         if let indexPath = taskList.indexPath(for: cell) {
             rowIndex = indexPath.row
-            print("row \(indexPath.row): button tapped")
             performSegue(withIdentifier: "segueToSelectTime", sender: nil)
         }
     }
