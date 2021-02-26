@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Gifu
 
+// MARK: CompeletedTask struct
 struct CompletedTask {
     var name: String
     var setTime: Int
@@ -21,7 +22,6 @@ class TaskRunViewController: UIViewController {
     var sprintTimer: Timer?
     var taskTimer: Timer?
     
-    var totalTimeCounter = Int()
     var taskTimeCounter = Int()
     var taskCounter = Int()
     
@@ -36,15 +36,28 @@ class TaskRunViewController: UIViewController {
     }()
 
     // MARK: - Outlets
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel! {
+        didSet {
+            timerLabel.text = showSecInLabel(time: pickedTime)
+        }
+    }
+    
     @IBOutlet weak var nextTaskList: UITableView!
+    
     @IBOutlet weak var checkmarkBox: UIImageView! {
         didSet {
             checkmarkBox.isUserInteractionEnabled = true
         }
     }
+    
     @IBOutlet weak var currentTaskView: UIView!
-    @IBOutlet weak var currentTaskName: UILabel!
+    
+    @IBOutlet weak var currentTaskName: UILabel! {
+        didSet {
+            currentTaskName.adjustsFontSizeToFitWidth = true
+        }
+    }
+
     @IBOutlet weak var currentTaskTime: UILabel!
     @IBOutlet weak var nextTaskButton: UIButton!
     
@@ -68,10 +81,6 @@ class TaskRunViewController: UIViewController {
             completedAllTasks = true
             nextTaskList.isHidden = true
         }
-        
-        // Update timerLabel
-        totalTimeCounter = pickedTime
-        timerLabel.text = showTimeLabel(time: totalTimeCounter)
         
         // Compile taskName and taskTime values
         for task in tasks {
@@ -106,8 +115,47 @@ class TaskRunViewController: UIViewController {
         determineNextStep()
     }
     
+    // MARK: - Timer Methods
+    func startSprintTimer() {
+        sprintTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                                           selector: #selector(updateSprintTimer),
+                                           userInfo: nil, repeats: true)
+    }
+
+    @objc func updateSprintTimer() {
+        if pickedTime > 0 {
+            print("\(pickedTime) left")
+            pickedTime -= 1
+            timerLabel.text = showSecInLabel(time: pickedTime)
+        } else {
+            if let sprintTimer = sprintTimer {
+                sprintTimer.invalidate()
+                timerLabel.text = "0:00"
+                performSegue(withIdentifier: "completedScreen", sender: nil)
+            }
+        }
+    }
     
-    // MARK: - Helper methods
+    func startTaskTimer() {
+        taskTimeCounter = taskTimes.first!
+        taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                                                selector: #selector(updateTaskTimer),
+                                                userInfo: taskTimeCounter, repeats: true)
+    }
+
+    @objc func updateTaskTimer() {
+        if taskTimeCounter > 0 {
+            print("\(taskTimeCounter) left")
+            taskTimeCounter -= 1
+            currentTaskTime.text = "\(showSecInLabel(time: taskTimeCounter) + " left")"
+        } else {
+            if let taskTimer = taskTimer {
+                taskTimer.invalidate()
+                currentTaskTime.text = "No time left"
+                determineNextStep()
+            }
+        }
+    }
     
     // Determine next step after checkmarkBox or nextTaskButton is pressed
     func determineNextStep() {
@@ -171,6 +219,8 @@ class TaskRunViewController: UIViewController {
         print(completedTaskInfo)
     }
     
+    // MARK: - Checkmark Methods
+    
     // Shows checkmark
     func tapToShowCheckmark() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showCheckmark(_:)))
@@ -185,45 +235,7 @@ class TaskRunViewController: UIViewController {
         animatedCheckmark.removeFromSuperview()
     }
     
-    func startSprintTimer() {
-        sprintTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
-                                           selector: #selector(updateSprintTimer),
-                                           userInfo: nil, repeats: true)
-    }
-
-    @objc func updateSprintTimer() {
-        timerLabel.text = showTimeLabel(time: pickedTime)
-        if pickedTime > 0 {
-            print("\(pickedTime) left")
-            pickedTime -= 1
-        } else {
-            if let sprintTimer = sprintTimer {
-                sprintTimer.invalidate()
-                timerLabel.text = "Time's Up"
-            }
-        }
-    }
-    
-    func startTaskTimer() {
-        taskTimeCounter = taskTimes.first!
-        taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
-                                                selector: #selector(updateTaskTimer),
-                                                userInfo: taskTimeCounter, repeats: true)
-    }
-
-    @objc func updateTaskTimer() {
-        currentTaskTime.text = "\(showTimeLabel(time: taskTimeCounter) + " left")"
-        if taskTimeCounter > 0 {
-            print("\(taskTimeCounter) left")
-            taskTimeCounter -= 1
-        } else {
-            if let taskTimer = taskTimer {
-                taskTimer.invalidate()
-                currentTaskTime.text = "No time left"
-            }
-        }
-    }
-    
+    // MARK: - TaskView Methods
     func updateCurrentTaskView() {
         currentTaskName.text = taskNames.first
         currentTaskTime.text = "\(showTimeLabel(time: taskTimes.first!) + " left")"
@@ -282,6 +294,7 @@ extension TaskRunViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nextTaskCell") as! NextTaskCell
         
         cell.nextTaskName.text = taskNames[indexPath.row+1]
+        cell.nextTaskName.adjustsFontSizeToFitWidth = true
         cell.nextTimeLabel.text = "\(showTimeLabel(time: taskTimes[indexPath.row+1]) +  " left")"
     
         return cell

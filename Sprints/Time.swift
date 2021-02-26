@@ -19,9 +19,24 @@ var completedTaskInfo = [CompletedTask]()
 
 // MARK: - Global helper methods
 func showTimeLabel(time: Int) -> String {
-    let hour = time / 60 / 60
-    let min = (time - (hour * 60 * 60)) / 60
+    let hour = time / 3600
+    let min = time / 60 % 60
     return String(format: "%01d:%02d", hour, min)
+}
+
+func showSecInLabel(time: Int) -> String {
+    var formattedTime = String()
+    let hour = time / 60 / 60
+    let min = time / 60 % 60
+    let sec = time % 60
+    
+    if hour == 0 {
+        formattedTime = String(format: "%02d:%02d", min, sec)
+    } else {
+        formattedTime = String(format: "%01d:%02d:%02d", hour, min, sec)
+    }
+    
+    return formattedTime
 }
 
 func showTimeInSec(time: String) -> Int {
