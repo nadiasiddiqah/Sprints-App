@@ -63,6 +63,11 @@ class TaskListViewController: UIViewController {
         navigationItem.leftBarButtonItem = resetButton
         navigationItem.hidesBackButton = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showGradientLayer(view: view)
+    }
 
     // MARK: - Navigation
 
@@ -153,7 +158,7 @@ class TaskListViewController: UIViewController {
             
             // Check if taskName or taskTime is empty, show appropriate alert + buttonAnimation
             if checkTaskNames.contains("") || checkTaskTimes.contains("Set time") {
-                buttonAnimation(button: addOrSprintButton, enable: false)
+                buttonEnabling(button: addOrSprintButton, enable: false)
 //                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [self] in
 //                    let alert = UIAlertController(title: "Finish updating task name and time to start the sprint.", message: nil, preferredStyle: .alert)
 //                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -161,12 +166,12 @@ class TaskListViewController: UIViewController {
 //                    present(alert, animated: true, completion: nil)
 //                }
             } else {
-                buttonAnimation(button: addOrSprintButton, enable: true)
+                buttonEnabling(button: addOrSprintButton, enable: true)
             }
         } else {
             // When timeLeft > 0, show add button
             showAddButton()
-            buttonAnimation(button: addOrSprintButton, enable: true)
+            buttonEnabling(button: addOrSprintButton, enable: true)
         }
     }
     
@@ -179,25 +184,42 @@ class TaskListViewController: UIViewController {
     func showSprintButton() {
         switchToSprintButton = true
         addOrSprintButton.setTitle("Ready, Set, Sprint!", for: .normal)
-        addOrSprintButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+        addOrSprintButton.backgroundColor = green
     }
     
 
-    
     // MARK: - Action Methods
     
     @IBAction func pressedAddTask(_ sender: UIButton) {
         if switchToSprintButton {
             // Switch to Sprint Button to segue to TaskRun screen
-            if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
-                view.endEditing(true)
-                navigationController?.pushViewController(controller, animated: true)
+            UIView.animate(withDuration: 0.1, delay: 0,
+                           usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5,
+                           options: .curveEaseIn) { [self] in
+                addOrSprintButton.backgroundColor = teal
+                addOrSprintButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+            } completion: { [self] _ in
+                UIView.animate(withDuration: 0.15, delay: 0,
+                               usingSpringWithDamping: 0.5, initialSpringVelocity: 2,
+                               options: .curveEaseIn) {
+                    addOrSprintButton.backgroundColor = green
+                    addOrSprintButton.transform = CGAffineTransform.identity
+                } completion: { [self] _ in
+                    if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
+                        view.endEditing(true)
+                        navigationController?.pushViewController(controller, animated: true)
+                    }
+                }
             }
         } else {
             // Adds new cell in Table View
-            tasks.append(Task(name: "", time: "Set time"))
-            taskList.reloadData()
-            taskList.scrollToRow(at: IndexPath(row: tasks.count-1, section: 0), at: .bottom, animated: true)
+            buttonSpringAction(button: addOrSprintButton,
+                               selectedColor: lavender, normalColor: UIColor.systemIndigo,
+                               pressDownTime: 0.2, normalTime: 0.25) { [self] in
+                tasks.append(Task(name: "", time: "Set time"))
+                taskList.reloadData()
+                taskList.scrollToRow(at: IndexPath(row: tasks.count-1, section: 0), at: .bottom, animated: true)
+            }
         }
     }
     
@@ -231,7 +253,7 @@ extension TaskListViewController: UITableViewDataSource {
         if cell.timeButton.currentTitle == "Set time" {
             cell.timeButton.backgroundColor = UIColor.systemIndigo
         } else {
-            cell.timeButton.backgroundColor = UIColor(red: 0.25, green: 0.45, blue: 0.38, alpha: 1.00)
+            cell.timeButton.backgroundColor = green
         }
         
         updateTimeLeft()
@@ -296,9 +318,28 @@ extension TaskListViewController: TaskCellDelegate {
     
     func pressedTimeButton(onCell cell: TaskCell) {
         view.endEditing(true)
-        if let indexPath = taskList.indexPath(for: cell) {
-            rowIndex = indexPath.row
-            performSegue(withIdentifier: "segueToSelectTime", sender: nil)
+        
+        func segueToSelectTime() {
+            if let indexPath = taskList.indexPath(for: cell) {
+                rowIndex = indexPath.row
+                performSegue(withIdentifier: "segueToSelectTime", sender: nil)
+            }
+        }
+        
+        if let timeButton = cell.timeButton {
+            if timeButton.backgroundColor == green {
+                buttonSpringAction(button: timeButton,
+                                   selectedColor: teal, normalColor: green,
+                                   pressDownTime: 0.1, normalTime: 0.15) {
+                    segueToSelectTime()
+                }
+            } else {
+                buttonSpringAction(button: timeButton,
+                                   selectedColor: lavender, normalColor: UIColor.systemIndigo,
+                                   pressDownTime: 0.1, normalTime: 0.15) {
+                    segueToSelectTime()
+                }
+            }
         }
     }
 

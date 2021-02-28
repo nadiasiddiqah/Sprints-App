@@ -12,10 +12,10 @@ import Gifu
 class LaunchViewController: UIViewController {
     
     lazy var sprintGif: GIFImageView = {
-        let view = GIFImageView()
-        view.contentMode = .scaleAspectFit
-        view.animate(withGIFNamed: "sprintlaunch")
-        return view
+        let gif = GIFImageView()
+        gif.contentMode = .scaleAspectFit
+        gif.animate(withGIFNamed: "sprintlaunch")
+        return gif
     }()
 
     override func viewDidLoad() {
@@ -24,4 +24,10 @@ class LaunchViewController: UIViewController {
         view.addSubview(sprintGif)
         sprintGif.centerInSuperview()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        showGradientLayer(view: view)
+    }
+    
 }

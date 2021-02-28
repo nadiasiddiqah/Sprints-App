@@ -33,16 +33,13 @@ class SprintTimeViewController: UIViewController {
     
     // Creates an empty array of TimerData class type
     var timerData = [TimePickerData]()
-
-    // Reference to Managed Object Context (via the Persistent Container in AppDelegate)
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - View Controller Methods
     
     // Runs when view loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Connect picker view's dataSource and delegate to current view controller
         sprintTimePicker.dataSource = self
         sprintTimePicker.delegate = self
@@ -63,6 +60,7 @@ class SprintTimeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        showGradientLayer(view: view)
     }
     
     // Runs before view disappears
@@ -71,99 +69,35 @@ class SprintTimeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    // MARK: - Navigation
-    
-    // Runs before segue to next screen
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showTaskList" {
-//            let controller = segue.destination as! TaskListViewController
-////            controller.context = context
-//        }
-//    }
-    
     // MARK: - Action Methods
     
     // Saves pickedTime to Core Data
-    @IBAction func pressedNext() {
-//        saveTotalTime()
+    @IBAction func pressedNext(_ sender: UIButton) {
+        buttonSpringAction(button: nextButton,
+                           selectedColor: lavender, normalColor: UIColor.systemIndigo,
+                           pressDownTime: 0.2, normalTime: 0.25) {
+            self.performSegue(withIdentifier: "segueToTaskList", sender: nil)
+        }
     }
     
     // MARK: - Methods
-    
-//    func saveTotalTime() {
-//        // Create SavedTotalTime object
-//        let totalTime = TotalTime(context: self.context)
-//        totalTime.totalTimeInSec = Int64(pickedTime)
-//
-//        // Add error handling if saving fails
-//        do {
-//            // Save pickedTime
-//            try self.context.save()
-//            // DEBUG if issues with pickedTime
-//            print(totalTime)
-//        } catch {
-//            // Show error alert to user
-//            let alert = UIAlertController(title: "Fatal Error", message: "Unable to save timer set", preferredStyle: .alert)
-//            let action = UIAlertAction(title: "Force Quit", style: .destructive, handler: nil)
-//            alert.addAction(action)
-//            present(alert, animated: true) {
-//                DispatchQueue.main.async {
-//                    fatalError()
-//                }
-//            }
-//            // DEBUG if error in saving pickedTime
-//            print(error.localizedDescription)
-//        }
-//    }
-    
-    
-//    func saveTimerSet() {
-//        // Create SprintTimer object (using timer set by user data)
-//        let finalTimerSet = SprintTimer(context: self.context)
-//        finalTimerSet.hour = tempTimerSet[0]
-//        finalTimerSet.min = tempTimerSet[1]
-//        finalTimerSet.sec = tempTimerSet[2]
-//
-//        // Add error handling if saving fails
-//        do {
-//            // Save the timer set by user data
-//            try self.context.save()
-//            // DEBUG: issues with finalTimerSet data
-//            print(finalTimerSet)
-//        } catch {
-//            // Show error alert to user
-//            let alert = UIAlertController(title: "Fatal Error", message: "Unable to save timer set", preferredStyle: .alert)
-//            let action = UIAlertAction(title: "Force Quit", style: .destructive, handler: nil)
-//            alert.addAction(action)
-//            present(alert, animated: true) {
-//                DispatchQueue.main.async {
-//                    fatalError()
-//                }
-//            }
-//            // DEBUG: error in saving timer set by user data
-//            print(error.localizedDescription)
-//        }
-//    }
     
     // Determines if next button is enabled
     func enableNextButton() {
         if pickedTime != 0 {
             // Enable next button
-            buttonAnimation(button: nextButton, enable: true)
+            buttonEnabling(button: nextButton, enable: true)
         } else if pickedTime == 0 {
             // Disable next button
-            buttonAnimation(button: nextButton, enable: false)
+            buttonEnabling(button: nextButton, enable: false)
         }
     }
     
 }
 
 // MARK: - UIPickerViewDataSource protocol
-
 // UIPickerDataSource provides data to UIPickerView
 extension SprintTimeViewController: UIPickerViewDataSource {
-
-    // MARK: - UIPickerViewDataSource protocol methods
     
     // Displays number of columns
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -184,11 +118,8 @@ extension SprintTimeViewController: UIPickerViewDataSource {
 }
 
 // MARK: - UIPickerViewDelegate protocol
-
 // UIPickerViewDelegate creates views (ex: rows) to display data and respond to user selections
 extension SprintTimeViewController: UIPickerViewDelegate {
-    
-    // MARK: - UIPickerViewDelegate protocol methods
     
     // Displays row content in each column
     func pickerView(_ pickerView: UIPickerView,
