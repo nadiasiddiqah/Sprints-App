@@ -12,6 +12,8 @@
 		0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */; };
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
+		09562B2425E98474001819EE /* taskCompleteAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09562B2325E98474001819EE /* taskCompleteAnimation.gif */; };
+		0985CA5A25E9849200C8B087 /* completionAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0985CA5925E9849200C8B087 /* completionAnimation.gif */; };
 		0999E3B725DEEA22006BF396 /* animatedCheckmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
@@ -34,6 +36,8 @@
 		0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sprints.xcdatamodel; sourceTree = "<group>"; };
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		09562B2325E98474001819EE /* taskCompleteAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = taskCompleteAnimation.gif; path = ../../../taskCompleteAnimation.gif; sourceTree = "<group>"; };
+		0985CA5925E9849200C8B087 /* completionAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = completionAnimation.gif; path = ../../../completionAnimation.gif; sourceTree = "<group>"; };
 		0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = animatedCheckmark.gif; path = ../../../../Downloads/animatedCheckmark.gif; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				0915628225AD34B9002A42A9 /* sprintlaunch.gif */,
 				0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */,
+				09562B2325E98474001819EE /* taskCompleteAnimation.gif */,
+				0985CA5925E9849200C8B087 /* completionAnimation.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -219,10 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
+				09562B2425E98474001819EE /* taskCompleteAnimation.gif in Resources */,
 				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
 				0999E3B725DEEA22006BF396 /* animatedCheckmark.gif in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
+				0985CA5A25E9849200C8B087 /* completionAnimation.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

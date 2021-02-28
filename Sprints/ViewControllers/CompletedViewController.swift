@@ -10,35 +10,50 @@ import Gifu
 
 class CompletedViewController: UIViewController {
     
-    lazy var sprintGif: GIFImageView = {
-        let view = GIFImageView()
-        view.contentMode = .scaleAspectFit
-        view.animate(withGIFNamed: "sprintlaunch")
-        return view
+    // MARK: - Lazy Variables
+    lazy var taskCompleteGif: GIFImageView = {
+        let gif = GIFImageView(frame: CGRect(x: taskCompleteGifView.frame.origin.x, y: taskCompleteGifView.frame.origin.y,
+                                              width: taskCompleteGifView.frame.width, height: taskCompleteGifView.frame.height))
+        gif.contentMode = .scaleAspectFit
+        gif.animate(withGIFNamed: "taskCompleteAnimation")
+        gif.animationRepeatCount = 1
+        return gif
     }()
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//        view.addSubview(sprintGif)
-//        sprintGif.centerInSuperview()
-//    }
+    
+    lazy var confettiGif: GIFImageView = {
+        let gif = GIFImageView(frame: view.bounds)
+        gif.contentMode = .scaleAspectFill
+        gif.animate(withGIFNamed: "completionAnimation")
+        gif.animationRepeatCount = 3
+        return gif
+    }()
+    
+    // MARK: - Outlet Variables
+    @IBOutlet weak var taskCompleteGifView: UIImageView!
 
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        taskCompleteGifView.addSubview(taskCompleteGif)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [self] in
+            view.addSubview(confettiGif)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        showGradientLayer(view: view)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    // MARK: - Methods
     
 
     // MARK: - Navigation

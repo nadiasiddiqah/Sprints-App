@@ -71,10 +71,10 @@ class SelectTimeViewController: UIViewController {
     func enableSaveTimeButton() {
         if selectedTaskTime == 0 {
             // Disable save button
-            buttonAnimation(button: saveTimeButton, enable: false)
+            buttonEnabling(button: saveTimeButton, enable: false)
         } else {
             // Enable save button
-            buttonAnimation(button: saveTimeButton, enable: true)
+            buttonEnabling(button: saveTimeButton, enable: true)
         }
     }
     

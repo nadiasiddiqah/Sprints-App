@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 // MARK: - Global variables
+var gradientLayer = CAGradientLayer()
+
 var pickedTime = Int()
 
 var tasks = [Task]()
@@ -55,7 +57,7 @@ func roundedBorder(object: [UIView]) {
     }
 }
 
-func buttonAnimation(button: UIButton, enable: Bool) {
+func buttonEnabling(button: UIButton, enable: Bool) {
     if enable == true {
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear) {
             button.alpha = 1
@@ -70,6 +72,44 @@ func buttonAnimation(button: UIButton, enable: Bool) {
         }
     }
 }
+
+func buttonSpringAction(button: UIButton,
+                        selectedColor: UIColor, normalColor: UIColor,
+                        pressDownTime: TimeInterval, normalTime: TimeInterval,
+                        completionBlock: @escaping () -> Void) {
+    UIView.animate(withDuration: pressDownTime, delay: 0,
+                   usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5,
+                   options: .curveEaseIn) {
+        button.backgroundColor = selectedColor
+        button.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+    } completion: { _ in
+        UIView.animate(withDuration: normalTime, delay: 0,
+                       usingSpringWithDamping: 0.5, initialSpringVelocity: 2,
+                       options: .curveEaseIn) {
+            button.backgroundColor = normalColor
+            button.transform = CGAffineTransform.identity
+        } completion: { _ in
+            completionBlock()
+        }
+    }
+}
+
+let blue = #colorLiteral(red: 0.01116534323, green: 0.4508657455, blue: 0.9130660892, alpha: 1)
+let teal = #colorLiteral(red: 0.08938745409, green: 0.5523278713, blue: 0.5999835134, alpha: 1)
+let lavender = #colorLiteral(red: 0.4824807048, green: 0.4465178847, blue: 0.9689412713, alpha: 1)
+let green = #colorLiteral(red: 0, green: 0.6272221804, blue: 0.4726006389, alpha: 1)
+
+func showGradientLayer(view: UIView) {
+    let blue = #colorLiteral(red: 0.01116534323, green: 0.4508657455, blue: 0.9130660892, alpha: 1)
+    let teal = #colorLiteral(red: 0.08938745409, green: 0.5523278713, blue: 0.5999835134, alpha: 1)
+    let lavender = #colorLiteral(red: 0.4824807048, green: 0.4465178847, blue: 0.9689412713, alpha: 1)
+
+    //        gradientLayer.colors = [UIColor.systemTeal.cgColor, blueGradient.cgColor, lavenderGradient.cgColor]
+    gradientLayer.colors = [lavender.cgColor, blue.cgColor, teal.cgColor]
+    gradientLayer.frame = view.bounds
+    view.layer.insertSublayer(gradientLayer, at: 0)
+}
+
 
 // MARK: - Extensions
 extension UIView {

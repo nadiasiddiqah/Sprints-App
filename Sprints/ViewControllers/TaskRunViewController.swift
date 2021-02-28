@@ -28,11 +28,12 @@ class TaskRunViewController: UIViewController {
     var completedAllTasks = false
     
     lazy var animatedCheckmark: GIFImageView = {
-        let view = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y, width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
-        view.contentMode = .scaleAspectFit
-        view.animate(withGIFNamed: "animatedCheckmark")
-        view.animationRepeatCount = 1
-        return view
+        let gif = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y,
+                                              width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
+        gif.contentMode = .scaleAspectFit
+        gif.animate(withGIFNamed: "animatedCheckmark")
+        gif.animationRepeatCount = 1
+        return gif
     }()
 
     // MARK: - Outlets
@@ -106,6 +107,7 @@ class TaskRunViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        showGradientLayer(view: view)
     }
     
     // MARK: - Action methods
