@@ -17,8 +17,16 @@ struct Task {
 class TaskListViewController: UIViewController {
     
     // MARK: - Outlet Variables
-    @IBOutlet weak var taskList: SelfSizedTableView!
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var taskList: SelfSizedTableView! {
+        didSet {
+            taskList.maxHeight = 351
+        }
+    }
+    @IBOutlet weak var progressBar: UIProgressView! {
+        didSet {
+            progressBar.progressTintColor = green
+        }
+    }
     @IBOutlet weak var pickedTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var addOrSprintButton: UIButton!
@@ -37,9 +45,6 @@ class TaskListViewController: UIViewController {
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Define max height for table view
-        taskList.maxHeight = 351
         
         // Set initial taskTime value
         tasks.append(Task(name: "", time: "Set time"))
@@ -99,7 +104,6 @@ class TaskListViewController: UIViewController {
         let controller = segue.source as! SelectTimeViewController
         tasks[rowIndex].time = controller.selectedTaskTimeLabel
         updateTimeLeft()
-        taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
         taskList.reloadData()
         print(tasks)
     }
@@ -139,6 +143,10 @@ class TaskListViewController: UIViewController {
         // Update timeLeft
         timeLeft = pickedTime - updatedTaskTimes.reduce(0, +)
         timeLeftLabel.text = showTimeLabel(time: timeLeft)
+        
+        // Update progressBar
+        progressBar.progress = Float(pickedTime-timeLeft)/Float(pickedTime)
+
         
         // Check timeLeft and initiate appropriate action
         checkTaskInfo()

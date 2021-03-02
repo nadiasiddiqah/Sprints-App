@@ -261,11 +261,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" trackImage="pencil.tip.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ykh-0k-sj5">
-                                <rect key="frame" x="55" y="272" width="310" height="4"/>
-                                <color key="progressTintColor" systemColor="systemGreenColor"/>
-                                <color key="trackTintColor" systemColor="separatorColor"/>
-                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-Y0-k5c" userLabel="Time Left Stack">
                                 <rect key="frame" x="214" y="295" width="80" height="30"/>
                                 <subviews>
@@ -421,6 +416,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" trackImage="pencil.tip.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ykh-0k-sj5">
+                                <rect key="frame" x="55" y="272" width="310" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="separatorColor"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fdP-1t-xWY"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
@@ -448,7 +448,7 @@
                         <outlet property="IQLayoutGuideConstraint" destination="sq7-yF-BA0" id="5Wi-Zq-APH"/>
                         <outlet property="addOrSprintButton" destination="jOx-KP-sq2" id="I0H-EG-Cwd"/>
                         <outlet property="pickedTimeLabel" destination="sf7-8m-D8a" id="dKj-xc-PQf"/>
-                        <outlet property="progressBar" destination="ykh-0k-sj5" id="PfH-Ks-1F3"/>
+                        <outlet property="progressBar" destination="ykh-0k-sj5" id="Isb-hV-cBC"/>
                         <outlet property="taskList" destination="crq-yl-GxC" id="a8X-1h-PSq"/>
                         <outlet property="taskListStack" destination="sq7-yF-BA0" id="SV9-3s-rJs"/>
                         <outlet property="timeLeftLabel" destination="drn-bD-wCu" id="UT1-ti-NAw"/>
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41V-qE-pJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="70"/>
+            <point key="canvasLocation" x="837.68115942028987" y="69.642857142857139"/>
         </scene>
         <!--Task Run View Controller-->
         <scene sceneID="HmH-Md-XEf">
