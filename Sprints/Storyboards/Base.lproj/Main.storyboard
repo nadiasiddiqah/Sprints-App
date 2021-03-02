@@ -630,6 +630,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressedPauseOrResume:" destination="LR7-eS-b3X" eventType="touchUpInside" id="vqK-ac-Ug9"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qp-q4-zwP">
                                         <rect key="frame" x="39" y="0.0" width="159" height="64"/>
@@ -666,6 +669,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addMinute:" destination="LR7-eS-b3X" eventType="touchUpInside" id="e31-D1-MNa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1z-6Z-60a">
                                                 <rect key="frame" x="0.0" y="33" width="31" height="31"/>
@@ -682,6 +688,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="subtractMinute:" destination="LR7-eS-b3X" eventType="touchUpInside" id="f2I-ii-oar"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -708,13 +717,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fs3-Pc-1NJ"/>
                     <connections>
+                        <outlet property="addMinuteButton" destination="Gdl-mo-IzR" id="RSi-wk-tlA"/>
                         <outlet property="checkmarkBox" destination="0QL-Qe-xVd" id="h9P-Vo-nBb"/>
                         <outlet property="currentTaskName" destination="h42-vs-r2Y" id="rZg-rz-mOc"/>
                         <outlet property="currentTaskTime" destination="AJQ-Ch-P8s" id="bQH-RR-fiw"/>
                         <outlet property="currentTaskView" destination="kyP-ur-JiZ" id="a77-xa-0sf"/>
                         <outlet property="nextTaskButton" destination="GKe-0U-2YV" id="WsA-ge-FeT"/>
                         <outlet property="nextTaskList" destination="31S-yf-f3M" id="IoW-hg-Afz"/>
+                        <outlet property="pauseOrResumeButton" destination="I9n-1E-S9f" id="Y3A-Yb-QXq"/>
+                        <outlet property="subtractMinuteButton" destination="m1z-6Z-60a" id="aeq-On-DFi"/>
                         <outlet property="timerLabel" destination="4Qp-q4-zwP" id="DEo-27-xTQ"/>
+                        <segue destination="tsw-Cv-J4h" kind="show" identifier="completedScreen" id="eXU-2C-b5q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jI-P2-Dqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -785,6 +798,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="eXU-2C-b5q"/>
         <segue reference="uzK-Rm-b84"/>
     </inferredMetricsTieBreakers>
     <resources>

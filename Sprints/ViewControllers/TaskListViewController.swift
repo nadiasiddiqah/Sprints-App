@@ -31,7 +31,7 @@ class TaskListViewController: UIViewController {
     // Updates timeLeft when new time is set
     var timeLeft = Int()
     
-    var switchToSprintButton: Bool = false
+    var switchToSprintButton = false
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -72,8 +72,8 @@ class TaskListViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Segue to SelectTime
         if segue.identifier == "segueToSelectTime" {
+            // Segue to SelectTime
             let controller = segue.destination as! SelectTimeViewController
             
             if tasks[rowIndex].time == "Set time" {
@@ -106,6 +106,7 @@ class TaskListViewController: UIViewController {
     
     // Segue to SprintTime screen
     @objc func resetSprint() {
+        view.endEditing(true)
         tasks.removeAll()
         navigationController?.popViewController(animated: true)
     }
@@ -250,7 +251,10 @@ extension TaskListViewController: UITableViewDataSource {
         cell.nameField.clearButtonMode = .always
         
         cell.timeButton.setTitle(task.time, for: .normal)
-        if cell.timeButton.currentTitle == "Set time" {
+        
+        let currentTime = cell.timeButton.currentTitle
+        
+        if currentTime == "Set time" {
             cell.timeButton.backgroundColor = UIColor.systemIndigo
         } else {
             cell.timeButton.backgroundColor = green
@@ -327,17 +331,35 @@ extension TaskListViewController: TaskCellDelegate {
         }
         
         if let timeButton = cell.timeButton {
-            if timeButton.backgroundColor == green {
-                buttonSpringAction(button: timeButton,
-                                   selectedColor: teal, normalColor: green,
-                                   pressDownTime: 0.1, normalTime: 0.15) {
-                    segueToSelectTime()
+            if timeLeft == 0 {
+                if timeButton.backgroundColor == green {
+                    buttonEnabling(button: timeButton, enable: true)
+                    buttonSpringAction(button: timeButton,
+                                       selectedColor: teal, normalColor: green,
+                                       pressDownTime: 0.1, normalTime: 0.15) {
+                        segueToSelectTime()
+                    }
+                } else {
+                    buttonEnabling(button: timeButton, enable: false)
+                    let alert = UIAlertController(title: "No time left", message: "This task time cannot be set.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(action)
+                    present(alert, animated: true, completion: nil)
                 }
             } else {
-                buttonSpringAction(button: timeButton,
-                                   selectedColor: lavender, normalColor: UIColor.systemIndigo,
-                                   pressDownTime: 0.1, normalTime: 0.15) {
-                    segueToSelectTime()
+                buttonEnabling(button: timeButton, enable: true)
+                if timeButton.backgroundColor == green {
+                    buttonSpringAction(button: timeButton,
+                                       selectedColor: teal, normalColor: green,
+                                       pressDownTime: 0.1, normalTime: 0.15) {
+                        segueToSelectTime()
+                    }
+                } else {
+                    buttonSpringAction(button: timeButton,
+                                       selectedColor: lavender, normalColor: UIColor.systemIndigo,
+                                       pressDownTime: 0.1, normalTime: 0.15) {
+                        segueToSelectTime()
+                    }
                 }
             }
         }
