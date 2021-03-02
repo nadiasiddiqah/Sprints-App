@@ -3,14 +3,12 @@ PODS:
   - IQKeyboardManagerSwift (6.5.6)
   - lottie-ios (3.1.9)
   - TinyConstraints (4.0.1)
-  - YLProgressBar (3.11.0)
 
 DEPENDENCIES:
   - Gifu (~> 3.3.0)
   - IQKeyboardManagerSwift (~> 6.5.6)
   - lottie-ios (~> 3.1.9)
   - TinyConstraints (~> 4.0.1)
-  - YLProgressBar
 
 SPEC REPOS:
   trunk:
@@ -18,15 +16,13 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - lottie-ios
     - TinyConstraints
-    - YLProgressBar
 
 SPEC CHECKSUMS:
   Gifu: 97c2a3c3865fbc834ab13f797e2e8e7729a1853c
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
-  YLProgressBar: 0c0796a6e9b5e5d5040d15c8911e802b67ccb939
 
-PODFILE CHECKSUM: 823c416e80391baad98c2f3a26178567419e775d
+PODFILE CHECKSUM: 6d089baf9ef76e12519bd27ca70a76dc1d8fe98a
 
 COCOAPODS: 1.10.0
