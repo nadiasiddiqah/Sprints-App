@@ -24,8 +24,11 @@ class TaskRunViewController: UIViewController {
     
     var taskTimeCounter = Int()
     var taskCounter = Int()
+    var addedTime = 0
+    var subtractedTime = 0
     
     var completedAllTasks = false
+    var pressedResume = false
     
     lazy var animatedCheckmark: GIFImageView = {
         let gif = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y,
@@ -42,25 +45,25 @@ class TaskRunViewController: UIViewController {
             timerLabel.text = showSecInLabel(time: pickedTime)
         }
     }
-    
-    @IBOutlet weak var nextTaskList: UITableView!
+    @IBOutlet weak var pauseOrResumeButton: UIButton!
+    @IBOutlet weak var addMinuteButton: UIButton!
+    @IBOutlet weak var subtractMinuteButton: UIButton!
     
     @IBOutlet weak var checkmarkBox: UIImageView! {
         didSet {
             checkmarkBox.isUserInteractionEnabled = true
         }
     }
-    
     @IBOutlet weak var currentTaskView: UIView!
-    
     @IBOutlet weak var currentTaskName: UILabel! {
         didSet {
             currentTaskName.adjustsFontSizeToFitWidth = true
         }
     }
-
     @IBOutlet weak var currentTaskTime: UILabel!
     @IBOutlet weak var nextTaskButton: UIButton!
+    
+    @IBOutlet weak var nextTaskList: UITableView!
     
     // MARK: - View Controller Methods
     override func viewDidLoad() {
@@ -126,7 +129,7 @@ class TaskRunViewController: UIViewController {
 
     @objc func updateSprintTimer() {
         if pickedTime > 0 {
-            print("\(pickedTime) left")
+//            print("pickedTime: \(pickedTime) left")
             pickedTime -= 1
             timerLabel.text = showSecInLabel(time: pickedTime)
         } else {
@@ -139,16 +142,23 @@ class TaskRunViewController: UIViewController {
     }
     
     func startTaskTimer() {
-        taskTimeCounter = taskTimes.first!
-        taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
-                                                selector: #selector(updateTaskTimer),
-                                                userInfo: taskTimeCounter, repeats: true)
+        if pressedResume {
+            taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                                                    selector: #selector(updateTaskTimer),
+                                                    userInfo: taskTimeCounter, repeats: true)
+        } else {
+            taskTimeCounter = taskTimes.first!
+            taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                                                    selector: #selector(updateTaskTimer),
+                                                    userInfo: taskTimeCounter, repeats: true)
+        }
     }
 
     @objc func updateTaskTimer() {
         if taskTimeCounter > 0 {
-            print("\(taskTimeCounter) left")
+//            print("taskTimeCounter: \(taskTimeCounter) left")
             taskTimeCounter -= 1
+            enableOrDisableSubtractMinuteButton()
             currentTaskTime.text = "\(showSecInLabel(time: taskTimeCounter) + " left")"
         } else {
             if let taskTimer = taskTimer {
@@ -159,6 +169,57 @@ class TaskRunViewController: UIViewController {
         }
     }
     
+    @IBAction func pressedPauseOrResume(_ sender: UIButton) {
+        if pauseOrResumeButton.currentTitle == "⏸" {
+            showResumeButton()
+        } else {
+            showPauseButton()
+        }
+    }
+    
+    func showResumeButton() {
+        pressedResume = true
+        pauseOrResumeButton.setTitle("▶️", for: .normal)
+        sprintTimer?.invalidate()
+        taskTimer?.invalidate()
+    }
+    
+    func showPauseButton() {
+        pauseOrResumeButton.setTitle("⏸", for: .normal)
+        startSprintTimer()
+        startTaskTimer()
+        pressedResume = false
+    }
+    
+    
+    @IBAction func addMinute(_ sender: UIButton) {
+        addedTime += 60
+        pickedTime += 60
+        taskTimeCounter += 60
+        print("pressed add minute")
+    }
+    
+    @IBAction func subtractMinute(_ sender: UIButton) {
+        if taskTimeCounter > 60 {
+            buttonEnabling(button: subtractMinuteButton, enable: true)
+            subtractedTime -= 60
+            pickedTime -= 60
+            taskTimeCounter -= 60
+        } else {
+            buttonEnabling(button: subtractMinuteButton, enable: false)
+        }
+        print("pressed subtract minute")
+    }
+    
+    func enableOrDisableSubtractMinuteButton() {
+        if taskTimeCounter > 60 {
+            buttonEnabling(button: subtractMinuteButton, enable: true)
+        } else {
+            buttonEnabling(button: subtractMinuteButton, enable: false)
+        }
+    }
+    
+    // MARK: - Next Step Methods
     // Determine next step after checkmarkBox or nextTaskButton is pressed
     func determineNextStep() {
         // Show animated checkmark
@@ -168,6 +229,9 @@ class TaskRunViewController: UIViewController {
         nextTaskButton.isEnabled = false
         checkmarkBox.isUserInteractionEnabled = false
         
+        sprintTimer?.invalidate()
+        taskTimer?.invalidate()
+        
         // Delay striking through text
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [self] in
             currentTaskName.strikeThroughText()
@@ -175,7 +239,7 @@ class TaskRunViewController: UIViewController {
         }
         
         // Delay updating completed task info + checking for completion
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [self] in
             saveCompletedTaskInfo()
             checkForCompletion()
             
@@ -192,16 +256,28 @@ class TaskRunViewController: UIViewController {
         currentTaskTime.fadeTransition(0.6)
         let removeName = taskNames.remove(at: 0)
         let removeTime = taskTimes.remove(at: 0)
+        let timeControl = addedTime + subtractedTime
         
         // Check taskTimeCounter (of current task) to update completedTaskInfo
         if taskTimeCounter == 0 || currentTaskTime.text == "No time left" {
-            // If current task time runs out
-            completedTaskInfo.append(CompletedTask(name: removeName, setTime: removeTime,
-                                                   actualTime: removeTime))
+            if timeControl == 0 {
+                // If current task time runs out + no time added/subtracted
+                completedTaskInfo.append(CompletedTask(name: removeName, setTime: removeTime,
+                                                       actualTime: removeTime))
+                print("current task time runs out + no time added/subtracted")
+            } else {
+                // If current task time runs out + time is added/subtracted
+                completedTaskInfo.append(CompletedTask(name: removeName, setTime: removeTime,
+                                                       actualTime: removeTime+timeControl))
+                print("timeControl: \(timeControl)")
+                print("current task time runs out + time is added/subtracted")
+            }
         } else {
             // If current task is finished earlier
             completedTaskInfo.append(CompletedTask(name: removeName, setTime: removeTime,
-                                                   actualTime: removeTime-taskTimeCounter))
+                                                   actualTime: removeTime-taskTimeCounter+timeControl))
+            print("timeControl: \(timeControl)")
+            print("current task is finished earlier")
         }
     }
     
@@ -210,8 +286,8 @@ class TaskRunViewController: UIViewController {
         if completedAllTasks {
             // If all tasks completed, segue to completed screen
             if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
-                sprintTimer?.invalidate()
-                taskTimer?.invalidate()
+//                sprintTimer?.invalidate()
+//                taskTimer?.invalidate()
                 navigationController?.pushViewController(controller, animated: true)
             }
         } else {
@@ -240,11 +316,13 @@ class TaskRunViewController: UIViewController {
     // MARK: - TaskView Methods
     func updateCurrentTaskView() {
         currentTaskName.text = taskNames.first
-        currentTaskTime.text = "\(showTimeLabel(time: taskTimes.first!) + " left")"
+        currentTaskTime.text = "\(showSecInLabel(time: taskTimes.first!) + " left")"
     }
     
     func reloadTaskViews() {
         taskCounter -= 1
+        addedTime = 0
+        subtractedTime = 0
         
         showSquare()
         
@@ -253,8 +331,10 @@ class TaskRunViewController: UIViewController {
         
         updateCurrentTaskView()
         
-        taskTimeCounter = taskTimes.first!
-        updateTaskTimer()
+        startTaskTimer()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
+            self.startSprintTimer()
+        }
         
         if taskCounter > 0 {
             nextTaskList.reloadData()
@@ -297,7 +377,7 @@ extension TaskRunViewController: UITableViewDataSource {
         
         cell.nextTaskName.text = taskNames[indexPath.row+1]
         cell.nextTaskName.adjustsFontSizeToFitWidth = true
-        cell.nextTimeLabel.text = "\(showTimeLabel(time: taskTimes[indexPath.row+1]) +  " left")"
+        cell.nextTimeLabel.text = "\(showSecInLabel(time: taskTimes[indexPath.row+1]) +  " left")"
     
         return cell
     }
