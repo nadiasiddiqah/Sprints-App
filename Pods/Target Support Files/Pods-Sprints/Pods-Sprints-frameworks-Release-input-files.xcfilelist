@@ -2,4 +2,5 @@ ${PODS_ROOT}/Target Support Files/Pods-Sprints/Pods-Sprints-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework
+${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework
 ${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

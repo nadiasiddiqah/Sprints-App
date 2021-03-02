@@ -7,5 +7,6 @@ target 'Sprints' do
   pod 'TinyConstraints', '~> 4.0.1'
   pod 'IQKeyboardManagerSwift', '~> 6.5.6'
   pod 'lottie-ios', '~> 3.1.9'
+  pod 'YLProgressBar'
   
 end

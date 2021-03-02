@@ -18,6 +18,7 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Outlet Variables
     @IBOutlet weak var taskList: SelfSizedTableView!
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var pickedTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var addOrSprintButton: UIButton!
@@ -99,6 +100,7 @@ class TaskListViewController: UIViewController {
         tasks[rowIndex].time = controller.selectedTaskTimeLabel
         updateTimeLeft()
         taskList.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .automatic)
+        taskList.reloadData()
         print(tasks)
     }
     
@@ -134,7 +136,7 @@ class TaskListViewController: UIViewController {
             }
         }
         
-        // Update currentTimeLabel
+        // Update timeLeft
         timeLeft = pickedTime - updatedTaskTimes.reduce(0, +)
         timeLeftLabel.text = showTimeLabel(time: timeLeft)
         
@@ -157,15 +159,9 @@ class TaskListViewController: UIViewController {
                 checkTaskTimes.append(task.time)
             }
             
-            // Check if taskName or taskTime is empty, show appropriate alert + buttonAnimation
+            // Check if taskName or taskTime is empty, show appropriate buttonAnimation
             if checkTaskNames.contains("") || checkTaskTimes.contains("Set time") {
                 buttonEnabling(button: addOrSprintButton, enable: false)
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [self] in
-//                    let alert = UIAlertController(title: "Finish updating task name and time to start the sprint.", message: nil, preferredStyle: .alert)
-//                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-//                    alert.addAction(action)
-//                    present(alert, animated: true, completion: nil)
-//                }
             } else {
                 buttonEnabling(button: addOrSprintButton, enable: true)
             }
@@ -194,26 +190,16 @@ class TaskListViewController: UIViewController {
     @IBAction func pressedAddTask(_ sender: UIButton) {
         if switchToSprintButton {
             // Switch to Sprint Button to segue to TaskRun screen
-            UIView.animate(withDuration: 0.1, delay: 0,
-                           usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5,
-                           options: .curveEaseIn) { [self] in
-                addOrSprintButton.backgroundColor = teal
-                addOrSprintButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
-            } completion: { [self] _ in
-                UIView.animate(withDuration: 0.15, delay: 0,
-                               usingSpringWithDamping: 0.5, initialSpringVelocity: 2,
-                               options: .curveEaseIn) {
-                    addOrSprintButton.backgroundColor = green
-                    addOrSprintButton.transform = CGAffineTransform.identity
-                } completion: { [self] _ in
-                    if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
-                        view.endEditing(true)
-                        navigationController?.pushViewController(controller, animated: true)
-                    }
+            buttonSpringAction(button: addOrSprintButton,
+                               selectedColor: teal, normalColor: green,
+                               pressDownTime: 0.1, normalTime: 0.15) { [self] in
+                if let controller = storyboard?.instantiateViewController(identifier: "taskRunScreen") {
+                    view.endEditing(true)
+                    navigationController?.pushViewController(controller, animated: true)
                 }
             }
         } else {
-            // Adds new cell in Table View
+            // Adds new cell in Table View + reloads taskList
             buttonSpringAction(button: addOrSprintButton,
                                selectedColor: lavender, normalColor: UIColor.systemIndigo,
                                pressDownTime: 0.2, normalTime: 0.25) { [self] in
@@ -244,22 +230,39 @@ extension TaskListViewController: UITableViewDataSource {
         
         cell.delegate = self
         
-        // Configure nameField and timeButton in taskCell
+        // Gather task data for each taskCell
         let task = tasks[indexPath.row]
         
+        // Configure each taskCell's nameField
         cell.nameField.text = task.name
         cell.nameField.clearButtonMode = .always
         
+        // Configure each taskCell's timeButton
         cell.timeButton.setTitle(task.time, for: .normal)
-        
-        let currentTime = cell.timeButton.currentTitle
-        
-        if currentTime == "Set time" {
-            cell.timeButton.backgroundColor = UIColor.systemIndigo
+        if timeLeft == 0 {
+            // When no time is left
+            if cell.timeButton.currentTitle == "Set time" {
+                // Disable timeButtons with no set time
+                buttonEnabling(button: cell.timeButton, enable: false)
+                cell.timeButton.backgroundColor = UIColor.systemIndigo
+            } else {
+                // Enable timeButtons with set time
+                buttonEnabling(button: cell.timeButton, enable: true)
+                cell.timeButton.backgroundColor = green
+            }
         } else {
-            cell.timeButton.backgroundColor = green
+            // When there is time left, enable all timeButtons
+            buttonEnabling(button: cell.timeButton, enable: true)
+            if cell.timeButton.currentTitle == "Set time" {
+                // Color of timeButtons with no set time
+                cell.timeButton.backgroundColor = UIColor.systemIndigo
+            } else {
+                // Color of timeButtons with set time
+                cell.timeButton.backgroundColor = green
+            }
         }
         
+        // Updates + checks timeLeft label to determine next steps
         updateTimeLeft()
         
         return cell
@@ -267,10 +270,14 @@ extension TaskListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        // Sets up swipe-to-delete trailing action
         let delete = UIContextualAction(style: .destructive,
                                         title: "Delete") { [unowned self] (action, view, completionHandler) in
             // Update tasks data + current time label
             tasks.remove(at: indexPath.row)
+            
+            // Updates + checks timeLeft label to determine next steps
             updateTimeLeft()
             
             // Update tableView
@@ -301,28 +308,55 @@ extension TaskListViewController: UITableViewDelegate {
 
 // MARK: TaskCellDelegate Extension
 extension TaskListViewController: TaskCellDelegate {
+    
+    // Called when nameField starts editing
     func nameFieldDidBeginEditing(onCell cell: TaskCell) {
+        // Makes selected nameField, the first responder
         cell.nameField.becomeFirstResponder()
     }
     
+    // Called when nameField ends editing
     func nameFieldDidEndEditing(onCell cell: TaskCell) {
+        // Saves text entered in nameField to tasks data var
         if let indexPath = taskList.indexPath(for: cell) {
             if let newName = cell.nameField.text {
                 tasks[indexPath.row].name = newName
             }
         }
+        // Updates + checks timeLeft label to determine next steps
         updateTimeLeft()
+        // Ends all editing
         view.endEditing(true)
     }
     
+    // Called when nameField returns
     func nameFieldShouldReturn(onCell cell: TaskCell) -> Bool {
+        // Ends all editing
         view.endEditing(true)
         return true
     }
     
+    // Called when timeButton is pressed
     func pressedTimeButton(onCell cell: TaskCell) {
+        // Ends all editing (nameField) if timeButton is pressed
         view.endEditing(true)
         
+        // Shows appropriate button click animation + segues to select time
+        if cell.timeButton.backgroundColor == green {
+            buttonSpringAction(button: cell.timeButton,
+                               selectedColor: teal, normalColor: green,
+                               pressDownTime: 0.1, normalTime: 0.15) {
+                segueToSelectTime()
+            }
+        } else {
+            buttonSpringAction(button: cell.timeButton,
+                               selectedColor: lavender, normalColor: UIColor.systemIndigo,
+                               pressDownTime: 0.1, normalTime: 0.15) {
+                segueToSelectTime()
+            }
+        }
+        
+        // Segue to select time
         func segueToSelectTime() {
             if let indexPath = taskList.indexPath(for: cell) {
                 rowIndex = indexPath.row
@@ -330,39 +364,6 @@ extension TaskListViewController: TaskCellDelegate {
             }
         }
         
-        if let timeButton = cell.timeButton {
-            if timeLeft == 0 {
-                if timeButton.backgroundColor == green {
-                    buttonEnabling(button: timeButton, enable: true)
-                    buttonSpringAction(button: timeButton,
-                                       selectedColor: teal, normalColor: green,
-                                       pressDownTime: 0.1, normalTime: 0.15) {
-                        segueToSelectTime()
-                    }
-                } else {
-                    buttonEnabling(button: timeButton, enable: false)
-                    let alert = UIAlertController(title: "No time left", message: "This task time cannot be set.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(action)
-                    present(alert, animated: true, completion: nil)
-                }
-            } else {
-                buttonEnabling(button: timeButton, enable: true)
-                if timeButton.backgroundColor == green {
-                    buttonSpringAction(button: timeButton,
-                                       selectedColor: teal, normalColor: green,
-                                       pressDownTime: 0.1, normalTime: 0.15) {
-                        segueToSelectTime()
-                    }
-                } else {
-                    buttonSpringAction(button: timeButton,
-                                       selectedColor: lavender, normalColor: UIColor.systemIndigo,
-                                       pressDownTime: 0.1, normalTime: 0.15) {
-                        segueToSelectTime()
-                    }
-                }
-            }
-        }
     }
 
 }
