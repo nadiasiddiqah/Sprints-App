@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */; };
 		0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906C3DA25BF80A300B5C415 /* TaskCell.swift */; };
-		0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */; };
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
+		092D891025EF3819000A8DE2 /* confettiAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 092D890F25EF3819000A8DE2 /* confettiAnimation.json */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
 		0999E3B725DEEA22006BF396 /* animatedCheckmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */; };
 		09B80F2025EC8F9B0041723A /* taskCompleteAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */; };
@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		0906C3DA25BF80A300B5C415 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sprints.xcdatamodel; sourceTree = "<group>"; };
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
+		092D890F25EF3819000A8DE2 /* confettiAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = confettiAnimation.json; path = ../../../confettiAnimation.json; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = animatedCheckmark.gif; path = ../../../../Downloads/animatedCheckmark.gif; sourceTree = "<group>"; };
 		09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = taskCompleteAnimation.gif; path = ../../../../Downloads/taskCompleteAnimation.gif; sourceTree = "<group>"; };
@@ -83,14 +83,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		0903724725AFAB5500A0AAD6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0903724825AFAB7F00A0AAD6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +98,7 @@
 				0915628225AD34B9002A42A9 /* sprintlaunch.gif */,
 				0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */,
 				09B80F2225EC8FA20041723A /* completionAnimation.gif */,
+				092D890F25EF3819000A8DE2 /* confettiAnimation.json */,
 				09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */,
 			);
 			path = Resources;
@@ -136,7 +129,6 @@
 				09ECD1CD259974B7006D301A /* AppDelegate.swift */,
 				09ECD1CF259974B7006D301A /* SceneDelegate.swift */,
 				09ECD1D6259974BA006D301A /* Assets.xcassets */,
-				0903724725AFAB5500A0AAD6 /* Model */,
 				0903724825AFAB7F00A0AAD6 /* Storyboards */,
 				09D1AC0825AD09DF00F9E053 /* Resources */,
 				0903724625AFAB1E00A0AAD6 /* ViewControllers */,
@@ -226,6 +218,7 @@
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
 				09B80F2025EC8F9B0041723A /* taskCompleteAnimation.gif in Resources */,
+				092D891025EF3819000A8DE2 /* confettiAnimation.json in Resources */,
 				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
 				09B80F2325EC8FA20041723A /* completionAnimation.gif in Resources */,
@@ -284,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */,
-				0906E68925B0DECB00F31C0D /* Sprints.xcdatamodeld in Sources */,
 				09F133F125D4814D0077CC6C /* Time.swift in Sources */,
 				09ECD1CE259974B7006D301A /* AppDelegate.swift in Sources */,
 				09ECD1D0259974B7006D301A /* SceneDelegate.swift in Sources */,
@@ -499,20 +491,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0906E68725B0DECB00F31C0D /* Sprints.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */,
-			);
-			currentVersion = 0906E68825B0DECB00F31C0D /* Sprints.xcdatamodel */;
-			name = Sprints.xcdatamodeld;
-			path = ../Sprints.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 09ECD1C2259974B7006D301A /* Project object */;
 }

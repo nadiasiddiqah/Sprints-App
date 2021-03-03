@@ -26,10 +26,13 @@ class TaskRunViewController: UIViewController {
     var taskCounter = Int()
     var addedTime = 0
     var subtractedTime = 0
+    var aheadByTime = 0
     
     var completedAllTasks = false
-    var pressedResume = false
+    var pressedPlay = false
+    var disableSubtractButton = false
     
+    // MARK: - Lazy Variables
     lazy var animatedCheckmark: GIFImageView = {
         let gif = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y,
                                               width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
@@ -45,9 +48,10 @@ class TaskRunViewController: UIViewController {
             timerLabel.text = showSecInLabel(time: pickedTime)
         }
     }
-    @IBOutlet weak var pauseOrResumeButton: UIButton!
+    @IBOutlet weak var pauseOrPlayButton: UIButton!
     @IBOutlet weak var addMinuteButton: UIButton!
     @IBOutlet weak var subtractMinuteButton: UIButton!
+    @IBOutlet weak var timeTrackerLabel: UILabel!
     
     @IBOutlet weak var checkmarkBox: UIImageView! {
         didSet {
@@ -142,7 +146,7 @@ class TaskRunViewController: UIViewController {
     }
     
     func startTaskTimer() {
-        if pressedResume {
+        if pressedPlay {
             taskTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self,
                                                     selector: #selector(updateTaskTimer),
                                                     userInfo: taskTimeCounter, repeats: true)
@@ -169,28 +173,41 @@ class TaskRunViewController: UIViewController {
         }
     }
     
-    @IBAction func pressedPauseOrResume(_ sender: UIButton) {
-        if pauseOrResumeButton.currentTitle == "⏸" {
-            showResumeButton()
+    @IBAction func pressedPauseOrPlay(_ sender: UIButton) {
+        if pauseOrPlayButton.currentImage == UIImage(systemName: "pause.circle.fill") {
+            showPlayButton()
         } else {
             showPauseButton()
         }
     }
     
-    func showResumeButton() {
-        pressedResume = true
-        pauseOrResumeButton.setTitle("▶️", for: .normal)
+    func showPlayButton() {
+        pressedPlay = true
+        pauseOrPlayButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+        
         sprintTimer?.invalidate()
         taskTimer?.invalidate()
+        
+        buttonEnabling(button: addMinuteButton, enable: false)
+        buttonEnabling(button: subtractMinuteButton, enable: false)
+        buttonEnabling(button: nextTaskButton, enable: false)
+        checkmarkBox.isUserInteractionEnabled = false
     }
     
     func showPauseButton() {
-        pauseOrResumeButton.setTitle("⏸", for: .normal)
+        pauseOrPlayButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+        
         startSprintTimer()
         startTaskTimer()
-        pressedResume = false
+        
+        buttonEnabling(button: subtractMinuteButton, enable: disableSubtractButton)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.95) { [self] in
+            buttonEnabling(button: addMinuteButton, enable: true)
+            buttonEnabling(button: nextTaskButton, enable: true)
+            checkmarkBox.isUserInteractionEnabled = true
+            pressedPlay = false
+        }
     }
-    
     
     @IBAction func addMinute(_ sender: UIButton) {
         addedTime += 60
@@ -201,11 +218,13 @@ class TaskRunViewController: UIViewController {
     
     @IBAction func subtractMinute(_ sender: UIButton) {
         if taskTimeCounter > 60 {
+            disableSubtractButton = false
             buttonEnabling(button: subtractMinuteButton, enable: true)
             subtractedTime -= 60
             pickedTime -= 60
             taskTimeCounter -= 60
         } else {
+            disableSubtractButton = true
             buttonEnabling(button: subtractMinuteButton, enable: false)
         }
         print("pressed subtract minute")
@@ -213,8 +232,10 @@ class TaskRunViewController: UIViewController {
     
     func enableOrDisableSubtractMinuteButton() {
         if taskTimeCounter > 60 {
+            disableSubtractButton = false
             buttonEnabling(button: subtractMinuteButton, enable: true)
         } else {
+            disableSubtractButton = true
             buttonEnabling(button: subtractMinuteButton, enable: false)
         }
     }
@@ -271,6 +292,15 @@ class TaskRunViewController: UIViewController {
                                                        actualTime: removeTime+timeControl))
                 print("timeControl: \(timeControl)")
                 print("current task time runs out + time is added/subtracted")
+                
+                if timeControl < 0 {
+                    timeTrackerLabel.isHidden = false
+                    aheadByTime -= timeControl
+                    timeTrackerLabel.text = "You're ahead by \(showSecInLabel(time: aheadByTime))!"
+                } else if aheadByTime <= 0 {
+                    timeTrackerLabel.isHidden = true
+                    aheadByTime -= timeControl
+                }
             }
         } else {
             // If current task is finished earlier
@@ -278,6 +308,15 @@ class TaskRunViewController: UIViewController {
                                                    actualTime: removeTime-taskTimeCounter+timeControl))
             print("timeControl: \(timeControl)")
             print("current task is finished earlier")
+            
+            aheadByTime += taskTimeCounter
+            if aheadByTime > 0 {
+                timeTrackerLabel.isHidden = false
+                timeTrackerLabel.text = "You're ahead by \(showSecInLabel(time: aheadByTime))!"
+            } else if aheadByTime <= 0 {
+                timeTrackerLabel.isHidden = true
+                aheadByTime -= timeControl
+            }
         }
     }
     
@@ -285,10 +324,10 @@ class TaskRunViewController: UIViewController {
     func checkForCompletion() {
         if completedAllTasks {
             // If all tasks completed, segue to completed screen
-            if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
-//                sprintTimer?.invalidate()
-//                taskTimer?.invalidate()
-                navigationController?.pushViewController(controller, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+                if let controller = storyboard?.instantiateViewController(identifier: "completedScreen") {
+                    navigationController?.pushViewController(controller, animated: true)
+                }
             }
         } else {
             // If more tasks left, update task view info
@@ -386,5 +425,10 @@ extension TaskRunViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate Extension
 extension TaskRunViewController: UITableViewDelegate {
+    // De-selects a row after its selected
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
