@@ -85,13 +85,11 @@ class TaskListViewController: UIViewController {
             if tasks[rowIndex].time == "Set time" {
                 // Initially set timeButton title
                 controller.timeLeft = timeLeft
-                print("setting time in row \(rowIndex)")
             } else if tasks[rowIndex].time != "Set time" {
                 // Edit timeButton title
                 tasks[rowIndex].time = "0:00"
                 updateTimeLeft()
                 controller.timeLeft = timeLeft
-                print("editing time in row \(rowIndex)")
             }
         } else {
             // Segue to TaskRun
