@@ -5,10 +5,10 @@ PODS:
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
-  - Gifu (~> 3.3.0)
-  - IQKeyboardManagerSwift (~> 6.5.6)
-  - lottie-ios (~> 3.1.9)
-  - TinyConstraints (~> 4.0.1)
+  - Gifu
+  - IQKeyboardManagerSwift
+  - lottie-ios
+  - TinyConstraints
 
 SPEC REPOS:
   trunk:
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 6d089baf9ef76e12519bd27ca70a76dc1d8fe98a
+PODFILE CHECKSUM: 6f5c522b282e1770ff920df9d2fda2b361b497a7
 
 COCOAPODS: 1.10.0

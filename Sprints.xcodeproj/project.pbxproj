@@ -11,10 +11,10 @@
 		0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906C3DA25BF80A300B5C415 /* TaskCell.swift */; };
 		0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0915628225AD34B9002A42A9 /* sprintlaunch.gif */; };
 		092D891025EF3819000A8DE2 /* confettiAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 092D890F25EF3819000A8DE2 /* confettiAnimation.json */; };
+		092D892A25F03535000A8DE2 /* taskCompleteAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 092D892925F03535000A8DE2 /* taskCompleteAnimation.json */; };
+		092D892D25F0B82B000A8DE2 /* Youtube Star.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 092D892C25F0B82B000A8DE2 /* Youtube Star.ttf */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
 		0999E3B725DEEA22006BF396 /* animatedCheckmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */; };
-		09B80F2025EC8F9B0041723A /* taskCompleteAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */; };
-		09B80F2325EC8FA20041723A /* completionAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09B80F2225EC8FA20041723A /* completionAnimation.gif */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
@@ -35,10 +35,10 @@
 		0906C3DA25BF80A300B5C415 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		0915628225AD34B9002A42A9 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		092D890F25EF3819000A8DE2 /* confettiAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = confettiAnimation.json; path = ../../../confettiAnimation.json; sourceTree = "<group>"; };
+		092D892925F03535000A8DE2 /* taskCompleteAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = taskCompleteAnimation.json; sourceTree = "<group>"; };
+		092D892C25F0B82B000A8DE2 /* Youtube Star.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Youtube Star.ttf"; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = animatedCheckmark.gif; path = ../../../../Downloads/animatedCheckmark.gif; sourceTree = "<group>"; };
-		09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = taskCompleteAnimation.gif; path = ../../../../Downloads/taskCompleteAnimation.gif; sourceTree = "<group>"; };
-		09B80F2225EC8FA20041723A /* completionAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = completionAnimation.gif; path = ../../../../Downloads/completionAnimation.gif; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
@@ -95,11 +95,11 @@
 		09D1AC0825AD09DF00F9E053 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				092D892C25F0B82B000A8DE2 /* Youtube Star.ttf */,
+				092D892925F03535000A8DE2 /* taskCompleteAnimation.json */,
 				0915628225AD34B9002A42A9 /* sprintlaunch.gif */,
 				0999E3B625DEEA22006BF396 /* animatedCheckmark.gif */,
-				09B80F2225EC8FA20041723A /* completionAnimation.gif */,
 				092D890F25EF3819000A8DE2 /* confettiAnimation.json */,
-				09B80F1F25EC8F9A0041723A /* taskCompleteAnimation.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,13 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
-				09B80F2025EC8F9B0041723A /* taskCompleteAnimation.gif in Resources */,
+				092D892D25F0B82B000A8DE2 /* Youtube Star.ttf in Resources */,
 				092D891025EF3819000A8DE2 /* confettiAnimation.json in Resources */,
 				0915628325AD34B9002A42A9 /* sprintlaunch.gif in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
-				09B80F2325EC8FA20041723A /* completionAnimation.gif in Resources */,
 				0999E3B725DEEA22006BF396 /* animatedCheckmark.gif in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
+				092D892A25F03535000A8DE2 /* taskCompleteAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

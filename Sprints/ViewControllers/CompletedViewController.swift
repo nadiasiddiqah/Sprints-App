@@ -7,39 +7,48 @@
 
 import UIKit
 import Gifu
+import Lottie
 
 class CompletedViewController: UIViewController {
     
     // MARK: - Lazy Variables
-    lazy var taskCompleteGif: GIFImageView = {
-        let gif = GIFImageView(frame: CGRect(x: taskCompleteGifView.frame.origin.x, y: taskCompleteGifView.frame.origin.y,
-                                              width: taskCompleteGifView.frame.width, height: taskCompleteGifView.frame.height))
-        gif.contentMode = .scaleAspectFit
-        gif.animate(withGIFNamed: "taskCompleteAnimation")
-        gif.animationRepeatCount = 1
-        return gif
+    lazy var confettiView: AnimationView = {
+        let animationView = AnimationView()
+        view.addSubview(animationView)
+        animationView.animation = Animation.named("confettiAnimation")
+        
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        animationView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        animationView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        animationView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        return animationView
     }()
     
-    lazy var confettiGif: GIFImageView = {
-        let gif = GIFImageView(frame: view.bounds)
-        gif.contentMode = .scaleAspectFill
-        gif.animate(withGIFNamed: "completionAnimation")
-        gif.animationRepeatCount = 3
-        return gif
+    lazy var taskCompleteView: AnimationView = {
+        let animationView = AnimationView()
+        imageView.addSubview(animationView)
+        animationView.animation = Animation.named("taskCompleteAnimation")
+        animationView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        animationView.contentMode = .scaleAspectFit
+        
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        
+        animationView.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        animationView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        animationView.leftAnchor.constraint(equalTo: imageView.leftAnchor).isActive = true
+        animationView.rightAnchor.constraint(equalTo: imageView.rightAnchor).isActive = true
+        return animationView
     }()
     
     // MARK: - Outlet Variables
-    @IBOutlet weak var taskCompleteGifView: UIImageView!
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var startNewSprint: UIButton!
+    
     // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        taskCompleteGifView.addSubview(taskCompleteGif)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [self] in
-            view.addSubview(confettiGif)
-        }
+        playAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,11 +63,26 @@ class CompletedViewController: UIViewController {
     }
     
     // MARK: - Methods
-    
+    func playAnimation() {
+        taskCompleteView.animationSpeed = 1.4
+        taskCompleteView.play(fromProgress: 0, toProgress: 0.2, loopMode: .playOnce, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+            view.bringSubviewToFront(startNewSprint)
+            confettiView.animationSpeed = 0.85
+            confettiView.play(fromProgress: 0, toProgress: 1, loopMode: .playOnce) { _ in
+                self.confettiView.isHidden = true
+                self.startNewSprint.isHidden = false
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+                taskCompleteView.animationSpeed = 0.75
+                taskCompleteView.play(fromProgress: 0.08, toProgress: 0.2, loopMode: .playOnce, completion: nil)
+            }
+        }
+    }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToStart" {
             tasks.removeAll()
