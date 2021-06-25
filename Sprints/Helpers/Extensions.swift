@@ -2,14 +2,14 @@
 //  Extensions.swift
 //  Sprints
 //
-//  Created by Nadia Siddiqah on 2/18/21.
+//  Created by Nadia Siddiqah on 6/24/21.
 //
 
 import Foundation
 import UIKit
 
 extension UIView {
-    func fadeTransition(_ duration:CFTimeInterval) {
+    func fadeTransition(_ duration: CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name:
             CAMediaTimingFunctionName.easeInEaseOut)
@@ -42,4 +42,24 @@ extension UILabel {
         self.attributedText = attributeString
     }
     
+}
+
+extension UITextField {
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let l = Utils.__maxLengths[self] else {
+                return 150 // (global default-limit. or just, Int.max)
+            }
+            return l
+        }
+        set {
+            Utils.__maxLengths[self] = newValue
+            addTarget(self, action: #selector(fix), for: .editingChanged)
+        }
+    }
+    @objc func fix(textField: UITextField) {
+        if let t = textField.text {
+            textField.text = String(t.prefix(maxLength))
+        }
+    }
 }

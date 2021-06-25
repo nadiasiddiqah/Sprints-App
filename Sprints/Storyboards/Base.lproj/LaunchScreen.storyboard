@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,30 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready, Set, Sprint!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPv-Q1-7Jf">
-                                <rect key="frame" x="55" y="621" width="304" height="70"/>
-                                <color key="backgroundColor" red="0.34721022839999999" green="0.33570402859999998" blue="0.85815113779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="sprintlaunch.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Juu-Fa-5Lf">
-                                <rect key="frame" x="65.5" y="306.5" width="283" height="283"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="gjZ-Tm-jNb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="KYm-Dx-8Aq">
+                                <rect key="frame" x="57" y="251" width="300" height="404"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sprint" translatesAutoresizingMaskIntoConstraints="NO" id="LV6-bJ-l4S">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LV6-bJ-l4S" secondAttribute="height" multiplier="1:1" id="66J-fc-pTG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKN-GQ-5y7">
+                                        <rect key="frame" x="0.0" y="343" width="300" height="61"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JKN-GQ-5y7" secondAttribute="height" multiplier="300:61" id="19L-mA-Fyv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Juu-Fa-5Lf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65.5" id="1uI-Tw-ZKW"/>
-                            <constraint firstItem="Juu-Fa-5Lf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="262.5" id="2Qb-3h-Nvi"/>
-                            <constraint firstItem="XPv-Q1-7Jf" firstAttribute="top" secondItem="Juu-Fa-5Lf" secondAttribute="bottom" constant="31.5" id="8gP-bC-dos"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XPv-Q1-7Jf" secondAttribute="bottom" constant="171" id="Nh5-Tz-3ja"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XPv-Q1-7Jf" secondAttribute="trailing" constant="55" id="QRC-SQ-ltB"/>
-                            <constraint firstItem="Juu-Fa-5Lf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TfN-ii-ZIb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Juu-Fa-5Lf" secondAttribute="trailing" constant="65.5" id="aiI-YH-ti8"/>
-                            <constraint firstItem="Juu-Fa-5Lf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eQq-Cc-kGR"/>
-                            <constraint firstItem="XPv-Q1-7Jf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="l3p-Mp-mhU"/>
+                            <constraint firstItem="KYm-Dx-8Aq" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.450893" id="3B6-FL-ATp"/>
+                            <constraint firstItem="KYm-Dx-8Aq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ODk-o8-eTU"/>
+                            <constraint firstAttribute="trailing" secondItem="gjZ-Tm-jNb" secondAttribute="trailing" id="h1r-Lr-bYu"/>
+                            <constraint firstItem="gjZ-Tm-jNb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="idc-Fe-Rqd"/>
+                            <constraint firstAttribute="bottom" secondItem="gjZ-Tm-jNb" secondAttribute="bottom" id="nQg-VE-62U"/>
+                            <constraint firstItem="KYm-Dx-8Aq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rWg-8y-gTF"/>
+                            <constraint firstItem="gjZ-Tm-jNb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xOz-c9-MPh"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,9 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sprintlaunch.gif" width="283" height="283"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="background" width="276" height="553"/>
+        <image name="sprint" width="469" height="469"/>
     </resources>
 </document>

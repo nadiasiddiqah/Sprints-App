@@ -9,19 +9,6 @@ import Foundation
 import UIKit
 import CoreData
 
-// MARK: - TimerData Class
-
-// Custom class type to set hour/min options in UIPickerView
-public class TimePickerData {
-    var hour: String
-    var minute: [String]
-    
-    init(hour: String, minute: [String]) {
-        self.hour = hour
-        self.minute = minute
-    }
-}
-
 // MARK: - SprintTimeViewController Class
 class SprintTimeViewController: UIViewController {
     
@@ -60,7 +47,7 @@ class SprintTimeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        showGradientLayer(view: view)
+        Utils.showGradientLayer(view: view)
     }
     
     // Runs before view disappears
@@ -73,9 +60,9 @@ class SprintTimeViewController: UIViewController {
     
     // Saves pickedTime to Core Data
     @IBAction func pressedNext(_ sender: UIButton) {
-        buttonSpringAction(button: nextButton,
-                           selectedColor: lavender, normalColor: UIColor.systemIndigo,
-                           pressDownTime: 0.2, normalTime: 0.25) {
+        Utils.buttonSpringAction(button: nextButton,
+                                 selectedColor: Utils.lavender, normalColor: UIColor.systemIndigo,
+                                 pressDownTime: 0.2, normalTime: 0.25) {
             self.performSegue(withIdentifier: "segueToTaskList", sender: nil)
         }
     }
@@ -84,12 +71,12 @@ class SprintTimeViewController: UIViewController {
     
     // Determines if next button is enabled
     func enableNextButton() {
-        if pickedTime != 0 {
+        if Utils.pickedTime != 0 {
             // Enable next button
-            buttonEnabling(button: nextButton, enable: true)
-        } else if pickedTime == 0 {
+            Utils.buttonEnabling(button: nextButton, enable: true)
+        } else if Utils.pickedTime == 0 {
             // Disable next button
-            buttonEnabling(button: nextButton, enable: false)
+            Utils.buttonEnabling(button: nextButton, enable: false)
         }
     }
     
@@ -144,7 +131,7 @@ extension SprintTimeViewController: UIPickerViewDelegate {
         let hourInSec = Int(timerData[selectedHour].hour)! * 60 * 60
         let minInSec = Int(timerData[selectedHour].minute[selectedMin])! * 60
 
-        pickedTime = hourInSec + minInSec
+        Utils.pickedTime = hourInSec + minInSec
         
         enableNextButton()
     }

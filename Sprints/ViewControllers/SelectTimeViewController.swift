@@ -50,7 +50,7 @@ class SelectTimeViewController: UIViewController {
         // Initialize setTimeSlider
         setTimeSlider.value = timeFloat
         setTimeSlider.maximumValue = Float(timeLeft/60)
-        setTimeSlider.minimumTrackTintColor = lavender
+        setTimeSlider.minimumTrackTintColor = Utils.lavender
         setTimeSlider.setThumbImage(UIImage(named: "sprintsSlider"), for: .normal)
         
         // Observes value changes in setTimeSlider
@@ -70,10 +70,10 @@ class SelectTimeViewController: UIViewController {
     func enableSaveTimeButton() {
         if selectedTaskTime == 0 {
             // Disable save button
-            buttonEnabling(button: saveTimeButton, enable: false)
+            Utils.buttonEnabling(button: saveTimeButton, enable: false)
         } else {
             // Enable save button
-            buttonEnabling(button: saveTimeButton, enable: true)
+            Utils.buttonEnabling(button: saveTimeButton, enable: true)
         }
     }
     

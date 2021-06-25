@@ -54,7 +54,7 @@ class CompletedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        showGradientLayer(view: view)
+        Utils.showGradientLayer(view: view)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,8 +85,8 @@ class CompletedViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToStart" {
-            tasks.removeAll()
-            completedTaskInfo.removeAll()
+            Utils.tasks.removeAll()
+            Utils.completedTaskInfo.removeAll()
         }
     }
 
