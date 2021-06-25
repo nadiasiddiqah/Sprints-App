@@ -15,11 +15,6 @@ class SelfSizedTableView: UITableView {
   override func reloadData() {
     super.reloadData()
     self.invalidateIntrinsicContentSize()
-    //heightConstraint.constant = tableView.contentSize.height
-//    UIView.animate(withDuration: 0.2) {
-//      self.layoutIfNeeded()
-//    }
-    
     self.layoutIfNeeded()
   }
   

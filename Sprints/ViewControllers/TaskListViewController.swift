@@ -20,6 +20,7 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var taskList: SelfSizedTableView! {
         didSet {
             taskList.maxHeight = 351
+            taskList.estimatedRowHeight = 44
         }
     }
     @IBOutlet weak var progressBar: UIProgressView! {
@@ -30,7 +31,6 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var pickedTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var addOrSprintButton: UIButton!
-    @IBOutlet weak var taskListStack: UIStackView!
     
     // MARK: - Instance Variables
     
@@ -278,24 +278,28 @@ extension TaskListViewController: UITableViewDataSource {
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         // Sets up swipe-to-delete trailing action
-        let delete = UIContextualAction(style: .destructive,
-                                        title: "Delete") { [unowned self] (action, view, completionHandler) in
-            // Update tasks data + current time label
-            tasks.remove(at: indexPath.row)
-            
-            // Updates + checks timeLeft label to determine next steps
-            updateTimeLeft()
-            
-            // Update tableView
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
-            // Update tableView + button positioning
-            tableView.reloadData()
-            tableView.scrollToRow(at: IndexPath(row: tasks.count-1, section: 0), at: .bottom, animated: true)
-            
-            completionHandler(true)
+        if tasks.count > 1 {
+            let delete = UIContextualAction(style: .destructive,
+                                            title: "Delete") { [unowned self] (action, view, completionHandler) in
+                // Update tasks data + current time label
+                tasks.remove(at: indexPath.row)
+                
+                // Updates + checks timeLeft label to determine next steps
+                updateTimeLeft()
+                
+                // Update tableView
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+                // Update tableView + button positioning
+                tableView.reloadData()
+                tableView.scrollToRow(at: IndexPath(row: tasks.count-1, section: 0), at: .bottom, animated: true)
+                
+                completionHandler(true)
+            }
+            return UISwipeActionsConfiguration(actions: [delete])
+        } else {
+            return nil
         }
-        return UISwipeActionsConfiguration(actions: [delete])
     }
 
 }

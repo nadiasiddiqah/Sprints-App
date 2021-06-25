@@ -10,24 +10,27 @@ import TinyConstraints
 import Gifu
 
 class LaunchViewController: UIViewController {
-    
-    lazy var sprintGif: GIFImageView = {
-        let gif = GIFImageView()
-        gif.contentMode = .scaleAspectFit
-        gif.animate(withGIFNamed: "sprintlaunch")
-        return gif
+     
+    // MARK: Lazy Variables
+    lazy var sprintAnimation: GIFImageView = {
+        let gifImageView = GIFImageView()
+        gifImageView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+        gifImageView.animate(withGIFNamed: "sprintlaunch")
+        
+        return gifImageView
     }()
-
+    
+    // MARK: - Outlet Variables
+    @IBOutlet weak var sprintGifImageView: UIImageView!
+    
+    // MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.addSubview(sprintGif)
-        sprintGif.centerInSuperview()
+        playAnimation()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        showGradientLayer(view: view)
+    func playAnimation() {
+        sprintGifImageView.addSubview(sprintAnimation)
+        sprintAnimation.centerInSuperview()
     }
-    
 }
