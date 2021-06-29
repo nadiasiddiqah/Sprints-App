@@ -8,7 +8,8 @@
 import Foundation
 
 // Custom class type to set hour/min options in UIPickerView
-public class TimePickerData {
+
+class TimePickerData {
     var hour: String
     var minute: [String]
     

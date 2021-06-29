@@ -5,6 +5,7 @@
 //  Created by Nadia Siddiqah on 1/20/21.
 //
 
+import Foundation
 import UIKit
 
 class CustomSlider: UISlider {

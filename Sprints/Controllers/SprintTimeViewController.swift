@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import CoreData
 
 // MARK: - SprintTimeViewController Class
 class SprintTimeViewController: UIViewController {

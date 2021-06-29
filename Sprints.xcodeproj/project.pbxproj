@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		0903723025AE6F3200A0AAD6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */; };
 		0906C3DB25BF80A300B5C415 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906C3DA25BF80A300B5C415 /* TaskCell.swift */; };
-		0909CB9026857AFA005D5782 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0909CB8F26857AFA005D5782 /* sprintlaunch.gif */; };
 		094A1ED625B622AF007E3F73 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */; };
-		099FEDC026857C7B00DC1FFD /* animatedCheckmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 099FEDBF26857C7B00DC1FFD /* animatedCheckmark.gif */; };
+		095502A6268BA5AA002AF0EC /* confettiAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 095502A5268BA5AA002AF0EC /* confettiAnimation.json */; };
 		09AF6962268586440097C15A /* CompletedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6961268586430097C15A /* CompletedTask.swift */; };
 		09AF696A2685897D0097C15A /* TimePickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF69692685897D0097C15A /* TimePickerData.swift */; };
 		09AF696E268589B40097C15A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF696D268589B40097C15A /* Task.swift */; };
 		09AF697526858A4B0097C15A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF697426858A4B0097C15A /* Extensions.swift */; };
-		09BAB3492685792900E3B2B1 /* confettiAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 09BAB3482685792900E3B2B1 /* confettiAnimation.json */; };
 		09BBE54025B93848007CC2F5 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */; };
 		09C1FD1B26857A6C00948190 /* taskCompleteAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 09C1FD1A26857A6C00948190 /* taskCompleteAnimation.json */; };
 		09C2D41E259D4F8A002E6E27 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */; };
+		09CFACBA268BB3F60012BE92 /* animatedCheckmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09CFACB9268BB3F60012BE92 /* animatedCheckmark.gif */; };
+		09CFACC2268BB5510012BE92 /* sprintlaunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09CFACC1268BB5510012BE92 /* sprintlaunch.gif */; };
 		09CFBAEC259AA78F0011AF5B /* SprintTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */; };
 		09D1ABEF25ACF21800F9E053 /* TaskRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */; };
 		09D1AC1725AD26CA00F9E053 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */; };
@@ -36,17 +36,17 @@
 /* Begin PBXFileReference section */
 		0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		0906C3DA25BF80A300B5C415 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		0909CB8F26857AFA005D5782 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
-		099FEDBF26857C7B00DC1FFD /* animatedCheckmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animatedCheckmark.gif; sourceTree = "<group>"; };
+		095502A5268BA5AA002AF0EC /* confettiAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confettiAnimation.json; sourceTree = "<group>"; };
 		09AF6961268586430097C15A /* CompletedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTask.swift; sourceTree = "<group>"; };
 		09AF69692685897D0097C15A /* TimePickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerData.swift; sourceTree = "<group>"; };
 		09AF696D268589B40097C15A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		09AF697426858A4B0097C15A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		09BAB3482685792900E3B2B1 /* confettiAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = confettiAnimation.json; path = "../../../../.Trash/Sprints-main/Sprints/Resources/confettiAnimation.json"; sourceTree = "<group>"; };
 		09BBE53F25B93848007CC2F5 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		09C1FD1A26857A6C00948190 /* taskCompleteAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = taskCompleteAnimation.json; sourceTree = "<group>"; };
 		09C2D41D259D4F8A002E6E27 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		09CFACB9268BB3F60012BE92 /* animatedCheckmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animatedCheckmark.gif; sourceTree = "<group>"; };
+		09CFACC1268BB5510012BE92 /* sprintlaunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sprintlaunch.gif; sourceTree = "<group>"; };
 		09CFBAEB259AA78F0011AF5B /* SprintTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimeViewController.swift; sourceTree = "<group>"; };
 		09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunViewController.swift; sourceTree = "<group>"; };
 		09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0903724625AFAB1E00A0AAD6 /* ViewControllers */ = {
+		0903724625AFAB1E00A0AAD6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				09D1AC1625AD26CA00F9E053 /* LaunchViewController.swift */,
@@ -86,16 +86,19 @@
 				09D1ABEE25ACF21800F9E053 /* TaskRunViewController.swift */,
 				0903722F25AE6F3200A0AAD6 /* CompletedViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0903724825AFAB7F00A0AAD6 /* Storyboards */ = {
+		0903724825AFAB7F00A0AAD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				09ECD1D8259974BA006D301A /* LaunchScreen.storyboard */,
 				09ECD1D3259974B7006D301A /* Main.storyboard */,
+				094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */,
+				0906C3DA25BF80A300B5C415 /* TaskCell.swift */,
+				09F1332D25CF3D930077CC6C /* NextTaskCell.swift */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		09AF69652685894A0097C15A /* Helpers */ = {
@@ -103,9 +106,6 @@
 			children = (
 				09AF697426858A4B0097C15A /* Extensions.swift */,
 				09F133F025D4814D0077CC6C /* Utils.swift */,
-				094A1ED525B622AF007E3F73 /* SelfSizedTableView.swift */,
-				0906C3DA25BF80A300B5C415 /* TaskCell.swift */,
-				09F1332D25CF3D930077CC6C /* NextTaskCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -120,15 +120,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		09D1AC0825AD09DF00F9E053 /* Resources */ = {
+		09CFACC5268BB8340012BE92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09ECD1D6259974BA006D301A /* Assets.xcassets */,
+				09D1AC0825AD09DF00F9E053 /* Animations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		09D1AC0825AD09DF00F9E053 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
 				09C1FD1A26857A6C00948190 /* taskCompleteAnimation.json */,
-				09BAB3482685792900E3B2B1 /* confettiAnimation.json */,
-				0909CB8F26857AFA005D5782 /* sprintlaunch.gif */,
-				099FEDBF26857C7B00DC1FFD /* animatedCheckmark.gif */,
+				095502A5268BA5AA002AF0EC /* confettiAnimation.json */,
+				09CFACB9268BB3F60012BE92 /* animatedCheckmark.gif */,
+				09CFACC1268BB5510012BE92 /* sprintlaunch.gif */,
 			);
-			path = Resources;
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		09ECD1C1259974B7006D301A = {
@@ -155,12 +164,11 @@
 				09ECD1DB259974BA006D301A /* Info.plist */,
 				09ECD1CD259974B7006D301A /* AppDelegate.swift */,
 				09ECD1CF259974B7006D301A /* SceneDelegate.swift */,
-				09ECD1D6259974BA006D301A /* Assets.xcassets */,
-				0903724825AFAB7F00A0AAD6 /* Storyboards */,
-				09D1AC0825AD09DF00F9E053 /* Resources */,
-				0903724625AFAB1E00A0AAD6 /* ViewControllers */,
-				09AF69652685894A0097C15A /* Helpers */,
+				09CFACC5268BB8340012BE92 /* Resources */,
+				0903724825AFAB7F00A0AAD6 /* Views */,
 				09AF697826865CE30097C15A /* Models */,
+				0903724625AFAB1E00A0AAD6 /* Controllers */,
+				09AF69652685894A0097C15A /* Helpers */,
 			);
 			path = Sprints;
 			sourceTree = "<group>";
@@ -242,11 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ECD1DA259974BA006D301A /* LaunchScreen.storyboard in Resources */,
-				0909CB9026857AFA005D5782 /* sprintlaunch.gif in Resources */,
-				099FEDC026857C7B00DC1FFD /* animatedCheckmark.gif in Resources */,
-				09BAB3492685792900E3B2B1 /* confettiAnimation.json in Resources */,
+				095502A6268BA5AA002AF0EC /* confettiAnimation.json in Resources */,
+				09CFACBA268BB3F60012BE92 /* animatedCheckmark.gif in Resources */,
 				09C1FD1B26857A6C00948190 /* taskCompleteAnimation.json in Resources */,
 				09ECD1D7259974BA006D301A /* Assets.xcassets in Resources */,
+				09CFACC2268BB5510012BE92 /* sprintlaunch.gif in Resources */,
 				09ECD1D5259974B7006D301A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

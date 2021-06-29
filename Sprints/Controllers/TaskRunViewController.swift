@@ -28,7 +28,7 @@ class TaskRunViewController: UIViewController {
     // MARK: - Lazy Variables
     lazy var animatedCheckmark: GIFImageView = {
         let gif = GIFImageView(frame: CGRect(x: checkmarkBox.frame.origin.x, y: checkmarkBox.frame.origin.y,
-                                              width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
+                                             width: checkmarkBox.frame.width, height: checkmarkBox.frame.height))
         gif.contentMode = .scaleAspectFit
         gif.animate(withGIFNamed: "animatedCheckmark")
         gif.animationRepeatCount = 1

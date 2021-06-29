@@ -28,7 +28,6 @@ class LaunchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Utils.showGradientLayer(view: view)
     }
     
     func playAnimation() {

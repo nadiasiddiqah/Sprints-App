@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "sprintlaunch 2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "IMG_6942E6CDC003-1.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

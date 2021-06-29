@@ -17,21 +17,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="EHm-iW-JDe">
-                                <rect key="frame" x="57" y="251" width="300" height="404"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-GR-cne">
+                                <rect key="frame" x="82" y="203" width="250" height="500"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUC-DM-bDH">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="93"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sloganBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-Pc-Vfz">
+                                                <rect key="frame" x="-5" y="-5" width="260" height="108"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-Yp-9CQ">
+                                                <rect key="frame" x="17" y="-1.3333333333333428" width="216" height="95.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprints" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OV5-TY-ohX">
+                                                        <rect key="frame" x="28" y="0.0" width="160.33333333333334" height="68.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                                        <color key="textColor" red="0.40598890189999998" green="0.44388377670000001" blue="0.92946285009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="optimize your workflow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1fR-as-dGF">
+                                                        <rect key="frame" x="0.0" y="68.333333333333343" width="216" height="27.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" red="0.40598890189999998" green="0.44388377670000001" blue="0.92946285009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4Of-Pc-Vfz" firstAttribute="leading" secondItem="FUC-DM-bDH" secondAttribute="leading" constant="-5" id="9xq-IS-nt5"/>
+                                            <constraint firstItem="xNO-Yp-9CQ" firstAttribute="centerY" secondItem="FUC-DM-bDH" secondAttribute="centerY" id="Dol-bK-ykV"/>
+                                            <constraint firstAttribute="bottom" secondItem="4Of-Pc-Vfz" secondAttribute="bottom" constant="-10" id="ImB-vX-u8Y"/>
+                                            <constraint firstItem="4Of-Pc-Vfz" firstAttribute="top" secondItem="FUC-DM-bDH" secondAttribute="top" constant="-5" id="Kpa-Yv-0Hd"/>
+                                            <constraint firstItem="xNO-Yp-9CQ" firstAttribute="centerX" secondItem="FUC-DM-bDH" secondAttribute="centerX" id="kM4-vz-heb"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Of-Pc-Vfz" secondAttribute="trailing" constant="-5" id="yyK-75-Wnn"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JrO-FO-rTW">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="141" width="250" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JrO-FO-rTW" secondAttribute="height" multiplier="1:1" id="dt8-iG-VY0"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVg-Rb-QMM">
-                                        <rect key="frame" x="0.0" y="343" width="300" height="61"/>
+                                        <rect key="frame" x="0.0" y="439" width="250" height="61"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="CVg-Rb-QMM" secondAttribute="height" multiplier="300:61" id="iTQ-9D-4T3"/>
+                                            <constraint firstAttribute="width" secondItem="CVg-Rb-QMM" secondAttribute="height" multiplier="250:61" id="Pzy-I6-qg3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Start Sprint"/>
@@ -46,14 +81,17 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="FUC-DM-bDH" firstAttribute="width" secondItem="FUC-DM-bDH" secondAttribute="height" multiplier="250:93" id="7mj-Pe-TRl"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JTP-5J-YzU"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EHm-iW-JDe" firstAttribute="centerY" secondItem="JTP-5J-YzU" secondAttribute="centerY" id="A52-3e-GFe"/>
-                            <constraint firstItem="EHm-iW-JDe" firstAttribute="height" secondItem="cqc-dq-h5b" secondAttribute="height" multiplier="0.450893" id="Hgx-1j-8Zu"/>
-                            <constraint firstItem="EHm-iW-JDe" firstAttribute="centerX" secondItem="JTP-5J-YzU" secondAttribute="centerX" id="wcd-hG-fXf"/>
+                            <constraint firstItem="JTf-GR-cne" firstAttribute="centerX" secondItem="JTP-5J-YzU" secondAttribute="centerX" id="hU8-KG-6C1"/>
+                            <constraint firstItem="JTf-GR-cne" firstAttribute="height" secondItem="cqc-dq-h5b" secondAttribute="height" multiplier="0.558036" id="lZ3-7X-IuR"/>
+                            <constraint firstItem="JTf-GR-cne" firstAttribute="centerY" secondItem="JTP-5J-YzU" secondAttribute="centerY" id="zsn-QX-kw6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lYk-ak-y4t"/>
@@ -839,6 +877,7 @@
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.tip.crop.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sloganBackground" width="83.333335876464844" height="31"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
