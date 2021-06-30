@@ -90,7 +90,7 @@ class TaskRunViewController: UIViewController {
         }
         
         // Add round borders to views
-        Utils.roundedBorder(object: [currentTaskView, nextTaskList, timerLabel])
+        Utils.roundedCorner(object: [currentTaskView, nextTaskList, timerLabel])
         
         // Start timers
         startSprintTimer()

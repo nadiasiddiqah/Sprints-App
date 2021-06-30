@@ -58,12 +58,10 @@ class Utils {
         return (components[0]*60*60) + (components[1]*60)
     }
 
-    static func roundedBorder(object: [UIView]) {
+    static func roundedCorner(object: [UIView]) {
         for i in object {
             i.layer.masksToBounds = true
             i.layer.cornerRadius = 10
-            i.layer.borderWidth = 2
-            i.layer.borderColor = UIColor.black.cgColor
         }
     }
 
